@@ -2,7 +2,7 @@
  "name": "satcat",
  "title": "Satellites in orbit (CelesTrak SATCAT)",
  "source_url": "https://celestrak.org/satcat/search.php",
- "collected_at": "2026-10-12T17:02:30+00:00",
+ "collected_at": "2026-10-12T17:16:20+00:00",
  "payload": {
   "active_payloads": {
    "US": 12998,

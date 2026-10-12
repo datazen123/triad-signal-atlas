@@ -2,37 +2,37 @@
  "name": "links",
  "title": "Evidence link health",
  "source_url": "https://archive.org/help/wayback_api.php",
- "collected_at": "2026-10-12T17:10:42+00:00",
+ "collected_at": "2026-10-12T17:21:39+00:00",
  "payload": {
   "status": {
    "http://eng.mod.gov.cn": {
-    "state": "unreachable",
+    "state": "ok",
     "code": null,
     "dead_streak": 0
    },
    "http://publication.pravo.gov.ru": {
-    "state": "unreachable",
-    "code": null,
+    "state": "unverifiable",
+    "code": 405,
     "dead_streak": 0
    },
    "http://stats.customs.gov.cn": {
-    "state": "unreachable",
-    "code": null,
+    "state": "error",
+    "code": 412,
     "dead_streak": 0
    },
    "http://treaty.mfa.gov.cn": {
-    "state": "unreachable",
+    "state": "ok",
     "code": null,
     "dead_streak": 0
    },
    "http://www.mofcom.gov.cn": {
-    "state": "unreachable",
+    "state": "ok",
     "code": null,
     "dead_streak": 0
    },
    "https://acleddata.com": {
-    "state": "unverifiable",
-    "code": 403,
+    "state": "ok",
+    "code": null,
     "dead_streak": 0
    },
    "https://adst.org/2016/06/russia-love-back-rostropovichs-exile-return/": {
@@ -103,7 +103,7 @@
    "https://china.usc.edu/node/2611": {
     "state": "dead",
     "code": 404,
-    "dead_streak": 2
+    "dead_streak": 3
    },
    "https://ciss.tsinghua.edu.cn": {
     "state": "ok",
@@ -183,7 +183,7 @@
    "https://english.cas.cn/newsroom/cas_media/202408/t20240806_681340.shtml": {
     "state": "dead",
     "code": 404,
-    "dead_streak": 2
+    "dead_streak": 3
    },
    "https://epoch.ai": {
     "state": "ok",
@@ -296,7 +296,7 @@
     "dead_streak": 0
    },
    "https://ignca.gov.in/?p=16847": {
-    "state": "unreachable",
+    "state": "ok",
     "code": null,
     "dead_streak": 0
    },
@@ -471,7 +471,7 @@
     "dead_streak": 0
    },
    "https://relstud-hist.spbu.ru/en/articles/alekseev-vasily": {
-    "state": "unreachable",
+    "state": "ok",
     "code": null,
     "dead_streak": 0
    },
@@ -736,8 +736,8 @@
     "dead_streak": 0
    },
    "https://www.foreign.senate.gov/press/dem/release/lugar-applauds-the-secure-storage-of-spent-plutonium-fuel-in-kazakhstan": {
-    "state": "unverifiable",
-    "code": 403,
+    "state": "ok",
+    "code": null,
     "dead_streak": 0
    },
    "https://www.gavi.org/news/media-room/covid-19-vaccinations-shift-regular-immunisation-covax-draws-close": {
@@ -1146,8 +1146,8 @@
     "dead_streak": 0
    },
    "https://www.unep.org/zh-hans/xinwenyuziyuan/xinwengao/chouyangcenghuifuyiburuzhengguiyouzhuyubimianquanqiu05degcdeshengwen": {
-    "state": "unverifiable",
-    "code": 403,
+    "state": "ok",
+    "code": null,
     "dead_streak": 0
    },
    "https://www.unoosa.org/oosa/en/spaceobjectregister/index.html": {
@@ -1222,13 +1222,15 @@
    }
   },
   "healed": {
-   "https://english.cas.cn/newsroom/cas_media/202408/t20240806_681340.shtml": "https://web.archive.org/web/20241106235940/https://english.cas.cn/newsroom/cas_media/202408/t20240806_681340.shtml"
+   "https://english.cas.cn/newsroom/cas_media/202408/t20240806_681340.shtml": "https://web.archive.org/web/20241106235940/https://english.cas.cn/newsroom/cas_media/202408/t20240806_681340.shtml",
+   "https://china.usc.edu/node/2611": "https://web.archive.org/web/20240729091821/https://china.usc.edu/node/2611"
   },
   "counts": {
-   "unreachable": 13,
-   "unverifiable": 22,
-   "ok": 206,
-   "dead": 2
+   "ok": 214,
+   "unverifiable": 20,
+   "error": 1,
+   "dead": 2,
+   "unreachable": 6
   },
   "checked": 243
  }

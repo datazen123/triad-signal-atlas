@@ -2,7 +2,7 @@
  "name": "openalex",
  "title": "Research co-authorship (OpenAlex)",
  "source_url": "https://openalex.org",
- "collected_at": "2026-10-12T16:50:48+00:00",
+ "collected_at": "2026-10-12T17:12:44+00:00",
  "payload": {
   "pairs": {
    "US-CN": {

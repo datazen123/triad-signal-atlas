@@ -2,7 +2,7 @@
  "name": "nobel",
  "title": "Cross-border Nobel laureates (Nobel Foundation API)",
  "source_url": "https://www.nobelprize.org/about/developer-zone-2/",
- "collected_at": "2026-10-12T16:51:03+00:00",
+ "collected_at": "2026-10-12T17:12:54+00:00",
  "payload": {
   "people": [
    {

@@ -2,7 +2,7 @@
  "name": "migrants",
  "title": "Migrant stock between powers (UN DESA)",
  "source_url": "https://www.un.org/development/desa/pd/content/international-migrant-stock",
- "collected_at": "2026-10-12T17:02:35+00:00",
+ "collected_at": "2026-10-12T17:16:26+00:00",
  "payload": {
   "year": 2024,
   "pairs": {
