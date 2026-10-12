@@ -1,0 +1,614 @@
+<title>Triad Signal Atlas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a night-sky observatory. Two rotatable 3D instruments (the triad of sources, the web of powers), then flat instruments: channels, bridges, live pulse, ladder, calendar, catalog, pipeline health. One deliberate dark look. */
+:root{
+  color-scheme: dark;
+  --void:#0a0f1e; --panel:#111a2e; --panel-2:#16213a; --rule:#23304e;
+  --ink:#e7ebf5; --muted:#8e99b6; --faint:#5a6684; --all:#9fe6d6;
+  --evA:#f4fbff; --evB:#8fe3d2; --evC:#b6a7ff; --evD:#f2a98f; --evE:#cfd88a; --evF:#6f7a96;
+  --ok:#6fd39a; --warn:#f2c14e; --bad:#ff6e5a; --idle:#8e99b6; --cont:#ff9d7a;
+  --f-display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --f-body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+}
+*{box-sizing:border-box}
+html,body{background:var(--void);color:var(--ink)}
+body{font-family:var(--f-body);font-size:15px;line-height:1.55;padding-inline:16px;padding-block:0 64px}
+a{color:var(--all)}
+a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--all);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:64px}
+header.top{padding-top:36px;display:grid;gap:14px}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+h1{font-family:var(--f-display);font-weight:800;font-size:clamp(34px,6vw,64px);line-height:1;margin:0;letter-spacing:-.02em;text-wrap:balance}
+h1 .u{color:#6fa8ff} h1 .c{color:#ff6e5a} h1 .r{color:#f2c14e}
+.lede{max-width:70ch;margin:0;font-size:16px}
+.status-line{display:flex;flex-wrap:wrap;gap:8px 16px;font-family:var(--f-mono);font-size:12px;color:var(--muted);align-items:center}
+.status-line .live{color:var(--ok)}
+nav.jump{display:flex;flex-wrap:wrap;gap:6px}
+nav.jump a{font-family:var(--f-mono);font-size:12px;color:var(--muted);text-decoration:none;border:1px solid var(--rule);border-radius:999px;padding:4px 10px}
+nav.jump a:hover{color:var(--ink);border-color:var(--muted)}
+h2{font-family:var(--f-display);font-weight:700;font-size:clamp(24px,3.4vw,34px);margin:0;letter-spacing:-.01em;text-wrap:balance}
+h3{font-family:var(--f-display);font-weight:700;margin:0}
+.sec-head{display:grid;gap:8px;margin-bottom:20px}
+.sec-head p{margin:0;color:var(--muted);max-width:72ch}
+.mono{font-family:var(--f-mono)}
+
+/* 3D instruments */
+.observatory{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:16px;align-items:start}
+@media (max-width:880px){.observatory{grid-template-columns:minmax(0,1fr)}}
+.sky{position:relative;background:radial-gradient(ellipse at 50% 40%,#142140 0%,var(--void) 70%);border:1px solid var(--rule);border-radius:6px;overflow:hidden}
+.sky canvas{display:block;width:100%;height:min(68vh,600px);min-height:380px;touch-action:pan-y;cursor:grab}
+.sky canvas.dragging{cursor:grabbing}
+.sky-ui{position:absolute;left:12px;right:12px;bottom:12px;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;pointer-events:none}
+.sky-ui>*{pointer-events:auto}
+.btns{display:flex;gap:6px;flex-wrap:wrap}
+.btn{font-family:var(--f-mono);font-size:12px;background:rgba(17,26,46,.88);color:var(--ink);border:1px solid var(--rule);border-radius:4px;padding:6px 10px;cursor:pointer}
+.btn:hover{border-color:var(--muted)}
+.btn[aria-pressed="true"]{border-color:var(--all);color:var(--all)}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.hint{font-family:var(--f-mono);font-size:11px;color:var(--muted);background:rgba(10,15,30,.75);padding:5px 8px;border-radius:4px;align-self:center}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-family:var(--f-mono);font-size:11px;color:var(--muted);margin-bottom:12px}
+.legend span{display:flex;align-items:center;gap:7px}
+.dot{width:9px;height:9px;border-radius:50%;display:inline-block;flex:none}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.chip{font-family:var(--f-mono);font-size:12px;border:1px solid var(--rule);background:transparent;color:var(--muted);border-radius:999px;padding:5px 11px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--void);border-color:var(--ink)}
+.chip .n{opacity:.6;margin-left:4px}
+.side{background:var(--panel);border:1px solid var(--rule);border-radius:6px;padding:18px;display:grid;gap:12px;min-width:0}
+.side h3{font-size:22px;line-height:1.15;text-wrap:balance}
+.meta{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-family:var(--f-mono);font-size:11px;padding:3px 7px;border-radius:3px;background:var(--panel-2);color:var(--muted);border:1px solid var(--rule)}
+.ev{font-family:var(--f-mono);font-size:11px;font-weight:500;padding:3px 7px;border-radius:3px;color:var(--void)}
+dl.kv{margin:0;display:grid;gap:10px}
+dl.kv dt{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+dl.kv dd{margin:2px 0 0}
+.cov{display:inline-flex;gap:6px;align-items:center;flex-wrap:wrap}
+.cov i{font-style:normal;font-family:var(--f-mono);font-size:11px;padding:2px 6px;border-radius:3px;border:1px solid currentColor}
+.cov i.off{opacity:.22}
+.arch{font-family:var(--f-mono);font-size:10px;color:var(--warn);border:1px solid var(--warn);border-radius:3px;padding:0 4px}
+.timebar{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;margin-bottom:12px}
+.timebar input[type=range]{flex:1 1 220px;min-width:0;accent-color:var(--all)}
+.yearbig{font-family:var(--f-display);font-weight:800;font-size:28px;min-width:4.2ch;font-variant-numeric:tabular-nums}
+.stat-row{display:flex;flex-wrap:wrap;gap:14px 22px}
+.stat b{display:block;font-family:var(--f-display);font-size:26px;line-height:1;font-variant-numeric:tabular-nums}
+.stat span{font-family:var(--f-mono);font-size:11px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.visible-list{display:grid;gap:0;max-height:300px;overflow:auto;border-top:1px solid var(--rule)}
+.visible-list button{all:unset;cursor:pointer;display:flex;gap:8px;align-items:center;padding:7px 2px;border-bottom:1px solid var(--rule);font-size:13px}
+.visible-list button:hover,.visible-list button:focus-visible{color:var(--all)}
+
+/* floating evidence card */
+#card{position:fixed;z-index:50;max-width:min(360px,calc(100vw - 24px));background:var(--panel-2);border:1px solid var(--muted);border-radius:6px;padding:14px 16px;box-shadow:0 12px 40px rgba(0,0,0,.5);display:grid;gap:8px;font-size:14px}
+#card h4{margin:0;font-family:var(--f-display);font-size:17px;line-height:1.2;padding-right:22px}
+#card p{margin:0}
+#card .muted{color:var(--muted);font-size:13px}
+#card .links{display:grid;gap:4px;font-size:13px}
+#card .x{position:absolute;top:8px;right:8px;background:none;border:0;color:var(--muted);font-size:18px;cursor:pointer;line-height:1}
+.flag{font-family:var(--f-mono);font-size:11px;color:var(--warn)}
+
+/* channels */
+.dyads{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:24px;align-items:start}
+@media (max-width:880px){.dyads{grid-template-columns:minmax(0,1fr)}}
+.tri{width:100%;max-width:420px;height:auto;display:block;margin:0 auto}
+.tri .edge{cursor:pointer}
+.tri text{font-family:var(--f-mono)}
+.channels{display:grid;border-top:1px solid var(--rule)}
+.ch{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 14px;padding:12px 4px;border-bottom:1px solid var(--rule);cursor:pointer}
+.ch:hover,.ch:focus-visible{background:var(--panel)}
+.ch h4{margin:0;font-size:15px;font-weight:600}
+.ch .more{grid-column:1/-1;display:none;gap:6px;color:var(--muted);font-size:14px}
+.ch.open .more{display:grid}
+.ch .more .links{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px}
+.pill{font-family:var(--f-mono);font-size:11px;padding:3px 8px;border-radius:999px;align-self:start;white-space:nowrap;border:1px solid currentColor}
+.pill.active,.pill.ok{color:var(--ok)} .pill.limited,.pill.suspect,.pill.pending{color:var(--warn)} .pill.dormant{color:var(--idle)} .pill.ended,.pill.fail{color:var(--bad)} .pill.contested{color:var(--cont)}
+
+/* bridges */
+.bridges{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:24px;align-items:start}
+@media (max-width:920px){.bridges{grid-template-columns:minmax(0,1fr)}}
+.mx-wrap{overflow-x:auto}
+table.mx{border-collapse:separate;border-spacing:3px;font-family:var(--f-mono);font-size:12px}
+table.mx th{font-weight:500;color:var(--muted);padding:4px;white-space:nowrap}
+table.mx th.rowh{text-align:right}
+table.mx td button{all:unset;box-sizing:border-box;display:grid;place-items:center;width:52px;height:40px;border-radius:4px;cursor:pointer;font-variant-numeric:tabular-nums;color:var(--ink)}
+table.mx td button:hover,table.mx td button:focus-visible{outline:2px solid var(--all)}
+table.mx td button[aria-pressed="true"]{outline:2px solid var(--ink)}
+table.mx td.self{background:transparent}
+.mx-note{font-size:13px;color:var(--muted);margin-top:8px;max-width:60ch}
+.people-list{display:grid;gap:0;border-top:1px solid var(--rule)}
+.person{display:grid;gap:4px;padding:12px 2px;border-bottom:1px solid var(--rule);cursor:pointer}
+.person:hover{background:var(--panel)}
+.person .top{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline}
+.person b{font-size:15px}
+.person .native{color:var(--muted)}
+.person p{margin:0;color:var(--muted);font-size:14px}
+.index-strip{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.index-strip .pair{border:1px solid var(--rule);border-radius:4px;padding:8px 10px;display:grid;gap:2px;min-width:118px;background:var(--panel)}
+.index-strip .pair b{font-family:var(--f-display);font-size:22px;line-height:1;font-variant-numeric:tabular-nums}
+.index-strip .pair span{font-family:var(--f-mono);font-size:11px;color:var(--muted)}
+
+/* live pulse */
+.pulse{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:16px}
+.pcard{background:var(--panel);border:1px solid var(--rule);border-radius:6px;padding:16px;display:grid;gap:10px;align-content:start;min-width:0}
+.pcard h3{font-size:18px}
+.pcard .src{font-family:var(--f-mono);font-size:11px;color:var(--faint)}
+.pcard .pending{color:var(--muted);font-size:14px;border:1px dashed var(--rule);border-radius:4px;padding:12px}
+.srow{display:grid;grid-template-columns:minmax(0,1fr) 120px 70px;gap:10px;align-items:center;font-size:13px;padding:3px 0}
+.srow .lab{display:flex;gap:6px;align-items:center;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.srow .num{font-family:var(--f-mono);text-align:right;font-variant-numeric:tabular-nums}
+.srow .chg{font-family:var(--f-mono);font-size:11px;text-align:right}
+.up{color:var(--ok)} .down{color:var(--bad)}
+.tbl{width:100%;border-collapse:collapse;font-size:13px}
+.tbl th,.tbl td{text-align:left;padding:6px 6px;border-bottom:1px solid var(--rule);vertical-align:top}
+.tbl th{font-family:var(--f-mono);font-size:11px;color:var(--muted);font-weight:500;letter-spacing:.05em}
+.tbl td.n{font-family:var(--f-mono);text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.hbar{display:grid;grid-template-columns:110px minmax(0,1fr) 60px;gap:8px;align-items:center;font-size:13px}
+.hbar .track{height:10px;background:var(--panel-2);border-radius:3px;overflow:hidden}
+.hbar .track i{display:block;height:100%}
+.hbar .n{font-family:var(--f-mono);text-align:right}
+
+/* ladder, calendar, catalog */
+.ladder{display:grid;border:1px solid var(--rule);border-radius:6px;overflow:hidden}
+.rung{display:grid;grid-template-columns:64px minmax(0,1.1fr) minmax(0,1.6fr) 120px;gap:16px;align-items:center;padding:14px 16px;border-bottom:1px solid var(--rule);background:var(--panel)}
+.rung:last-child{border-bottom:0}
+.rung .k{font-family:var(--f-display);font-weight:800;font-size:30px;line-height:1}
+.rung h4{margin:0;font-size:15px}
+.rung p{margin:0;color:var(--muted);font-size:14px}
+.bar{height:8px;background:var(--panel-2);border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;border-radius:4px}
+.rung .count{font-family:var(--f-mono);font-size:11px;color:var(--faint);margin-top:4px}
+@media (max-width:720px){.rung{grid-template-columns:48px minmax(0,1fr)}.rung>p,.rung>.meter{grid-column:2}}
+.cal-scroll{overflow-x:auto;border:1px solid var(--rule);border-radius:6px;background:var(--panel)}
+.cal{display:grid;grid-template-columns:repeat(12,minmax(78px,1fr));min-width:940px}
+.mo{border-right:1px solid var(--rule);padding:10px 8px;display:flex;flex-direction:column;gap:6px;min-height:170px}
+.mo:last-child{border-right:0}
+.mo h5{margin:0 0 4px;font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;color:var(--muted);font-weight:500}
+.mo.now{background:var(--panel-2)} .mo.now h5{color:var(--all)}
+.ev-item{font-size:12px;line-height:1.3;padding-left:8px;border-left:2px solid var(--muted)}
+.cadence{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:14px;font-size:13px;color:var(--muted)}
+.cadence b{color:var(--ink);font-weight:600;font-family:var(--f-mono);font-size:12px;margin-right:6px}
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:12px}
+#q{flex:1 1 240px;min-width:0;background:var(--panel);border:1px solid var(--rule);color:var(--ink);font:inherit;padding:9px 12px;border-radius:4px}
+.count-line{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+.cat{display:grid;border-top:1px solid var(--rule)}
+.row{display:grid;grid-template-columns:minmax(0,2.2fr) minmax(0,2.8fr) 150px;gap:6px 18px;padding:14px 0;border-bottom:1px solid var(--rule)}
+.row .nm{display:grid;gap:6px;min-width:0}
+.row .nm a{font-weight:600;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule)}
+.row .nm a:hover{border-color:var(--all)}
+.row .pub{font-size:12px;color:var(--faint);font-family:var(--f-mono)}
+.row .w{font-size:14px;min-width:0}
+.row .w .cv{color:var(--muted);font-size:13px;margin-top:4px}
+.row .sidecol{display:grid;gap:6px;justify-items:start;align-content:start}
+.locate{font-family:var(--f-mono);font-size:11px;background:none;border:1px solid var(--rule);color:var(--muted);border-radius:3px;padding:3px 7px;cursor:pointer}
+.locate:hover{color:var(--ink);border-color:var(--muted)}
+@media (max-width:760px){.row{grid-template-columns:minmax(0,1fr)}}
+.health-wrap{overflow-x:auto}
+footer{color:var(--faint);font-size:13px;max-width:78ch;display:grid;gap:8px}
+</style>
+
+<script id="atlas-data" type="application/json">/*__ATLAS_DATA__*/</script>
+
+<div class="wrap">
+  <header class="top">
+    <div class="eyebrow">Open-source watch board · United States · China · Russia · and the other powers</div>
+    <h1>Triad Signal <span class="u">At</span><span class="c">l</span><span class="r">as</span></h1>
+    <p class="lede">Primary evidence on how the great powers actually relate: the channels they keep open, the projects they build together, the people who carry ideas between them, and live data that refreshes itself. Every claim links to its source. Hover or tap anything to see the evidence.</p>
+    <div class="status-line" id="statusLine"></div>
+    <nav class="jump" aria-label="Sections">
+      <a href="#sec-sky">Sources</a><a href="#sec-ch">Channels</a><a href="#sec-web">Powers web</a><a href="#sec-bridges">Bridges</a><a href="#sec-pulse">Live pulse</a><a href="#sec-ladder">Evidence ladder</a><a href="#sec-cal">Calendar</a><a href="#sec-cat">Catalog</a><a href="#sec-health">Data health</a>
+    </nav>
+  </header>
+
+  <section id="sec-sky" aria-labelledby="h-sky">
+    <div class="sec-head">
+      <h2 id="h-sky">The source constellation</h2>
+      <p>The three pillars are the US, China and Russia, and each level is a topic. A star sits closer to the countries its source covers. Brighter stars are harder evidence. Drag sideways to rotate. Hover a star for its evidence card, or tap to pin it.</p>
+    </div>
+    <div class="chips" id="topicChips" role="group" aria-label="Filter by topic"></div>
+    <div class="legend" id="evLegend" aria-label="Evidence classes"></div>
+    <div class="observatory">
+      <div class="sky">
+        <canvas id="sky" role="img" aria-label="Rotatable 3D constellation of data sources"></canvas>
+        <div class="sky-ui"><div class="btns" id="skyBtns"></div><span class="hint">Drag to rotate · tap a star</span></div>
+      </div>
+      <aside class="side" id="detail" aria-live="polite"></aside>
+    </div>
+  </section>
+
+  <section id="sec-ch" aria-labelledby="h-ch">
+    <div class="sec-head">
+      <h2 id="h-ch">Where the channels stand</h2>
+      <p>Working channels between each pair, and the bodies where all three still sit together. Hover a row for its evidence card, or tap to open it in place. Rows marked "unconfirmed" are not yet backed by a primary page we could open, so treat them as leads.</p>
+    </div>
+    <div class="dyads">
+      <svg class="tri" id="tri" viewBox="0 0 420 380" role="img" aria-label="Triangle of the three bilateral relationships"></svg>
+      <div>
+        <div class="chips" id="dyadTabs" role="tablist"></div>
+        <div class="channels" id="channels"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sec-web" aria-labelledby="h-web">
+    <div class="sec-head">
+      <h2 id="h-web">The powers web</h2>
+      <p>Seven powers around one ring. Joint projects float above the ring and rise higher the more powers take part, so projects shared by all seven sit at the top. The arcs below the ring are people who lived or worked across borders. Lines across the ring are co-authored research papers. Scrub the years or press Play to watch cooperation build and fade.</p>
+    </div>
+    <div class="timebar">
+      <button class="btn" id="play" aria-pressed="false">▶ Play</button>
+      <span class="yearbig" id="yearLabel">All</span>
+      <input type="range" id="year" min="1950" max="2026" value="2026" aria-label="Year">
+      <button class="btn" id="allTime" aria-pressed="true">All time</button>
+    </div>
+    <div class="chips" id="layerChips" role="group" aria-label="Layers"></div>
+    <div class="legend" id="webLegend"></div>
+    <div class="observatory">
+      <div class="sky">
+        <canvas id="web" role="img" aria-label="Rotatable 3D web of great powers, joint projects and bridge people"></canvas>
+        <div class="sky-ui"><div class="btns" id="webBtns"></div><span class="hint">Drag to rotate · tap a node</span></div>
+      </div>
+      <aside class="side" id="webSide"></aside>
+    </div>
+  </section>
+
+  <section id="sec-bridges" aria-labelledby="h-br">
+    <div class="sec-head">
+      <h2 id="h-br">Bridges: people between powers</h2>
+      <p>The Bridge Index counts evidence of people carrying knowledge, care and trust across borders. Choose a measure, then tap a cell to see who is behind the number. Rows are where people came from and columns are where they worked.</p>
+    </div>
+    <div class="index-strip" id="indexStrip"></div>
+    <div class="chips" id="metricTabs" role="tablist" aria-label="Measure"></div>
+    <div class="chips" id="catChips" role="group" aria-label="Field"></div>
+    <div class="bridges">
+      <div><div class="mx-wrap"><table class="mx" id="mx"></table></div><p class="mx-note" id="mxNote"></p></div>
+      <div><h3 id="pairTitle" style="font-size:20px;margin-bottom:10px"></h3><div class="people-list" id="peopleList"></div></div>
+    </div>
+  </section>
+
+  <section id="sec-pulse" aria-labelledby="h-pulse">
+    <div class="sec-head">
+      <h2 id="h-pulse">Live pulse</h2>
+      <p>Numbers refreshed automatically from primary datasets by the update pipeline. Each card shows when it was last collected. If a source fails, the last good numbers stay up with their date.</p>
+    </div>
+    <div class="pulse" id="pulse"></div>
+  </section>
+
+  <section id="sec-ladder" aria-labelledby="h-ladder">
+    <div class="sec-head"><h2 id="h-ladder">The evidence ladder</h2><p>Neutral sources don't exist, but some evidence is much harder to fake. Weight each claim by its rung. When two rungs disagree, trust the higher one.</p></div>
+    <div class="ladder" id="ladder"></div>
+  </section>
+
+  <section id="sec-cal" aria-labelledby="h-cal">
+    <div class="sec-head"><h2 id="h-cal">Release calendar</h2><p>Typical publication months for the big annual datasets. Exact dates shift each year.</p></div>
+    <div class="cal-scroll"><div class="cal" id="cal"></div></div>
+    <div class="cadence" id="cadence"></div>
+  </section>
+
+  <section id="sec-cat" aria-labelledby="h-cat">
+    <div class="sec-head"><h2 id="h-cat">Source catalog</h2><p>Every star in the constellation, with what to watch and how each is biased. The topic filter above applies here too.</p></div>
+    <div class="toolbar"><input id="q" type="search" placeholder="Search sources, e.g. uranium, satellite, Arctic" aria-label="Search sources"><span class="count-line" id="countLine"></span></div>
+    <div class="cat" id="cat"></div>
+  </section>
+
+  <section id="sec-health" aria-labelledby="h-health">
+    <div class="sec-head"><h2 id="h-health">Data health</h2><p>The update pipeline runs on a schedule with no AI involved. It retries, switches to backup endpoints, keeps last-good data, and swaps dead links for archived copies. When something stays broken, it opens a GitHub issue that emails the owner. It closes the issue again once the problem clears.</p></div>
+    <div id="health"></div>
+  </section>
+
+  <footer>
+    <span>Method: triangulate. Compare each side's readout of the same meeting, compare what trading partners report about each other, and check claims against physical traces.</span>
+    <span>"Bridges" covers documented, sourced contributions only. Inclusion records a specific cross-border act. It is not an endorsement of a person's wider record; caveats are on each card. Birthplaces follow the source, and the card notes when a place is now in another country.</span>
+    <span id="footBuild"></span>
+  </footer>
+</div>
+<div id="card" hidden role="dialog" aria-live="polite"></div>
+
+<script>
+const A = JSON.parse(document.getElementById('atlas-data').textContent || '{}');
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const clamp = (v,a,b) => Math.max(a, Math.min(b, v));
+const healed = (A.links && A.links.healed) || {};
+function hash(s){let h=2166136261;for(const c of String(s)){h^=c.charCodeAt(0);h=Math.imul(h,16777619);}return (h>>>0)/4294967295;}
+function link(url,label){ if(!url) return ''; const h=healed[url]; const u=h||url;
+  const lab = label || u.replace(/^https?:\/\/(www\.)?/,'').replace(/\/$/,'').slice(0,64);
+  return `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(lab)} ↗</a>${h?' <span class="arch">archived copy</span>':''}`; }
+function fmtDate(iso){ if(!iso) return '—'; const d=new Date(iso); return isNaN(d)?iso:d.toISOString().slice(0,10); }
+function ago(iso){ if(!iso) return 'never'; const d=(Date.now()-new Date(iso))/864e5; return d<1?'today':d<2?'yesterday':`${Math.round(d)} days ago`; }
+function big(n){ if(n==null) return '—'; const a=Math.abs(n); return a>=1e12?(n/1e12).toFixed(2)+' T':a>=1e9?(n/1e9).toFixed(1)+' B':a>=1e6?(n/1e6).toFixed(1)+' M':a>=1e3?(n/1e3).toFixed(1)+' k':String(Math.round(n)); }
+
+const TOPICS=[{k:'diplo',label:'Diplomacy'},{k:'trade',label:'Trade & money'},{k:'ai',label:'AI & tech'},{k:'nuclear',label:'Nuclear'},{k:'military',label:'Military'},{k:'coop',label:'Cooperation'},{k:'sentiment',label:'Public opinion'}];
+const EV={
+ A:{name:'Physical sensor',hex:'#f4fbff',hard:1,desc:'Satellites, seismometers, radar, ship and aircraft transponders. Hard to fake, but it needs interpretation.',use:'Use it to confirm or refute claims. A ship either docked or it did not.'},
+ B:{name:'Statistics',hex:'#8fe3d2',hard:.82,desc:'Customs, central bank and agency data series. Compare what each partner reports (mirror data) to find gaps.',use:'Watch trends and gaps between partner reports, not single months.'},
+ C:{name:'Legal record',hex:'#b6a7ff',hard:.68,desc:'Treaty texts, laws, sanctions lists, export rules, court filings and UN votes. These are binding acts, not talk.',use:'Read what a government did, then compare it with what it said.'},
+ D:{name:'Official readout',hex:'#f2a98f',hard:.48,desc:"Each party's own account of meetings, exercises and positions. Primary, but self-serving.",use:"Put all sides' versions next to each other. What one side leaves out is the signal."},
+ E:{name:'Independent research',hex:'#cfd88a',hard:.4,desc:'Academic and NGO datasets and polls. Their methods are published, but they carry funding and mission bias.',use:'Check the method section and who pays. Prefer the raw data over the commentary.'},
+ F:{name:'State media',hex:'#6f7a96',hard:.15,desc:"Xinhua, People's Daily, TASS. They show the official line.",use:'Never cite it as fact. Track how its tone shifts over time.'},
+};
+const POWERS=[{k:'US',name:'United States',hex:'#6fa8ff'},{k:'UK',name:'United Kingdom',hex:'#4fd6e8'},{k:'EU',name:'European Union',hex:'#a98bff'},{k:'RU',name:'Russia',hex:'#f2c14e'},{k:'IN',name:'India',hex:'#57d68d'},{k:'CN',name:'China',hex:'#ff6e5a'},{k:'JP',name:'Japan',hex:'#ff8fc7'}];
+const PW=Object.fromEntries(POWERS.map(p=>[p.k,p]));
+const TRIAD=['US','CN','RU'];
+const CATS={science:'#8fe3d2',academia:'#b6a7ff',medicine:'#ff9b9b',business:'#f2c14e',politics:'#6fa8ff',religion:'#ffd9a0',arts:'#ff8fc7',sport:'#57d68d'};
+const DOMAINS={space:'#b6d4ff',science:'#8fe3d2',health:'#ff9b9b',nuclear:'#f2c14e',environment:'#57d68d',maritime:'#4fd6e8',finance:'#ffd9a0',culture:'#ff8fc7'};
+const NOW_YEAR=new Date().getUTCFullYear();
+const S=A.sources||[], PEOPLE=A.people||[], PROJECTS=A.projects||[], CHANNELS=A.channels||[];
+const LIVE=A.live||{};
+const covHTML=cov=>'<span class="cov">'+TRIAD.map(c=>`<i style="color:${PW[c].hex}" class="${cov.includes(c)?'':'off'}">${c}</i>`).join('')+'</span>';
+const pdot=k=>`<i class="dot" style="background:${(PW[k]||{}).hex||'#888'}"></i>`;
+const tlabel=k=>(TOPICS.find(t=>t.k===k)||{}).label||k;
+
+/* ---------- evidence card ---------- */
+const card=$('#card'); let hideT=null, pinned=false;
+function placeCard(x,y){ const r=card.getBoundingClientRect(); let L=x+16,T=y+16;
+  if(L+r.width>innerWidth-8) L=x-r.width-16; if(L<8) L=8; if(T+r.height>innerHeight-8) T=Math.max(8,y-r.height-16);
+  card.style.left=L+'px'; card.style.top=T+'px'; }
+function showCard(html,x,y,pin){ clearTimeout(hideT); pinned=!!pin;
+  card.innerHTML=html+(pin?'<button class="x" aria-label="Close evidence card">×</button>':''); card.hidden=false; placeCard(x,y);
+  const b=card.querySelector('.x'); if(b) b.onclick=hideCard; }
+function hideCard(){ pinned=false; card.hidden=true; }
+function softHide(){ if(pinned) return; clearTimeout(hideT); hideT=setTimeout(()=>{ if(!pinned) card.hidden=true; },300); }
+card.addEventListener('pointerenter',()=>clearTimeout(hideT));
+card.addEventListener('pointerleave',softHide);
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') hideCard(); });
+document.addEventListener('pointerdown',e=>{ if(card.hidden||card.contains(e.target)||e.target.closest('[data-card]')||e.target.tagName==='CANVAS') return; hideCard(); });
+addEventListener('scroll',()=>{ if(!pinned) card.hidden=true; },{passive:true});
+
+const CARD={
+ src(s){const e=EV[s.ev];return `<h4>${esc(s.name)}</h4><div class="meta"><span class="ev" style="background:${e.hex}">${s.ev} · ${e.name}</span>${covHTML(s.cov)}</div><p>${esc(s.watch)}</p><p class="muted">${esc(s.cav)}</p><div class="links">${link(s.url)}</div>`;},
+ ch(c){const flag=(c.links||[]).length?'':'<span class="flag">Unconfirmed: no primary page verified yet</span>';
+   return `<h4>${esc(c.title)}</h4><div class="meta"><span class="pill ${c.status}">${esc(c.status)}</span><span class="tag">${esc(c.dyad)}</span>${/\d/.test(c.asof||'')?`<span class="tag">as of ${esc(c.asof)}</span>`:''}</div><p>${esc(c.desc)}</p>${flag}<div class="links">${(c.links||[]).map(l=>link(l.url,l.label)).join('')}</div>${c.note&&(c.links||[]).length?`<p class="muted">${esc(c.note)}</p>`:''}`;},
+ project(p){return `<h4>${esc(p.name)}</h4><div class="meta"><span class="tag" style="color:${DOMAINS[p.domain]||'#ccc'}">${esc(p.domain)}</span><span class="tag">${p.start}–${p.end??'now'}</span><span class="pill ${p.status==='active'?'active':p.status==='completed'?'dormant':'ended'}">${esc(p.status)}</span></div><div class="meta">${(p.members||[]).map(m=>`<span class="tag" style="color:${PW[m].hex}">${m}</span>`).join('')}${p.others?`<span class="tag">+${p.others} others</span>`:''}</div><p>${esc(p.achieved)}</p>${p.caveat?`<p class="muted">${esc(p.caveat)}</p>`:''}<div class="links">${link(p.url,p.src)}</div>${p.confidence==='medium'?'<span class="flag">Medium confidence: secondary or partial source</span>':''}`;},
+ person(x){return `<h4>${esc(x.name)}${x.native?` <span class="muted">${esc(x.native)}</span>`:''}</h4><div class="meta"><span class="tag" style="color:${CATS[x.cat]}">${esc(x.cat)}</span><span class="tag">${esc(x.years)}</span><span class="tag">${x.type==='resident'?'lived across':'envoy'}</span></div><div class="meta">${pdot(x.from)} ${esc(x.from)} → ${(x.to||[]).map(t=>pdot(t)+' '+esc(t)).join(' ')}</div><p>${esc(x.did)}</p>${x.caveat?`<p class="muted">${esc(x.caveat)}</p>`:''}<div class="links">${link(x.url,x.src)}</div>${x.confidence==='medium'?'<span class="flag">Medium confidence</span>':''}`;},
+ power(k){const p=PW[k];const proj=PROJECTS.filter(x=>x.members.includes(k));const out=PEOPLE.filter(x=>x.from===k).length, inn=PEOPLE.filter(x=>(x.to||[]).includes(k)).length;
+   return `<h4 style="color:${p.hex}">${esc(p.name)}</h4><p>${proj.length} joint projects in this atlas · ${out} bridge people from here · ${inn} who came to work here.</p><p class="muted">Most-shared partners: ${partners(k).slice(0,3).map(([o,n])=>`${PW[o].name} (${n})`).join(', ')}</p>`;},
+};
+function partners(k){const c={};PROJECTS.forEach(p=>{if(p.members.includes(k))p.members.forEach(m=>{if(m!==k)c[m]=(c[m]||0)+1;});});return Object.entries(c).sort((a,b)=>b[1]-a[1]);}
+document.addEventListener('pointerover',e=>{ if(e.pointerType!=='mouse'||pinned) return; const el=e.target.closest('[data-card]'); if(!el) return;
+  const html=cardFor(el.dataset.card); if(!html) return; const r=el.getBoundingClientRect(); showCard(html,Math.min(r.right,e.clientX+40),r.top,false); });
+document.addEventListener('pointerout',e=>{ const el=e.target.closest('[data-card]'); if(el&&!el.contains(e.relatedTarget)) softHide(); });
+function cardFor(key){ const [kind,id]=key.split(':');
+  if(kind==='src'){const s=S.find(x=>x.id===id);return s&&CARD.src(s);} if(kind==='ch'){const c=CHANNELS.find(x=>x.id===id);return c&&CARD.ch(c);}
+  if(kind==='project'){const p=PROJECTS.find(x=>x.id===id);return p&&CARD.project(p);} if(kind==='person'){const p=PEOPLE.find(x=>x.id===id);return p&&CARD.person(p);}
+  if(kind==='power') return CARD.power(id); return null; }
+
+/* ---------- 3D orbit engine ---------- */
+class Orbit{
+  constructor(canvas,o){ Object.assign(this,{canvas,ctx:canvas.getContext('2d'),yaw:o.yaw??.6,pitch:o.pitch??.3,zoom:1,dist:o.dist??6,k:o.k??1.55,y0:o.y0??16,spin:!reduce,draw:o.draw,onPick:o.onPick,items:[],hover:null,W:0,H:0,visible:true});
+    this.home={yaw:this.yaw,pitch:this.pitch};
+    const c=canvas;
+    c.addEventListener('pointerdown',e=>{this.drag=true;this.moved=0;this.lx=e.clientX;this.ly=e.clientY;c.setPointerCapture(e.pointerId);c.classList.add('dragging');});
+    c.addEventListener('pointermove',e=>{ if(this.drag){const dx=e.clientX-this.lx,dy=e.clientY-this.ly;this.moved+=Math.abs(dx)+Math.abs(dy);this.yaw+=dx*.008;if(e.pointerType==='mouse')this.pitch=clamp(this.pitch+dy*.006,-1.1,1.3);this.lx=e.clientX;this.ly=e.clientY;}
+      else if(e.pointerType==='mouse'){const it=this.hit(e);this.hover=it?it.key:null;c.style.cursor=it?'pointer':'grab';
+        if(it&&!pinned){const h=cardFor(it.key);if(h)showCard(h,e.clientX,e.clientY,false);} else if(!it) softHide();}});
+    c.addEventListener('pointerup',e=>{this.drag=false;c.classList.remove('dragging');if(this.moved<6){const it=this.hit(e);if(it){const h=cardFor(it.key);if(h)showCard(h,e.clientX,e.clientY,true);this.onPick&&this.onPick(it);}else hideCard();}});
+    c.addEventListener('pointerleave',()=>{this.hover=null;softHide();});
+    new ResizeObserver(()=>this.resize()).observe(c);
+    new IntersectionObserver(es=>{this.visible=es[0].isIntersecting;}).observe(c);
+    this.resize();
+  }
+  resize(){const d=Math.min(2,devicePixelRatio||1),r=this.canvas.getBoundingClientRect();this.W=r.width;this.H=r.height;this.canvas.width=r.width*d;this.canvas.height=r.height*d;this.ctx.setTransform(d,0,0,d,0,0);}
+  get fit(){return Math.min(this.W*1.1,this.H)*this.k*this.zoom;}
+  proj(p){const cy=Math.cos(this.yaw),sy=Math.sin(this.yaw);const x=p.x*cy-p.z*sy,z=p.x*sy+p.z*cy;const cp=Math.cos(this.pitch),sp=Math.sin(this.pitch);const y=p.y*cp-z*sp,z2=p.y*sp+z*cp;const s=this.fit/(this.dist-z2);return {x:this.W/2+x*s,y:this.H/2-y*s+this.y0,z:z2,sc:s/(this.fit/this.dist)};}
+  hit(e){const r=this.canvas.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;let best=null,bd=22;for(const it of this.items){const d=Math.hypot(it.x-x,it.y-y);if(d<bd){bd=d;best=it;}}return best;}
+  frame(){ if(!this.visible||!this.W) return; if(this.spin&&!this.drag) this.yaw+=.0022; this.ctx.clearRect(0,0,this.W,this.H); this.items=[]; this.stars(); this.draw(this); }
+  stars(){const c=this.ctx;for(let i=0;i<110;i++){c.fillStyle=`rgba(200,215,255,${.08+hash('a'+i)*.18})`;c.fillRect(hash('x'+i)*this.W,hash('y'+i)*this.H,1.2,1.2);}}
+  line(a,b,col,w){const c=this.ctx;c.strokeStyle=col;c.lineWidth=w;c.beginPath();c.moveTo(a.x,a.y);c.lineTo(b.x,b.y);c.stroke();}
+  controls(box){ const mk=(t,f,lab)=>{const b=document.createElement('button');b.className='btn';b.textContent=t;if(lab)b.setAttribute('aria-label',lab);b.onclick=f;box.appendChild(b);return b;};
+    const sp=mk('Auto-rotate',()=>{this.spin=!this.spin;sp.setAttribute('aria-pressed',this.spin);});sp.setAttribute('aria-pressed',this.spin);
+    mk('▲',()=>this.pitch=clamp(this.pitch+.2,-1.1,1.3),'Tilt up');mk('▼',()=>this.pitch=clamp(this.pitch-.2,-1.1,1.3),'Tilt down');
+    mk('+',()=>this.zoom=Math.min(2.4,this.zoom*1.15),'Zoom in');mk('−',()=>this.zoom=Math.max(.55,this.zoom/1.15),'Zoom out');
+    mk('Reset',()=>{this.yaw=this.home.yaw;this.pitch=this.home.pitch;this.zoom=1;}); }
+}
+
+/* ---------- view 1: source constellation ---------- */
+let activeTopic='all', selected='gacs', query='';
+const corners={US:{x:Math.cos(Math.PI*7/6),z:Math.sin(Math.PI*7/6)},CN:{x:Math.cos(-Math.PI/6),z:Math.sin(-Math.PI/6)},RU:{x:Math.cos(Math.PI/2),z:Math.sin(Math.PI/2)}};
+const yOf=k=>{const i=TOPICS.findIndex(t=>t.k===k);return 1.2-i*(2.4/(TOPICS.length-1));};
+S.forEach(s=>{let x=0,z=0;const w=1/s.cov.length;s.cov.forEach(c=>{x+=corners[c].x*w;z+=corners[c].z*w;});
+  const k=s.cov.length===1?.62:.7,a=hash(s.id)*Math.PI*2,r=.08+hash(s.id+'r')*.17;
+  s.p={x:x*k+Math.cos(a)*r,y:yOf(s.topics[0])+(hash(s.id+'y')-.5)*.16,z:z*k+Math.sin(a)*r};});
+function matches(s){const t=activeTopic==='all'||s.topics.includes(activeTopic);if(!query)return t;return t&&(s.name+' '+s.pub+' '+s.watch+' '+s.cav+' '+s.topics.join(' ')).toLowerCase().includes(query);}
+const sky=new Orbit($('#sky'),{draw(o){
+  const c=o.ctx;
+  TOPICS.forEach(t=>{const y=yOf(t.k),on=activeTopic==='all'||activeTopic===t.k;const P=TRIAD.map(k=>o.proj({x:corners[k].x,y,z:corners[k].z}));
+    c.strokeStyle=on?'rgba(159,230,214,.28)':'rgba(142,153,182,.08)';c.lineWidth=1;c.setLineDash([3,5]);c.beginPath();c.moveTo(P[0].x,P[0].y);P.slice(1).forEach(p=>c.lineTo(p.x,p.y));c.closePath();c.stroke();c.setLineDash([]);
+    const L=o.proj({x:(corners.US.x+corners.CN.x)/2*1.12,y,z:(corners.US.z+corners.CN.z)/2*1.12});c.font='500 10px "IBM Plex Mono",monospace';c.fillStyle=on?'rgba(231,235,245,.75)':'rgba(142,153,182,.3)';c.textAlign='center';c.fillText(t.label.toUpperCase(),L.x,L.y+3);});
+  TRIAD.forEach(k=>{const top=o.proj({x:corners[k].x,y:1.45,z:corners[k].z}),bot=o.proj({x:corners[k].x,y:-1.4,z:corners[k].z});const g=c.createLinearGradient(top.x,top.y,bot.x,bot.y);g.addColorStop(0,PW[k].hex);g.addColorStop(1,PW[k].hex+'22');o.line(top,bot,g,2.2);
+    c.fillStyle=PW[k].hex;c.beginPath();c.arc(top.x,top.y,5,0,7);c.fill();c.font='700 14px "Bricolage Grotesque",sans-serif';c.textAlign='center';c.fillText(PW[k].name,top.x,top.y-12);});
+  const pts=S.map(s=>({s,...o.proj(s.p)})).sort((a,b)=>a.z-b.z);
+  pts.forEach(n=>{const on=matches(n.s),sel=n.s.id===selected;n.s.cov.forEach(k=>{const a=o.proj({x:corners[k].x,y:n.s.p.y,z:corners[k].z});o.line(n,a,sel?PW[k].hex+'cc':(on?PW[k].hex+'26':PW[k].hex+'08'),sel?1.4:.8);});});
+  pts.forEach(n=>{const s=n.s,on=matches(s),sel=s.id===selected,hov=o.hover==='src:'+s.id,e=EV[s.ev];const r=(2.2+e.hard*3.2)*n.sc*(sel?1.6:1);
+    c.globalAlpha=on?1:.12;
+    if(on&&e.hard>.6){const g=c.createRadialGradient(n.x,n.y,0,n.x,n.y,r*4);g.addColorStop(0,e.hex+'66');g.addColorStop(1,e.hex+'00');c.fillStyle=g;c.beginPath();c.arc(n.x,n.y,r*4,0,7);c.fill();}
+    c.fillStyle=e.hex;c.beginPath();c.arc(n.x,n.y,r,0,7);c.fill();
+    if(sel||hov){c.strokeStyle='#e7ebf5';c.lineWidth=1.2;c.beginPath();c.arc(n.x,n.y,r+5,0,7);c.stroke();}
+    c.globalAlpha=1; if(on) o.items.push({x:n.x,y:n.y,key:'src:'+s.id});});
+},onPick(it){select(it.key.split(':')[1]);}});
+sky.controls($('#skyBtns'));
+$('#evLegend').innerHTML=Object.entries(EV).map(([k,e])=>`<span><i class="dot" style="background:${e.hex}"></i>${k} ${e.name.toLowerCase()}</span>`).join('');
+function select(id){ selected=id; const s=S.find(x=>x.id===id); if(!s) return; const e=EV[s.ev];
+  $('#detail').innerHTML=`<div class="eyebrow">Selected source</div><h3>${esc(s.name)}</h3>
+   <div class="meta"><span class="ev" style="background:${e.hex}">${s.ev} · ${e.name}</span>${s.topics.map(t=>`<span class="tag">${tlabel(t)}</span>`).join('')}</div>
+   <dl class="kv"><div><dt>Published by</dt><dd>${esc(s.pub)}</dd></div><div><dt>Covers</dt><dd>${covHTML(s.cov)}</dd></div>
+   <div><dt>What to watch</dt><dd>${esc(s.watch)}</dd></div><div><dt>Bias & limits</dt><dd>${esc(s.cav)}</dd></div><div><dt>Cadence</dt><dd class="mono">${esc(s.cad)}</dd></div></dl>
+   <div class="mono" style="font-size:13px;word-break:break-all">${link(s.url)}</div>`; }
+function renderChips(){ const opts=[{k:'all',label:'All'},...TOPICS];
+  $('#topicChips').innerHTML=opts.map(t=>`<button class="chip" data-k="${t.k}" aria-pressed="${activeTopic===t.k}">${t.label}<span class="n">${t.k==='all'?S.length:S.filter(s=>s.topics.includes(t.k)).length}</span></button>`).join('');
+  $('#topicChips').querySelectorAll('.chip').forEach(b=>b.onclick=()=>{activeTopic=b.dataset.k;renderChips();renderCat();const sel=S.find(s=>s.id===selected);if(!sel||!matches(sel)){const f=S.find(matches);if(f)select(f.id);}}); }
+
+/* ---------- channels ---------- */
+const DYADS=['US–CN','US–RU','CN–RU','All three']; let dyad='All three';
+function renderDyad(){
+  $('#dyadTabs').innerHTML=DYADS.map(k=>`<button class="chip" role="tab" aria-selected="${k===dyad}" aria-pressed="${k===dyad}" data-k="${k}">${k}<span class="n">${CHANNELS.filter(c=>c.dyad===k).length}</span></button>`).join('');
+  $('#dyadTabs').querySelectorAll('.chip').forEach(b=>b.onclick=()=>{dyad=b.dataset.k;renderDyad();});
+  $('#channels').innerHTML=CHANNELS.filter(c=>c.dyad===dyad).map(c=>`<div class="ch" tabindex="0" role="button" aria-expanded="false" data-card="ch:${c.id}">
+     <h4>${esc(c.title)}${(c.links||[]).length?'':' <span class="flag">unconfirmed</span>'}</h4><span class="pill ${c.status}">${esc(c.status)}</span>
+     <div class="more"><span>${esc(c.desc)}</span><div class="links">${(c.links||[]).map(l=>link(l.url,l.label)).join('')||'<span class="flag">No primary page verified yet</span>'}</div>${/\d/.test(c.asof||'')?`<span class="mono" style="font-size:11px">as of ${esc(c.asof)}</span>`:''}</div></div>`).join('');
+  $('#channels').querySelectorAll('.ch').forEach(r=>{const t=()=>{r.classList.toggle('open');r.setAttribute('aria-expanded',r.classList.contains('open'));hideCard();};r.addEventListener('click',e=>{if(e.target.closest('a'))return;t();});r.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();t();}});});
+  drawTri(); }
+function drawTri(){ const P={US:[70,320],CN:[350,320],RU:[210,70]};const pairs=[['US','CN','US–CN'],['US','RU','US–RU'],['CN','RU','CN–RU']];
+  const SC={active:'#6fd39a',limited:'#f2c14e',contested:'#ff9d7a',dormant:'#8e99b6',ended:'#ff6e5a'}; let h='';
+  pairs.forEach(([a,b,k])=>{const on=dyad===k||dyad==='All three';const ch=CHANNELS.filter(c=>c.dyad===k);const [x1,y1]=P[a],[x2,y2]=P[b];
+    h+=`<g class="edge" data-k="${k}" tabindex="0" role="button" aria-label="${k} channels"><line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="transparent" stroke-width="28"/><line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${on?'#e7ebf5':'#3a4868'}" stroke-width="${on?3:1.5}"/>`;
+    const mx=(x1+x2)/2,my=(y1+y2)/2,off=k==='US–CN'?[0,32]:k==='US–RU'?[-58,-6]:[58,-6];let bx=mx+off[0]-ch.length*4.5;const by=my+off[1];
+    Object.keys(SC).forEach(t=>ch.filter(c=>c.status===t).forEach(()=>{h+=`<rect x="${bx}" y="${by-5}" width="7" height="10" rx="1.5" fill="${SC[t]}"/>`;bx+=9;}));
+    h+=`<text x="${mx+off[0]}" y="${by-11}" text-anchor="middle" font-size="11" fill="${on?'#e7ebf5':'#8e99b6'}">${k}</text></g>`;});
+  h+=`<circle cx="210" cy="237" r="${dyad==='All three'?30:24}" fill="#111a2e" stroke="${dyad==='All three'?'#9fe6d6':'#3a4868'}" stroke-width="1.5" class="edge" data-k="All three" tabindex="0" role="button" aria-label="Channels shared by all three"/><text x="210" y="235" text-anchor="middle" font-size="10" fill="#9fe6d6" pointer-events="none">ALL</text><text x="210" y="248" text-anchor="middle" font-size="10" fill="#9fe6d6" pointer-events="none">THREE</text>`;
+  TRIAD.forEach(c=>{const [x,y]=P[c];h+=`<circle cx="${x}" cy="${y}" r="15" fill="${PW[c].hex}"/><text x="${x}" y="${y+4}" text-anchor="middle" font-size="11" font-weight="500" fill="#0a0f1e">${c}</text><text x="${x}" y="${c==='RU'?y-24:y+34}" text-anchor="middle" font-size="12" fill="#e7ebf5">${PW[c].name}</text>`;});
+  let lx=12;Object.entries(SC).forEach(([t,col])=>{h+=`<rect x="${lx}" y="10" width="7" height="10" rx="1.5" fill="${col}"/><text x="${lx+11}" y="19" font-size="10" fill="#8e99b6">${t}</text>`;lx+=t.length*6.4+24;});
+  const svg=$('#tri');svg.innerHTML=h;svg.querySelectorAll('.edge').forEach(g=>{const go=()=>{dyad=g.dataset.k;renderDyad();};g.addEventListener('click',go);g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}});}); }
+
+/* ---------- view 2: powers web ---------- */
+const WEB={all:true,year:2026,layers:{projects:true,people:true,coauthor:true},playing:null};
+const ring={};POWERS.forEach((p,i)=>{const a=i/POWERS.length*Math.PI*2-Math.PI/2;ring[p.k]={x:Math.cos(a)*1.55,y:0,z:Math.sin(a)*1.55};});
+function span(str){const m=String(str||'').match(/\d{3,4}/g);if(!m)return [-Infinity,Infinity];const a=+m[0],b=/present|now/i.test(str)?NOW_YEAR:+m[m.length-1];return [a,b];}
+PROJECTS.forEach(p=>{p.members=(p.members||[]).filter(m=>PW[m]);const n=p.members.length||1;let x=0,z=0;p.members.forEach(m=>{x+=ring[m].x/n;z+=ring[m].z/n;});const f=Math.max(.05,1-.13*(n-1));
+  const ja=hash(p.id)*Math.PI*2,jr=(.08+.075*n)*Math.sqrt(hash(p.id+'r'));p.pos={x:x*f+Math.cos(ja)*jr,y:.2+.2*(n-1)+(hash(p.id+'y')-.5)*.2,z:z*f+Math.sin(ja)*jr};p.span=[p.start||0,p.end??NOW_YEAR];});
+PEOPLE.forEach(x=>{x.span=span(x.years);x.arcs=(x.to||[]).filter(t=>PW[t]&&PW[x.from]&&t!==x.from).map(t=>{const a=ring[x.from],b=ring[t];const mid={x:(a.x+b.x)/2*.45,y:-.75-.45*hash(x.id+t),z:(a.z+b.z)/2*.45};const pts=[];for(let i=0;i<=18;i++){const u=i/18,v=1-u;pts.push({x:v*v*a.x+2*v*u*mid.x+u*u*b.x,y:v*v*a.y+2*v*u*mid.y+u*u*b.y,z:v*v*a.z+2*v*u*mid.z+u*u*b.z});}return {to:t,pts};});});
+const live=k=>LIVE[k]&&LIVE[k].payload;
+const OA=live('openalex');
+function inYear(sp){return WEB.all||(sp[0]<=WEB.year&&sp[1]>=WEB.year);}
+function coauthorFor(a,b){ if(!OA) return null; const s=OA.pairs[`${a}-${b}`]||OA.pairs[`${b}-${a}`]; if(!s) return null; const y=WEB.all?String(Math.min(NOW_YEAR-1,+Object.keys(s).pop())):String(WEB.year); return s[y]??null; }
+const web=new Orbit($('#web'),{yaw:.2,pitch:.42,k:1.25,y0:0,draw(o){
+  const c=o.ctx;
+  // ring
+  c.setLineDash([3,6]);c.strokeStyle='rgba(159,230,214,.22)';c.lineWidth=1;c.beginPath();for(let i=0;i<=72;i++){const a=i/72*Math.PI*2;const p=o.proj({x:Math.cos(a)*1.55,y:0,z:Math.sin(a)*1.55});i?c.lineTo(p.x,p.y):c.moveTo(p.x,p.y);}c.stroke();c.setLineDash([]);
+  // co-authorship
+  if(WEB.layers.coauthor&&OA){ for(let i=0;i<POWERS.length;i++)for(let j=i+1;j<POWERS.length;j++){const a=POWERS[i].k,b=POWERS[j].k,v=coauthorFor(a,b);if(!v)continue;const w=clamp(Math.log10(v)-2,0,4);
+      const g=c.createLinearGradient(...Object.values(o.proj(ring[a])).slice(0,2),...Object.values(o.proj(ring[b])).slice(0,2));g.addColorStop(0,PW[a].hex+'88');g.addColorStop(1,PW[b].hex+'88');o.line(o.proj(ring[a]),o.proj(ring[b]),g,.4+w*1.1);} }
+  // people arcs
+  let nP=0; if(WEB.layers.people) PEOPLE.forEach(x=>{ if(!inYear(x.span)) return; nP++; const hov=o.hover==='person:'+x.id; x.arcs.forEach((arc,ai)=>{const pts=arc.pts.map(p=>o.proj(p));c.strokeStyle=(CATS[x.cat]||'#ccc')+(hov?'ff':'55');c.lineWidth=hov?2.2:1;c.beginPath();pts.forEach((p,i)=>i?c.lineTo(p.x,p.y):c.moveTo(p.x,p.y));c.stroke();
+      if(ai===0){const m=pts[9];c.fillStyle=CATS[x.cat]||'#ccc';c.beginPath();c.arc(m.x,m.y,(hov?4:2.4)*m.sc,0,7);c.fill();o.items.push({x:m.x,y:m.y,key:'person:'+x.id});}});});
+  // projects
+  let nJ=0; const vis=[]; if(WEB.layers.projects) PROJECTS.forEach(p=>{ if(!inYear(p.span)) return; nJ++; vis.push({p,...o.proj(p.pos)}); });
+  vis.sort((a,b)=>a.z-b.z).forEach(n=>{const p=n.p,hov=o.hover==='project:'+p.id,col=DOMAINS[p.domain]||'#ddd';
+    p.members.forEach(m=>o.line(n,o.proj(ring[m]),hov?PW[m].hex+'dd':PW[m].hex+'1c',hov?1.4:.7));
+    const r=(2.4+p.members.length*.55)*n.sc*(hov?1.5:1);const g=c.createRadialGradient(n.x,n.y,0,n.x,n.y,r*3.4);g.addColorStop(0,col+'77');g.addColorStop(1,col+'00');c.fillStyle=g;c.beginPath();c.arc(n.x,n.y,r*3.4,0,7);c.fill();
+    c.fillStyle=col;c.beginPath();c.arc(n.x,n.y,r,0,7);c.fill(); if(p.status!=='active'){c.strokeStyle='#0a0f1e';c.lineWidth=1;c.beginPath();c.arc(n.x,n.y,r*.45,0,7);c.stroke();}
+    o.items.push({x:n.x,y:n.y,key:'project:'+p.id});});
+  // powers
+  POWERS.map(p=>({p,...o.proj(ring[p.k])})).sort((a,b)=>a.z-b.z).forEach(n=>{const r=9*n.sc;const g=c.createRadialGradient(n.x,n.y,0,n.x,n.y,r*3);g.addColorStop(0,n.p.hex+'aa');g.addColorStop(1,n.p.hex+'00');c.fillStyle=g;c.beginPath();c.arc(n.x,n.y,r*3,0,7);c.fill();
+    c.fillStyle=n.p.hex;c.beginPath();c.arc(n.x,n.y,r,0,7);c.fill();c.font='700 13px "Bricolage Grotesque",sans-serif';c.textAlign='center';c.fillStyle='#e7ebf5';c.fillText(n.p.name,n.x,n.y-r-8);o.items.push({x:n.x,y:n.y,key:'power:'+n.p.k});});
+  if(o.counts!==nJ+'/'+nP){o.counts=nJ+'/'+nP;renderWebSide(nJ,nP);}
+}});
+web.controls($('#webBtns'));
+function renderWebSide(nJ,nP){
+  const vis=PROJECTS.filter(p=>WEB.layers.projects&&inYear(p.span)).sort((a,b)=>b.members.length-a.members.length);
+  const ppl=PEOPLE.filter(x=>WEB.layers.people&&inYear(x.span));
+  let top='';if(OA&&WEB.layers.coauthor){let best=null;for(let i=0;i<POWERS.length;i++)for(let j=i+1;j<POWERS.length;j++){const v=coauthorFor(POWERS[i].k,POWERS[j].k);if(v&&(!best||v>best[2]))best=[POWERS[i].k,POWERS[j].k,v];}if(best)top=`<div class="stat"><b>${big(best[2])}</b><span>papers ${best[0]}–${best[1]}</span></div>`;}
+  $('#webSide').innerHTML=`<div class="eyebrow">${WEB.all?'All years':'In '+WEB.year}</div>
+   <div class="stat-row"><div class="stat"><b>${nJ}</b><span>joint projects</span></div><div class="stat"><b>${nP}</b><span>bridge people</span></div>${top}</div>
+   ${!OA?'<p class="mono" style="font-size:12px;color:var(--muted)">Co-authorship lines appear after the first automated data run.</p>':''}
+   <div class="visible-list">${vis.map(p=>`<button data-card="project:${p.id}" data-pin="project:${p.id}"><i class="dot" style="background:${DOMAINS[p.domain]}"></i>${esc(p.name)} <span class="mono" style="color:var(--faint);font-size:11px">${p.members.length} powers</span></button>`).join('')}
+   ${ppl.slice(0,40).map(x=>`<button data-card="person:${x.id}" data-pin="person:${x.id}"><i class="dot" style="background:${CATS[x.cat]}"></i>${esc(x.name)} <span class="mono" style="color:var(--faint);font-size:11px">${x.from}→${(x.to||[]).join(',')}</span></button>`).join('')}</div>`;
+  $('#webSide').querySelectorAll('[data-pin]').forEach(b=>b.onclick=e=>{const r=b.getBoundingClientRect();showCard(cardFor(b.dataset.pin),r.left,r.bottom,true);});
+}
+$('#layerChips').innerHTML=[['projects','Joint projects'],['people','Bridge people'],['coauthor','Co-authored papers']].map(([k,l])=>`<button class="chip" data-k="${k}" aria-pressed="true">${l}</button>`).join('');
+$('#layerChips').querySelectorAll('.chip').forEach(b=>b.onclick=()=>{WEB.layers[b.dataset.k]=!WEB.layers[b.dataset.k];b.setAttribute('aria-pressed',WEB.layers[b.dataset.k]);web.counts=null;});
+$('#webLegend').innerHTML=Object.entries(DOMAINS).map(([k,c])=>`<span><i class="dot" style="background:${c}"></i>${k}</span>`).join('')+'<span style="color:var(--faint)">│ people by field:</span>'+Object.entries(CATS).map(([k,c])=>`<span><i class="dot" style="background:${c};border-radius:2px"></i>${k}</span>`).join('');
+const yr=$('#year'),allB=$('#allTime'),playB=$('#play');yr.max=NOW_YEAR;yr.value=NOW_YEAR;
+function setYear(y,all){WEB.year=+y;WEB.all=all;yr.value=y;$('#yearLabel').textContent=all?'All':y;allB.setAttribute('aria-pressed',all);web.counts=null;}
+yr.oninput=()=>setYear(yr.value,false);
+allB.onclick=()=>setYear(yr.value,!WEB.all);
+playB.onclick=()=>{ if(WEB.playing){clearInterval(WEB.playing);WEB.playing=null;playB.textContent='▶ Play';playB.setAttribute('aria-pressed','false');return;}
+  let y=WEB.all||+yr.value>=NOW_YEAR?1950:+yr.value;setYear(y,false);playB.textContent='❚❚ Pause';playB.setAttribute('aria-pressed','true');
+  WEB.playing=setInterval(()=>{y++;if(y>NOW_YEAR){clearInterval(WEB.playing);WEB.playing=null;playB.textContent='▶ Play';playB.setAttribute('aria-pressed','false');return;}setYear(y,false);},reduce?600:260);};
+
+/* ---------- bridges ---------- */
+const METRICS=[
+ {k:'curated',label:'Documented bridge-builders',note:'People in this atlas with a sourced cross-border contribution. Hand-checked against primary pages.'},
+ {k:'nobel',label:'Nobel laureates abroad',note:'Laureates born in one power whose prize-winning affiliation was in another. Source: Nobel Foundation API.'},
+ {k:'migrants',label:'People living abroad',note:'Everyone born in one power and living in another (UN DESA International Migrant Stock).'},
+];
+let metric='curated', cell=null, catSel='all';
+function curatedCount(a,b){return PEOPLE.filter(x=>(catSel==='all'||x.cat===catSel)&&x.from===a&&(x.to||[]).includes(b)).length;}
+function val(a,b){ if(metric==='curated') return curatedCount(a,b);
+  const L=live(metric==='nobel'?'nobel':'migrants'); if(!L) return null; return (L.pairs||{})[`${a}>${b}`]||0; }
+function renderBridges(){
+  $('#metricTabs').innerHTML=METRICS.map(m=>{const off=m.k!=='curated'&&!live(m.k==='nobel'?'nobel':'migrants');return `<button class="chip" role="tab" data-k="${m.k}" aria-pressed="${metric===m.k}" aria-selected="${metric===m.k}" ${off?'title="Appears after the first automated data run"':''}>${m.label}${off?' <span class="n">pending</span>':''}</button>`;}).join('');
+  $('#metricTabs').querySelectorAll('.chip').forEach(b=>b.onclick=()=>{metric=b.dataset.k;cell=null;renderBridges();});
+  $('#catChips').hidden=metric!=='curated';
+  $('#catChips').innerHTML=['all',...Object.keys(CATS)].map(k=>`<button class="chip" data-k="${k}" aria-pressed="${catSel===k}">${k==='all'?'All fields':k}<span class="n">${k==='all'?PEOPLE.length:PEOPLE.filter(x=>x.cat===k).length}</span></button>`).join('');
+  $('#catChips').querySelectorAll('.chip').forEach(b=>b.onclick=()=>{catSel=b.dataset.k;renderBridges();});
+  const vals=[];POWERS.forEach(a=>POWERS.forEach(b=>{if(a.k!==b.k){const v=val(a.k,b.k);if(v)vals.push(v);}}));const mx=Math.max(1,...vals);
+  let h='<tr><th></th>'+POWERS.map(p=>`<th style="color:${p.hex}">${p.k}</th>`).join('')+'</tr>';
+  POWERS.forEach(a=>{h+=`<tr><th class="rowh" style="color:${a.hex}">${a.k} →</th>`+POWERS.map(b=>{ if(a.k===b.k) return '<td class="self"></td>'; const v=val(a.k,b.k);
+     const t=v==null?0:Math.log(1+v)/Math.log(1+mx);const bg=v==null?'#16213a':`rgba(159,230,214,${.06+t*.62})`;
+     return `<td><button style="background:${bg};color:${t>.6?'#0a0f1e':'#e7ebf5'}" data-a="${a.k}" data-b="${b.k}" aria-pressed="${cell&&cell[0]===a.k&&cell[1]===b.k}" aria-label="${a.name} to ${b.name}: ${v??'pending'}">${v==null?'·':big(v)}</button></td>`;}).join('')+'</tr>';});
+  $('#mx').innerHTML=h;
+  const m=METRICS.find(x=>x.k===metric);const L=metric!=='curated'&&LIVE[metric==='nobel'?'nobel':'migrants'];
+  $('#mxNote').innerHTML=esc(m.note)+(L?` Collected ${fmtDate(L.collected_at)}${L.payload.year?`, figures for ${L.payload.year}`:''}. ${link(L.source_url,'Source')}`:metric!=='curated'?' Waiting for the first automated run.':'');
+  $('#mx').querySelectorAll('button').forEach(b=>b.onclick=()=>{cell=[b.dataset.a,b.dataset.b];renderBridges();});
+  renderPeople(); renderIndexStrip(); }
+function renderPeople(){
+  const [a,b]=cell||[null,null];
+  if(metric==='curated'){ const list=PEOPLE.filter(x=>(catSel==='all'||x.cat===catSel)&&(!a||(x.from===a&&(x.to||[]).includes(b))));
+    $('#pairTitle').innerHTML=a?`${pdot(a)} ${PW[a].name} → ${pdot(b)} ${PW[b].name} <span class="mono" style="font-size:13px;color:var(--muted)">${list.length}</span>`:`All bridge-builders <span class="mono" style="font-size:13px;color:var(--muted)">${list.length}</span>`;
+    $('#peopleList').innerHTML=list.map(x=>`<div class="person" data-card="person:${x.id}"><div class="top"><b>${esc(x.name)}</b>${x.native?`<span class="native">${esc(x.native)}</span>`:''}<span class="tag" style="color:${CATS[x.cat]}">${x.cat}</span><span class="mono" style="font-size:11px;color:var(--faint)">${esc(x.years)} · ${x.from}→${(x.to||[]).join(',')}</span></div><p>${esc(x.did)}</p><div style="font-size:13px">${link(x.url,x.src)}</div></div>`).join('')||'<p style="color:var(--muted)">No documented people for this pair yet.</p>';
+  } else if(metric==='nobel'){ const L=live('nobel'); const list=L?(L.people||[]).filter(x=>!a||(x.from===a&&x.to.includes(b))).sort((p,q)=>q.year-p.year):[];
+    $('#pairTitle').innerHTML=a?`${PW[a].name} → ${PW[b].name}: Nobel laureates`:'Nobel laureates who crossed borders';
+    $('#peopleList').innerHTML=L?list.slice(0,150).map(x=>`<div class="person"><div class="top"><b>${esc(x.name)}</b><span class="tag">${esc(x.category||'')} ${x.year}</span><span class="mono" style="font-size:11px;color:var(--faint)">born ${x.from} · prize work in ${x.to.join(',')}</span></div><div style="font-size:13px">${link(x.url||'https://www.nobelprize.org','Nobel Foundation')}</div></div>`).join(''):'<p style="color:var(--muted)">Appears after the first automated run.</p>';
+  } else { const L=live('migrants');
+    $('#pairTitle').innerHTML=a?`Born in ${PW[a].name}, living in ${PW[b].name}`:'People living in another power';
+    $('#peopleList').innerHTML=L?(a?`<div class="person"><div class="top"><b style="font-size:30px;font-family:var(--f-display)">${(L.pairs[a+'>'+b]||0).toLocaleString()}</b></div><p>people born in ${PW[a].name} were living in ${PW[b].name} in ${L.year} (UN DESA estimate).</p><p>The reverse: ${(L.pairs[b+'>'+a]||0).toLocaleString()} born in ${PW[b].name} living in ${PW[a].name}.</p></div>`:'<p style="color:var(--muted)">Tap a cell to see a pair.</p>'):'<p style="color:var(--muted)">Appears after the first automated run.</p>'; }
+}
+function renderIndexStrip(){ const pairs=[];for(let i=0;i<POWERS.length;i++)for(let j=i+1;j<POWERS.length;j++){const a=POWERS[i].k,b=POWERS[j].k;const n=PEOPLE.filter(x=>(x.from===a&&(x.to||[]).includes(b))||(x.from===b&&(x.to||[]).includes(a))).length;const pj=PROJECTS.filter(p=>p.members.includes(a)&&p.members.includes(b)).length;if(n||pj)pairs.push([a,b,n,pj]);}
+  pairs.sort((x,y)=>(y[2]*2+y[3])-(x[2]*2+x[3]));
+  $('#indexStrip').innerHTML=pairs.slice(0,8).map(([a,b,n,pj])=>`<div class="pair"><span>${pdot(a)} ${a} – ${pdot(b)} ${b}</span><b>${n}</b><span>bridge people · ${pj} shared projects</span></div>`).join(''); }
+
+/* ---------- live pulse ---------- */
+function spark(vals,col,w=120,h=28){ const v=vals.filter(x=>x!=null); if(v.length<2) return ''; const mn=Math.min(...v),mx=Math.max(...v),r=mx-mn||1;
+  const pts=vals.map((x,i)=>[i/(vals.length-1)*(w-4)+2,h-3-((x??mn)-mn)/r*(h-6)]);const d=pts.map((p,i)=>(i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' ');
+  const last=pts[pts.length-1];return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" aria-hidden="true"><path d="${d} L${last[0]} ${h} L2 ${h} Z" fill="${col}22"/><path d="${d}" fill="none" stroke="${col}" stroke-width="1.5"/><circle cx="${last[0]}" cy="${last[1]}" r="2.6" fill="${col}"/></svg>`; }
+function pcard(key,title,body,fallback){ const L=LIVE[key]; const h=A.health&&A.health.collectors&&A.health.collectors[key];
+  return `<div class="pcard"><h3>${title}</h3>${L?body(L.payload):`<div class="pending">${fallback}</div>`}<div class="src">${L?`Collected ${fmtDate(L.collected_at)} (${ago(L.collected_at)}) · `:''}${h&&h.status&&h.status!=='ok'&&L?`<span class="flag">last attempt: ${h.status}</span> · `:''}${link((L&&L.source_url)||(h&&h.source_url),'Source')}</div></div>`; }
+function renderPulse(){
+  const out=[];
+  out.push(pcard('openalex','Co-authored papers by pair',P=>{const last=String(NOW_YEAR-1);const rows=Object.entries(P.pairs).map(([k,s])=>{const ys=Object.keys(s).filter(y=>+y<NOW_YEAR);const v=ys.map(y=>s[y]);const cur=s[last]??v[v.length-1];const base=s['2019'];const chg=base?Math.round((cur-base)/base*100):null;const [a,b]=k.split('-');return {a,b,v,cur,chg};}).sort((x,y)=>y.cur-x.cur);
+     return `<div>${rows.map(r=>`<div class="srow"><span class="lab">${pdot(r.a)}${r.a} – ${pdot(r.b)}${r.b}</span>${spark(r.v,'#9fe6d6')}<span class="num">${big(r.cur)} <span class="chg ${r.chg>=0?'up':'down'}">${r.chg==null?'':(r.chg>=0?'+':'')+r.chg+'% vs 2019'}</span></span></div>`).join('')}</div><p class="src">${last} counts. ${esc(P.note||'')}</p>`;},
+     'Yearly counts of research papers co-authored across each pair of powers since 2000 (OpenAlex). Shows whether scientific cooperation is growing or shrinking.'));
+  out.push(pcard('comtrade','Trade, read from both sides',P=>{const rows=P.rows||[];const get=(r,p,f)=>{const m=rows.filter(x=>x.reporter===r&&x.partner===p&&x.flow===f).sort((a,b)=>b.year-a.year)[0];return m;};
+     const L=[['China → Russia',get('CN','RU','X'),null],['Russia → China',get('CN','RU','M'),null],['China → US',get('CN','US','X'),get('US','CN','M')],['US → China',get('US','CN','X'),get('CN','US','M')],['US → Russia',get('US','RU','X'),null],['Russia → US',get('US','RU','M'),null]];
+     return `<table class="tbl"><tr><th>Flow</th><th style="text-align:right">Reported</th><th style="text-align:right">Mirror</th><th>Year</th></tr>${L.map(([n,a,b])=>`<tr><td>${n}</td><td class="n">${a?'$'+big(a.usd):'—'}</td><td class="n">${b?'$'+big(b.usd):'—'}</td><td class="n">${a?a.year:''}</td></tr>`).join('')}</table><p class="src">"Reported" is the exporter's or China's own figure; "Mirror" is the partner's. Russia has not reported to the UN since 2022.</p>`;},
+     'Annual goods trade between the three from UN Comtrade, with US–China read from both sides so the mirror gap is visible.'));
+  out.push(pcard('fedreg','US Entity List actions naming China or Russia',P=>{const ys=[...new Set([...Object.keys(P.series.CN||{}),...Object.keys(P.series.RU||{})])].filter(y=>+y>=2014).sort();const mx=Math.max(1,...ys.map(y=>Math.max(P.series.CN[y]||0,P.series.RU[y]||0)));
+     return `<div style="display:grid;gap:4px">${ys.map(y=>`<div class="hbar"><span class="mono">${y}</span><div style="display:grid;gap:2px"><div class="track"><i style="width:${(P.series.CN[y]||0)/mx*100}%;background:#ff6e5a"></i></div><div class="track"><i style="width:${(P.series.RU[y]||0)/mx*100}%;background:#f2c14e"></i></div></div><span class="n">${P.series.CN[y]||0} / ${P.series.RU[y]||0}</span></div>`).join('')}</div><p class="src">Commerce Department documents per year mentioning the Entity List with China (red) or Russia (amber).</p>`;},
+     'Commerce Department Federal Register documents per year that mention the Entity List alongside China or Russia.'));
+  out.push(pcard('satcat','Active satellites by owner',P=>{const a=P.active_payloads||{};const ks=Object.keys(a).filter(k=>PW[k]).sort((x,y)=>a[y]-a[x]);const mx=Math.max(1,...ks.map(k=>a[k]));
+     return `<div style="display:grid;gap:6px">${ks.map(k=>`<div class="hbar"><span>${pdot(k)} ${PW[k].name}</span><div class="track"><i style="width:${a[k]/mx*100}%;background:${PW[k].hex}"></i></div><span class="n">${big(a[k])}</span></div>`).join('')}</div>${a.JOINT?`<p class="src">${a.JOINT} jointly owned (ISS) objects.</p>`:''}`;},
+     'Active payloads in orbit by owning power from the CelesTrak catalogue. Shows space presence and how fast it is changing.'));
+  out.push(pcard('portwatch','Ships through chokepoints',P=>{const cps=Object.entries(P.chokepoints||{}).slice(0,8);
+     return `<div>${cps.map(([n,s])=>{const ws=Object.keys(s).sort();const v=ws.map(w=>s[w].total);const t=ws.map(w=>s[w].tanker);const last=v[v.length-1],tk=t[t.length-1];return `<div class="srow"><span class="lab">${esc(n)}</span>${spark(v,'#4fd6e8')}<span class="num">${big(last)}<span class="chg" style="color:var(--muted)"> ${last?Math.round(tk/last*100):0}% tankers</span></span></div>`;}).join('')}</div><p class="src">Weekly transits, latest week ${esc(P.latest_week||'')}. Data lags about five weeks.</p>`;},
+     'Weekly ship transits through the world\'s main chokepoints from satellite ship tracking (IMF PortWatch).'));
+  $('#pulse').innerHTML=out.join('');
+}
+
+/* ---------- ladder, calendar, catalog ---------- */
+$('#ladder').innerHTML=Object.entries(EV).map(([k,e])=>`<div class="rung"><span class="k" style="color:${e.hex}">${k}</span><div><h4>${e.name}</h4><p>${e.desc}</p></div><p>${e.use}</p><div class="meter"><div class="bar"><i style="width:${e.hard*100}%;background:${e.hex}"></i></div><div class="count">${S.filter(s=>s.ev===k).length} sources · hardness ${Math.round(e.hard*100)}</div></div></div>`).join('');
+const MON=['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+const CAL={0:[['USGS mineral summaries','B']],1:[['USGS mineral summaries (cont.)','B']],2:[['SIPRI arms transfers','E']],3:[['SIPRI military spending','E'],['State Dept compliance report','D'],['Stanford AI Index','E']],4:[['China–Russia bomber patrol (often)','A']],5:[['SIPRI Yearbook: nuclear forces','E'],['Pew global attitudes','E']],6:[['Pew (cont.)','E'],['Joint naval drills season','A']],7:[['Joint naval drills season','A']],8:[['UN General Assembly opens','C'],['Eastern Economic Forum','D']],9:[['UNGA First Committee: AI and nuclear votes','C'],['Nobel Prizes announced','B']],10:[['USCC annual report','E'],['IIE Open Doors','E'],['China–Russia bomber patrol (often)','A']],11:[['DoD China Military Power Report','D'],['UNGA plenary votes','C']]};
+const nowM=new Date().getUTCMonth();
+$('#cal').innerHTML=MON.map((m,i)=>`<div class="mo ${i===nowM?'now':''}"><h5>${m}${i===nowM?' · NOW':''}</h5>${(CAL[i]||[]).map(([t,ev])=>`<div class="ev-item" style="border-color:${EV[ev].hex}">${t}</div>`).join('')}</div>`).join('');
+$('#cadence').innerHTML=[['DAILY','Taiwan MND counts, IMF PortWatch, NASA FIRMS, China MFA briefing'],['WEEKLY','OFAC actions, USDA export sales, ACLED; this atlas refreshes OpenAlex, CelesTrak, PortWatch and link checks'],['MONTHLY','China Customs, US Census trade, TIC, SWIFT RMB Tracker, Levada; this atlas refreshes Comtrade, Nobel and UN DESA'],['EVENT','Japan Joint Staff, NORAD, Kremlin transcripts, DOJ indictments']].map(([a,b])=>`<span><b>${a}</b>${b}</span>`).join('');
+function renderCat(){ const rows=S.filter(matches).sort((a,b)=>'ABCDEF'.indexOf(a.ev)-'ABCDEF'.indexOf(b.ev));
+  $('#countLine').textContent=`${rows.length} of ${S.length} sources`;
+  $('#cat').innerHTML=rows.map(s=>`<div class="row"><div class="nm"><a href="${esc(healed[s.url]||s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>${healed[s.url]?'<span class="arch">archived copy</span>':''}<span class="pub">${esc(s.pub)}</span></div><div class="w">${esc(s.watch)}<div class="cv">${esc(s.cav)}</div></div><div class="sidecol"><span class="ev" style="background:${EV[s.ev].hex}">${s.ev} · ${EV[s.ev].name}</span>${covHTML(s.cov)}<span class="pub">${esc(s.cad)}</span><button class="locate" data-id="${s.id}">Show in sky</button></div></div>`).join('')||'<p style="color:var(--muted);padding:16px 0">No sources match that search. Try a broader word.</p>';
+  $('#cat').querySelectorAll('.locate').forEach(b=>b.onclick=()=>{select(b.dataset.id);$('#sec-sky').scrollIntoView({behavior:reduce?'auto':'smooth'});}); }
+$('#q').addEventListener('input',e=>{query=e.target.value.trim().toLowerCase();renderCat();});
+
+/* ---------- health ---------- */
+function renderHealth(){ const H=A.health||{}; const cs=H.collectors||{}; const names=Object.keys(cs);
+  const lk=A.links&&A.links.counts;
+  if(!names.length){ $('#health').innerHTML='<p class="pending" style="color:var(--muted)">The pipeline has not run yet. This snapshot was built from curated data only.</p>'; return; }
+  $('#health').innerHTML=`<div class="health-wrap"><table class="tbl"><tr><th>Dataset</th><th>Status</th><th>Last good data</th><th>Checks every</th><th>Note</th></tr>${names.map(n=>{const e=cs[n];const st=e.stale?'suspect':(e.status||'pending');return `<tr><td>${esc(e.title||n)}</td><td><span class="pill ${st}">${e.stale?'stale':esc(e.status||'pending')}</span></td><td class="n">${fmtDate(e.last_success)}</td><td class="n">${e.every_days} d</td><td style="color:var(--muted);font-size:12px">${esc((e.error||'').slice(0,140))}</td></tr>`;}).join('')}</table></div>
+   <p class="mono" style="font-size:12px;color:var(--muted)">Last pipeline run ${fmtDate(H.last_run)}.${lk?` Evidence links: ${lk.ok||0} working, ${lk.unverifiable||0} block automated checks, ${(lk.dead||0)+(lk.error||0)} failing, ${Object.keys(healed).length} replaced with archived copies.`:''}</p>`; }
+
+/* ---------- boot ---------- */
+$('#statusLine').innerHTML=`<span>Built ${fmtDate(A.built_at)}</span>${A.live_url?`<span class="live">● ${link(A.live_url,'Live, auto-updating version')}</span>`:''}${A.repo_url?`<span>${link(A.repo_url,'Pipeline source')}</span>`:''}<span>${S.length} sources · ${PROJECTS.length} joint projects · ${PEOPLE.length} bridge people · ${CHANNELS.length} channels</span>`;
+$('#footBuild').textContent=`Snapshot built ${A.built_at||'—'}.`;
+renderChips(); renderCat(); renderDyad(); select(selected); renderBridges(); renderPulse(); renderHealth(); setYear(NOW_YEAR,true);
+(function loop(){ sky.frame(); web.frame(); requestAnimationFrame(loop); })();
+</script>

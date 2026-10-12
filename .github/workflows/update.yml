@@ -1,0 +1,82 @@
+name: Update atlas
+
+# Runs daily; each collector decides whether it is due (weekly, monthly, ...),
+# so most days only the fast checks run. No AI model is called anywhere.
+on:
+  schedule:
+    - cron: "17 6 * * *"   # 06:17 UTC daily
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Run every collector now"
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths: ["template/**", "data/curated/**", "pipeline/**", ".github/workflows/**"]
+
+permissions:
+  contents: write
+  issues: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: atlas-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Self-test (offline, catches bugs in our own code)
+        run: python -m unittest discover -s pipeline/tests -v
+
+      - name: Collect data (retries, fallbacks, last-known-good)
+        run: python pipeline/doctor.py ${{ inputs.force && '--force' || '' }}
+        env:
+          CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
+
+      - name: Build page
+        run: python pipeline/build.py
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name "atlas-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data site
+          if git diff --cached --quiet; then echo "no changes"; else
+            git commit -m "data: automated refresh $(date -u +%F)"
+            git pull --rebase --autostash origin main || true
+            git push
+          fi
+
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deploy
+        uses: actions/deploy-pages@v4
+
+      - name: Alert or close alert
+        if: always()
+        run: python pipeline/notify.py --job-status ${{ job.status }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          ALERT_TO: ${{ secrets.ALERT_TO }}

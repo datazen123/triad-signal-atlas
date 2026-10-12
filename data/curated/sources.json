@@ -1,0 +1,1660 @@
+[
+ {
+  "id": "kremlin",
+  "name": "Kremlin transcripts",
+  "url": "https://kremlin.ru",
+  "pub": "Russian Presidency",
+  "ev": "D",
+  "topics": [
+   "diplo",
+   "nuclear"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Event-driven",
+  "watch": "Near-full transcripts of Putin's talks, press conferences and joint statements with Xi and US envoys.",
+  "cav": "Russian framing. Compare with the Chinese and US readouts of the same meeting."
+ },
+ {
+  "id": "fmprc",
+  "name": "China MFA readouts & daily briefings",
+  "url": "https://www.fmprc.gov.cn",
+  "pub": "PRC Ministry of Foreign Affairs",
+  "ev": "D",
+  "topics": [
+   "diplo",
+   "ai"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Daily",
+  "watch": "Leader-call readouts, daily press transcripts and policy papers such as the Global AI Governance Initiative.",
+  "cav": "The wording changes in small steps over time. Look for phrases that are added or dropped."
+ },
+ {
+  "id": "mid",
+  "name": "Russian MFA",
+  "url": "https://mid.ru",
+  "pub": "Russian Ministry of Foreign Affairs",
+  "ev": "D",
+  "topics": [
+   "diplo",
+   "nuclear"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Daily",
+  "watch": "Statements on arms control, strategic stability and talks with Washington and Beijing.",
+  "cav": "Some pages are geo-blocked outside Russia."
+ },
+ {
+  "id": "stategov",
+  "name": "US State Dept & White House readouts",
+  "url": "https://www.state.gov",
+  "pub": "US Government",
+  "ev": "D",
+  "topics": [
+   "diplo"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Event-driven",
+  "watch": "US readouts of calls and summits, with fact sheets after major meetings.",
+  "cav": "US framing. Readouts are often shorter than the Kremlin's."
+ },
+ {
+  "id": "undl",
+  "name": "UN Digital Library voting records",
+  "url": "https://digitallibrary.un.org",
+  "pub": "United Nations",
+  "ev": "C",
+  "topics": [
+   "diplo",
+   "ai",
+   "nuclear"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Per session",
+  "watch": "Recorded votes of all three on the same texts, including resolutions on AI in the military domain, disarmament and Ukraine.",
+  "cav": "Votes are binding acts. How a country votes says more than its speeches."
+ },
+ {
+  "id": "untreaty",
+  "name": "UN Treaty Collection",
+  "url": "https://treaties.un.org",
+  "pub": "United Nations",
+  "ev": "C",
+  "topics": [
+   "diplo",
+   "nuclear"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Continuous",
+  "watch": "Who signed and ratified what, including reservations and withdrawals.",
+  "cav": "Slow to update for bilateral deals."
+ },
+ {
+  "id": "cntreaty",
+  "name": "China treaty database",
+  "url": "http://treaty.mfa.gov.cn",
+  "pub": "PRC MFA",
+  "ev": "C",
+  "topics": [
+   "diplo"
+  ],
+  "cov": [
+   "CN",
+   "RU",
+   "US"
+  ],
+  "cad": "Continuous",
+  "watch": "Full texts of China's bilateral agreements, including with Russia.",
+  "cav": "Chinese-language search works best."
+ },
+ {
+  "id": "pravo",
+  "name": "Russia official legal portal",
+  "url": "http://publication.pravo.gov.ru",
+  "pub": "Russian Government",
+  "ev": "C",
+  "topics": [
+   "diplo",
+   "ai",
+   "nuclear"
+  ],
+  "cov": [
+   "RU"
+  ],
+  "cad": "Daily",
+  "watch": "Decrees and ratifications, such as the national AI strategy and the law suspending New START.",
+  "cav": "The authoritative text of Russian law. May block foreign IP addresses."
+ },
+ {
+  "id": "fedreg",
+  "name": "Federal Register",
+  "url": "https://www.federalregister.gov",
+  "pub": "US Government",
+  "ev": "C",
+  "topics": [
+   "trade",
+   "ai"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Daily",
+  "watch": "Export-control rules, tariff actions and Entity List additions, published as binding text.",
+  "cav": "The legal text is often more precise than the press release."
+ },
+ {
+  "id": "crs",
+  "name": "Congressional Research Service",
+  "url": "https://crsreports.congress.gov",
+  "pub": "US Library of Congress",
+  "ev": "E",
+  "topics": [
+   "diplo",
+   "nuclear",
+   "military"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Weekly",
+  "watch": "Nonpartisan briefs on arms control, sanctions and China–Russia ties, with citations.",
+  "cav": "Written for Congress from a US-interest point of view, but careful with facts."
+ },
+ {
+  "id": "uscc",
+  "name": "US-China Economic & Security Review Commission",
+  "url": "https://www.uscc.gov",
+  "pub": "US Congress",
+  "ev": "E",
+  "topics": [
+   "trade",
+   "military",
+   "ai"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Annual (Nov) + hearings",
+  "watch": "Hearing transcripts with expert testimony and a long annual report.",
+  "cav": "Its mandate is adversarial. Use it for the sources it cites, not its conclusions."
+ },
+ {
+  "id": "gacs",
+  "name": "China Customs statistics platform",
+  "url": "http://stats.customs.gov.cn",
+  "pub": "PRC General Administration of Customs",
+  "ev": "B",
+  "topics": [
+   "trade"
+  ],
+  "cov": [
+   "CN",
+   "RU",
+   "US"
+  ],
+  "cad": "Monthly",
+  "watch": "China–Russia trade by HS code: chips, machine tools, vehicles, oil. Russia stopped publishing detailed data in 2022.",
+  "cav": "The best single window into China–Russia trade. Check it against UN Comtrade mirror data."
+ },
+ {
+  "id": "census",
+  "name": "US Census trade with China",
+  "url": "https://www.census.gov/foreign-trade/balance/c5700.html",
+  "pub": "US Census Bureau",
+  "ev": "B",
+  "topics": [
+   "trade"
+  ],
+  "cov": [
+   "US",
+   "CN"
+  ],
+  "cad": "Monthly",
+  "watch": "The monthly US–China goods balance. USA Trade Online gives HS-code detail.",
+  "cav": "Records the country of origin, so goods rerouted through Vietnam or Mexico look non-Chinese."
+ },
+ {
+  "id": "comtrade",
+  "name": "UN Comtrade",
+  "url": "https://comtradeplus.un.org",
+  "pub": "United Nations",
+  "ev": "B",
+  "topics": [
+   "trade"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Monthly/annual",
+  "watch": "Mirror statistics: compare what A says it exported with what B says it imported.",
+  "cav": "Gaps reveal transshipment through Kazakhstan, Kyrgyzstan, Türkiye and the UAE."
+ },
+ {
+  "id": "imfdata",
+  "name": "IMF trade & COFER reserves",
+  "url": "https://data.imf.org",
+  "pub": "International Monetary Fund",
+  "ev": "B",
+  "topics": [
+   "trade"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Monthly/quarterly",
+  "watch": "Direction of trade and currency composition of reserves. Measures de-dollarization in actual numbers.",
+  "cav": "COFER does not identify individual countries' reserves."
+ },
+ {
+  "id": "portwatch",
+  "name": "IMF PortWatch",
+  "url": "https://portwatch.imf.org",
+  "pub": "IMF + Oxford",
+  "ev": "A",
+  "topics": [
+   "trade",
+   "military"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Daily",
+  "watch": "Port calls and chokepoint transits built from satellite ship tracking. A near-live view of trade.",
+  "cav": "Ships that switch off their transponders (the shadow fleet) are undercounted."
+ },
+ {
+  "id": "gats",
+  "name": "USDA FAS GATS",
+  "url": "https://apps.fas.usda.gov/gats",
+  "pub": "US Dept of Agriculture",
+  "ev": "B",
+  "topics": [
+   "trade"
+  ],
+  "cov": [
+   "US",
+   "CN"
+  ],
+  "cad": "Weekly/monthly",
+  "watch": "Soybean, grain and meat sales to China. A quick test of whether trade-truce purchase pledges are being kept.",
+  "cav": "Weekly export-sales reports move faster than customs data."
+ },
+ {
+  "id": "crea",
+  "name": "CREA Russia fossil tracker",
+  "url": "https://energyandcleanair.org",
+  "pub": "Centre for Research on Energy and Clean Air (Finland)",
+  "ev": "E",
+  "topics": [
+   "trade"
+  ],
+  "cov": [
+   "RU",
+   "CN"
+  ],
+  "cad": "Daily/monthly",
+  "watch": "Russian oil, gas and coal exports by buyer and by ship.",
+  "cav": "Open method, but the group campaigns for sanctions."
+ },
+ {
+  "id": "cbr",
+  "name": "Bank of Russia statistics",
+  "url": "https://www.cbr.ru/eng/statistics",
+  "pub": "Central Bank of Russia",
+  "ev": "B",
+  "topics": [
+   "trade"
+  ],
+  "cov": [
+   "RU"
+  ],
+  "cad": "Monthly/quarterly",
+  "watch": "Balance of payments and currency structure of settlements, such as the yuan's share.",
+  "cav": "Many series have been coarsened since 2022."
+ },
+ {
+  "id": "safe",
+  "name": "SAFE (China FX regulator)",
+  "url": "https://www.safe.gov.cn",
+  "pub": "PRC State Administration of Foreign Exchange",
+  "ev": "B",
+  "topics": [
+   "trade"
+  ],
+  "cov": [
+   "CN"
+  ],
+  "cad": "Monthly",
+  "watch": "China's balance of payments, reserves and cross-border yuan flows.",
+  "cav": "Reserves held in US Treasuries are partly hidden through custodians."
+ },
+ {
+  "id": "tic",
+  "name": "US Treasury TIC data",
+  "url": "https://home.treasury.gov/data/treasury-international-capital-tic-system",
+  "pub": "US Treasury",
+  "ev": "B",
+  "topics": [
+   "trade"
+  ],
+  "cov": [
+   "US",
+   "CN"
+  ],
+  "cad": "Monthly",
+  "watch": "Chinese holdings of US Treasuries.",
+  "cav": "Holdings in Belgium and Luxembourg custody accounts can mask Chinese ownership."
+ },
+ {
+  "id": "swift",
+  "name": "SWIFT RMB Tracker",
+  "url": "https://www.swift.com",
+  "pub": "SWIFT (Belgium)",
+  "ev": "B",
+  "topics": [
+   "trade"
+  ],
+  "cov": [
+   "CN"
+  ],
+  "cad": "Monthly",
+  "watch": "The yuan's share of global payments.",
+  "cav": "Excludes China's CIPS system and Russia's SPFS, which carry much of China–Russia settlement."
+ },
+ {
+  "id": "bisorg",
+  "name": "BIS international banking statistics",
+  "url": "https://data.bis.org",
+  "pub": "Bank for International Settlements",
+  "ev": "B",
+  "topics": [
+   "trade"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Quarterly",
+  "watch": "Cross-border bank claims between the three countries.",
+  "cav": "Lags by about two quarters."
+ },
+ {
+  "id": "wto",
+  "name": "WTO disputes & tariff profiles",
+  "url": "https://www.wto.org",
+  "pub": "World Trade Organization",
+  "ev": "C",
+  "topics": [
+   "trade"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Event-driven",
+  "watch": "Formal complaints between the US and China, and the panel rulings.",
+  "cav": "The Appellate Body has been paralysed since 2019, so rulings often go nowhere."
+ },
+ {
+  "id": "ustr",
+  "name": "USTR Section 301 actions",
+  "url": "https://ustr.gov",
+  "pub": "Office of the US Trade Representative",
+  "ev": "C",
+  "topics": [
+   "trade"
+  ],
+  "cov": [
+   "US",
+   "CN"
+  ],
+  "cad": "Event-driven",
+  "watch": "Tariff lists, exclusions and the deal texts behind truce announcements.",
+  "cav": "Check the Federal Register for the binding version."
+ },
+ {
+  "id": "mofcom",
+  "name": "MOFCOM export controls & Unreliable Entity List",
+  "url": "http://www.mofcom.gov.cn",
+  "pub": "PRC Ministry of Commerce",
+  "ev": "C",
+  "topics": [
+   "trade",
+   "ai"
+  ],
+  "cov": [
+   "CN",
+   "US"
+  ],
+  "cad": "Event-driven",
+  "watch": "Rare earth, gallium and germanium controls, and US firms placed on blacklists. These are China's countermoves, written as law.",
+  "cav": "Announcements often appear in Chinese first."
+ },
+ {
+  "id": "usgs",
+  "name": "USGS Mineral Commodity Summaries",
+  "url": "https://www.usgs.gov/centers/national-minerals-information-center",
+  "pub": "US Geological Survey",
+  "ev": "B",
+  "topics": [
+   "trade",
+   "military"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Annual (Jan–Feb)",
+  "watch": "How dependent the US is on Chinese and Russian rare earths, gallium, titanium and uranium.",
+  "cav": "Annual, so it lags fast-moving export-control fights."
+ },
+ {
+  "id": "eiau",
+  "name": "EIA Uranium Marketing Annual Report",
+  "url": "https://www.eia.gov/uranium/marketing/",
+  "pub": "US Energy Information Administration",
+  "ev": "B",
+  "topics": [
+   "trade",
+   "nuclear"
+  ],
+  "cov": [
+   "US",
+   "RU"
+  ],
+  "cad": "Annual",
+  "watch": "Russia's share of US enrichment purchases as the 2024 import ban phases in, with waivers possible through 2027.",
+  "cav": "A quiet example of US–Russia trade that continues despite the conflict."
+ },
+ {
+  "id": "rosstat",
+  "name": "Rosstat",
+  "url": "https://rosstat.gov.ru",
+  "pub": "Russian Federal Statistics Service",
+  "ev": "B",
+  "topics": [
+   "trade"
+  ],
+  "cov": [
+   "RU"
+  ],
+  "cad": "Monthly",
+  "watch": "Domestic output, inflation and industrial production, which show how much strain the war economy is under.",
+  "cav": "Many series were suspended or reclassified after 2022."
+ },
+ {
+  "id": "ofac",
+  "name": "OFAC sanctions lists (SDN)",
+  "url": "https://ofac.treasury.gov",
+  "pub": "US Treasury",
+  "ev": "C",
+  "topics": [
+   "trade",
+   "military"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Weekly",
+  "watch": "Chinese and third-country firms designated for supplying Russia. The press releases name specific items and routes.",
+  "cav": "A US view of the facts, but each designation carries specific evidence."
+ },
+ {
+  "id": "bis",
+  "name": "BIS Entity List & chip rules",
+  "url": "https://www.bis.gov",
+  "pub": "US Commerce Dept, Bureau of Industry and Security",
+  "ev": "C",
+  "topics": [
+   "ai",
+   "trade",
+   "military"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Event-driven",
+  "watch": "AI chip and chipmaking equipment controls. Entity List additions of Chinese firms tied to Russia's military.",
+  "cav": "Each rule includes a long preamble explaining Washington's reasoning."
+ },
+ {
+  "id": "eumap",
+  "name": "EU Sanctions Map",
+  "url": "https://www.sanctionsmap.eu",
+  "pub": "European Union",
+  "ev": "C",
+  "topics": [
+   "trade",
+   "military"
+  ],
+  "cov": [
+   "RU",
+   "CN"
+  ],
+  "cad": "Per package",
+  "watch": "EU sanctions packages that name Chinese and Hong Kong entities supplying Russia.",
+  "cav": "A third-party government source that is useful for checking US designations."
+ },
+ {
+  "id": "doj",
+  "name": "DOJ export-control prosecutions",
+  "url": "https://www.justice.gov",
+  "pub": "US Dept of Justice",
+  "ev": "C",
+  "topics": [
+   "trade",
+   "ai",
+   "military"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Event-driven",
+  "watch": "Sworn indictments describing China-to-Russia evasion networks and GPU smuggling.",
+  "cav": "Allegations until proven, but rich in detail."
+ },
+ {
+  "id": "courtl",
+  "name": "CourtListener (court dockets)",
+  "url": "https://www.courtlistener.org",
+  "pub": "Free Law Project",
+  "ev": "C",
+  "topics": [
+   "trade",
+   "ai"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Continuous",
+  "watch": "Full filings behind the DOJ press releases, including exhibits and plea agreements.",
+  "cav": "US courts only."
+ },
+ {
+  "id": "cac",
+  "name": "CAC algorithm & generative-AI filings",
+  "url": "https://www.cac.gov.cn",
+  "pub": "Cyberspace Administration of China",
+  "ev": "C",
+  "topics": [
+   "ai"
+  ],
+  "cov": [
+   "CN"
+  ],
+  "cad": "Rolling batches",
+  "watch": "Registry of approved Chinese AI models and services. Shows how fast China's model ecosystem is growing.",
+  "cav": "Chinese-language. Lists approvals but not capability."
+ },
+ {
+  "id": "caisi",
+  "name": "NIST CAISI & US AI policy",
+  "url": "https://www.nist.gov/caisi",
+  "pub": "US Commerce Dept, NIST",
+  "ev": "D",
+  "topics": [
+   "ai"
+  ],
+  "cov": [
+   "US",
+   "CN"
+  ],
+  "cad": "Event-driven",
+  "watch": "US government evaluations of frontier models, including Chinese ones, and AI Action Plan follow-through.",
+  "cav": "Its mission is framed around US competitiveness."
+ },
+ {
+  "id": "ccw",
+  "name": "UN CCW talks on autonomous weapons (GGE LAWS)",
+  "url": "https://meetings.unoda.org",
+  "pub": "UN Office for Disarmament Affairs",
+  "ev": "D",
+  "topics": [
+   "ai",
+   "military"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Several sessions/yr",
+  "watch": "Each state's written positions on lethal autonomous weapons, side by side in one forum.",
+  "cav": "Consensus rules mean slow progress, but the statements are on record."
+ },
+ {
+  "id": "unai",
+  "name": "UN AI governance (Scientific Panel & Global Dialogue)",
+  "url": "https://www.un.org/digital-emerging-technologies/",
+  "pub": "UN Office for Digital & Emerging Technologies",
+  "ev": "D",
+  "topics": [
+   "ai",
+   "coop"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Annual dialogue",
+  "watch": "The one AI governance forum where all three take part, created by the General Assembly in 2025.",
+  "cav": "Early stage. Watch who sends senior delegations."
+ },
+ {
+  "id": "poldecl",
+  "name": "Political Declaration on Responsible Military Use of AI",
+  "url": "https://www.state.gov",
+  "pub": "US State Dept",
+  "ev": "C",
+  "topics": [
+   "ai",
+   "military"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Rolling",
+  "watch": "The list of endorsing states shows who has joined the US-led norms on military AI.",
+  "cav": "China and Russia have not endorsed it. The absence is itself the signal."
+ },
+ {
+  "id": "openalex",
+  "name": "OpenAlex (research co-authorship)",
+  "url": "https://openalex.org",
+  "pub": "OurResearch (nonprofit)",
+  "ev": "E",
+  "topics": [
+   "ai",
+   "coop"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Weekly",
+  "watch": "Raw counts of US–China and China–Russia co-authored papers, a measure of cooperation that persists through politics.",
+  "cav": "Free API. Count the papers yourself instead of relying on anyone's chart."
+ },
+ {
+  "id": "eto",
+  "name": "CSET Emerging Technology Observatory",
+  "url": "https://eto.tech",
+  "pub": "Georgetown CSET",
+  "ev": "E",
+  "topics": [
+   "ai"
+  ],
+  "cov": [
+   "US",
+   "CN"
+  ],
+  "cad": "Rolling",
+  "watch": "Open datasets on AI research, patents, chips and investment.",
+  "cav": "A US think tank with security framing, but the data is downloadable."
+ },
+ {
+  "id": "epoch",
+  "name": "Epoch AI datasets",
+  "url": "https://epoch.ai",
+  "pub": "Epoch AI",
+  "ev": "E",
+  "topics": [
+   "ai"
+  ],
+  "cov": [
+   "US",
+   "CN"
+  ],
+  "cad": "Rolling",
+  "watch": "Training compute and model releases by country, and the size of the compute gap.",
+  "cav": "Coverage of Chinese labs depends on what they disclose."
+ },
+ {
+  "id": "aiindex",
+  "name": "Stanford AI Index",
+  "url": "https://hai.stanford.edu/ai-index",
+  "pub": "Stanford HAI",
+  "ev": "E",
+  "topics": [
+   "ai"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Annual (Apr)",
+  "watch": "The annual cross-country benchmark for AI talent, investment, papers and policy.",
+  "cav": "A secondary compilation. Follow its citations back to the raw data."
+ },
+ {
+  "id": "wipo",
+  "name": "WIPO PATENTSCOPE",
+  "url": "https://patentscope.wipo.int",
+  "pub": "World Intellectual Property Organization",
+  "ev": "B",
+  "topics": [
+   "ai",
+   "trade"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Weekly",
+  "watch": "Patent filings by applicant country in AI, semiconductors and batteries.",
+  "cav": "Patent counts measure volume, not quality."
+ },
+ {
+  "id": "track2",
+  "name": "Brookings–Tsinghua AI dialogue",
+  "url": "https://www.brookings.edu",
+  "pub": "Brookings & Tsinghua CISS",
+  "ev": "E",
+  "topics": [
+   "ai",
+   "nuclear"
+  ],
+  "cov": [
+   "US",
+   "CN"
+  ],
+  "cad": "Periodic",
+  "watch": "Unofficial (Track 2) agreements on military AI risk and nuclear command, written by people close to both governments.",
+  "cav": "Not official policy, but often an early sign of where the official channels go next."
+ },
+ {
+  "id": "ctbto",
+  "name": "CTBTO monitoring network",
+  "url": "https://www.ctbto.org",
+  "pub": "CTBT Organization (Vienna)",
+  "ev": "A",
+  "topics": [
+   "nuclear",
+   "coop"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Continuous",
+  "watch": "The global network of seismic, radionuclide and infrasound sensors. All three countries host stations and share data.",
+  "cav": "The detailed data goes to member states. The public sees statements after events."
+ },
+ {
+  "id": "iris",
+  "name": "EarthScope / IRIS seismic data",
+  "url": "https://ds.iris.edu",
+  "pub": "EarthScope Consortium (NSF-funded)",
+  "ev": "A",
+  "topics": [
+   "nuclear"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Continuous",
+  "watch": "Raw waveforms from stations near Lop Nur, Novaya Zemlya and Nevada, the test sites at the centre of resumed-testing claims.",
+  "cav": "Anyone can check it independently. Telling small tests apart from earthquakes takes expertise."
+ },
+ {
+  "id": "pris",
+  "name": "IAEA PRIS reactor database",
+  "url": "https://pris.iaea.org",
+  "pub": "International Atomic Energy Agency",
+  "ev": "B",
+  "topics": [
+   "nuclear",
+   "coop"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Continuous",
+  "watch": "Every power reactor, including the Rosatom-built units at Tianwan and Xudapu in China.",
+  "cav": "Covers civil reactors only."
+ },
+ {
+  "id": "iaea",
+  "name": "IAEA statements & Zaporizhzhia updates",
+  "url": "https://www.iaea.org",
+  "pub": "International Atomic Energy Agency",
+  "ev": "E",
+  "topics": [
+   "nuclear"
+  ],
+  "cov": [
+   "RU",
+   "US",
+   "CN"
+  ],
+  "cad": "Event-driven",
+  "watch": "Reports from inspectors on site at Zaporizhzhia, plus board statements where all three speak.",
+  "cav": "Board diplomacy is political, but the inspectors' reports are first-hand observation."
+ },
+ {
+  "id": "compliance",
+  "name": "State Dept arms control compliance report",
+  "url": "https://www.state.gov",
+  "pub": "US State Dept",
+  "ev": "D",
+  "topics": [
+   "nuclear"
+  ],
+  "cov": [
+   "US",
+   "RU",
+   "CN"
+  ],
+  "cad": "Annual (Apr)",
+  "watch": "US findings on Russian and Chinese adherence to arms control and testing commitments.",
+  "cav": "One-sided. Compare Russian MFA rebuttals."
+ },
+ {
+  "id": "newstart",
+  "name": "New START data archive",
+  "url": "https://www.state.gov",
+  "pub": "US State Dept",
+  "ev": "C",
+  "topics": [
+   "nuclear"
+  ],
+  "cov": [
+   "US",
+   "RU"
+  ],
+  "cad": "Historic",
+  "watch": "The last verified warhead and launcher counts. The baseline for any informal limits after the treaty expired on 5 Feb 2026.",
+  "cav": "No more on-site inspections. Watch whether either side publishes counts at all."
+ },
+ {
+  "id": "npt",
+  "name": "NPT Review Conference 2026 documents",
+  "url": "https://www.un.org/en/conferences/npt2026",
+  "pub": "United Nations",
+  "ev": "D",
+  "topics": [
+   "nuclear",
+   "diplo"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Five-yearly",
+  "watch": "National reports and working papers of the three nuclear powers. Compare with P5 joint statements.",
+  "cav": "Final documents often fail by consensus. The working papers are the substance."
+ },
+ {
+  "id": "launchnotif",
+  "name": "Missile launch notification agreements",
+  "url": "https://www.state.gov",
+  "pub": "US State Dept / PRC & Russian MFAs",
+  "ev": "C",
+  "topics": [
+   "nuclear",
+   "military",
+   "coop"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Continuous",
+  "watch": "US–Russia (1988, run through each side's Nuclear Risk Reduction Center) and China–Russia (2009, extended 2021) advance notices of launches.",
+  "cav": "Some of the last working nuclear hotlines. Watch for mention of a missed notification."
+ },
+ {
+  "id": "nnotebook",
+  "name": "FAS Nuclear Notebook",
+  "url": "https://thebulletin.org",
+  "pub": "Federation of American Scientists / Bulletin",
+  "ev": "E",
+  "topics": [
+   "nuclear",
+   "military"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Periodic",
+  "watch": "Warhead estimates built from satellite imagery, budgets and official data, such as China's silo fields.",
+  "cav": "Estimates, not counts. The method is explained."
+ },
+ {
+  "id": "sipriyb",
+  "name": "SIPRI Yearbook (nuclear forces)",
+  "url": "https://www.sipri.org",
+  "pub": "Stockholm International Peace Research Institute",
+  "ev": "E",
+  "topics": [
+   "nuclear",
+   "military"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Annual (Jun)",
+  "watch": "The annual inventory of the world's nuclear forces.",
+  "cav": "Swedish government-funded. Broadly regarded as even-handed."
+ },
+ {
+  "id": "japanjs",
+  "name": "Japan Joint Staff press releases",
+  "url": "https://www.mod.go.jp/js/press/index.html",
+  "pub": "Japan Ministry of Defense",
+  "ev": "A",
+  "topics": [
+   "military"
+  ],
+  "cov": [
+   "CN",
+   "RU"
+  ],
+  "cad": "Event-driven",
+  "watch": "Maps, flight tracks and photos of joint China–Russia bomber flights and naval transits.",
+  "cav": "A third country's radar data, published with photos. One of the best open sources."
+ },
+ {
+  "id": "taiwanmnd",
+  "name": "Taiwan MND daily PLA activity",
+  "url": "https://www.mnd.gov.tw",
+  "pub": "Taiwan Ministry of National Defense",
+  "ev": "A",
+  "topics": [
+   "military"
+  ],
+  "cov": [
+   "CN"
+  ],
+  "cad": "Daily",
+  "watch": "Daily counts of PLA aircraft and ships with track maps.",
+  "cav": "Taiwan is a party to the dispute, but the counts are consistent and verifiable over time."
+ },
+ {
+  "id": "rokjcs",
+  "name": "ROK Joint Chiefs of Staff",
+  "url": "https://www.jcs.mil.kr",
+  "pub": "South Korea",
+  "ev": "A",
+  "topics": [
+   "military"
+  ],
+  "cov": [
+   "CN",
+   "RU"
+  ],
+  "cad": "Event-driven",
+  "watch": "Notices of Chinese and Russian aircraft entering South Korea's air defense zone (KADIZ).",
+  "cav": "Mostly Korean-language."
+ },
+ {
+  "id": "norad",
+  "name": "NORAD news",
+  "url": "https://www.norad.mil",
+  "pub": "US–Canada binational command",
+  "ev": "A",
+  "topics": [
+   "military"
+  ],
+  "cov": [
+   "RU",
+   "CN",
+   "US"
+  ],
+  "cad": "Event-driven",
+  "watch": "Intercepts in the Alaska air defense zone, including joint China–Russia bomber flights.",
+  "cav": "Gives few details beyond the intercept itself."
+ },
+ {
+  "id": "uscg",
+  "name": "US Coast Guard news (Arctic)",
+  "url": "https://www.news.uscg.mil",
+  "pub": "US Coast Guard",
+  "ev": "A",
+  "topics": [
+   "military",
+   "coop"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Event-driven",
+  "watch": "Sightings of Chinese and Russian vessels in the Bering Sea and Arctic, including joint coast guard patrols.",
+  "cav": "Event-driven, with no regular cadence."
+ },
+ {
+  "id": "dod",
+  "name": "DoD releases & China Military Power Report",
+  "url": "https://www.defense.gov",
+  "pub": "US Dept of Defense",
+  "ev": "D",
+  "topics": [
+   "military",
+   "nuclear"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Annual (late year) + releases",
+  "watch": "The annual estimate of PLA forces, plus readouts of US–China military talks.",
+  "cav": "A US threat assessment. Compare it with Chinese defense ministry rebuttals."
+ },
+ {
+  "id": "cnmod",
+  "name": "China MND press conferences",
+  "url": "http://eng.mod.gov.cn",
+  "pub": "PRC Ministry of National Defense",
+  "ev": "D",
+  "topics": [
+   "military"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Monthly + events",
+  "watch": "Announcements of joint exercises with Russia and readouts of talks with the US military.",
+  "cav": "Read for what is announced and what is denied."
+ },
+ {
+  "id": "rumod",
+  "name": "Russian Ministry of Defence",
+  "url": "https://eng.mil.ru",
+  "pub": "Russian Ministry of Defence",
+  "ev": "D",
+  "topics": [
+   "military"
+  ],
+  "cov": [
+   "RU",
+   "CN"
+  ],
+  "cad": "Event-driven",
+  "watch": "Exercise announcements, including joint drills with China. Its Telegram channel is often faster.",
+  "cav": "Often blocks foreign visitors. A party to the war in Ukraine."
+ },
+ {
+  "id": "spacetrack",
+  "name": "Space-Track.org",
+  "url": "https://www.space-track.org",
+  "pub": "US Space Force (18th Space Defense Squadron)",
+  "ev": "A",
+  "topics": [
+   "military",
+   "coop"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Continuous",
+  "watch": "The official public satellite catalog: proximity operations, debris events and new launches.",
+  "cav": "Free registration. Classified objects are left out."
+ },
+ {
+  "id": "celestrak",
+  "name": "CelesTrak",
+  "url": "https://celestrak.org",
+  "pub": "Independent (T.S. Kelso)",
+  "ev": "A",
+  "topics": [
+   "military"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Continuous",
+  "watch": "Orbital data and analysis tools, independent of any government.",
+  "cav": "Partly built on Space-Track data."
+ },
+ {
+  "id": "mcdowell",
+  "name": "Jonathan McDowell's space catalogs",
+  "url": "https://planet4589.org",
+  "pub": "Independent astrophysicist",
+  "ev": "E",
+  "topics": [
+   "military",
+   "coop"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Continuous",
+  "watch": "A meticulous independent launch and satellite log.",
+  "cav": "Run by one person, but widely cited by agencies."
+ },
+ {
+  "id": "unoosa",
+  "name": "UN Register of Objects Launched into Space",
+  "url": "https://www.unoosa.org/oosa/en/spaceobjectregister/index.html",
+  "pub": "UN Office for Outer Space Affairs",
+  "ev": "C",
+  "topics": [
+   "military",
+   "coop"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Rolling",
+  "watch": "What each state formally declares it launched. Compare against tracking data.",
+  "cav": "Declarations are late or incomplete. The gaps are the signal."
+ },
+ {
+  "id": "sipri",
+  "name": "SIPRI arms transfers & military spending",
+  "url": "https://www.sipri.org/databases",
+  "pub": "Stockholm International Peace Research Institute",
+  "ev": "E",
+  "topics": [
+   "military",
+   "trade"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Annual (Mar & Apr)",
+  "watch": "Russian arms exports to China and military spending of all three in comparable dollars.",
+  "cav": "Spending figures use estimates for China and Russia."
+ },
+ {
+  "id": "unroca",
+  "name": "UN Register of Conventional Arms",
+  "url": "https://www.unroca.org",
+  "pub": "United Nations",
+  "ev": "D",
+  "topics": [
+   "military"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Annual",
+  "watch": "Self-reported arms imports and exports.",
+  "cav": "Reporting is voluntary and patchy. Compare against SIPRI."
+ },
+ {
+  "id": "acled",
+  "name": "ACLED conflict events",
+  "url": "https://acleddata.com",
+  "pub": "Armed Conflict Location & Event Data",
+  "ev": "E",
+  "topics": [
+   "military"
+  ],
+  "cov": [
+   "RU"
+  ],
+  "cad": "Weekly",
+  "watch": "Coded events from the war in Ukraine.",
+  "cav": "Built from media reports. Western-funded."
+ },
+ {
+  "id": "firms",
+  "name": "NASA FIRMS fire detection",
+  "url": "https://firms.modaps.eosdis.nasa.gov",
+  "pub": "NASA",
+  "ev": "A",
+  "topics": [
+   "military",
+   "trade"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Near real time",
+  "watch": "Heat signatures from refinery strikes, depot fires and industrial activity.",
+  "cav": "Fires are not always attacks. Confirm with imagery."
+ },
+ {
+  "id": "car",
+  "name": "Conflict Armament Research (iTrace)",
+  "url": "https://www.conflictarm.com",
+  "pub": "Conflict Armament Research (UK)",
+  "ev": "E",
+  "topics": [
+   "military",
+   "trade"
+  ],
+  "cov": [
+   "RU",
+   "CN",
+   "US"
+  ],
+  "cad": "Periodic",
+  "watch": "Field documentation of components found in Russian weapons: which country made them and the supply chains.",
+  "cav": "Physical teardown evidence. Partly funded by EU governments."
+ },
+ {
+  "id": "adsb",
+  "name": "ADS-B Exchange",
+  "url": "https://globe.adsbexchange.com",
+  "pub": "Independent flight tracking",
+  "ev": "A",
+  "topics": [
+   "military"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Real time",
+  "watch": "Unfiltered aircraft transponder data, including some military, VIP and tanker flights.",
+  "cav": "Many military aircraft fly with transponders off."
+ },
+ {
+  "id": "copernicus",
+  "name": "Copernicus Browser (Sentinel-1/2)",
+  "url": "https://dataspace.copernicus.eu",
+  "pub": "European Union / ESA",
+  "ev": "A",
+  "topics": [
+   "military",
+   "trade",
+   "nuclear"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Every few days",
+  "watch": "Free optical and radar imagery of ports, bases, test sites and borders. Radar sees through cloud.",
+  "cav": "10 m resolution shows ships and construction, not aircraft types."
+ },
+ {
+  "id": "landsat",
+  "name": "USGS EarthExplorer (Landsat)",
+  "url": "https://earthexplorer.usgs.gov",
+  "pub": "US Geological Survey",
+  "ev": "A",
+  "topics": [
+   "military",
+   "trade"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Every 8–16 days",
+  "watch": "A free imagery archive going back decades, for before-and-after comparisons.",
+  "cav": "Coarser than Sentinel-2 for recent imagery."
+ },
+ {
+  "id": "worldview",
+  "name": "NASA Worldview (VIIRS night lights)",
+  "url": "https://worldview.earthdata.nasa.gov",
+  "pub": "NASA",
+  "ev": "A",
+  "topics": [
+   "trade",
+   "military"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Daily",
+  "watch": "Night lights show industrial activity, blackouts and new infrastructure.",
+  "cav": "Daily but coarse. Best for trends."
+ },
+ {
+  "id": "gfw",
+  "name": "Global Fishing Watch",
+  "url": "https://globalfishingwatch.org",
+  "pub": "Global Fishing Watch (NGO)",
+  "ev": "A",
+  "topics": [
+   "trade",
+   "military",
+   "coop"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Near real time",
+  "watch": "Ship tracking and detection of dark vessels from radar and transponders, including tankers serving Russia's shadow fleet to China.",
+  "cav": "Founded with Google and Oceana. Data is open and methods are published."
+ },
+ {
+  "id": "iss",
+  "name": "International Space Station",
+  "url": "https://www.nasa.gov/international-space-station/",
+  "pub": "NASA (with Roscosmos)",
+  "ev": "D",
+  "topics": [
+   "coop"
+  ],
+  "cov": [
+   "US",
+   "RU"
+  ],
+  "cad": "Continuous",
+  "watch": "US–Russia integrated crews and seat swaps continue despite the war.",
+  "cav": "The clearest sign of US–Russia cooperation. Watch the planning for retiring the station."
+ },
+ {
+  "id": "iter",
+  "name": "ITER fusion project",
+  "url": "https://www.iter.org",
+  "pub": "ITER Organization (France)",
+  "ev": "D",
+  "topics": [
+   "coop",
+   "nuclear"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Periodic",
+  "watch": "All three countries are members and deliver hardware to one reactor.",
+  "cav": "Progress reports show whether each member is delivering its components on time."
+ },
+ {
+  "id": "ats",
+  "name": "Antarctic Treaty Secretariat",
+  "url": "https://www.ats.aq",
+  "pub": "Antarctic Treaty System",
+  "ev": "C",
+  "topics": [
+   "coop",
+   "military"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Annual meeting",
+  "watch": "All three are consultative parties. Inspection reports cover each other's bases.",
+  "cav": "Decisions need consensus. Watch for proposals that get blocked."
+ },
+ {
+  "id": "npfc",
+  "name": "North Pacific Fisheries Commission",
+  "url": "https://www.npfc.int",
+  "pub": "NPFC",
+  "ev": "C",
+  "topics": [
+   "coop",
+   "trade"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Annual",
+  "watch": "A fisheries body where all three still set catch limits together.",
+  "cav": "Low politics, so cooperation here holds up."
+ },
+ {
+  "id": "wmo",
+  "name": "WMO weather data exchange",
+  "url": "https://wmo.int",
+  "pub": "World Meteorological Organization",
+  "ev": "B",
+  "topics": [
+   "coop"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Continuous",
+  "watch": "The global system through which national weather services share observations. It has kept working through every crisis.",
+  "cav": "Watch for any member cutting data sharing."
+ },
+ {
+  "id": "cospas",
+  "name": "Cospas-Sarsat search & rescue",
+  "url": "https://www.cospas-sarsat.int",
+  "pub": "Cospas-Sarsat programme",
+  "ev": "C",
+  "topics": [
+   "coop"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Continuous",
+  "watch": "A satellite rescue-beacon system founded by the US and the Soviet Union. China runs ground stations in it.",
+  "cav": "Cold War cooperation that is still running."
+ },
+ {
+  "id": "natureidx",
+  "name": "Nature Index collaboration tables",
+  "url": "https://www.nature.com/nature-index",
+  "pub": "Springer Nature",
+  "ev": "E",
+  "topics": [
+   "coop",
+   "ai"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Annual",
+  "watch": "Research collaboration scores between each pair of countries.",
+  "cav": "Covers selected journals only. Use OpenAlex for raw counts."
+ },
+ {
+  "id": "opendoors",
+  "name": "IIE Open Doors",
+  "url": "https://opendoorsdata.org",
+  "pub": "Institute of International Education",
+  "ev": "E",
+  "topics": [
+   "coop",
+   "sentiment"
+  ],
+  "cov": [
+   "US",
+   "CN"
+  ],
+  "cad": "Annual (Nov)",
+  "watch": "Chinese student numbers in the US, a slow-moving measure of people-to-people ties.",
+  "cav": "Lags visa policy by about a year."
+ },
+ {
+  "id": "pew",
+  "name": "Pew Research Center",
+  "url": "https://www.pewresearch.org",
+  "pub": "Pew (US nonprofit)",
+  "ev": "E",
+  "topics": [
+   "sentiment"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Annual (spring–summer)",
+  "watch": "How people in many countries view the US, China and Russia, with comparable questions across countries.",
+  "cav": "Cannot poll freely inside China."
+ },
+ {
+  "id": "levada",
+  "name": "Levada Center",
+  "url": "https://www.levada.ru/en/",
+  "pub": "Independent Russian pollster",
+  "ev": "E",
+  "topics": [
+   "sentiment"
+  ],
+  "cov": [
+   "RU",
+   "CN",
+   "US"
+  ],
+  "cad": "Monthly",
+  "watch": "Russian views of the US and China, tracked over decades.",
+  "cav": "Russia has labelled it a \"foreign agent\". Wartime answers may be less candid."
+ },
+ {
+  "id": "ciss",
+  "name": "Tsinghua CISS public opinion surveys",
+  "url": "https://ciss.tsinghua.edu.cn",
+  "pub": "Tsinghua University CISS",
+  "ev": "E",
+  "topics": [
+   "sentiment"
+  ],
+  "cov": [
+   "CN",
+   "US",
+   "RU"
+  ],
+  "cad": "Annual",
+  "watch": "Chinese public views of the US and of international security.",
+  "cav": "Conducted inside China's political limits, but a rare data point."
+ },
+ {
+  "id": "ccga",
+  "name": "Chicago Council surveys",
+  "url": "https://globalaffairs.org",
+  "pub": "Chicago Council on Global Affairs",
+  "ev": "E",
+  "topics": [
+   "sentiment"
+  ],
+  "cov": [
+   "US",
+   "CN",
+   "RU"
+  ],
+  "cad": "Annual",
+  "watch": "American views of China and Russia, tracked since 1974.",
+  "cav": "US public only."
+ },
+ {
+  "id": "xinhua",
+  "name": "Xinhua / People's Daily",
+  "url": "https://www.news.cn",
+  "pub": "PRC state media",
+  "ev": "F",
+  "topics": [
+   "diplo",
+   "sentiment"
+  ],
+  "cov": [
+   "CN"
+  ],
+  "cad": "Continuous",
+  "watch": "The official line. Shifts in adjectives about the US or Russia mark changes in policy.",
+  "cav": "Read for intent, never for fact."
+ },
+ {
+  "id": "tass",
+  "name": "TASS",
+  "url": "https://tass.com",
+  "pub": "Russian state media",
+  "ev": "F",
+  "topics": [
+   "diplo",
+   "sentiment"
+  ],
+  "cov": [
+   "RU"
+  ],
+  "cad": "Continuous",
+  "watch": "The Kremlin's narrative, and often the first report of Russian statements.",
+  "cav": "Read for intent, never for fact."
+ }
+]

@@ -1,0 +1,408 @@
+{
+ "uscn_summits": {
+  "title": "US–China leader summits",
+  "dyad": "US–CN",
+  "status": "active",
+  "desc": "Trump and Xi met in Busan on 30 Oct 2025 (trade truce). Trump made a state visit to Beijing on 13–15 May 2026 (talks 14 May), where the leaders agreed a 'constructive China–US relationship of strategic stability'. Xi held talks with Trump at the White House on 24 Sep 2026: a new joint trade arrangement and agreement to continue the AI dialogue.",
+  "links": [
+   {
+    "label": "PRC MFA readout: Xi meets Trump in Busan (30 Oct 2025)",
+    "url": "https://www.mfa.gov.cn/web/wjdt_674879/gjldrhd_674881/202510/t20251030_11743847.shtml"
+   },
+   {
+    "label": "PRC MFA (EN): President Xi Jinping Holds Talks with U.S. President Donald J. Trump, Beijing (14 May 2026)",
+    "url": "https://www.fmprc.gov.cn/mfa_eng/xw/zyxw/202605/t20260514_11910330.html"
+   },
+   {
+    "label": "PRC MFA readout: Xi–Trump talks, White House (24 Sep 2026)",
+    "url": "https://www.mfa.gov.cn/gjhdq_676201/gj_676203/bmz_679954/1206_680528/xgxw_680534/202609/t20260925_12031134.shtml"
+   }
+  ],
+  "asof": "2026-09-25",
+  "note": "All three meetings confirmed via PRC MFA readouts. No whitehouse.gov readout fetched. H200/Boeing details from Wikipedia not used."
+ },
+ "uscn_mmca": {
+  "title": "Military Maritime Consultative Agreement (MMCA) talks",
+  "dyad": "US–CN",
+  "status": "active",
+  "desc": "The MMCA (1998) is the annual US–PRC military maritime and air safety consultation. A working-group meeting was held in Hawaii on 28–29 May 2026; it reviewed implementation of the air–maritime encounter code of conduct since the 2025 round, which took place after the Busan summit in Nov 2025.",
+  "links": [
+   {
+    "label": "Sputnik China citing PLA Navy outlet 人民海军 (secondary) – May 2026 Hawaii round",
+    "url": "https://sputniknews.cn/20260602/1071625764.html"
+   }
+  ],
+  "asof": "2026-06-02",
+  "note": "No DoD/INDOPACOM or PRC MND primary page confirmed for the 2026 round; the only fetched source is Sputnik, which is secondary."
+ },
+ "uscn_dtl": {
+  "title": "Defense Telephone Link (2008)",
+  "dyad": "US–CN",
+  "status": "limited",
+  "desc": "A defense hotline set up by a 2008 agreement between the US DoD and PRC MND. Its use has been episodic: Beijing suspended mil-mil channels after Aug 2022, and they were partially restored from 2024.",
+  "links": [],
+  "asof": "2025 (background)",
+  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use."
+ },
+ "uscn_cn": {
+  "title": "Counternarcotics working group / fentanyl cooperation",
+  "dyad": "US–CN",
+  "status": "active",
+  "desc": "A bilateral counternarcotics working group was launched after the Nov 2023 Woodside summit. Under the Busan deal, China committed to halt precursor flows. In exchange, the US cut the fentanyl-related IEEPA tariff on Chinese goods from 20% to 10%, effective 10 Nov 2025. Fentanyl precursors were raised again at the May 2026 Beijing summit.",
+  "links": [
+   {
+    "label": "White House fact sheet: Trump strikes deal on economic and trade relations with China (Nov 2025)",
+    "url": "https://www.whitehouse.gov/fact-sheets/2025/11/fact-sheet-president-donald-j-trump-strikes-deal-on-economic-and-trade-relations-with-china/"
+   },
+   {
+    "label": "GovInfo DCPD-202501078: Trump remarks on fentanyl tariff cut to 10% (30 Oct 2025)",
+    "url": "https://www.govinfo.gov/content/pkg/DCPD-202501078/html/DCPD-202501078.htm"
+   }
+  ],
+  "asof": "2025-11 / 2026-05",
+  "note": "No 2026 working-group meeting confirmed."
+ },
+ "uscn_ai": {
+  "title": "US–China intergovernmental AI dialogue",
+  "dyad": "US–CN",
+  "status": "limited",
+  "desc": "The first intergovernmental talks on AI risk and safety were held in Geneva on 14 May 2024. In the 24 Sep 2026 White House talks, Xi and Trump agreed to continue an AI dialogue on risks and benefits and to cooperate against misuse.",
+  "links": [
+   {
+    "label": "PRC MFA readout of 24 Sep 2026 talks (AI dialogue commitment)",
+    "url": "https://www.mfa.gov.cn/gjhdq_676201/gj_676203/bmz_679954/1206_680528/xgxw_680534/202609/t20260925_12031134.shtml"
+   }
+  ],
+  "asof": "2026-09-25",
+  "note": "No primary page for the Geneva May 2024 round was confirmed, and no second formal round is confirmed."
+ },
+ "uscn_nc2": {
+  "title": "Biden–Xi Lima statement on human control of nuclear-use decisions",
+  "dyad": "US–CN",
+  "status": "limited",
+  "desc": "At Lima on 16 Nov 2024, Biden and Xi affirmed the need to maintain human control over the decision to use nuclear weapons. It is a one-off leaders' statement, not a mechanism.",
+  "links": [],
+  "asof": "2024-11 (background)",
+  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use. Not known whether it has been reaffirmed under Trump."
+ },
+ "uscn_exportctl": {
+  "title": "Export controls (BIS chip rules; MOFCOM rare earth/gallium controls)",
+  "dyad": "US–CN",
+  "status": "contested",
+  "desc": "Under the Busan deal, the US suspended BIS's 'affiliates' end-user rule for one year from 10 Nov 2025. China suspended its 9 Oct 2025 expanded rare-earth controls (MOFCOM Ann. 2025 No. 61) and committed to general licences for rare earths, gallium, germanium, antimony and graphite. China's April 2025 controls on seven medium and heavy rare earths (Ann. No. 18) form the baseline regime.",
+  "links": [
+   {
+    "label": "White House fact sheet (affiliates-rule suspension; rare-earth suspension)",
+    "url": "https://www.whitehouse.gov/fact-sheets/2025/11/fact-sheet-president-donald-j-trump-strikes-deal-on-economic-and-trade-relations-with-china/"
+   },
+   {
+    "label": "HK TID circular relaying MOFCOM Ann. 2025 No. 61 (9 Oct 2025)",
+    "url": "https://www.tid.gov.hk/en/tradecircular/files/2025/ci8892025a.pdf"
+   },
+   {
+    "label": "HK TID circular relaying MOFCOM/GAC Ann. 2025 No. 18 (4 Apr 2025)",
+    "url": "https://www.tid.gov.hk/en/tradecircular/files/2025/ci2025318a.pdf"
+   }
+  ],
+  "asof": "2025-11 (suspensions run to ~Nov 2026)",
+  "note": "MOFCOM's own suspension notice (number and end date, believed to be 10 Nov 2026) was not fetched. Whether the one-year suspensions were extended at the Sep 2026 summit is unconfirmed. Wikipedia reports that in May 2026 Commerce cleared 10 Chinese firms to buy Nvidia H200 chips; this is not confirmed from a primary source."
+ },
+ "uscn_sta": {
+  "title": "US–China Science and Technology Agreement renewal",
+  "dyad": "US–CN",
+  "status": "active",
+  "desc": "A protocol signed 13 Dec 2024 extended the 1979 S&T Agreement for five years, with a narrower scope and added safeguards. It limits cooperation to government-to-government basic research and excludes critical and emerging technologies.",
+  "links": [],
+  "asof": "2024-12 (background)",
+  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use."
+ },
+ "usru_newstart": {
+  "title": "New START",
+  "dyad": "US–RU",
+  "status": "ended",
+  "desc": "Russia suspended its participation in Feb 2023, and the treaty expired on 5 Feb 2026. Putin had offered mutual voluntary adherence to the central limits for a year after expiry, but Russia's MFA said it received no formal US response. Moscow then declared both sides free of the treaty's obligations.",
+  "links": [
+   {
+    "label": "Xinhua: Russian MFA statement on New START expiry (5 Feb 2026)",
+    "url": "https://www.news.cn/world/20260205/74c3432ca6e445deab59a0da8cbf8616/c.html"
+   }
+  ],
+  "asof": "2026-02-05",
+  "note": "No post-expiry informal limits arrangement was found as of Feb 2026, and developments after Feb 2026 are not confirmed. The only link is Xinhua; no state.gov or mid.ru page was fetched."
+ },
+ "usru_bmlna": {
+  "title": "1988 Ballistic Missile Launch Notification Agreement / Nuclear Risk Reduction Centers",
+  "dyad": "US–RU",
+  "status": "active",
+  "desc": "Under the 1988 agreement, each side notifies the other of ICBM and SLBM launches via the NRRCs, which were set up in 1987. Russia said in 2023 it would keep giving launch notifications despite suspending New START.",
+  "links": [],
+  "asof": "2023–2025 (background)",
+  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use. Status after New START expiry is not confirmed."
+ },
+ "usru_incsea": {
+  "title": "1972 Incidents at Sea Agreement",
+  "dyad": "US–RU",
+  "status": "limited",
+  "desc": "A 1972 US–Soviet navy agreement on avoiding dangerous manoeuvres at sea, with annual review talks. It remains in force, but the regular annual meetings have reportedly lapsed since 2022.",
+  "links": [],
+  "asof": "background",
+  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use."
+ },
+ "usru_iss": {
+  "title": "ISS integrated crew / seat swap agreement",
+  "dyad": "US–RU",
+  "status": "active",
+  "desc": "Under a NASA–Roscosmos integrated crew agreement, NASA astronauts fly on Soyuz and cosmonauts on US commercial crew vehicles. It was reportedly extended through 2027.",
+  "links": [],
+  "asof": "2025 (background)",
+  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use."
+ },
+ "usru_ukraine": {
+  "title": "Ukraine negotiations",
+  "dyad": "US–RU",
+  "status": "contested",
+  "desc": "After the Trump–Putin summit in Anchorage, Alaska on 15 Aug 2025, US–Ukraine–Russia trilateral rounds took place in Abu Dhabi (23–24 Jan and 4–5 Feb 2026) and Geneva (17–18 Feb 2026). A further Abu Dhabi round was floated for March 2026. Ukraine was discussed at the May and Sep 2026 Xi–Trump meetings.",
+  "links": [
+   {
+    "label": "Xinhua: US–Ukraine Geneva talks end; next trilateral may be in Abu Dhabi (27 Feb 2026)",
+    "url": "https://www.news.cn/world/20260227/9755b93a3cd0473f980465d241127deb/c.html"
+   }
+  ],
+  "asof": "2026-02-27",
+  "note": "No primary source for the Alaska summit was fetched. Rounds after Feb 2026 and any ceasefire or settlement status are unconfirmed."
+ },
+ "usru_embassy": {
+  "title": "Embassy operations talks (Istanbul 2025)",
+  "dyad": "US–RU",
+  "status": "limited",
+  "desc": "US and Russian delegations met in Istanbul on 27 Feb and 10 Apr 2025 to discuss restoring diplomatic mission operations (staffing, banking, property).",
+  "links": [],
+  "asof": "2025-04 (background)",
+  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use. Later rounds unknown."
+ },
+ "usru_uranium": {
+  "title": "US ban on Russian enriched uranium imports",
+  "dyad": "US–RU",
+  "status": "limited",
+  "desc": "The Prohibiting Russian Uranium Imports Act (signed May 2024, effective Aug 2024) bans imports of Russian LEU, with DOE waivers possible through end-2027. Russia imposed counter-restrictions on exports to the US in Nov 2024.",
+  "links": [
+   {
+    "label": "GovInfo: Public Law 118-62, Prohibiting Russian Uranium Imports Act (13 May 2024)",
+    "url": "https://www.govinfo.gov/app/details/PLAW-118publ62"
+   }
+  ],
+  "asof": "2024–2027 (background)",
+  "note": "Enactment date confirmed. The Aug 2024 effective date, the end-2027 waiver window and Russia's Nov 2024 counter-restriction are unconfirmed (energy.gov and congress.gov fetches failed)."
+ },
+ "cnru_airpatrol": {
+  "title": "China–Russia joint strategic air patrols",
+  "dyad": "CN–RU",
+  "status": "active",
+  "desc": "Joint bomber patrols over the Sea of Japan, East China Sea and western Pacific have been held roughly annually since July 2019. They included a 2024 patrol near Alaska and a Dec 2025 round.",
+  "links": [],
+  "asof": "2025 (background)",
+  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use. The PRC MND English front page carried a 30 Nov joint air strategic patrol item (year not shown, no article URL), so it is not linked."
+ },
+ "cnru_naval": {
+  "title": "Joint naval exercises and 2024 coast guard patrol (Bering Sea/Arctic)",
+  "dyad": "CN–RU",
+  "status": "active",
+  "desc": "The two navies hold regular exercises (Joint Sea / Northern Interaction) and joint Pacific patrols. In late Sep–Oct 2024 the US Coast Guard reported Chinese and Russian coast guard vessels patrolling together in the Bering Sea.",
+  "links": [],
+  "asof": "2024–2025 (background)",
+  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use. The USCG press release URL was not fetched."
+ },
+ "cnru_bmln": {
+  "title": "2009 China–Russia ballistic missile launch notification agreement",
+  "dyad": "CN–RU",
+  "status": "active",
+  "desc": "Under a 2009 bilateral agreement, each side notifies the other of ballistic missile and space launches toward the other's territory. It was extended for 10 years in Dec 2021.",
+  "links": [],
+  "asof": "2021 extension (background)",
+  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use."
+ },
+ "cnru_pos": {
+  "title": "Power of Siberia 1 & Power of Siberia 2",
+  "dyad": "CN–RU",
+  "status": "limited",
+  "desc": "Power of Siberia 1 has delivered gas since Dec 2019, with a design capacity of 38 bcm/yr. On 2 Sep 2025 Gazprom and CNPC signed a 'legally binding memorandum' on Power of Siberia 2 (50 bcm/yr via Mongolia), but pricing and final contract terms remained unresolved.",
+  "links": [
+   {
+    "label": "Gazprom: Power of Siberia project page",
+    "url": "https://www.gazprom.com/projects/power-of-siberia/"
+   }
+  ],
+  "asof": "2025-09 (background)",
+  "note": "PoS-1 confirmed: 38 bcm/yr, deliveries from 2 Dec 2019, full route operating since 21 Dec 2022. No primary source for the 2 Sep 2025 PoS-2 memorandum was found (Gazprom/Kremlin pages blocked or not located)."
+ },
+ "cnru_nuclear": {
+  "title": "Rosatom-built Tianwan 7/8 and Xudapu 3/4",
+  "dyad": "CN–RU",
+  "status": "active",
+  "desc": "Four VVER-1200 units are being built in China under 2018 agreements: Tianwan 7/8 in Jiangsu and Xudapu 3/4 in Liaoning. The first unit is expected online around 2026.",
+  "links": [],
+  "asof": "background",
+  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use. Commissioning status not confirmed."
+ },
+ "cnru_ilrs": {
+  "title": "International Lunar Research Station (ILRS)",
+  "dyad": "CN–RU",
+  "status": "active",
+  "desc": "A China-led lunar base programme co-founded with Roscosmos in 2021, with other partner states and organisations joining. Its roadmap targets a basic station by about 2035, and includes a Russian–Chinese lunar nuclear power plant concept.",
+  "links": [
+   {
+    "label": "CNSA: Joint Statement between CNSA and Roscosmos on ILRS construction (29 Apr 2021)",
+    "url": "https://www.cnsa.gov.cn/english/n6465668/n6465670/c6811967/content.html"
+   },
+   {
+    "label": "CNSA: ILRS Guide for Partnership (16 Jun 2021)",
+    "url": "https://www.cnsa.gov.cn/english/n6465652/n6465653/c6812150/content.html"
+   }
+  ],
+  "asof": "background",
+  "note": "The 2021 founding documents are confirmed. The current partner count, the ~2035 roadmap and the lunar nuclear power plant concept are unconfirmed."
+ },
+ "cnru_currency": {
+  "title": "Local-currency settlement share",
+  "dyad": "CN–RU",
+  "status": "active",
+  "desc": "Russian officials have said that over 95% of Russia–China trade is settled in rubles and yuan.",
+  "links": [],
+  "asof": "2024–2025 (background)",
+  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use."
+ },
+ "all_unsc": {
+  "title": "UN Security Council voting/vetoes",
+  "dyad": "All three",
+  "status": "contested",
+  "desc": "All three are veto-holding permanent members. Recent vetoes include repeated US vetoes on Gaza resolutions (2024–2025) and Russian vetoes on Ukraine-related texts and other files.",
+  "links": [
+   {
+    "label": "UN Dag Hammarskjöld Library: Security Council veto list",
+    "url": "https://research.un.org/en/docs/sc/quick/veto"
+   }
+  ],
+  "asof": "background",
+  "note": "The veto-list page exists, but the list loads via JavaScript and could not be read. Recent veto details come from background knowledge and are unconfirmed."
+ },
+ "all_p5": {
+  "title": "P5 Process & 3 Jan 2022 joint statement on preventing nuclear war",
+  "dyad": "All three",
+  "status": "limited",
+  "desc": "In the 3 Jan 2022 P5 statement, the five leaders affirmed that 'a nuclear war cannot be won and must never be fought'. The P5 Process continued at working level but was strained after Russia's invasion of Ukraine.",
+  "links": [
+   {
+    "label": "White House (archived): Joint Statement of the Leaders of the Five Nuclear-Weapon States (3 Jan 2022)",
+    "url": "https://bidenwhitehouse.archives.gov/briefing-room/statements-releases/2022/01/03/p5-statement-on-preventing-nuclear-war-and-avoiding-arms-races/"
+   },
+   {
+    "label": "PRC MFA: 五个核武器国家领导人关于防止核战争与避免军备竞赛的联合声明",
+    "url": "https://www.mfa.gov.cn/web/zyxw/202201/t20220103_10478507.shtml"
+   }
+  ],
+  "asof": "background",
+  "note": "The 2022 statement is confirmed. The current state of the P5 Process (2025–2026 meetings, chair) is unconfirmed."
+ },
+ "all_ctbt": {
+  "title": "CTBT / CTBTO",
+  "dyad": "All three",
+  "status": "limited",
+  "desc": "The US and China signed the CTBT in 1996 but have not ratified it. Russia ratified in 2000 and revoked its ratification in Nov 2023, while remaining a signatory. In late Oct 2025 Trump directed preparations for nuclear testing 'on an equal basis'.",
+  "links": [
+   {
+    "label": "CTBTO: States Signatories",
+    "url": "https://www.ctbto.org/our-mission/states-signatories"
+   }
+  ],
+  "asof": "background",
+  "note": "The CTBTO page confirms all three signed on 24 Sep 1996 and lists no ratification date for any of them, consistent with Russia's 2023 revocation. Russia's revocation and Trump's Oct 2025 testing directive are not confirmed from a primary page."
+ },
+ "all_iaea": {
+  "title": "IAEA Board of Governors",
+  "dyad": "All three",
+  "status": "active",
+  "desc": "The US, China and Russia sit on the 35-member IAEA Board each year as designated members, where they often split on Iran resolutions.",
+  "links": [
+   {
+    "label": "IAEA: Board of Governors",
+    "url": "https://www.iaea.org/about/governance/board-of-governors"
+   }
+  ],
+  "asof": "background",
+  "note": "The fetched page showed the 2023–2024 composition, which includes China, Russia and the US. Current 2025–2026 membership was not shown but is near-certain as all three are designated members."
+ },
+ "all_iter": {
+  "title": "ITER members",
+  "dyad": "All three",
+  "status": "active",
+  "desc": "ITER has seven Members: China, the EU, India, Japan, Korea, Russia and the US. Russia remains a Member. Switzerland participates via Fusion for Energy (from 1 Jan 2026), and the UK has discontinued participation.",
+  "links": [
+   {
+    "label": "ITER Organization: ITER Members",
+    "url": "https://www.iter.org/about/iter-members"
+   }
+  ],
+  "asof": "2026-10 (fetched)"
+ },
+ "all_ats": {
+  "title": "Antarctic Treaty Consultative Parties",
+  "dyad": "All three",
+  "status": "active",
+  "desc": "The US and Russia are original 1959 signatories with consultative status since entry into force (23 Jun 1961). China acceded in 1983 and gained consultative status on 7 Oct 1985. There are 29 Consultative Parties in total.",
+  "links": [
+   {
+    "label": "Antarctic Treaty Secretariat: Parties list",
+    "url": "https://www.ats.aq/devAS/Parties?lang=e"
+   }
+  ],
+  "asof": "2026-10 (fetched)"
+ },
+ "all_npfc": {
+  "title": "North Pacific Fisheries Commission",
+  "dyad": "All three",
+  "status": "active",
+  "desc": "The North Pacific Fisheries Commission is the high-seas fisheries management body for the North Pacific. It has nine members: Canada, China, EU, Japan, Korea, Russia, Chinese Taipei, US and Vanuatu.",
+  "links": [
+   {
+    "label": "NPFC home page (members list)",
+    "url": "https://www.npfc.int/"
+   }
+  ],
+  "asof": "2026-10 (fetched)"
+ },
+ "all_wmo": {
+  "title": "World Meteorological Organization",
+  "dyad": "All three",
+  "status": "active",
+  "desc": "All three are WMO Members and exchange data through the WMO global observing and telecommunication system.",
+  "links": [],
+  "asof": "background",
+  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use."
+ },
+ "all_cospas": {
+  "title": "Cospas-Sarsat",
+  "dyad": "All three",
+  "status": "active",
+  "desc": "Cospas-Sarsat is the satellite search-and-rescue system. The US and Russia (with Canada and France) are founding parties under the 1988 agreement, and China participates as a ground segment provider.",
+  "links": [],
+  "asof": "background",
+  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use."
+ },
+ "all_nptrevcon": {
+  "title": "NPT Review Conference 2026",
+  "dyad": "All three",
+  "status": "contested",
+  "desc": "The 11th NPT Review Conference met in New York from 27 Apr to 22 May 2026 and ended without a consensus outcome document, reportedly over US–Iran disagreements. This is the third consecutive RevCon without one, after 2015 and 2022.",
+  "links": [
+   {
+    "label": "UN Digital Library: NPT/CONF.2026/PC.III/DEC.1 (dates and venue)",
+    "url": "https://digitallibrary.un.org/record/4082389/files/NPT_CONF.2026_PC.III_DEC.1-ZH.pdf"
+   },
+   {
+    "label": "Xinhua: PRC MFA regrets RevCon failure to adopt outcome (25 May 2026)",
+    "url": "https://www.news.cn/20260525/889a1f7101dc4dd1aeafbd55f6814d3d/c.html"
+   }
+  ],
+  "asof": "2026-05-25"
+ }
+}
