@@ -1,0 +1,240 @@
+{
+ "name": "comtrade",
+ "title": "Mirror trade statistics (UN Comtrade)",
+ "source_url": "https://comtradeplus.un.org",
+ "collected_at": "2026-10-12T16:53:44+00:00",
+ "payload": {
+  "rows": [
+   {
+    "reporter": "CN",
+    "partner": "RU",
+    "flow": "X",
+    "year": 2025,
+    "usd": 103457523832.0
+   },
+   {
+    "reporter": "CN",
+    "partner": "RU",
+    "flow": "X",
+    "year": 2024,
+    "usd": 115275861485.0
+   },
+   {
+    "reporter": "CN",
+    "partner": "RU",
+    "flow": "X",
+    "year": 2023,
+    "usd": 110935409106.0
+   },
+   {
+    "reporter": "CN",
+    "partner": "RU",
+    "flow": "X",
+    "year": 2022,
+    "usd": 76122649188.0
+   },
+   {
+    "reporter": "CN",
+    "partner": "RU",
+    "flow": "M",
+    "year": 2025,
+    "usd": 124005929237.0
+   },
+   {
+    "reporter": "CN",
+    "partner": "RU",
+    "flow": "M",
+    "year": 2024,
+    "usd": 129881357745.0
+   },
+   {
+    "reporter": "CN",
+    "partner": "RU",
+    "flow": "M",
+    "year": 2023,
+    "usd": 129205577995.0
+   },
+   {
+    "reporter": "CN",
+    "partner": "RU",
+    "flow": "M",
+    "year": 2022,
+    "usd": 114148970877.0
+   },
+   {
+    "reporter": "CN",
+    "partner": "US",
+    "flow": "X",
+    "year": 2025,
+    "usd": 420998963675.0
+   },
+   {
+    "reporter": "CN",
+    "partner": "US",
+    "flow": "X",
+    "year": 2024,
+    "usd": 525648764497.0
+   },
+   {
+    "reporter": "CN",
+    "partner": "US",
+    "flow": "X",
+    "year": 2023,
+    "usd": 501220722660.0
+   },
+   {
+    "reporter": "CN",
+    "partner": "US",
+    "flow": "X",
+    "year": 2022,
+    "usd": 582756110047.0
+   },
+   {
+    "reporter": "CN",
+    "partner": "US",
+    "flow": "M",
+    "year": 2025,
+    "usd": 141224117506.0
+   },
+   {
+    "reporter": "CN",
+    "partner": "US",
+    "flow": "M",
+    "year": 2024,
+    "usd": 164590858212.0
+   },
+   {
+    "reporter": "CN",
+    "partner": "US",
+    "flow": "M",
+    "year": 2023,
+    "usd": 165157213513.0
+   },
+   {
+    "reporter": "CN",
+    "partner": "US",
+    "flow": "M",
+    "year": 2022,
+    "usd": 178956829551.0
+   },
+   {
+    "reporter": "US",
+    "partner": "CN",
+    "flow": "X",
+    "year": 2025,
+    "usd": 106308380310.0
+   },
+   {
+    "reporter": "US",
+    "partner": "CN",
+    "flow": "X",
+    "year": 2024,
+    "usd": 143545716168.0
+   },
+   {
+    "reporter": "US",
+    "partner": "CN",
+    "flow": "X",
+    "year": 2023,
+    "usd": 147805519996.0
+   },
+   {
+    "reporter": "US",
+    "partner": "CN",
+    "flow": "X",
+    "year": 2022,
+    "usd": 153837022415.0
+   },
+   {
+    "reporter": "US",
+    "partner": "CN",
+    "flow": "M",
+    "year": 2025,
+    "usd": 327476103023.0
+   },
+   {
+    "reporter": "US",
+    "partner": "CN",
+    "flow": "M",
+    "year": 2024,
+    "usd": 462620339617.0
+   },
+   {
+    "reporter": "US",
+    "partner": "CN",
+    "flow": "M",
+    "year": 2023,
+    "usd": 448017376384.0
+   },
+   {
+    "reporter": "US",
+    "partner": "CN",
+    "flow": "M",
+    "year": 2022,
+    "usd": 575688091172.0
+   },
+   {
+    "reporter": "US",
+    "partner": "RU",
+    "flow": "X",
+    "year": 2025,
+    "usd": 592952149.0
+   },
+   {
+    "reporter": "US",
+    "partner": "RU",
+    "flow": "X",
+    "year": 2024,
+    "usd": 526066141.0
+   },
+   {
+    "reporter": "US",
+    "partner": "RU",
+    "flow": "X",
+    "year": 2023,
+    "usd": 597274158.0
+   },
+   {
+    "reporter": "US",
+    "partner": "RU",
+    "flow": "X",
+    "year": 2022,
+    "usd": 1715079989.0
+   },
+   {
+    "reporter": "US",
+    "partner": "RU",
+    "flow": "M",
+    "year": 2025,
+    "usd": 4047522367.0
+   },
+   {
+    "reporter": "US",
+    "partner": "RU",
+    "flow": "M",
+    "year": 2024,
+    "usd": 3272046210.0
+   },
+   {
+    "reporter": "US",
+    "partner": "RU",
+    "flow": "M",
+    "year": 2023,
+    "usd": 4902440527.0
+   },
+   {
+    "reporter": "US",
+    "partner": "RU",
+    "flow": "M",
+    "year": 2022,
+    "usd": 15071041473.0
+   }
+  ],
+  "years_tried": [
+   2025,
+   2024,
+   2023,
+   2022
+  ]
+ }
+}

@@ -90,9 +90,11 @@ def _parse(raw: bytes):
     pairs = {}
     for row in _rows(zf):
         if dest_col is None:
+            # The 2024 title cell reads "...: Destination and origin", so a label cell
+            # must name one side only, or both columns would lock onto the title.
             texts = {i: str(v).lower() for i, v in row.items()}
-            d = [i for i, t in texts.items() if "destination" in t and "code" not in t]
-            o = [i for i, t in texts.items() if "origin" in t and "code" not in t]
+            d = [i for i, t in texts.items() if "destination" in t and "origin" not in t and "code" not in t]
+            o = [i for i, t in texts.items() if "origin" in t and "destination" not in t and "code" not in t]
             if not (d and o):
                 continue
             dest_col, orig_col = d[0], o[0]

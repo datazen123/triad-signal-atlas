@@ -1,0 +1,1235 @@
+{
+ "name": "links",
+ "title": "Evidence link health",
+ "source_url": "https://archive.org/help/wayback_api.php",
+ "collected_at": "2026-10-12T17:10:42+00:00",
+ "payload": {
+  "status": {
+   "http://eng.mod.gov.cn": {
+    "state": "unreachable",
+    "code": null,
+    "dead_streak": 0
+   },
+   "http://publication.pravo.gov.ru": {
+    "state": "unreachable",
+    "code": null,
+    "dead_streak": 0
+   },
+   "http://stats.customs.gov.cn": {
+    "state": "unreachable",
+    "code": null,
+    "dead_streak": 0
+   },
+   "http://treaty.mfa.gov.cn": {
+    "state": "unreachable",
+    "code": null,
+    "dead_streak": 0
+   },
+   "http://www.mofcom.gov.cn": {
+    "state": "unreachable",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://acleddata.com": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://adst.org/2016/06/russia-love-back-rostropovichs-exile-return/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://adst.org/2017/10/act-kindness-chinese-president-xi-jinping-helped-grant-american-ambassador-final-wish/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://almaobservatory.org/en/about-alma/global-collaboration": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://apps.fas.usda.gov/gats": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://bidenwhitehouse.archives.gov/briefing-room/statements-releases/2022/01/03/p5-statement-on-preventing-nuclear-war-and-avoiding-arms-races/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://billygrahamlibrary.org/blog-inside-the-archives-chinese-tea-set/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://biotech.law.lsu.edu/blaw/bt/smallpox/who/red-book/9241561106_chp9.pdf": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://blog.google/around-the-globe/google-asia/google-ai-china-center/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://bushchinafoundation.org/?p=282394": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://c250.columbia.edu/c250_celebrates/remarkable_columbians/hu_shih.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://carnegie.org/great-immigrants/shuji-nakamura/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://celestrak.org": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://china.usc.edu/getting-beijing-henry-kissingers-secret-1971-trip": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://china.usc.edu/node/2611": {
+    "state": "dead",
+    "code": 404,
+    "dead_streak": 2
+   },
+   "https://ciss.tsinghua.edu.cn": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://cnes.fr/en/projects/svom": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://combinedmaritimeforces.com/2016/05/01/combined-maritime-forces-in-bahrain-lead-the-shade-counter-piracy-conference/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://comtradeplus.un.org": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://crsreports.congress.gov": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://data.bis.org": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://data.imf.org": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://dataspace.copernicus.eu": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://digitallibrary.un.org": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://digitallibrary.un.org/record/4082389/files/NPT_CONF.2026_PC.III_DEC.1-ZH.pdf": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://divinity-adhoc.library.yale.edu/Nanking/Rabe.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://ds.iris.edu": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://earthexplorer.usgs.gov": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://energyandcleanair.org": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://eng.mil.ru": {
+    "state": "unreachable",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://english.cas.cn/newsroom/cas_media/202408/t20240806_681340.shtml": {
+    "state": "dead",
+    "code": 404,
+    "dead_streak": 2
+   },
+   "https://epoch.ai": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://esa.int/Enabling_Support/Operations/ESA_ground_stations_support_Chandrayaan-3_Moon_mission": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://eto.tech": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://eventhorizontelescope.org/press-release-april-10-2019-astronomers-capture-first-image-black-hole": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://fair-center.eu/about/partners": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://fddi.fudan.edu.cn/93/07/c18965a430855/page.htm": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://finding-aids.library.umkc.edu/agents/people/601": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://firms.modaps.eosdis.nasa.gov": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://fsi.stanford.edu/news/visit-russias-secret-nuclear-labs": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://gardnermuseum.emuseum.com/people/1281/okakura-kakuzo": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://globalaffairs.org": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://globalfishingwatch.org": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://globe.adsbexchange.com": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://gulfnews.com/world/when-russian-and-us-scientists-worked-together-on-vaccines-1.1597530992539": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://hai.stanford.edu/ai-index": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://history.state.gov/departmenthistory/people/burns-william-joseph": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://history.state.gov/departmenthistory/people/huntsman-jon-m": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://history.state.gov/departmenthistory/people/matlock-jack-foust": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://history.state.gov/departmenthistory/people/roy-j-stapleton": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://home.cern/science/physics/higgs-boson": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://home.treasury.gov/data/treasury-international-capital-tic-system": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://icsin.org/centenary-celebration-of-tagores-visit-to-china": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://ignca.gov.in/?p=16847": {
+    "state": "unreachable",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://journal.juilliard.edu/journal/van-cliburn-1934-2013": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://kremlin.ru": {
+    "state": "unreachable",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://lemelson.mit.edu/resources/vladimir-zworykin": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://library.um.edu.mo/resources/electronic_resources/macau_music/musician/m01": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://ligo.org/ligo-virgo-kagra-to-resume-and-extend-the-o4-run/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://meetings.unoda.org": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://mid.ru": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://mosaic-expedition.org/wp-content/uploads/2021/02/mosaic_factsheet_expedition-in-numbers_engl.pdf": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://news.microsoft.com/source/1998/11/04/microsoft-announces-beijing-as-site-for-its-first-asian-research-lab/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://news.un.org/en/story/2025/09/1165901": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://newscenter.lbl.gov/2020/12/11/scientists-say-farewell-to-daya-bay-site-proceed-with-final-data-analysis/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://nobelprize.org/prizes/literature/1938/buck/biographical": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://nobelprize.org/prizes/physics/1983/chandrasekhar/biographical": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://nobelprize.org/prizes/physics/2021/manabe/biographical": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://nonproliferation.org/lab-to-lab-joint-verification-experiment/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://obamawhitehouse.archives.gov/the-press-office/2013/12/10/statement-nsc-spokesperson-caitlin-hayden-completion-us-russia-megatons-": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://obamawhitehouse.archives.gov/the-press-office/2014/11/11/us-china-joint-announcement-climate-change": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://oceans-and-fisheries.ec.europa.eu/news/arctic-agreement-prevent-unregulated-fishing-enters-force-2021-06-25_en": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://ofac.treasury.gov": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://openalex.org": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://opendoorsdata.org": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://paper.people.com.cn/hqrw/html/2015-05/26/content_1632321.htm": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://paper.people.com.cn/rmrb/html/2024-06/28/nw.D110000renmrb_20240628_1-16.htm": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://paper.people.com.cn/rmrbwap/html/2022-12/20/nw.D110000renmrb_20221220_3-03.htm": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://paper.people.com.cn/rmwz/html/2012-08/01/content_1101529.htm?div=-1": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://patentscope.wipo.int": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://planet4589.org": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://pmc.ncbi.nlm.nih.gov/articles/PMC10129129": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://pmc.ncbi.nlm.nih.gov/articles/PMC8888238": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://polioeradication.org/about-polio/history-of-polio": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://portwatch.imf.org": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://praemiumimperiale.org/en/laureate/baryshnikov": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://pris.iaea.org": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://publichealth.jhu.edu/about/history/heroes-of-public-health/donald-a-henderson": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://relstud-hist.spbu.ru/en/articles/alekseev-vasily": {
+    "state": "unreachable",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://research.un.org/en/docs/sc/quick/veto": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://rijs.fas.harvard.edu/edwin-o-reischauer": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://rosstat.gov.ru": {
+    "state": "unreachable",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://sci.esa.int/web/rosetta/-/31242-rosetta-disk-goes-back-to-the-future": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://sci.esa.int/web/rosetta/-/31397-fact-sheet": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://sputniknews.cn/20260602/1071625764.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://tass.com": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://thebulletin.org": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://treaties.un.org": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://usbelleii.bnl.gov/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://uschinaexchange.usc.edu/node/451": {
+    "state": "unreachable",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://usinfo.org/wf-archive/2004/040330/epf206.htm": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://ustr.gov": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://wilsoncenter.org/publication/reagans-evolving-views-russians-and-their-relevance-today": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://wmo.int": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://wmo.int/node/11383": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://wmo.int/node/14000": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://worldview.earthdata.nasa.gov": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.aiib.org/en/about-aiib/governance/members-of-bank/index.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.amsa.gov.au/safety-navigation/search-and-rescue/search-malaysia-airlines-flight-mh370": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.armscontrol.org/factsheets/intermediate-range-nuclear-forces-inf-treaty-glance": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.asme.org/engineering-topics/articles/aerospace-defense/igor-sikorsky-aviation-pioneer": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.ats.aq": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.ats.aq/devAS/Parties?lang=e": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.ats.aq/e/antarctictreaty.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.bimsa.cn/president": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.bis.gov": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.brookings.edu": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.cac.gov.cn": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.cbr.ru/eng/statistics": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.census.gov/foreign-trade/balance/c5700.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.chinanews.com.cn/gn/2023/02-08/9950028.shtml": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.chinawriter.com.cn/xdzj/278.shtml": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.city.sendai.jp/koryu/foreignlanguage/cn/sendai/rojin.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.cnsa.gov.cn/english/n6465652/n6465653/c6812150/content.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.cnsa.gov.cn/english/n6465668/n6465670/c6811967/content.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.collectspace.com/news/news-101119a-cosmonaut-alexei-leonov-obituary.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.conflictarm.com": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.cospas-sarsat.int": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.courtlistener.org": {
+    "state": "unreachable",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.ctbto.org": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.ctbto.org/our-mission/states-signatories": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.ctbto.org/our-work/international-monitoring-system": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.defense.gov": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.dtra.mil/Missions/Partnering/Cooperative-Threat-Reduction-Program/": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.eia.gov/uranium/marketing/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/DAMA_mission/The_antimatter_hunter": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.esa.int/Science_Exploration/Space_Science/Einstein_Probe_opens_its_wide_eyes_to_the_X-ray_sky": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.federalregister.gov": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.fmprc.gov.cn": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.fmprc.gov.cn/mfa_eng/xw/zyxw/202605/t20260514_11910330.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.fmprc.gov.cn/web/wjbxw_673019/202201/t20220103_10478508.shtml": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.foreign.senate.gov/press/dem/release/lugar-applauds-the-secure-storage-of-spent-plutonium-fuel-in-kazakhstan": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.gavi.org/news/media-room/covid-19-vaccinations-shift-regular-immunisation-covax-draws-close": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.gazprom.com/projects/power-of-siberia/": {
+    "state": "unreachable",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.gov.uk/government/publications/ai-safety-summit-2023-the-bletchley-declaration/the-bletchley-declaration-by-countries-attending-the-ai-safety-summit-1-2-november-2023": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.govinfo.gov/app/details/PLAW-118publ62": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.govinfo.gov/content/pkg/DCPD-202501078/html/DCPD-202501078.htm": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.gsd.harvard.edu/2024/05/i-m-pei-legacy-sandi-pei-calvin-tsao-paul-goldberger/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.iaea.org": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.iaea.org/about/governance/board-of-governors": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.iter.org": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.iter.org/about/iter-members": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.iter.org/node/2270": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.jcs.mil.kr": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.jinr.ru/posts/juno-experiment-first-physics-results-obtained/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.justice.gov": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.k-state.edu/landon/speakers/mike-mansfield/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.levada.ru/en/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.lindahall.org/about/news/scientist-of-the-day/matteo-ricci/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.mfa.gov.cn/eng/zy/jj/zggcddwjw100ggs/gg/202406/t20240606_11377970.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.mfa.gov.cn/gjhdq_676201/gj_676203/bmz_679954/1206_680528/xgxw_680534/202609/t20260925_12031134.shtml": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.mfa.gov.cn/web/gjhdq_676201/gjhdqzz_681964/xkfyh/zywj_700190/201602/t20160219_9867751.shtml": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.mfa.gov.cn/web/wjdt_674879/gjldrhd_674881/202510/t20251030_11743847.shtml": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.mfa.gov.cn/web/ziliao_674904/zt_674979/dnzt_674981/qtzt/zggcddwjw100ggs/gmqtjygml/202208/t20220823_10749394.shtml": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.mfa.gov.cn/web/zyxw/202201/t20220103_10478507.shtml": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.mnd.gov.tw": {
+    "state": "unverifiable",
+    "code": 405,
+    "dead_streak": 0
+   },
+   "https://www.mod.go.jp/js/press/index.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.nact.jp/english/artcommons/user/detail/26382": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.nasa.gov/history/65-years-ago-the-international-geophysical-year-begins": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.nasa.gov/history/astp/overview.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.nasa.gov/history/history-publications-and-resources/oral-histories/shuttle-mir-oral-histories": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.nasa.gov/international-space-station/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.nasa.gov/international-space-station/space-station-international-cooperation": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.nasa.gov/news-release/nasa-administrator-pays-tribute-to-space-pioneer-thomas-stafford": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.nationthailand.com/in-focus/30348966": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.nature.com/nature-index": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5876186/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.news.cn": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.news.cn/20260525/889a1f7101dc4dd1aeafbd55f6814d3d/c.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.news.cn/world/20260205/74c3432ca6e445deab59a0da8cbf8616/c.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.news.cn/world/20260227/9755b93a3cd0473f980465d241127deb/c.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.news.uscg.mil": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.nist.gov/caisi": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.nobelprize.org/prizes/chemistry/1977/prigogine/facts/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.nobelprize.org/prizes/chemistry/2009/ramakrishnan/facts/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.nobelprize.org/prizes/economic-sciences/1971/kuznets/facts/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.nobelprize.org/prizes/economic-sciences/1973/leontief/facts/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.nobelprize.org/prizes/medicine/1968/khorana/facts/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.nobelprize.org/prizes/peace/1990/gorbachev/facts/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.nobelprize.org/prizes/peace/1995/rotblat/biographical/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.nobelprize.org/prizes/physics/2003/abrikosov/facts/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.nobelprize.org/prizes/physics/2009/kao/facts/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.nobelprize.org/prizes/physics/2010/geim/facts/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.nobelprize.org/prizes/physics/2010/novoselov/facts/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.norad.mil": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.npfc.int": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.npfc.int/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.nri.cam.ac.uk/?p=170": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.nycballet.com/discover/our-history/george-balanchine": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.opcw.org/media-centre/news/2014/07/transloading-syrian-chemicals-cape-ray-completed-without-incident-port": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.orientalstudies.ru/eng/images/pdf/a_popova_2014.pdf": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.pewresearch.org": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.praemiumimperiale.org/en/laureate/ma/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.rmzxw.com.cn/c/2021-07-30/2918114.shtml": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.safe.gov.cn": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.sanctionsmap.eu": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.sarsat.noaa.gov/wp-content/uploads/2021/08/Cospas-Sarsat-Overview_2015.pdf": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.scientificamerican.com/article/farside-politics-the-west-eyes-moon-cooperation-with-china": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.si.com/nba/2016/03/30/yao-ming-elected-enshrinement-basketball-hall-fame": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.sipri.org": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.sipri.org/databases": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.skao.int/en/news/590/india-celebrates-skao-membership": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.space-track.org": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.state.gov": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.stonybrook.edu/commcms/physics/cnyang/index.php": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.swift.com": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.sysu.edu.cn/newsen/info/1701/54071.htm": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.tid.gov.hk/en/tradecircular/files/2025/ci2025318a.pdf": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.tid.gov.hk/en/tradecircular/files/2025/ci8892025a.pdf": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.tsinghua.edu.cn/info/1173/18290.htm": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.tsinghua.edu.cn/info/1662/97059.htm": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.un.org/digital-emerging-technologies/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.un.org/en/conferences/npt2026": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.unep.org/zh-hans/xinwenyuziyuan/xinwengao/chouyangcenghuifuyiburuzhengguiyouzhuyubimianquanqiu05degcdeshengwen": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.unoosa.org/oosa/en/spaceobjectregister/index.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.unroca.org": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.uscc.gov": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.usgs.gov/centers/national-minerals-information-center": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.visvabharati.ac.in/file/Dept_Chinaese.pdf": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.whitehouse.gov/fact-sheets/2025/11/fact-sheet-president-donald-j-trump-strikes-deal-on-economic-and-trade-relations-with-china/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.who.int/emergencies/situations/ebola-outbreak-2014-2016-West-Africa": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.who.int/health-topics/smallpox": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.who.int/news/item/08-04-2020-who-timeline---covid-19": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.who.int/zh/health-topics/who-pandemic-agreement": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.wilsoncenter.org/article/wilson-center-remembers-former-diplomat-scholar-anatoly-dobrynin": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.world-nuclear-news.org/articles/usa-applauds-iran-s-uranium-shipment-to-russia": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.worldbank.org/en/topic/debt/brief/covid-19-debt-service-suspension-initiative": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.wto.org": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   }
+  },
+  "healed": {
+   "https://english.cas.cn/newsroom/cas_media/202408/t20240806_681340.shtml": "https://web.archive.org/web/20241106235940/https://english.cas.cn/newsroom/cas_media/202408/t20240806_681340.shtml"
+  },
+  "counts": {
+   "unreachable": 13,
+   "unverifiable": 22,
+   "ok": 206,
+   "dead": 2
+  },
+  "checked": 243
+ }
+}

@@ -1,5 +1,27 @@
 # API endpoint verification
 
+## Live run, 2026-10-13 (plain urllib, `doctor.py --force`)
+
+All eight collectors returned `ok` against the real APIs. Response shapes were checked against the
+test fixtures, and the fixtures were updated to match:
+
+| Collector | Live result | What changed |
+|-----------|-------------|--------------|
+| openalex | 21 pairs, 2000 to now. `group_by[].key` is the year as a string; `meta` carries `groups_count` | Fixture only. The current year can exceed the previous one (2026 US-CN: 96k against 65k for 2025), so the page already drops the current partial year |
+| nobel | 1,028 laureates. `links[]` holds an API link first, then the `www.nobelprize.org/laureate/{id}` page; `links.next` is absent on the last page | Fixture only |
+| fedreg | Yearly facets keyed `"YYYY-01-01": {count, name}` from 1994 | None |
+| comtrade | 32 of 32 flow-years, including US as reporter. One `TOTAL` row with `customsCode` C00 and `motCode` 0 | Fixture only |
+| portwatch | `date` is a `YYYY-MM-DD` string; `exceededTransferLimit` paging works | None |
+| satcat | `pub/satcat.csv` has 17 columns | EU owner map was missing real member codes (GREC, POR, BEL, ASRA, DEN, CZCH, ...). Now built from the official list at celestrak.org/satcat/sources.php |
+| migrants | 2024 workbook, Table 1, 39 pairs (China-born in the US: 2,488,775) | **Bug fixed.** The title cell "International Migrant Stock 2024: Destination and origin" matched both labels, so both columns locked onto it and 0 pairs were parsed. The header row is row 11 (cols B and F; years in H to O, males from P) |
+| links | 243 URLs | Network-level failures (timeouts, TLS errors, geo-blocks on kremlin.ru, mil.ru, gazprom.com) were counted as dead and would have been swapped for archive copies. They are now "unreachable" and left alone; only 404/410 counts as dead |
+
+Note: un.org returns 403 to curl's default user agent but serves the pipeline's own user agent.
+
+---
+
+## Original desk check
+
 Checked 2026-10-12 via WebFetch, after the permissions were approved.
 
 **Caveat about the samples:** WebFetch passes pages through a summarizer that will not quote more than

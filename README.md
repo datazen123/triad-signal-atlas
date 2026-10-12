@@ -44,6 +44,7 @@ Each layer below is ordinary code with no AI and no tokens:
 | A source stays down | A circuit breaker drops it to weekly attempts. The page shows the data's age and marks it stale. |
 | An evidence link dies (404 twice in a row) | Swaps in the closest Internet Archive snapshot, labelled "archived copy". It reverts automatically if the original returns. |
 | A government site blocks bots (403) | Marked "unverifiable", not dead, so working links aren't replaced. |
+| A site times out or drops foreign traffic | Marked "unreachable", not dead; only real 404/410 answers trigger an archived copy. |
 | A third-party package breaks | Can't happen: the pipeline uses only the Python standard library. |
 | One collector crashes | It is isolated. The others still run and the site still builds. |
 

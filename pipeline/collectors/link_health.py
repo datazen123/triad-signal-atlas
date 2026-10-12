@@ -1,8 +1,10 @@
 """Checks every evidence link in the curated data and heals dead ones.
 
-A link that is dead (404/410/DNS failure) on two consecutive runs is swapped
-for its closest Internet Archive snapshot. Links that answer 401/403/429 are
-'unverifiable' (many government sites block automated checks) and are left alone.
+A link that answers 404/410 on two consecutive runs is swapped for its closest
+Internet Archive snapshot. Links that answer 401/403/429 are 'unverifiable' (many
+government sites block automated checks), and links that time out or fail at the
+network level are 'unreachable' (Russian and some Chinese government sites drop
+foreign traffic); both are left alone, since the page itself is usually fine.
 """
 import json
 from concurrent.futures import ThreadPoolExecutor
@@ -49,7 +51,7 @@ def _check(url):
             if e.status in DEAD:
                 return "dead", e.status
             if method == "GET":
-                return ("dead" if e.status is None else "error"), e.status
+                return ("unreachable" if e.status is None else "error"), e.status
     return "error", None
 
 
@@ -90,7 +92,7 @@ def collect(prev):
 def validate(payload, prev):
     c = payload.get("counts", {})
     n = payload.get("checked", 0) or 1
-    if c.get("error", 0) + c.get("dead", 0) > 0.6 * n:
+    if c.get("error", 0) + c.get("dead", 0) + c.get("unreachable", 0) > 0.6 * n:
         # More than 60% failing at once is almost certainly our network, not the web.
         return [f"{c} — looks like a runner network problem, keeping previous results"]
     return []

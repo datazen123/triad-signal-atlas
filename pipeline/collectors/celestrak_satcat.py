@@ -1,7 +1,9 @@
 """Active satellites and yearly launches by owner (CelesTrak SATCAT).
 
-Owner codes follow CelesTrak: US, PRC, CIS (Russia/USSR), IND, JPN, UK, ESA, and
-European national codes, which are summed into EU. 'ISS' objects are jointly owned.
+Owner codes follow CelesTrak (https://celestrak.org/satcat/sources.php): US, PRC,
+CIS (Russia/USSR), IND/ISRO, JPN, UK, and the EU member states plus European
+bodies (ESA, ESRO, EUMETSAT, EUTELSAT, SES and the France/Germany and France/Italy
+joint codes), which are summed into EU. 'ISS' objects are jointly owned.
 """
 import csv
 import io
@@ -13,10 +15,14 @@ TITLE = "Satellites in orbit (CelesTrak SATCAT)"
 EVERY_DAYS = 7
 SOURCE_URL = "https://celestrak.org/satcat/search.php"
 
+EU_OWNERS = {
+    "ASRA", "BEL", "BUL", "HRV", "CZCH", "DEN", "EST", "FIN", "FR", "GER", "GREC", "HUN", "IRL",
+    "IT", "LTU", "LUXE", "NETH", "POL", "POR", "ROM", "SVK", "SVN", "SPN", "SWED",
+    "ESA", "ESRO", "EUME", "EUTE", "SES", "FGER", "FRIT",
+}
 OWNER_TO_POWER = {
-    "US": "US", "PRC": "CN", "CIS": "RU", "IND": "IN", "JPN": "JP", "UK": "UK",
-    "ESA": "EU", "FR": "EU", "GER": "EU", "IT": "EU", "SPN": "EU", "EUME": "EU", "EUTE": "EU",
-    "NETH": "EU", "SWED": "EU", "POL": "EU", "FIN": "EU", "LUXE": "EU", "SES": "EU", "ISS": "JOINT",
+    "US": "US", "PRC": "CN", "CIS": "RU", "IND": "IN", "ISRO": "IN", "JPN": "JP", "UK": "UK",
+    "ISS": "JOINT", **{c: "EU" for c in EU_OWNERS},
 }
 ACTIVE = set("+PBSX")
 

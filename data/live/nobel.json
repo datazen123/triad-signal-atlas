@@ -1,0 +1,1280 @@
+{
+ "name": "nobel",
+ "title": "Cross-border Nobel laureates (Nobel Foundation API)",
+ "source_url": "https://www.nobelprize.org/about/developer-zone-2/",
+ "collected_at": "2026-10-12T16:51:03+00:00",
+ "payload": {
+  "people": [
+   {
+    "name": "Aaron Klug",
+    "from": "EU",
+    "to": [
+     "UK"
+    ],
+    "year": 1982,
+    "category": "Chemistry",
+    "url": "https://www.nobelprize.org/laureate/259"
+   },
+   {
+    "name": "Abhijit Banerjee",
+    "from": "IN",
+    "to": [
+     "US"
+    ],
+    "year": 2019,
+    "category": "Economic Sciences",
+    "url": "https://www.nobelprize.org/laureate/982"
+   },
+   {
+    "name": "Albert Abraham Michelson",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1907,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/11"
+   },
+   {
+    "name": "Aleksey Yekimov ",
+    "from": "RU",
+    "to": [
+     "US"
+    ],
+    "year": 2023,
+    "category": "Chemistry",
+    "url": "https://www.nobelprize.org/laureate/1031"
+   },
+   {
+    "name": "Alexei Alexeyevich Abrikosov",
+    "from": "RU",
+    "to": [
+     "US"
+    ],
+    "year": 2003,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/766"
+   },
+   {
+    "name": "Alexis Carrel",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1912,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/306"
+   },
+   {
+    "name": "Amartya Sen",
+    "from": "IN",
+    "to": [
+     "UK"
+    ],
+    "year": 1998,
+    "category": "Economic Sciences",
+    "url": "https://www.nobelprize.org/laureate/719"
+   },
+   {
+    "name": "André Frédéric Cournand",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1956,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/360"
+   },
+   {
+    "name": "Andre Geim",
+    "from": "RU",
+    "to": [
+     "UK"
+    ],
+    "year": 2010,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/849"
+   },
+   {
+    "name": "Andrew V. Schally",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1977,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/412"
+   },
+   {
+    "name": "Angus Deaton",
+    "from": "UK",
+    "to": [
+     "US"
+    ],
+    "year": 2015,
+    "category": "Economic Sciences",
+    "url": "https://www.nobelprize.org/laureate/926"
+   },
+   {
+    "name": "Anthony J. Leggett",
+    "from": "UK",
+    "to": [
+     "US"
+    ],
+    "year": 2003,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/768"
+   },
+   {
+    "name": "Arno Allan Penzias",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1978,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/111"
+   },
+   {
+    "name": "Ben Roy Mottelson",
+    "from": "US",
+    "to": [
+     "EU"
+    ],
+    "year": 1975,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/103"
+   },
+   {
+    "name": "Bengt Holmström",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 2016,
+    "category": "Economic Sciences",
+    "url": "https://www.nobelprize.org/laureate/936"
+   },
+   {
+    "name": "Carl Ferdinand Cori",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1947,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/343"
+   },
+   {
+    "name": "Charles Kuen Kao",
+    "from": "CN",
+    "to": [
+     "UK"
+    ],
+    "year": 2009,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/838"
+   },
+   {
+    "name": "Chen Ning Yang",
+    "from": "CN",
+    "to": [
+     "US"
+    ],
+    "year": 1957,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/68"
+   },
+   {
+    "name": "Christian de Duve",
+    "from": "UK",
+    "to": [
+     "EU",
+     "US"
+    ],
+    "year": 1974,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/404"
+   },
+   {
+    "name": "Christopher A. Pissarides",
+    "from": "EU",
+    "to": [
+     "UK"
+    ],
+    "year": 2010,
+    "category": "Economic Sciences",
+    "url": "https://www.nobelprize.org/laureate/858"
+   },
+   {
+    "name": "Clive W.J. Granger",
+    "from": "UK",
+    "to": [
+     "US"
+    ],
+    "year": 2003,
+    "category": "Economic Sciences",
+    "url": "https://www.nobelprize.org/laureate/772"
+   },
+   {
+    "name": "Dale T. Mortensen",
+    "from": "US",
+    "to": [
+     "EU"
+    ],
+    "year": 2010,
+    "category": "Economic Sciences",
+    "url": "https://www.nobelprize.org/laureate/857"
+   },
+   {
+    "name": "Daniel C. Tsui",
+    "from": "CN",
+    "to": [
+     "US"
+    ],
+    "year": 1998,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/157"
+   },
+   {
+    "name": "David J. Thouless",
+    "from": "UK",
+    "to": [
+     "US"
+    ],
+    "year": 2016,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/928"
+   },
+   {
+    "name": "David W.C. MacMillan",
+    "from": "UK",
+    "to": [
+     "US"
+    ],
+    "year": 2021,
+    "category": "Chemistry",
+    "url": "https://www.nobelprize.org/laureate/1003"
+   },
+   {
+    "name": "Dennis Gabor",
+    "from": "EU",
+    "to": [
+     "UK"
+    ],
+    "year": 1971,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/93"
+   },
+   {
+    "name": "Edmond H. Fischer",
+    "from": "CN",
+    "to": [
+     "US"
+    ],
+    "year": 1992,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/446"
+   },
+   {
+    "name": "Ei-ichi Negishi",
+    "from": "CN",
+    "to": [
+     "US"
+    ],
+    "year": 2010,
+    "category": "Chemistry",
+    "url": "https://www.nobelprize.org/laureate/852"
+   },
+   {
+    "name": "Emilio Gino Segrè",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1959,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/72"
+   },
+   {
+    "name": "Eric R. Kandel",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 2000,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/724"
+   },
+   {
+    "name": "Ernst Boris Chain",
+    "from": "EU",
+    "to": [
+     "UK"
+    ],
+    "year": 1945,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/340"
+   },
+   {
+    "name": "Esther Duflo",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 2019,
+    "category": "Economic Sciences",
+    "url": "https://www.nobelprize.org/laureate/983"
+   },
+   {
+    "name": "Eugene Paul Wigner",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1963,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/78"
+   },
+   {
+    "name": "F. Duncan M. Haldane",
+    "from": "UK",
+    "to": [
+     "US"
+    ],
+    "year": 2016,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/929"
+   },
+   {
+    "name": "Francis Halzen",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 2026,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/1064"
+   },
+   {
+    "name": "Franco Modigliani",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1985,
+    "category": "Economic Sciences",
+    "url": "https://www.nobelprize.org/laureate/699"
+   },
+   {
+    "name": "Fritz Albert Lipmann",
+    "from": "RU",
+    "to": [
+     "US"
+    ],
+    "year": 1953,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/355"
+   },
+   {
+    "name": "Georg von Békésy",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1961,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/371"
+   },
+   {
+    "name": "George A. Olah",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1994,
+    "category": "Chemistry",
+    "url": "https://www.nobelprize.org/laureate/280"
+   },
+   {
+    "name": "George E. Palade",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1974,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/405"
+   },
+   {
+    "name": "Gerard Debreu",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1983,
+    "category": "Economic Sciences",
+    "url": "https://www.nobelprize.org/laureate/697"
+   },
+   {
+    "name": "Gérard Mourou",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 2018,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/961"
+   },
+   {
+    "name": "Gerty Theresa Cori, née Radnitz",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1947,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/344"
+   },
+   {
+    "name": "Guglielmo Marconi",
+    "from": "EU",
+    "to": [
+     "UK"
+    ],
+    "year": 1909,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/13"
+   },
+   {
+    "name": "Guido W. Imbens",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 2021,
+    "category": "Economic Sciences",
+    "url": "https://www.nobelprize.org/laureate/1009"
+   },
+   {
+    "name": "Günter Blobel",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1999,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/461"
+   },
+   {
+    "name": "Har Gobind Khorana",
+    "from": "IN",
+    "to": [
+     "US"
+    ],
+    "year": 1968,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/389"
+   },
+   {
+    "name": "Hans Albrecht Bethe",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1967,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/88"
+   },
+   {
+    "name": "Hans G. Dehmelt",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1989,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/136"
+   },
+   {
+    "name": "Hans Adolf Krebs",
+    "from": "EU",
+    "to": [
+     "UK"
+    ],
+    "year": 1953,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/354"
+   },
+   {
+    "name": "Herbert C. Brown",
+    "from": "UK",
+    "to": [
+     "US"
+    ],
+    "year": 1979,
+    "category": "Chemistry",
+    "url": "https://www.nobelprize.org/laureate/252"
+   },
+   {
+    "name": "Herbert Kroemer",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 2000,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/727"
+   },
+   {
+    "name": "Hideki Yukawa",
+    "from": "JP",
+    "to": [
+     "US"
+    ],
+    "year": 1949,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/54"
+   },
+   {
+    "name": "Horst L. Störmer",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1998,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/156"
+   },
+   {
+    "name": "Ilya Romanovich Prigogine",
+    "from": "RU",
+    "to": [
+     "EU",
+     "US"
+    ],
+    "year": 1977,
+    "category": "Chemistry",
+    "url": "https://www.nobelprize.org/laureate/250"
+   },
+   {
+    "name": "Isidor Isaac Rabi",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1944,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/49"
+   },
+   {
+    "name": "J. Michael Kosterlitz",
+    "from": "UK",
+    "to": [
+     "US"
+    ],
+    "year": 2016,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/930"
+   },
+   {
+    "name": "Jack W. Szostak",
+    "from": "UK",
+    "to": [
+     "US"
+    ],
+    "year": 2009,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/837"
+   },
+   {
+    "name": "Joachim Frank",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 2017,
+    "category": "Chemistry",
+    "url": "https://www.nobelprize.org/laureate/945"
+   },
+   {
+    "name": "Joel Mokyr",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 2025,
+    "category": "Economic Sciences",
+    "url": "https://www.nobelprize.org/laureate/1058"
+   },
+   {
+    "name": "Johann Deisenhofer",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1988,
+    "category": "Chemistry",
+    "url": "https://www.nobelprize.org/laureate/270"
+   },
+   {
+    "name": "John B. Goodenough",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 2019,
+    "category": "Chemistry",
+    "url": "https://www.nobelprize.org/laureate/976"
+   },
+   {
+    "name": "John C. Harsanyi",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1994,
+    "category": "Economic Sciences",
+    "url": "https://www.nobelprize.org/laureate/711"
+   },
+   {
+    "name": "John Clarke",
+    "from": "UK",
+    "to": [
+     "US"
+    ],
+    "year": 2025,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/1050"
+   },
+   {
+    "name": "John Jumper",
+    "from": "US",
+    "to": [
+     "UK"
+    ],
+    "year": 2024,
+    "category": "Chemistry",
+    "url": "https://www.nobelprize.org/laureate/1041"
+   },
+   {
+    "name": "John O'Keefe",
+    "from": "US",
+    "to": [
+     "UK"
+    ],
+    "year": 2014,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/903"
+   },
+   {
+    "name": "John A. Pople",
+    "from": "UK",
+    "to": [
+     "US"
+    ],
+    "year": 1998,
+    "category": "Chemistry",
+    "url": "https://www.nobelprize.org/laureate/291"
+   },
+   {
+    "name": "Karl Landsteiner",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1930,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/321"
+   },
+   {
+    "name": "Katalin Karikó",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 2023,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/1024"
+   },
+   {
+    "name": "Konrad Bloch",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1964,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/378"
+   },
+   {
+    "name": "Konstantin Novoselov",
+    "from": "RU",
+    "to": [
+     "UK"
+    ],
+    "year": 2010,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/850"
+   },
+   {
+    "name": "Leo Esaki",
+    "from": "JP",
+    "to": [
+     "US"
+    ],
+    "year": 1973,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/97"
+   },
+   {
+    "name": "Leonid Hurwicz",
+    "from": "RU",
+    "to": [
+     "US"
+    ],
+    "year": 2007,
+    "category": "Economic Sciences",
+    "url": "https://www.nobelprize.org/laureate/820"
+   },
+   {
+    "name": "M. Stanley Whittingham",
+    "from": "UK",
+    "to": [
+     "US"
+    ],
+    "year": 2019,
+    "category": "Chemistry",
+    "url": "https://www.nobelprize.org/laureate/977"
+   },
+   {
+    "name": "Maria Goeppert Mayer",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1963,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/79"
+   },
+   {
+    "name": "Mario R. Capecchi",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 2007,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/811"
+   },
+   {
+    "name": "Martin Karplus",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 2013,
+    "category": "Chemistry",
+    "url": "https://www.nobelprize.org/laureate/889"
+   },
+   {
+    "name": "Max Born",
+    "from": "EU",
+    "to": [
+     "UK"
+    ],
+    "year": 1954,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/61"
+   },
+   {
+    "name": "Max Delbrück",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1969,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/391"
+   },
+   {
+    "name": "Max Ferdinand Perutz",
+    "from": "EU",
+    "to": [
+     "UK"
+    ],
+    "year": 1962,
+    "category": "Chemistry",
+    "url": "https://www.nobelprize.org/laureate/226"
+   },
+   {
+    "name": "Michel H. Devoret",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 2025,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/1051"
+   },
+   {
+    "name": "Moungi G. Bawendi",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 2023,
+    "category": "Chemistry",
+    "url": "https://www.nobelprize.org/laureate/1029"
+   },
+   {
+    "name": "Nicolaas Bloembergen",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1981,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/118"
+   },
+   {
+    "name": "Nikolaas Tinbergen",
+    "from": "EU",
+    "to": [
+     "UK"
+    ],
+    "year": 1973,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/402"
+   },
+   {
+    "name": "Oliver Hart",
+    "from": "UK",
+    "to": [
+     "US"
+    ],
+    "year": 2016,
+    "category": "Economic Sciences",
+    "url": "https://www.nobelprize.org/laureate/935"
+   },
+   {
+    "name": "Oliver Smithies",
+    "from": "UK",
+    "to": [
+     "US"
+    ],
+    "year": 2007,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/813"
+   },
+   {
+    "name": "Osamu Shimomura",
+    "from": "JP",
+    "to": [
+     "US"
+    ],
+    "year": 2008,
+    "category": "Chemistry",
+    "url": "https://www.nobelprize.org/laureate/829"
+   },
+   {
+    "name": "Otto Stern",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1943,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/48"
+   },
+   {
+    "name": "Otto Wallach",
+    "from": "RU",
+    "to": [
+     "EU"
+    ],
+    "year": 1910,
+    "category": "Chemistry",
+    "url": "https://www.nobelprize.org/laureate/169"
+   },
+   {
+    "name": "Philippe Aghion",
+    "from": "EU",
+    "to": [
+     "UK"
+    ],
+    "year": 2025,
+    "category": "Economic Sciences",
+    "url": "https://www.nobelprize.org/laureate/1059"
+   },
+   {
+    "name": "Polykarp Kusch",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1955,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/64"
+   },
+   {
+    "name": "Rainer Weiss",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 2017,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/941"
+   },
+   {
+    "name": "Reinhard Genzel",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 2020,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/989"
+   },
+   {
+    "name": "Renato Dulbecco",
+    "from": "EU",
+    "to": [
+     "UK"
+    ],
+    "year": 1975,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/407"
+   },
+   {
+    "name": "Riccardo Giacconi",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 2002,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/755"
+   },
+   {
+    "name": "Richard J. Roberts",
+    "from": "UK",
+    "to": [
+     "US"
+    ],
+    "year": 1993,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/448"
+   },
+   {
+    "name": "Roger Guillemin",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1977,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/411"
+   },
+   {
+    "name": "Ronald H. Coase",
+    "from": "UK",
+    "to": [
+     "US"
+    ],
+    "year": 1991,
+    "category": "Economic Sciences",
+    "url": "https://www.nobelprize.org/laureate/707"
+   },
+   {
+    "name": "Ronald Ross",
+    "from": "IN",
+    "to": [
+     "UK"
+    ],
+    "year": 1902,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/294"
+   },
+   {
+    "name": "Rudolf Ludwig Mössbauer",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1961,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/76"
+   },
+   {
+    "name": "Salvador E. Luria",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1969,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/393"
+   },
+   {
+    "name": "Severo Ochoa",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1959,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/367"
+   },
+   {
+    "name": "Shinya Yamanaka",
+    "from": "JP",
+    "to": [
+     "US"
+    ],
+    "year": 2012,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/875"
+   },
+   {
+    "name": "Shuji Nakamura",
+    "from": "JP",
+    "to": [
+     "US"
+    ],
+    "year": 2014,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/908"
+   },
+   {
+    "name": "Simon Henry Roberts Johnson",
+    "from": "UK",
+    "to": [
+     "US"
+    ],
+    "year": 2024,
+    "category": "Economic Sciences",
+    "url": "https://www.nobelprize.org/laureate/1045"
+   },
+   {
+    "name": "Sir Bernard Katz",
+    "from": "EU",
+    "to": [
+     "UK"
+    ],
+    "year": 1970,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/394"
+   },
+   {
+    "name": "Sir J. Fraser Stoddart",
+    "from": "UK",
+    "to": [
+     "US"
+    ],
+    "year": 2016,
+    "category": "Chemistry",
+    "url": "https://www.nobelprize.org/laureate/932"
+   },
+   {
+    "name": "Susumu Tonegawa",
+    "from": "JP",
+    "to": [
+     "US"
+    ],
+    "year": 1987,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/436"
+   },
+   {
+    "name": "Svante Pääbo",
+    "from": "EU",
+    "to": [
+     "JP"
+    ],
+    "year": 2022,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/1011"
+   },
+   {
+    "name": "Syukuro Manabe",
+    "from": "JP",
+    "to": [
+     "US"
+    ],
+    "year": 2021,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/999"
+   },
+   {
+    "name": "Thomas C. Südhof",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 2013,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/886"
+   },
+   {
+    "name": "Tjalling C. Koopmans",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1975,
+    "category": "Economic Sciences",
+    "url": "https://www.nobelprize.org/laureate/687"
+   },
+   {
+    "name": "Tomas Lindahl",
+    "from": "EU",
+    "to": [
+     "UK"
+    ],
+    "year": 2015,
+    "category": "Chemistry",
+    "url": "https://www.nobelprize.org/laureate/921"
+   },
+   {
+    "name": "Torsten N. Wiesel",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1981,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/424"
+   },
+   {
+    "name": "Tsung-Dao (T.D.) Lee",
+    "from": "CN",
+    "to": [
+     "US"
+    ],
+    "year": 1957,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/69"
+   },
+   {
+    "name": "Venkatraman Ramakrishnan",
+    "from": "IN",
+    "to": [
+     "UK"
+    ],
+    "year": 2009,
+    "category": "Chemistry",
+    "url": "https://www.nobelprize.org/laureate/841"
+   },
+   {
+    "name": "Walter Houser Brattain",
+    "from": "CN",
+    "to": [
+     "US"
+    ],
+    "year": 1956,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/67"
+   },
+   {
+    "name": "Walter Kohn",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1998,
+    "category": "Chemistry",
+    "url": "https://www.nobelprize.org/laureate/290"
+   },
+   {
+    "name": "Wassily Wassilyevich Leontief",
+    "from": "RU",
+    "to": [
+     "US"
+    ],
+    "year": 1973,
+    "category": "Economic Sciences",
+    "url": "https://www.nobelprize.org/laureate/683"
+   },
+   {
+    "name": "Wilhelm Wien",
+    "from": "RU",
+    "to": [
+     "EU"
+    ],
+    "year": 1911,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/16"
+   },
+   {
+    "name": "William Bradford Shockley",
+    "from": "UK",
+    "to": [
+     "US"
+    ],
+    "year": 1956,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/65"
+   },
+   {
+    "name": "William C. Campbell",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 2015,
+    "category": "Physiology or Medicine",
+    "url": "https://www.nobelprize.org/laureate/916"
+   },
+   {
+    "name": "Wolfgang Ketterle",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 2001,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/739"
+   },
+   {
+    "name": "Wolfgang Pauli",
+    "from": "EU",
+    "to": [
+     "US"
+    ],
+    "year": 1945,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/50"
+   },
+   {
+    "name": "Yoichiro Nambu",
+    "from": "JP",
+    "to": [
+     "US"
+    ],
+    "year": 2008,
+    "category": "Physics",
+    "url": "https://www.nobelprize.org/laureate/826"
+   }
+  ],
+  "pairs": {
+   "EU>UK": 13,
+   "IN>US": 2,
+   "EU>US": 57,
+   "RU>US": 6,
+   "IN>UK": 3,
+   "RU>UK": 2,
+   "UK>US": 20,
+   "US>EU": 2,
+   "CN>UK": 1,
+   "CN>US": 6,
+   "UK>EU": 1,
+   "JP>US": 8,
+   "RU>EU": 3,
+   "US>UK": 2,
+   "EU>JP": 1
+  },
+  "laureates_scanned": 1028
+ }
+}
