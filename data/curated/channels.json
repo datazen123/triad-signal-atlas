@@ -28,21 +28,34 @@
   "desc": "The MMCA (1998) is the annual US–PRC military maritime and air safety consultation. A working-group meeting was held in Hawaii on 28–29 May 2026; it reviewed implementation of the air–maritime encounter code of conduct since the 2025 round, which took place after the Busan summit in Nov 2025.",
   "links": [
    {
-    "label": "Sputnik China citing PLA Navy outlet 人民海军 (secondary) – May 2026 Hawaii round",
-    "url": "https://sputniknews.cn/20260602/1071625764.html"
+    "label": "PRC MND (EN): Chinese, U.S. militaries hold MMCA working group meeting in Hawaii, 28-29 May 2026",
+    "url": "http://eng.mod.gov.cn/2025xb/N/T/16464949.html"
+   },
+   {
+    "label": "PRC MND (EN): second MMCA working group meeting and annual session for 2025, Hawaii, 18-20 Nov 2025",
+    "url": "http://eng.mod.gov.cn/2025xb/N/T/16423311.html"
    }
   ],
-  "asof": "2026-06-02",
-  "note": "No DoD/INDOPACOM or PRC MND primary page confirmed for the 2026 round; the only fetched source is Sputnik, which is secondary."
+  "asof": "2026-06-01",
+  "note": "Both rounds confirmed from PRC MND English pages, replacing the Sputnik link. The MND readout says the sides evaluated the Rules of Behavior for Safety of Air and Maritime Encounters since the 2025 MMCA. The INDOPACOM release for the May 2026 round (pacom.mil article 4503301) returned HTTP 403 to automated fetches and was not read."
  },
  "uscn_dtl": {
   "title": "Defense Telephone Link (2008)",
   "dyad": "US–CN",
   "status": "limited",
-  "desc": "A defense hotline set up by a 2008 agreement between the US DoD and PRC MND. Its use has been episodic: Beijing suspended mil-mil channels after Aug 2022, and they were partially restored from 2024.",
-  "links": [],
-  "asof": "2025 (background)",
-  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use."
+  "desc": "A secure defense telephone link set up by a DoD-MND agreement signed in Shanghai on 29 Feb 2008. Use has been episodic: Beijing suspended mil-mil channels after Aug 2022. Defense-chief contact has since resumed, including a Dong Jun-Hegseth video call on 9 Sep 2025.",
+  "links": [
+   {
+    "label": "GovInfo: TIAS 08-229, Defense Telephone Link agreement between the US and China, signed at Shanghai 29 Feb 2008",
+    "url": "https://www.govinfo.gov/app/details/GOVPUB-S-PURL-gpo34414"
+   },
+   {
+    "label": "PRC MND (EN): Chinese defense minister holds video talk with U.S. counterpart (10 Sep 2025)",
+    "url": "http://eng.mod.gov.cn/xb/News_213114/TopStories/16408897.html"
+   }
+  ],
+  "asof": "2025-09-10",
+  "note": "The 2008 agreement is confirmed from the GovInfo TIAS record. The 2025 Dong-Hegseth video talk is confirmed, but neither readout says it used the 2008 link, so current use of the DTL itself is unconfirmed. The 2022 suspension is from background knowledge. state.gov/08-229 returned 403/504 to automated fetches."
  },
  "uscn_cn": {
   "title": "Counternarcotics working group / fentanyl cooperation",
@@ -81,9 +94,18 @@
   "dyad": "US–CN",
   "status": "limited",
   "desc": "At Lima on 16 Nov 2024, Biden and Xi affirmed the need to maintain human control over the decision to use nuclear weapons. It is a one-off leaders' statement, not a mechanism.",
-  "links": [],
-  "asof": "2024-11 (background)",
-  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use. Not known whether it has been reaffirmed under Trump."
+  "links": [
+   {
+    "label": "White House (archived): Readout of President Biden's meeting with President Xi, Lima (16 Nov 2024)",
+    "url": "https://bidenwhitehouse.archives.gov/briefing-room/statements-releases/2024/11/16/readout-of-president-joe-bidens-meeting-with-president-xi-jinping-of-the-peoples-republic-of-china-3/"
+   },
+   {
+    "label": "PRC MFA (EN): President Xi Jinping meets with U.S. President Joe Biden in Lima",
+    "url": "https://www.fmprc.gov.cn/mfa_eng/xw/zyxw/202411/t20241117_11527672.html"
+   }
+  ],
+  "asof": "2024-11-16",
+  "note": "Both readouts state that the leaders affirmed the need to maintain human control over the decision to use nuclear weapons. No reaffirmation under the Trump administration was found in the 2025-2026 PRC MFA readouts checked."
  },
  "uscn_exportctl": {
   "title": "Export controls (BIS chip rules; MOFCOM rare earth/gallium controls)",
@@ -112,9 +134,18 @@
   "dyad": "US–CN",
   "status": "active",
   "desc": "A protocol signed 13 Dec 2024 extended the 1979 S&T Agreement for five years, with a narrower scope and added safeguards. It limits cooperation to government-to-government basic research and excludes critical and emerging technologies.",
-  "links": [],
-  "asof": "2024-12 (background)",
-  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use."
+  "links": [
+   {
+    "label": "US State Dept (archived): Amendment and Extension of the U.S.-PRC Science and Technology Agreement (13 Dec 2024)",
+    "url": "https://2021-2025.state.gov/amendment-and-extension-of-the-u-s-prc-science-and-technology-agreement-sta/"
+   },
+   {
+    "label": "gov.cn: 中美续签两国政府科学技术合作协定 (extension for 5 years from 27 Aug 2024)",
+    "url": "https://www.gov.cn/lianbo/bumen/202412/content_6992558.htm"
+   }
+  ],
+  "asof": "2024-12-13",
+  "note": "State Dept confirms the 13 Dec 2024 protocol, the five-year extension, government-to-government scope and that it covers only basic research, not critical and emerging technologies. gov.cn (Xinhua relaying MOST) gives the effective start of the extension as 27 Aug 2024."
  },
  "usru_newstart": {
   "title": "New START",
@@ -123,62 +154,126 @@
   "desc": "Russia suspended its participation in Feb 2023, and the treaty expired on 5 Feb 2026. Putin had offered mutual voluntary adherence to the central limits for a year after expiry, but Russia's MFA said it received no formal US response. Moscow then declared both sides free of the treaty's obligations.",
   "links": [
    {
-    "label": "Xinhua: Russian MFA statement on New START expiry (5 Feb 2026)",
+    "label": "UN (India country team): Secretary-General statement on the expiration of New START (5 Feb 2026)",
+    "url": "https://india.un.org/en/311310-un-secretary-general-statement-expiration-treaty-measures-further-reduction-and-limitation"
+   },
+   {
+    "label": "US State Dept (archived): U.S. countermeasures in response to Russia's violations of New START (Russia's purported suspension, 28 Feb 2023)",
+    "url": "https://2021-2025.state.gov/u-s-countermeasures-in-response-to-russias-violations-of-the-new-start-treaty"
+   },
+   {
+    "label": "Xinhua (secondary): Russian MFA statement on New START expiry (5 Feb 2026)",
     "url": "https://www.news.cn/world/20260205/74c3432ca6e445deab59a0da8cbf8616/c.html"
    }
   ],
   "asof": "2026-02-05",
-  "note": "No post-expiry informal limits arrangement was found as of Feb 2026, and developments after Feb 2026 are not confirmed. The only link is Xinhua; no state.gov or mid.ru page was fetched."
+  "note": "Expiry on 5 Feb 2026 is confirmed by the UN Secretary-General's statement, and Russia's Feb 2023 suspension by State Dept. The Russian MFA statement (no formal US reply to Putin's offer; both sides free of obligations) is still sourced only to Xinhua, because mid.ru and kremlin.ru time out from this location (geo-blocking). No state.gov statement on the expiry was found. Developments after Feb 2026 are not confirmed."
  },
  "usru_bmlna": {
   "title": "1988 Ballistic Missile Launch Notification Agreement / Nuclear Risk Reduction Centers",
   "dyad": "US–RU",
   "status": "active",
-  "desc": "Under the 1988 agreement, each side notifies the other of ICBM and SLBM launches via the NRRCs, which were set up in 1987. Russia said in 2023 it would keep giving launch notifications despite suspending New START.",
-  "links": [],
-  "asof": "2023–2025 (background)",
-  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use. Status after New START expiry is not confirmed."
+  "desc": "Under the 1988 agreement, each side gives at least 24 hours' notice of any ICBM or SLBM launch through the Nuclear Risk Reduction Centers, which were set up under a 1987 agreement. In 2023 the US said it continues to give these notifications despite the New START dispute.",
+  "links": [
+   {
+    "label": "US State Dept (archived): Ballistic Missile Launch Notification Agreement, signed and in force 31 May 1988 (text and narrative)",
+    "url": "https://2009-2017.state.gov/t/avc/trty/187150.htm"
+   },
+   {
+    "label": "US State Dept (archived): History of the National and Nuclear Risk Reduction Center (NRRC agreement 15 Sep 1987; operations from 1 Apr 1988)",
+    "url": "https://2021-2025.state.gov/history-of-the-national-and-nuclear-risk-reduction-center/"
+   },
+   {
+    "label": "US State Dept (archived): U.S. countermeasures to Russia's New START violations (US continues 1988 launch notifications)",
+    "url": "https://2021-2025.state.gov/u-s-countermeasures-in-response-to-russias-violations-of-the-new-start-treaty"
+   }
+  ],
+  "asof": "2023 (US practice confirmed); post-Feb 2026 unconfirmed",
+  "note": "The agreement text, the NRRC history and the 2023 US statement are confirmed from State Dept pages. Russia's 2023 pledge to continue and any practice after New START's Feb 2026 expiry are unconfirmed (no primary page reachable; kremlin.ru and mid.ru are geo-blocked from here)."
  },
  "usru_incsea": {
   "title": "1972 Incidents at Sea Agreement",
   "dyad": "US–RU",
   "status": "limited",
-  "desc": "A 1972 US–Soviet navy agreement on avoiding dangerous manoeuvres at sea, with annual review talks. It remains in force, but the regular annual meetings have reportedly lapsed since 2022.",
-  "links": [],
-  "asof": "background",
-  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use."
+  "desc": "A 1972 US-Soviet agreement on avoiding dangerous manoeuvres on and over the high seas. Article IX provides for annual review meetings; a 1973 protocol bans simulated attacks on non-military ships.",
+  "links": [
+   {
+    "label": "US State Dept (archived): Incidents at Sea Agreement, signed and in force 25 May 1972 (text, 1973 protocol, narrative)",
+    "url": "https://2009-2017.state.gov/t/isn/4791.htm"
+   }
+  ],
+  "asof": "1972 text confirmed; recent meetings unconfirmed",
+  "note": "The agreement, the annual-review clause and the 1973 protocol are confirmed from the State Dept page. Whether annual meetings have lapsed since 2022 is unconfirmed; the US Navy INCSEA statement page (navy.mil) returned 403."
  },
  "usru_iss": {
   "title": "ISS integrated crew / seat swap agreement",
   "dyad": "US–RU",
   "status": "active",
-  "desc": "Under a NASA–Roscosmos integrated crew agreement, NASA astronauts fly on Soyuz and cosmonauts on US commercial crew vehicles. It was reportedly extended through 2027.",
-  "links": [],
-  "asof": "2025 (background)",
-  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use."
+  "desc": "Under a NASA-Roscosmos integrated crew agreement signed in July 2022, cosmonauts fly on US commercial crew vehicles and NASA astronauts on Soyuz, one swap per year. NASA's Crew-14 (no earlier than spring 2027) includes a Roscosmos cosmonaut.",
+  "links": [
+   {
+    "label": "NASA Advisory Council, Oct 2022 ISS briefing (PDF): integrated crew agreement signed July 2022, one crew swap per year",
+    "url": "https://www.nasa.gov/wp-content/uploads/2023/10/nac-oct2022-iss-final2.pdf"
+   },
+   {
+    "label": "NASA: SpaceX Crew-14 assignments, incl. Roscosmos cosmonaut Arutyun Kiviryan, launch NET spring 2027 (24 Sep 2026)",
+    "url": "https://www.nasa.gov/news-release/nasa-shares-spacex-crew-14-assignments-for-space-station-mission/"
+   }
+  ],
+  "asof": "2026-09-24",
+  "note": "The July 2022 agreement and the Crew-14 assignment are confirmed from NASA pages. The exact end date of the current seat-swap arrangement is not stated on either page."
  },
  "usru_ukraine": {
   "title": "Ukraine negotiations",
   "dyad": "US–RU",
   "status": "contested",
-  "desc": "After the Trump–Putin summit in Anchorage, Alaska on 15 Aug 2025, US–Ukraine–Russia trilateral rounds took place in Abu Dhabi (23–24 Jan and 4–5 Feb 2026) and Geneva (17–18 Feb 2026). A further Abu Dhabi round was floated for March 2026. Ukraine was discussed at the May and Sep 2026 Xi–Trump meetings.",
+  "desc": "After the Trump-Putin summit in Anchorage, Alaska on 15 Aug 2025, US-Ukraine-Russia trilateral rounds took place in Abu Dhabi (from 23 Jan and from 4 Feb 2026) and Geneva (from 17 Feb 2026). Ukraine was discussed at the May and Sep 2026 Xi-Trump meetings.",
   "links": [
    {
-    "label": "Xinhua: US–Ukraine Geneva talks end; next trilateral may be in Abu Dhabi (27 Feb 2026)",
-    "url": "https://www.news.cn/world/20260227/9755b93a3cd0473f980465d241127deb/c.html"
+    "label": "GovInfo DCPD-202500855: Trump remarks to reporters with Putin in Anchorage, Alaska (15 Aug 2025)",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202500855"
+   },
+   {
+    "label": "UAE MOFA: trilateral Russia-Ukraine-US talks open in Abu Dhabi (23 Jan 2026)",
+    "url": "https://www.mofa.gov.ae/en/MediaHub/News/2026/1/23/UAE-Russia-Ukraine-United-States"
+   },
+   {
+    "label": "UAE MOFA: second round of trilateral talks begins in Abu Dhabi (4 Feb 2026)",
+    "url": "https://www.mofa.gov.ae/en/MediaHub/News/2026/2/4/UAE-Tripartite-talks"
+   },
+   {
+    "label": "Swiss FDFA: trilateral talks between the US, Ukraine and Russia in Geneva, opened 17 Feb 2026",
+    "url": "https://www.eda.admin.ch/en/switzerland-is-committed-to-peace-in-ukraine"
+   },
+   {
+    "label": "PRC MFA (EN): Xi-Trump talks in Beijing, 14 May 2026 (Ukraine crisis discussed)",
+    "url": "https://www.fmprc.gov.cn/mfa_eng/xw/zyxw/202605/t20260514_11910330.html"
+   },
+   {
+    "label": "PRC MFA: Xi-Trump talks at the White House, 24 Sep 2026 (乌克兰危机 discussed)",
+    "url": "https://www.mfa.gov.cn/gjhdq_676201/gj_676203/bmz_679954/1206_680528/xgxw_680534/202609/t20260925_12031134.shtml"
    }
   ],
-  "asof": "2026-02-27",
-  "note": "No primary source for the Alaska summit was fetched. Rounds after Feb 2026 and any ceasefire or settlement status are unconfirmed."
+  "asof": "2026-09-25",
+  "note": "All events above are confirmed from official pages (GovInfo, UAE MOFA, Swiss FDFA, PRC MFA), replacing the Xinhua link. A further Abu Dhabi round reportedly floated for March 2026, rounds after Feb 2026, and any ceasefire or settlement status are unconfirmed. president.gov.ua and press.un.org returned 403 or a bot challenge."
  },
  "usru_embassy": {
   "title": "Embassy operations talks (Istanbul 2025)",
   "dyad": "US–RU",
   "status": "limited",
   "desc": "US and Russian delegations met in Istanbul on 27 Feb and 10 Apr 2025 to discuss restoring diplomatic mission operations (staffing, banking, property).",
-  "links": [],
-  "asof": "2025-04 (background)",
-  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use. Later rounds unknown."
+  "links": [
+   {
+    "label": "US Embassy Russia: U.S.-Russia delegations meet in Istanbul on 27 Feb 2025 (State Dept media note)",
+    "url": "https://ru.usembassy.gov/february-27-meeting-in-istanbul/"
+   },
+   {
+    "label": "US Embassy Russia: April 10th meeting in Istanbul (State Dept media note, diplomatic banking notes exchanged)",
+    "url": "https://ru.usembassy.gov/april-10th-meeting-in-istanbul/"
+   }
+  ],
+  "asof": "2025-04-10",
+  "note": "Both rounds confirmed from State Dept media notes (mirrored on the US Embassy site). The April note says a follow-up meeting would be held 'as needed', date to be determined; later rounds are unconfirmed."
  },
  "usru_uranium": {
   "title": "US ban on Russian enriched uranium imports",
@@ -198,28 +293,59 @@
   "title": "China–Russia joint strategic air patrols",
   "dyad": "CN–RU",
   "status": "active",
-  "desc": "Joint bomber patrols over the Sea of Japan, East China Sea and western Pacific have been held roughly annually since July 2019. They included a 2024 patrol near Alaska and a Dec 2025 round.",
-  "links": [],
-  "asof": "2025 (background)",
-  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use. The PRC MND English front page carried a 30 Nov joint air strategic patrol item (year not shown, no article URL), so it is not linked."
+  "desc": "Joint bomber patrols over the Sea of Japan, East China Sea and western Pacific have been held roughly annually since 2019. The 8th (25 Jul 2024) was over the Bering Sea, the 10th on 9 Dec 2025 and the 11th on 27 Jun 2026.",
+  "links": [
+   {
+    "label": "PRC MND (EN): Chinese, Russian air forces conduct 11th joint strategic patrol (27 Jun 2026)",
+    "url": "http://eng.mod.gov.cn/2025xb/N/JE/16470142.html"
+   },
+   {
+    "label": "PRC MND (EN): China, Russia conduct 10th joint strategic air patrol (9 Dec 2025)",
+    "url": "http://eng.mod.gov.cn/2025xb/N/T/16426188.html"
+   },
+   {
+    "label": "PRC MND (EN): regular press conference, 25 Jul 2024 (Bering Sea patrol, 8th since 2019)",
+    "url": "http://eng.mod.gov.cn/xb/News_213114/NewsRelease/16328897.html"
+   }
+  ],
+  "asof": "2026-06-27",
+  "note": "All three patrols confirmed from PRC MND English pages."
  },
  "cnru_naval": {
   "title": "Joint naval exercises and 2024 coast guard patrol (Bering Sea/Arctic)",
   "dyad": "CN–RU",
   "status": "active",
-  "desc": "The two navies hold regular exercises (Joint Sea / Northern Interaction) and joint Pacific patrols. In late Sep–Oct 2024 the US Coast Guard reported Chinese and Russian coast guard vessels patrolling together in the Bering Sea.",
-  "links": [],
-  "asof": "2024–2025 (background)",
-  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use. The USCG press release URL was not fetched."
+  "desc": "The two navies hold regular exercises (Joint Sea-2026 was the 12th since 2012) followed by joint Pacific patrols. In Sep-Oct 2024 the two coast guards held their first joint patrol in the North Pacific high seas; the Chinese ships continued through the Bering Sea into the Arctic Ocean.",
+  "links": [
+   {
+    "label": "China Coast Guard: 'Pacific Patrol-2024' China-Russia coast guard joint exercise and patrol completed (17 Oct 2024)",
+    "url": "https://www.ccg.gov.cn/gjhz/202410/t20241017_2520.html"
+   },
+   {
+    "label": "PRC MND (EN): China, Russia wrap up Joint Sea-2026 naval exercise (13 Jul 2026)",
+    "url": "http://eng.mod.gov.cn/2025xb/N/T/16473492.html"
+   }
+  ],
+  "asof": "2026-07-13",
+  "note": "Confirmed from China Coast Guard and PRC MND pages. The US Coast Guard release on the Sep 2024 Bering Sea sighting (news.uscg.mil article 3922625) returned 403 and was not read."
  },
  "cnru_bmln": {
   "title": "2009 China–Russia ballistic missile launch notification agreement",
   "dyad": "CN–RU",
   "status": "active",
-  "desc": "Under a 2009 bilateral agreement, each side notifies the other of ballistic missile and space launches toward the other's territory. It was extended for 10 years in Dec 2021.",
-  "links": [],
-  "asof": "2021 extension (background)",
-  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use."
+  "desc": "Under a 13 Oct 2009 intergovernmental agreement, each side notifies the other of planned and completed ballistic missile and space launch vehicle launches. A protocol signed on 15 Dec 2020 extended it to 16 Dec 2030; Russia ratified the protocol in Nov 2021.",
+  "links": [
+   {
+    "label": "Russian Government: materials for 15 Jul 2021 meeting - protocol signed 15 Dec 2020 extends the 13 Oct 2009 agreement to 16 Dec 2030",
+    "url": "http://government.ru/announcements/42770/"
+   },
+   {
+    "label": "Federation Council: ratification of the extension protocol approved (10 Nov 2021)",
+    "url": "http://council.gov.ru/events/news/130890/"
+   }
+  ],
+  "asof": "2021-11-10",
+  "note": "Settles the date question: the extension protocol was signed on 15 Dec 2020 (Russian Government), and Russian ratification followed in Nov 2021 (Federation Council, 10 Nov 2021), which explains the '2021' in some accounts. No PRC-side page was found; the gov.cn English article on the signing now redirects to the homepage."
  },
  "cnru_pos": {
   "title": "Power of Siberia 1 & Power of Siberia 2",
@@ -239,10 +365,23 @@
   "title": "Rosatom-built Tianwan 7/8 and Xudapu 3/4",
   "dyad": "CN–RU",
   "status": "active",
-  "desc": "Four VVER-1200 units are being built in China under 2018 agreements: Tianwan 7/8 in Jiangsu and Xudapu 3/4 in Liaoning. The first unit is expected online around 2026.",
-  "links": [],
-  "asof": "background",
-  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use. Commissioning status not confirmed."
+  "desc": "Four Russian-designed VVER-1200 units are being built in China under a June 2018 package agreement: Tianwan 7/8 (Jiangsu) and Xudapu 3/4 (Liaoning), with construction started on 19 May 2021. Tianwan 7 received its operating licence on 11 Aug 2026 and completed first fuel loading on 18 Aug 2026.",
+  "links": [
+   {
+    "label": "gov.cn: 习近平同普京共同见证中俄核能合作项目开工仪式 (Tianwan 7/8, Xudapu 3/4 construction start, 19 May 2021)",
+    "url": "https://www.gov.cn/xinwen/2021-05/19/content_5608935.htm"
+   },
+   {
+    "label": "NNSA/MEE: operating licence for Tianwan unit 7 issued 11 Aug 2026",
+    "url": "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk09/202608/t20260813_1163971.html"
+   },
+   {
+    "label": "CAEA (relaying CNNC): Tianwan 7 first fuel loading completed 18 Aug 2026, first VVER-1200 in China",
+    "url": "https://www.caea.gov.cn/n6760338/n6760342/c10768957/content.html"
+   }
+  ],
+  "asof": "2026-08-19",
+  "note": "Confirmed from gov.cn, the National Nuclear Safety Administration and CAEA. Media reports of Tianwan 7's first grid connection on 8 Oct 2026, and of Xudapu 3 hot functional tests, were not confirmed from an official page."
  },
  "cnru_ilrs": {
   "title": "International Lunar Research Station (ILRS)",
@@ -266,10 +405,15 @@
   "title": "Local-currency settlement share",
   "dyad": "CN–RU",
   "status": "active",
-  "desc": "Russian officials have said that over 95% of Russia–China trade is settled in rubles and yuan.",
-  "links": [],
-  "asof": "2024–2025 (background)",
-  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use."
+  "desc": "Russian Prime Minister Mishustin said on 21 Aug 2024 that rubles and yuan already account for more than 95% of Russia-China mutual settlements.",
+  "links": [
+   {
+    "label": "Russian Government: Mishustin meets Li Qiang (21 Aug 2024) - ruble and yuan share of mutual settlements 'already above 95%'",
+    "url": "http://government.ru/news/52428/"
+   }
+  ],
+  "asof": "2024-08-21",
+  "note": "The 95% figure is confirmed from the Russian Government transcript. A later 99.1% figure attributed to Finance Minister Siluanov was found only in media reports and is unconfirmed. No PRC-side official figure was found."
  },
  "all_unsc": {
   "title": "UN Security Council voting/vetoes",
@@ -375,34 +519,57 @@
   "dyad": "All three",
   "status": "active",
   "desc": "All three are WMO Members and exchange data through the WMO global observing and telecommunication system.",
-  "links": [],
-  "asof": "background",
-  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use."
+  "links": [
+   {
+    "label": "WMO: Member countries and their Regional Telecommunication Hubs (Beijing, Moscow and Washington are RTHs on the Main Telecommunication Network)",
+    "url": "https://community.wmo.int/site/knowledge-hub/programmes-and-initiatives/operational-information-service-ois/rths-country"
+   },
+   {
+    "label": "WMO: Congress approves Unified Data Policy reaffirming free and unrestricted data exchange among 193 Members (20 Oct 2021)",
+    "url": "https://wmo.int/media/news/wmo-overhauls-data-exchange-policy"
+   }
+  ],
+  "asof": "2026-10 (fetched)",
+  "note": "Membership and data-exchange roles confirmed from WMO pages. The WMO members directory loads its list via JavaScript and could not be read."
  },
  "all_cospas": {
   "title": "Cospas-Sarsat",
   "dyad": "All three",
   "status": "active",
-  "desc": "Cospas-Sarsat is the satellite search-and-rescue system. The US and Russia (with Canada and France) are founding parties under the 1988 agreement, and China participates as a ground segment provider.",
-  "links": [],
-  "asof": "background",
-  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use."
+  "desc": "Cospas-Sarsat is the satellite search-and-rescue system. Russia and the US (with Canada and France) are the four Parties to the International Programme Agreement, and China participates through its Maritime Safety Administration.",
+  "links": [
+   {
+    "label": "Cospas-Sarsat: Participants (Parties: Canada, France, Russia, USA; China participates via its Maritime Safety Administration)",
+    "url": "https://www.cospas-sarsat.int/en/about-us/participants"
+   }
+  ],
+  "asof": "2026-10 (fetched)",
+  "note": "Confirmed from the Cospas-Sarsat participants page. The page lists 45 participants but does not label each one's category, so China's role as a ground segment provider is not confirmed there."
  },
  "all_nptrevcon": {
   "title": "NPT Review Conference 2026",
   "dyad": "All three",
   "status": "contested",
-  "desc": "The 11th NPT Review Conference met in New York from 27 Apr to 22 May 2026 and ended without a consensus outcome document, reportedly over US–Iran disagreements. This is the third consecutive RevCon without one, after 2015 and 2022.",
+  "desc": "The 11th NPT Review Conference met in New York from 27 Apr to 22 May 2026 and ended without a consensus outcome document. The US blamed other states' failure to address Iran's noncompliance, and China expressed regret.",
   "links": [
+   {
+    "label": "UN: 2026 NPT Review Conference, 27 Apr - 22 May 2026 (conference page; 'Review Conference Ends without Consensus Outcome')",
+    "url": "https://www.un.org/en/conferences/treaty-on-the-non-proliferation-of-nuclear-weapons-npt-2026"
+   },
+   {
+    "label": "US State Dept: Conclusion of the 2026 NPT Review Conference (24 May 2026)",
+    "url": "https://www.state.gov/releases/office-of-the-spokesperson/2026/05/conclusion-of-the-2026-nuclear-non-proliferation-treaty-review-conference/"
+   },
+   {
+    "label": "PRC MFA (EN): spokesperson Mao Ning, 25 May 2026 - China regrets failure to reach a final document",
+    "url": "https://www.fmprc.gov.cn/eng/xw/fyrbt/202605/t20260525_11917325.html"
+   },
    {
     "label": "UN Digital Library: NPT/CONF.2026/PC.III/DEC.1 (dates and venue)",
     "url": "https://digitallibrary.un.org/record/4082389/files/NPT_CONF.2026_PC.III_DEC.1-ZH.pdf"
-   },
-   {
-    "label": "Xinhua: PRC MFA regrets RevCon failure to adopt outcome (25 May 2026)",
-    "url": "https://www.news.cn/20260525/889a1f7101dc4dd1aeafbd55f6814d3d/c.html"
    }
   ],
-  "asof": "2026-05-25"
+  "asof": "2026-05-25",
+  "note": "Dates and the no-consensus outcome confirmed from the UN conference page; US and Chinese reactions from State Dept and PRC MFA, replacing the Xinhua link. That this is the third consecutive RevCon without an outcome (after 2015 and 2022) is from the UN press release (press.un.org dc3912), which returned a bot challenge and was not read."
  }
 }
