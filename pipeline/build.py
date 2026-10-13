@@ -30,11 +30,76 @@ PLACEHOLDER = "/*__ATLAS_DATA__*/"
 LIVE_KEYS = ["openalex", "nobel", "fedreg", "comtrade", "portwatch", "satcat", "migrants"]
 MAX_BYTES = 15 * 1024 * 1024
 
+# "Bridges across divides": optional curated stories. If the file is missing, the page gets an empty set
+# and hides the feature. ATLAS_BRIDGES overrides the path (for previewing a fixture locally).
+BRIDGES = CURATED / "bridges.json"
+BRIDGE_KINDS = {"disaster-aid", "rescue", "statement", "cultural", "humanitarian", "economic", "personal", "institutional"}
+BRIDGE_CONF = {"ok", "check", "unconfirmed"}
+
 
 def repo_urls():
     repo = os.environ.get("GITHUB_REPOSITORY", "datazen123/triad-signal-atlas")
     owner, name = repo.split("/", 1)
     return f"https://{owner}.github.io/{name}/", f"https://github.com/{repo}"
+
+
+def _text(v) -> str:
+    return v.strip() if isinstance(v, str) else ""
+
+
+def load_bridges(path=None, warn=print) -> dict:
+    """Reads bridges.json and keeps only well-formed stories, so one bad entry can't break the page.
+
+    A story needs an id, a pair of two codes, a title, a "what", and at least one http(s) source.
+    An unknown kind becomes "personal"; an unknown or missing confidence becomes "unconfirmed", which
+    the page flags. Anything dropped is reported on stdout, never silently patched into a claim."""
+    path = Path(path or os.environ.get("ATLAS_BRIDGES") or BRIDGES)
+    empty = {"about": "", "verified": "", "stories": []}
+    if not path.exists():
+        return empty
+    doc = read_json(path)
+    if not isinstance(doc, dict):
+        warn(f"bridges: {path.name} is not a readable JSON object; feature hidden")
+        return empty
+    stories, seen = [], set()
+    for i, st in enumerate(doc.get("stories") or []):
+        if not isinstance(st, dict):
+            warn(f"bridges: story #{i} is not an object; skipped")
+            continue
+        sid, pair = _text(st.get("id")), st.get("pair")
+        src = [{"label": _text(x.get("label")) or _text(x.get("url")), "url": _text(x.get("url")), "lang": _text(x.get("lang"))}
+               for x in (st.get("src") or []) if isinstance(x, dict) and _text(x.get("url")).startswith(("http://", "https://"))]
+        why = []
+        if not sid or sid in seen:
+            why.append("missing or duplicate id")
+        if not (isinstance(pair, list) and len(pair) == 2 and all(_text(p) for p in pair)):
+            why.append("pair must be two codes")
+        if not _text(st.get("title")) or not _text(st.get("what")):
+            why.append("needs title and what")
+        if not src:
+            why.append("needs at least one http(s) source")
+        if why:
+            warn(f"bridges: story {sid or '#' + str(i)} skipped ({'; '.join(why)})")
+            continue
+        seen.add(sid)
+        sides = st.get("sides")
+        if not (isinstance(sides, list) and len(sides) == 2):
+            sides = pair
+        stories.append({
+            "id": sid,
+            "pair": [_text(p) for p in pair],
+            "sides": [_text(x) or _text(p) for x, p in zip(sides, pair)],
+            "year": _text(str(st.get("year") or "")),
+            "kind": st.get("kind") if st.get("kind") in BRIDGE_KINDS else "personal",
+            "who": _text(st.get("who")),
+            "title": _text(st.get("title")),
+            "what": _text(st.get("what")),
+            "why_it_matters": _text(st.get("why_it_matters")),
+            "src": src,
+            "conf": st.get("conf") if st.get("conf") in BRIDGE_CONF else "unconfirmed",
+            "note": _text(st.get("note")),
+        })
+    return {"about": _text(doc.get("about")), "verified": _text(doc.get("verified")), "stories": stories}
 
 
 def compose() -> dict:
@@ -61,6 +126,7 @@ def compose() -> dict:
         "live": live,
         "health": health,
         "peace": read_json(CURATED / "peace.json", {}) or {},
+        "bridges": load_bridges(),
         "links": {"healed": links.get("healed", {}), "counts": links.get("counts", {})},
     }
 

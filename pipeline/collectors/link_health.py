@@ -38,6 +38,12 @@ def all_urls():
     for word in peace.get("words", []):
         if word.get("url"):
             urls.add(word["url"])
+    bridges = read_json(CURATED / "bridges.json", {}) or {}  # optional file
+    for story in bridges.get("stories", []) if isinstance(bridges, dict) else []:
+        for src in story.get("src", []) if isinstance(story, dict) else []:
+            u = src.get("url") if isinstance(src, dict) else None
+            if isinstance(u, str) and u.startswith("http"):
+                urls.add(u)
     return sorted(urls)
 
 
