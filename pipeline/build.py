@@ -108,6 +108,8 @@ def check(html: str, data: dict) -> list[str]:
     for key in ("sources", "channels", "projects", "people"):
         if not data[key]:
             problems.append(f"no {key} in curated data")
+    if not (data.get("peace") or {}).get("nodes"):
+        problems.append("no Peace Lab nodes in curated data (data/curated/peace.json)")
     start = html.index('type="application/json">') + len('type="application/json">')
     end = html.index("</script>", start)
     json.loads(html[start:end])  # raises if the embedded data is not valid JSON

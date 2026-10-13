@@ -1,0 +1,2464 @@
+{
+ "about": "Peace Lab data. Each node is one approach to fostering, cultivating, sustaining and developing peace, with a playable mini-prototype (play.engine). conf: 'ok' = the URL was opened and supports the claim on the card; 'check' = not yet confirmed, shown with a 'check source' flag. Verified 2026-10-13: DOIs via Crossref metadata, pages via a batched fetch of title and key text.",
+ "verified": "2026-10-13",
+ "nodes": [
+  {
+   "id": "compassion",
+   "name": "Compassion training",
+   "domain": "mind",
+   "scale": "self",
+   "phase": "cultivate",
+   "horizon": "now",
+   "tags": [
+    "empathy",
+    "practice",
+    "attention"
+   ],
+   "what": "Short daily practice of wishing others well, starting with loved ones and widening to strangers and adversaries.",
+   "why": "In a randomized study, two weeks of online compassion training increased altruistic giving to a stranger, with matching changes in brain responses to suffering.",
+   "mvp": "A 7-minute daily guided audio plus a one-tap log of one kind act; compare giving in a simple game before and after.",
+   "q": "Who is the hardest person for you to wish well, and what changes in your body when you try?",
+   "play": {
+    "engine": "breathe",
+    "params": {
+     "minutes": 5,
+     "phrase": "May you be safe. May you be free of suffering."
+    }
+   },
+   "src": "Weng et al. 2013, Psychological Science",
+   "url": "https://doi.org/10.1177/0956797612469537",
+   "ev": "E",
+   "conf": "ok"
+  },
+  {
+   "id": "deep-canvass",
+   "name": "Deep canvassing",
+   "domain": "mind",
+   "scale": "relation",
+   "phase": "foster",
+   "horizon": "now",
+   "tags": [
+    "dialogue",
+    "empathy",
+    "perspective"
+   ],
+   "what": "A ten-minute, non-judgmental conversation in which people recall their own experience of being judged, then reconsider an outgroup.",
+   "why": "A door-to-door field experiment found attitude change that lasted at least three months.",
+   "mvp": "A script card and a role-play partner; measure warmth toward the other group before, right after and one month later.",
+   "q": "When were you last treated as 'one of them'? What did you need then?",
+   "play": {
+    "engine": "itt",
+    "params": {
+     "topic": "a group you find hard to understand"
+    }
+   },
+   "src": "Broockman & Kalla 2016, Science",
+   "url": "https://doi.org/10.1126/science.aad9713",
+   "ev": "E",
+   "conf": "ok"
+  },
+  {
+   "id": "perspective-getting",
+   "name": "Perspective-getting",
+   "domain": "mind",
+   "scale": "relation",
+   "phase": "foster",
+   "horizon": "now",
+   "tags": [
+    "perspective",
+    "dialogue",
+    "evidence"
+   ],
+   "what": "Instead of imagining what the other side thinks (perspective-taking), ask them and listen.",
+   "why": "Across many experiments, imagining another's view did not make people more accurate about it; actually asking did.",
+   "mvp": "Write your guess of a counterpart's view, then ask them three open questions and score how close you were.",
+   "q": "Whose mind do you claim to know without ever having asked?",
+   "play": {
+    "engine": "itt",
+    "params": {
+     "topic": "how a typical person in another power sees your country"
+    }
+   },
+   "src": "Eyal, Steffel & Epley 2018, JPSP",
+   "url": "https://doi.org/10.1037/pspa0000115",
+   "ev": "E",
+   "conf": "ok"
+  },
+  {
+   "id": "humility",
+   "name": "Intellectual humility",
+   "domain": "mind",
+   "scale": "self",
+   "phase": "cultivate",
+   "horizon": "now",
+   "tags": [
+    "evidence",
+    "humility",
+    "attention"
+   ],
+   "what": "Holding beliefs with a confidence that matches the evidence, and being open to being wrong.",
+   "why": "People higher in intellectual humility were less certain their own beliefs were correct and less inclined to call politicians who changed their minds 'flip-floppers'.",
+   "mvp": "A weekly 'where might I be wrong?' log with a confidence number per belief.",
+   "q": "Which of your political beliefs would you bet the least money on?",
+   "play": {
+    "engine": "provenance",
+    "params": {}
+   },
+   "src": "Leary et al. 2017, PSPB",
+   "url": "https://doi.org/10.1177/0146167217697695",
+   "ev": "E",
+   "conf": "ok"
+  },
+  {
+   "id": "overview",
+   "name": "The overview effect",
+   "domain": "mind",
+   "scale": "world",
+   "phase": "foster",
+   "horizon": "generations",
+   "tags": [
+    "awe",
+    "space",
+    "long-term"
+   ],
+   "what": "The shift astronauts describe on seeing Earth whole: borders vanish and the planet looks fragile.",
+   "why": "Analysis of astronaut accounts links the experience to awe and self-transcendence.",
+   "mvp": "A 3-minute 'Earth from orbit' contemplation before a negotiation; ask negotiators to note one shared stake.",
+   "q": "If you saw your country's border from orbit, which line would you redraw first, and why?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "Describe the Earth as if you had just seen it whole for the first time."
+    }
+   },
+   "src": "Yaden et al. 2016, Psychology of Consciousness",
+   "url": "https://doi.org/10.1037/cns0000086",
+   "ev": "E",
+   "conf": "ok"
+  },
+  {
+   "id": "metta",
+   "name": "Loving-kindness (mettā)",
+   "domain": "mind",
+   "scale": "self",
+   "phase": "cultivate",
+   "horizon": "now",
+   "tags": [
+    "practice",
+    "empathy",
+    "ritual"
+   ],
+   "what": "An ancient Buddhist practice of radiating goodwill to all beings without exception.",
+   "why": "The Karaniya Metta Sutta: 'Even as a mother protects with her life her child, her only child, so with a boundless heart should one cherish all living beings.'",
+   "mvp": "Pair the verse with a 5-minute breathing timer; end by naming one person you find difficult.",
+   "q": "What would 'without exception' mean for how you speak about a rival country?",
+   "play": {
+    "engine": "breathe",
+    "params": {
+     "minutes": 5,
+     "phrase": "May all beings be at ease."
+    }
+   },
+   "src": "Karaniya Metta Sutta (Access to Insight)",
+   "url": "https://www.accesstoinsight.org/tipitaka/kn/snp/snp.1.08.amar.html",
+   "ev": "C",
+   "conf": "ok"
+  },
+  {
+   "id": "contact",
+   "name": "Intergroup contact",
+   "domain": "relation",
+   "scale": "community",
+   "phase": "foster",
+   "horizon": "years",
+   "tags": [
+    "contact",
+    "empathy",
+    "cooperation"
+   ],
+   "what": "Structured time together between members of groups in tension.",
+   "why": "A meta-analysis of 515 studies (713 samples) found contact typically reduces prejudice; Allport's conditions (equal status, common goals, cooperation, institutional support) strengthen the effect.",
+   "mvp": "A shared task, such as a repair or a meal, for 6 people from two groups, run under Allport's conditions; survey before and after.",
+   "q": "Which group do you have almost no contact with, and what shared task could bring you together?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "Design one meeting between two groups that meets Allport's four conditions."
+    }
+   },
+   "src": "Pettigrew & Tropp 2006, JPSP",
+   "url": "https://doi.org/10.1037/0022-3514.90.5.751",
+   "ev": "E",
+   "conf": "ok"
+  },
+  {
+   "id": "robbers-cave",
+   "name": "Superordinate goals (Robbers Cave)",
+   "domain": "relation",
+   "scale": "community",
+   "phase": "foster",
+   "horizon": "now",
+   "tags": [
+    "cooperation",
+    "contact",
+    "games"
+   ],
+   "what": "Rival groups cooperate when they face a goal neither can reach alone.",
+   "why": "In Sherif's field study, hostility between two rival groups of boys eased once they faced goals that needed both groups to reach.",
+   "mvp": "List problems no single power can solve alone, and draft the smallest joint step on one.",
+   "q": "What is today's broken water tank that no power can fix alone?",
+   "play": {
+    "engine": "superordinate",
+    "params": {}
+   },
+   "src": "Sherif et al. 1954/1961 (Classics in the History of Psychology)",
+   "url": "https://psychclassics.yorku.ca/Sherif/",
+   "ev": "E",
+   "conf": "ok"
+  },
+  {
+   "id": "nvc",
+   "name": "Nonviolent Communication",
+   "domain": "relation",
+   "scale": "relation",
+   "phase": "cultivate",
+   "horizon": "now",
+   "tags": [
+    "communication",
+    "empathy",
+    "dialogue"
+   ],
+   "what": "Speak in observations, feelings, needs and requests instead of judgments.",
+   "why": "A widely taught method for de-escalating conflict in families, schools and mediation.",
+   "mvp": "Rewrite one hostile headline or message as observation, feeling, need and request.",
+   "q": "What need is behind the last angry thing you said about another country?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "Take a judgment you hold about another country. Rewrite it as: observation, feeling, need, request."
+    }
+   },
+   "src": "Center for Nonviolent Communication",
+   "url": "https://www.cnvc.org/",
+   "ev": "E",
+   "conf": "ok"
+  },
+  {
+   "id": "exchange",
+   "name": "Educational exchange",
+   "domain": "relation",
+   "scale": "nation",
+   "phase": "cultivate",
+   "horizon": "decades",
+   "tags": [
+    "contact",
+    "youth",
+    "science"
+   ],
+   "what": "Students and scholars living and working in another country for a year or more.",
+   "why": "Long-running exchange programmes such as Fulbright build personal networks that outlast political cycles.",
+   "mvp": "A pen-pal or virtual lab pairing two classrooms in different powers for one term.",
+   "q": "Who from another country changed how you think, and how did you meet?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "Design a one-term exchange between two classrooms in rival powers. What would they build together?"
+    }
+   },
+   "src": "Fulbright Program",
+   "url": "https://fulbrightprogram.org/",
+   "ev": "D",
+   "conf": "ok"
+  },
+  {
+   "id": "sistercities",
+   "name": "Sister cities",
+   "domain": "relation",
+   "scale": "community",
+   "phase": "sustain",
+   "horizon": "decades",
+   "tags": [
+    "contact",
+    "commons",
+    "long-term"
+   ],
+   "what": "Formal, long-term ties between towns in different countries.",
+   "why": "City-to-city links can keep people-to-people contact alive when national relations freeze.",
+   "mvp": "Find your town's sister cities; send one letter or join one exchange.",
+   "q": "What would your town share with a town in a rival power?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "Pick a city in another power. List three things your two cities share."
+    }
+   },
+   "src": "Sister Cities International",
+   "url": "https://sistercities.org/",
+   "ev": "D",
+   "conf": "check"
+  },
+  {
+   "id": "sustained-dialogue",
+   "name": "Sustained dialogue",
+   "domain": "relation",
+   "scale": "community",
+   "phase": "sustain",
+   "horizon": "years",
+   "tags": [
+    "dialogue",
+    "trust",
+    "long-term"
+   ],
+   "what": "The same small group meets repeatedly over months or years to transform relationships, not just solve problems.",
+   "why": "The Sustained Dialogue Institute trains campus and community groups in the method; it traces its roots to long-running US–Soviet citizen dialogues.",
+   "mvp": "A five-session dialogue circle with a fixed group and a shared log.",
+   "q": "Which relationship in your life would change if you met monthly for a year?",
+   "play": {
+    "engine": "itt",
+    "params": {
+     "topic": "a long-running dispute between two powers"
+    }
+   },
+   "src": "Sustained Dialogue Institute",
+   "url": "https://sustaineddialogue.org/",
+   "ev": "D",
+   "conf": "check"
+  },
+  {
+   "id": "track2",
+   "name": "Track 2 diplomacy (Pugwash)",
+   "domain": "relation",
+   "scale": "nation",
+   "phase": "foster",
+   "horizon": "years",
+   "tags": [
+    "dialogue",
+    "science",
+    "nuclear"
+   ],
+   "what": "Unofficial talks between experts and former officials that test ideas governments cannot yet float.",
+   "why": "The Pugwash Conferences and Joseph Rotblat shared the 1995 Nobel Peace Prize for efforts to reduce the role of nuclear arms.",
+   "mvp": "Run a 90-minute tabletop with three 'delegations' on one flashpoint; record off-ramps.",
+   "q": "What idea would you test quietly if no one could quote you?",
+   "play": {
+    "engine": "premortem",
+    "params": {}
+   },
+   "src": "Nobel Peace Prize 1995",
+   "url": "https://www.nobelprize.org/prizes/peace/1995/summary/",
+   "ev": "D",
+   "conf": "ok",
+   "refs": [
+    {
+     "label": "Pugwash Conferences",
+     "url": "https://pugwash.org/"
+    }
+   ]
+  },
+  {
+   "id": "restorative",
+   "name": "Restorative justice",
+   "domain": "relation",
+   "scale": "community",
+   "phase": "sustain",
+   "horizon": "years",
+   "tags": [
+    "repair",
+    "dialogue",
+    "law"
+   ],
+   "what": "Bringing those harmed and those responsible together to repair harm, not only to punish.",
+   "why": "The UN Office on Drugs and Crime publishes a handbook on designing restorative justice programmes.",
+   "mvp": "A restorative circle script for one real conflict in a school or workplace.",
+   "q": "What would repair look like for a harm your country has done?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "Name a harm. Who was affected, what do they need, and whose obligation is it?"
+    }
+   },
+   "src": "UNODC Handbook on Restorative Justice Programmes, 2nd ed. 2020",
+   "url": "https://www.unodc.org/documents/justice-and-prison-reform/20-01146_Handbook_on_Restorative_Justice_Programmes.pdf",
+   "ev": "C",
+   "conf": "ok"
+  },
+  {
+   "id": "virtual-exchange",
+   "name": "Virtual exchange",
+   "domain": "relation",
+   "scale": "relation",
+   "phase": "cultivate",
+   "horizon": "years",
+   "tags": [
+    "contact",
+    "dialogue",
+    "youth"
+   ],
+   "what": "Facilitated online dialogue between students across political and cultural divides.",
+   "why": "Organizations such as Soliya run facilitated cross-cultural dialogue at university scale.",
+   "mvp": "A four-week facilitated video dialogue between two classes.",
+   "q": "What would you ask a student your age in a rival power?",
+   "play": {
+    "engine": "itt",
+    "params": {
+     "topic": "what students in another power worry about"
+    }
+   },
+   "src": "Soliya",
+   "url": "https://soliya.net/",
+   "ev": "D",
+   "conf": "ok"
+  },
+  {
+   "id": "music",
+   "name": "Music across divides",
+   "domain": "culture",
+   "scale": "community",
+   "phase": "cultivate",
+   "horizon": "years",
+   "tags": [
+    "art",
+    "contact",
+    "harmony"
+   ],
+   "what": "Ensembles that bring together musicians from communities in conflict.",
+   "why": "Founded by Daniel Barenboim, the West-Eastern Divan Orchestra brings together musicians from communities in conflict.",
+   "mvp": "Compose a melody that mixes two traditions, such as a pentatonic line over a minor progression.",
+   "q": "What would an orchestra sound like if no two instruments played the same melody?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "Describe a piece of music that combines two traditions you know."
+    }
+   },
+   "src": "West-Eastern Divan Orchestra",
+   "url": "https://west-eastern-divan.org/",
+   "ev": "D",
+   "conf": "check"
+  },
+  {
+   "id": "sport",
+   "name": "Olympic Truce",
+   "domain": "culture",
+   "scale": "nation",
+   "phase": "foster",
+   "horizon": "now",
+   "tags": [
+    "ritual",
+    "sport",
+    "norms"
+   ],
+   "what": "An ancient Greek tradition of pausing hostilities for the Games, revived by the IOC and UN General Assembly resolutions.",
+   "why": "A shared calendar ritual creates a recurring window for de-escalation.",
+   "mvp": "Pick one recurring event and propose a 'truce week' around it.",
+   "q": "Which shared ritual could pause a conflict you care about?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "Design a truce ritual tied to a shared event."
+    }
+   },
+   "src": "International Olympic Committee: Olympic Truce",
+   "url": "https://www.olympics.com/ioc/olympic-truce",
+   "ev": "D",
+   "conf": "check"
+  },
+  {
+   "id": "harmony",
+   "name": "Harmony without uniformity (和而不同)",
+   "domain": "culture",
+   "scale": "world",
+   "phase": "develop",
+   "horizon": "generations",
+   "tags": [
+    "harmony",
+    "philosophy",
+    "pluralism"
+   ],
+   "what": "Confucius: 'The gentleman seeks harmony but not sameness; the petty person seeks sameness but not harmony' (Analects 13.23).",
+   "why": "A classical frame for coexistence that does not require agreement.",
+   "mvp": "Write one rule for coexisting with a rival that does not require either side to change its values.",
+   "q": "What would harmony without sameness look like between your country and its rival?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "Describe a relationship where difference made it stronger."
+    }
+   },
+   "src": "Analects 13.23 (Chinese Text Project)",
+   "url": "https://ctext.org/analects/zi-lu",
+   "ev": "C",
+   "conf": "check"
+  },
+  {
+   "id": "ubuntu",
+   "name": "Ubuntu",
+   "domain": "culture",
+   "scale": "community",
+   "phase": "cultivate",
+   "horizon": "generations",
+   "tags": [
+    "philosophy",
+    "repair",
+    "empathy"
+   ],
+   "what": "A Southern African ethic often summed up as 'a person is a person through other persons'.",
+   "why": "South Africa's 1993 interim constitution named 'a need for ubuntu but not for victimisation' as a basis for reconciliation.",
+   "mvp": "A circle where each person names how someone else made them who they are.",
+   "q": "Who are you through?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "List five people from other groups who made you who you are."
+    }
+   },
+   "src": "Constitution of the Republic of South Africa Act 200 of 1993, epilogue",
+   "url": "https://www.gov.za/documents/constitution/constitution-republic-south-africa-act-200-1993",
+   "ev": "C",
+   "conf": "ok"
+  },
+  {
+   "id": "ahimsa",
+   "name": "Ahimsa (non-harm)",
+   "domain": "culture",
+   "scale": "world",
+   "phase": "foster",
+   "horizon": "generations",
+   "tags": [
+    "nonviolence",
+    "philosophy",
+    "practice"
+   ],
+   "what": "The Indian principle of non-harm in thought, word and deed, central to Gandhi's satyagraha.",
+   "why": "Gandhi turned a personal ethic of non-harm into a method of mass political action.",
+   "mvp": "A one-day 'no harm in word' practice: note every harsh word you notice yourself about to say.",
+   "q": "Where does harm begin: in the act, the word, or the thought?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "Track one day of your words. Where did harm start?"
+    }
+   },
+   "src": "Mahatma Gandhi complete information website",
+   "url": "https://www.mkgandhi.org/",
+   "ev": "D",
+   "conf": "ok"
+  },
+  {
+   "id": "hongik",
+   "name": "Hongik ingan (弘益人間)",
+   "domain": "culture",
+   "scale": "world",
+   "phase": "develop",
+   "horizon": "generations",
+   "tags": [
+    "philosophy",
+    "youth",
+    "education"
+   ],
+   "what": "'Broadly benefit humanity', a founding ideal from Korean myth.",
+   "why": "Reported as the stated ideal in Article 2 of Korea's Framework Act on Education.",
+   "mvp": "Write a one-sentence 'benefit all humanity' test for one policy you care about.",
+   "q": "Who is left out when a policy benefits 'our people'?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "Apply 'broadly benefit humanity' to one national policy. What changes?"
+    }
+   },
+   "src": "Korea Framework Act on Education (law.go.kr)",
+   "url": "https://www.law.go.kr/법령/교육기본법",
+   "ev": "C",
+   "conf": "check"
+  },
+  {
+   "id": "mir",
+   "name": "мир = peace = world",
+   "domain": "culture",
+   "scale": "world",
+   "phase": "foster",
+   "horizon": "generations",
+   "tags": [
+    "language",
+    "translation",
+    "philosophy"
+   ],
+   "what": "In Russian, мир means both 'peace' and 'world'.",
+   "why": "Words for peace carry different pictures: harmony, calm, wholeness, a level field.",
+   "mvp": "Learn one word for 'peace' a week, with its literal meaning.",
+   "q": "If 'peace' and 'world' were the same word in your language, what would change?",
+   "play": {
+    "engine": "words",
+    "params": {}
+   },
+   "src": "Wiktionary: мир",
+   "url": "https://en.wiktionary.org/wiki/%D0%BC%D0%B8%D1%80",
+   "ev": "E",
+   "conf": "ok"
+  },
+  {
+   "id": "galtung",
+   "name": "Positive peace (Galtung)",
+   "domain": "culture",
+   "scale": "world",
+   "phase": "develop",
+   "horizon": "generations",
+   "tags": [
+    "philosophy",
+    "structure",
+    "long-term"
+   ],
+   "what": "Peace is not only the absence of direct violence (negative peace) but also the absence of structural violence (positive peace).",
+   "why": "Galtung's 1969 article set the frame that most peace research still uses.",
+   "mvp": "List the structural violence that would remain if all wars stopped tomorrow.",
+   "q": "If wars stopped tomorrow, what violence would remain?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "If every war stopped tomorrow, what violence would remain? List three kinds."
+    }
+   },
+   "src": "Galtung 1969, Journal of Peace Research",
+   "url": "https://doi.org/10.1177/002234336900600301",
+   "ev": "E",
+   "conf": "ok"
+  },
+  {
+   "id": "peace-ed",
+   "name": "Education for peace",
+   "domain": "culture",
+   "scale": "nation",
+   "phase": "cultivate",
+   "horizon": "decades",
+   "tags": [
+    "education",
+    "youth",
+    "norms"
+   ],
+   "what": "Teaching conflict skills, human rights and international understanding in schools.",
+   "why": "UNESCO member states adopted a revised Recommendation on Education for Peace, Human Rights and Sustainable Development in 2023.",
+   "mvp": "One lesson plan: two textbooks' accounts of the same event, side by side.",
+   "q": "What did your school teach you about your country's rivals?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "Recall how your schoolbooks described a rival country. What was left out?"
+    }
+   },
+   "src": "UNESCO Recommendation on Education for Peace and Human Rights (2023)",
+   "url": "https://www.unesco.org/en/legal-affairs/recommendation-education-peace-and-human-rights-international-understanding-cooperation-fundamental",
+   "ev": "C",
+   "conf": "ok"
+  },
+  {
+   "id": "longnow",
+   "name": "Long-term thinking",
+   "domain": "culture",
+   "scale": "world",
+   "phase": "develop",
+   "horizon": "generations",
+   "tags": [
+    "long-term",
+    "philosophy",
+    "future"
+   ],
+   "what": "Taking the next 10,000 years as the frame for decisions.",
+   "why": "The Long Now Foundation builds projects, such as a 10,000-year clock, to stretch our sense of time.",
+   "mvp": "A 1000-year audit: what in today's dispute will matter in the year 3000?",
+   "q": "What part of today's rivalry will anyone remember in 1000 years?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "Run a 1000-year audit on one current conflict."
+    }
+   },
+   "src": "The Long Now Foundation",
+   "url": "https://longnow.org/",
+   "ev": "D",
+   "conf": "ok"
+  },
+  {
+   "id": "memory",
+   "name": "Places of memory",
+   "domain": "culture",
+   "scale": "world",
+   "phase": "sustain",
+   "horizon": "generations",
+   "tags": [
+    "memory",
+    "ritual",
+    "nuclear"
+   ],
+   "what": "Museums and memorials that keep the human cost of war present.",
+   "why": "The Hiroshima Peace Memorial Museum documents the atomic bombing and its victims.",
+   "mvp": "Visit or study one place of memory and write what it asks of you.",
+   "q": "What memorial does your country not yet have?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "Describe a memorial you would build, and for whom."
+    }
+   },
+   "src": "Hiroshima Peace Memorial Museum",
+   "url": "https://hpmmuseum.jp/?lang=eng",
+   "ev": "D",
+   "conf": "ok"
+  },
+  {
+   "id": "interdependence",
+   "name": "Economic interdependence",
+   "domain": "economy",
+   "scale": "nation",
+   "phase": "sustain",
+   "horizon": "decades",
+   "tags": [
+    "trade",
+    "structure",
+    "trust"
+   ],
+   "what": "Trade and financial ties that raise the cost of conflict.",
+   "why": "The evidence is mixed: ties can bind, but Farrell and Newman show how network hubs can also be weaponized for coercion.",
+   "mvp": "Map one supply chain across the powers: who could cut whom off?",
+   "q": "Does depending on each other make us safer, or just more exposed?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "Trace one object you own across the powers. Where is the chokepoint?"
+    }
+   },
+   "src": "Farrell & Newman 2019, International Security",
+   "url": "https://doi.org/10.1162/isec_a_00351",
+   "ev": "E",
+   "conf": "ok"
+  },
+  {
+   "id": "shared-infra",
+   "name": "Shared infrastructure (Indus Waters)",
+   "domain": "economy",
+   "scale": "world",
+   "phase": "develop",
+   "horizon": "decades",
+   "tags": [
+    "commons",
+    "water",
+    "law"
+   ],
+   "what": "Treaties that share a river, grid or pipeline between rivals.",
+   "why": "The 1960 Indus Waters Treaty, brokered by the World Bank, divided a river system between India and Pakistan. Check its current status before citing it as a success.",
+   "mvp": "Sketch one piece of infrastructure two rivals could co-own.",
+   "q": "What would two rivals have to share to make war too costly?",
+   "play": {
+    "engine": "superordinate",
+    "params": {}
+   },
+   "src": "World Bank fact sheet: the Indus Waters Treaty 1960",
+   "url": "https://www.worldbank.org/en/region/sar/brief/fact-sheet-the-indus-waters-treaty-1960-and-the-world-bank",
+   "ev": "C",
+   "conf": "ok"
+  },
+  {
+   "id": "cost-of-violence",
+   "name": "Counting the cost of violence",
+   "domain": "economy",
+   "scale": "world",
+   "phase": "develop",
+   "horizon": "years",
+   "tags": [
+    "evidence",
+    "numbers",
+    "structure"
+   ],
+   "what": "Estimating what violence costs and what peace spending buys.",
+   "why": "The Institute for Economics and Peace publishes the Global Peace Index and estimates of the economic impact of violence.",
+   "mvp": "A Fermi estimate: the cost of violence against spending on peace.",
+   "q": "What would you do with a tenth of the world's military spending?",
+   "play": {
+    "engine": "fermi",
+    "params": {
+     "model": "cost"
+    }
+   },
+   "src": "Institute for Economics and Peace: Vision of Humanity",
+   "url": "https://www.visionofhumanity.org/",
+   "ev": "E",
+   "conf": "ok"
+  },
+  {
+   "id": "commons",
+   "name": "Governing the commons",
+   "domain": "economy",
+   "scale": "community",
+   "phase": "sustain",
+   "horizon": "generations",
+   "tags": [
+    "commons",
+    "cooperation",
+    "institutions"
+   ],
+   "what": "Communities can manage shared resources without either privatization or central control.",
+   "why": "Elinor Ostrom was awarded the 2009 economics prize for her analysis of how communities govern shared resources.",
+   "mvp": "Apply Ostrom-style rules (clear boundaries, local rule-making, monitoring, graduated sanctions) to one shared resource.",
+   "q": "What commons do the great powers share, and who monitors it?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "Pick a global commons. Who sets the rules, who monitors, and what are the sanctions?"
+    }
+   },
+   "src": "Nobel Prize: Elinor Ostrom, 2009",
+   "url": "https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/facts/",
+   "ev": "D",
+   "conf": "ok"
+  },
+  {
+   "id": "mediation",
+   "name": "Mediation",
+   "domain": "institution",
+   "scale": "nation",
+   "phase": "foster",
+   "horizon": "now",
+   "tags": [
+    "dialogue",
+    "law",
+    "trust"
+   ],
+   "what": "A trusted third party helps parties find an agreement.",
+   "why": "UN Peacemaker collects peace agreements and mediation guidance.",
+   "mvp": "Walk an escalation ladder and mark where a mediator could step in.",
+   "q": "Who could both sides of a conflict you care about trust as a go-between?",
+   "play": {
+    "engine": "premortem",
+    "params": {}
+   },
+   "src": "UN Peacemaker",
+   "url": "https://peacemaker.un.org/",
+   "ev": "C",
+   "conf": "ok"
+  },
+  {
+   "id": "women-peace",
+   "name": "Women in peace processes",
+   "domain": "institution",
+   "scale": "nation",
+   "phase": "sustain",
+   "horizon": "years",
+   "tags": [
+    "women",
+    "law",
+    "long-term"
+   ],
+   "what": "Including women as negotiators, mediators and signatories.",
+   "why": "An IPI study reports that agreements are 35% more likely to last 15 years when women participate in their creation (citing Stone's statistical analysis).",
+   "mvp": "Audit one peace process: who was at the table?",
+   "q": "Who is missing from the table in the conflict you follow most?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "Pick a negotiation. List who was at the table, then who was not."
+    }
+   },
+   "src": "O'Reilly, Ó Súilleabháin & Paffenholz 2015, Reimagining Peacemaking (IPI)",
+   "url": "https://www.ipinst.org/wp-content/uploads/2015/06/IPI-E-pub-Reimagining-Peacemaking.pdf",
+   "ev": "E",
+   "conf": "ok",
+   "refs": [
+    {
+     "label": "UN Women: facts and figures on women, peace and security",
+     "url": "https://www.unwomen.org/en/what-we-do/peace-and-security/facts-and-figures"
+    }
+   ]
+  },
+  {
+   "id": "pbc",
+   "name": "UN Peacebuilding Commission",
+   "domain": "institution",
+   "scale": "world",
+   "phase": "sustain",
+   "horizon": "decades",
+   "tags": [
+    "institutions",
+    "long-term",
+    "law"
+   ],
+   "what": "An intergovernmental advisory body that supports countries emerging from conflict.",
+   "why": "Peace often fails in the years after a deal; the Commission exists to keep attention on that phase.",
+   "mvp": "Pick one post-conflict country and list what would need to hold for ten years.",
+   "q": "Who keeps paying attention once the cameras leave?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "What would need to hold for ten years after a peace deal?"
+    }
+   },
+   "src": "United Nations Peacebuilding Commission",
+   "url": "https://www.un.org/peacebuilding/commission",
+   "ev": "C",
+   "conf": "ok"
+  },
+  {
+   "id": "icj",
+   "name": "International Court of Justice",
+   "domain": "institution",
+   "scale": "world",
+   "phase": "sustain",
+   "horizon": "generations",
+   "tags": [
+    "law",
+    "institutions",
+    "norms"
+   ],
+   "what": "The UN's principal judicial organ settles disputes between states.",
+   "why": "Courts turn disputes into arguments over rules instead of force.",
+   "mvp": "Read one ICJ case summary and note what each side argued.",
+   "q": "Which dispute would you most like to see settled by a court instead?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "Draft the question you would ask the Court to decide in one dispute."
+    }
+   },
+   "src": "International Court of Justice",
+   "url": "https://www.icj-cij.org/",
+   "ev": "C",
+   "conf": "ok"
+  },
+  {
+   "id": "assembly",
+   "name": "Citizens' assemblies",
+   "domain": "institution",
+   "scale": "nation",
+   "phase": "develop",
+   "horizon": "years",
+   "tags": [
+    "dialogue",
+    "bridging",
+    "institutions"
+   ],
+   "what": "A randomly selected group of citizens deliberates and recommends.",
+   "why": "Ireland's Citizens' Assemblies have deliberated on divisive questions and made recommendations to parliament.",
+   "mvp": "Draft a statement both sides could sign, then test it for loaded words.",
+   "q": "Would you trust 100 randomly chosen people from both sides to draft a deal?",
+   "play": {
+    "engine": "bridge",
+    "params": {}
+   },
+   "src": "Citizens' Assembly (Ireland)",
+   "url": "https://citizensassembly.ie/",
+   "ev": "C",
+   "conf": "ok"
+  },
+  {
+   "id": "trc",
+   "name": "Truth commissions",
+   "domain": "institution",
+   "scale": "nation",
+   "phase": "sustain",
+   "horizon": "decades",
+   "tags": [
+    "repair",
+    "memory",
+    "law"
+   ],
+   "what": "Public processes that record what happened and acknowledge victims.",
+   "why": "South Africa's Truth and Reconciliation Commission is the best-known example.",
+   "mvp": "Write the one sentence of acknowledgement you would want from the other side.",
+   "q": "What truth would your country find hardest to tell?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "Write the acknowledgement you would want to hear, then the one you would owe."
+    }
+   },
+   "src": "South Africa: Truth and Reconciliation Commission",
+   "url": "https://www.justice.gov.za/trc/",
+   "ev": "C",
+   "conf": "ok"
+  },
+  {
+   "id": "kant",
+   "name": "Perpetual peace (Kant)",
+   "domain": "institution",
+   "scale": "world",
+   "phase": "develop",
+   "horizon": "generations",
+   "tags": [
+    "philosophy",
+    "law",
+    "norms"
+   ],
+   "what": "Kant's 1795 sketch: republics, a federation of free states, and universal hospitality.",
+   "why": "It anticipated the democratic peace debate and international institutions.",
+   "mvp": "Design rules for the US–China–Russia relationship from behind a veil.",
+   "q": "What would universal hospitality ask of your country's border?",
+   "play": {
+    "engine": "veil",
+    "params": {}
+   },
+   "src": "Kant, Perpetual Peace (Project Gutenberg)",
+   "url": "https://www.gutenberg.org/ebooks/50922",
+   "ev": "C",
+   "conf": "ok"
+  },
+  {
+   "id": "rawls",
+   "name": "Veil of ignorance (Rawls)",
+   "domain": "institution",
+   "scale": "world",
+   "phase": "develop",
+   "horizon": "generations",
+   "tags": [
+    "philosophy",
+    "fairness",
+    "games"
+   ],
+   "what": "Choose rules without knowing which position you will occupy.",
+   "why": "The original position is a standard tool for testing fairness.",
+   "mvp": "Write rules for the great-power relationship, then get assigned a country at random.",
+   "q": "Which rule would you change if you might be born in the weakest country?",
+   "play": {
+    "engine": "veil",
+    "params": {}
+   },
+   "src": "Stanford Encyclopedia of Philosophy: Original Position",
+   "url": "https://plato.stanford.edu/entries/original-position/",
+   "ev": "E",
+   "conf": "ok"
+  },
+  {
+   "id": "cbm",
+   "name": "Confidence-building measures",
+   "domain": "security",
+   "scale": "nation",
+   "phase": "foster",
+   "horizon": "now",
+   "tags": [
+    "trust",
+    "verification",
+    "military"
+   ],
+   "what": "Notifications, observations and data exchange on military activity.",
+   "why": "The OSCE Vienna Document 2011 sets out confidence- and security-building measures among participating states.",
+   "mvp": "A trust ledger: log small unilateral steps and whether they were returned.",
+   "q": "What one notification would make you less afraid of a rival's army?",
+   "play": {
+    "engine": "grit",
+    "params": {}
+   },
+   "src": "OSCE Vienna Document 2011",
+   "url": "https://www.osce.org/fsc/86597",
+   "ev": "C",
+   "conf": "ok"
+  },
+  {
+   "id": "grit",
+   "name": "GRIT: graduated reciprocation",
+   "domain": "security",
+   "scale": "nation",
+   "phase": "foster",
+   "horizon": "years",
+   "tags": [
+    "trust",
+    "games",
+    "nonviolence"
+   ],
+   "what": "Osgood's strategy: announce and carry out small unilateral conciliatory steps, inviting reciprocation.",
+   "why": "In his 1963 'Strategy of Peace' speech, Kennedy declared the US would not conduct nuclear tests in the atmosphere so long as other states did not: a unilateral first step.",
+   "mvp": "Log one small conciliatory step a week and whether it was returned.",
+   "q": "What small step could you take first, without waiting?",
+   "play": {
+    "engine": "grit",
+    "params": {}
+   },
+   "src": "Kennedy, Commencement Address at American University, 10 June 1963 (American Presidency Project)",
+   "url": "https://www.presidency.ucsb.edu/documents/commencement-address-american-university-washington",
+   "ev": "D",
+   "conf": "ok"
+  },
+  {
+   "id": "arms-verif",
+   "name": "Arms control with verification",
+   "domain": "security",
+   "scale": "world",
+   "phase": "sustain",
+   "horizon": "decades",
+   "tags": [
+    "verification",
+    "nuclear",
+    "trust"
+   ],
+   "what": "Treaties that cap or eliminate weapons, with inspections to check.",
+   "why": "Under the INF Treaty a total of 2,692 missiles were eliminated by 1991, with on-site inspections.",
+   "mvp": "Design the smallest verifiable promise two rivals could make.",
+   "q": "What is the smallest promise you could verify?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "Draft the smallest verifiable promise between two rivals. How would each side check it?"
+    }
+   },
+   "src": "US State Department: INF Treaty",
+   "url": "https://2009-2017.state.gov/t/avc/trty/102360.htm",
+   "ev": "C",
+   "conf": "ok"
+  },
+  {
+   "id": "hotline",
+   "name": "Crisis hotlines",
+   "domain": "security",
+   "scale": "world",
+   "phase": "foster",
+   "horizon": "now",
+   "tags": [
+    "communication",
+    "trust",
+    "nuclear"
+   ],
+   "what": "Direct links between leaders for use in a crisis.",
+   "why": "The US and USSR agreed the Hot Line in June 1963, after the Cuban missile crisis.",
+   "mvp": "Walk an escalation ladder: at which rung would you pick up the phone?",
+   "q": "Who would you call first in a crisis, and do you have their number?",
+   "play": {
+    "engine": "premortem",
+    "params": {}
+   },
+   "src": "US State Department: Hot Line Agreement 1963",
+   "url": "https://2009-2017.state.gov/t/isn/4785.htm",
+   "ev": "C",
+   "conf": "ok"
+  },
+  {
+   "id": "peacekeeping",
+   "name": "UN peacekeeping",
+   "domain": "security",
+   "scale": "nation",
+   "phase": "sustain",
+   "horizon": "years",
+   "tags": [
+    "institutions",
+    "military",
+    "evidence"
+   ],
+   "what": "Multinational forces deployed to protect civilians and support ceasefires.",
+   "why": "Using monthly data on African civil wars from 1991 to 2008, more UN troops and police were associated with fewer civilian killings.",
+   "mvp": "A Fermi estimate: how many peacekeepers for a region, and what would it cost?",
+   "q": "What would it take for your country to send peacekeepers alongside a rival's?",
+   "play": {
+    "engine": "fermi",
+    "params": {
+     "model": "keepers"
+    }
+   },
+   "src": "Hultman, Kathman & Shannon 2013, AJPS",
+   "url": "https://doi.org/10.1111/ajps.12036",
+   "ev": "E",
+   "conf": "ok"
+  },
+  {
+   "id": "ddr",
+   "name": "Disarmament, demobilization, reintegration",
+   "domain": "security",
+   "scale": "community",
+   "phase": "sustain",
+   "horizon": "years",
+   "tags": [
+    "repair",
+    "military",
+    "institutions"
+   ],
+   "what": "Helping fighters lay down arms and return to civilian life.",
+   "why": "Peace deals often fail if former fighters have no livelihood.",
+   "mvp": "List what a former fighter would need in the first 100 days.",
+   "q": "What would you need to put down a weapon?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "List what a former fighter needs in the first 100 days."
+    }
+   },
+   "src": "UN DDR Resource Centre",
+   "url": "https://www.unddr.org/",
+   "ev": "C",
+   "conf": "check"
+  },
+  {
+   "id": "demining",
+   "name": "Mine ban and demining",
+   "domain": "security",
+   "scale": "community",
+   "phase": "sustain",
+   "horizon": "decades",
+   "tags": [
+    "repair",
+    "law",
+    "military"
+   ],
+   "what": "A treaty ban on anti-personnel mines, plus clearance and victim assistance.",
+   "why": "Landmines keep killing long after wars end. Check which states parties have recently announced withdrawals.",
+   "mvp": "Find one cleared minefield's story and what the land is used for now.",
+   "q": "What weapons of today will still harm children in 50 years?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "Which of today's weapons will still cause harm in 50 years?"
+    }
+   },
+   "src": "Anti-Personnel Mine Ban Convention",
+   "url": "https://www.apminebanconvention.org/",
+   "ev": "C",
+   "conf": "ok"
+  },
+  {
+   "id": "civil-resistance",
+   "name": "Civil resistance",
+   "domain": "security",
+   "scale": "nation",
+   "phase": "develop",
+   "horizon": "years",
+   "tags": [
+    "nonviolence",
+    "evidence",
+    "structure"
+   ],
+   "what": "Strikes, boycotts, protests and non-cooperation instead of arms.",
+   "why": "Across major campaigns from 1900 to 2006, nonviolent resistance was more than twice as effective as violent resistance in reaching its stated goals.",
+   "mvp": "List the pillars of support for one policy you oppose, and one nonviolent way to shift each.",
+   "q": "Which pillar of support would move first?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "Map the pillars of support for one policy. How could each be shifted nonviolently?"
+    }
+   },
+   "src": "Stephan & Chenoweth 2008, International Security; Chenoweth & Stephan 2011 (Columbia University Press)",
+   "url": "https://doi.org/10.1162/isec.2008.33.1.7",
+   "ev": "E",
+   "conf": "ok",
+   "refs": [
+    {
+     "label": "Chenoweth & Stephan 2011, Columbia University Press",
+     "url": "https://cup.columbia.edu/book/why-civil-resistance-works/9780231156837"
+    }
+   ]
+  },
+  {
+   "id": "war-premortem",
+   "name": "War pre-mortem",
+   "domain": "security",
+   "scale": "nation",
+   "phase": "foster",
+   "horizon": "now",
+   "tags": [
+    "games",
+    "foresight",
+    "trust"
+   ],
+   "what": "Imagine the war has already happened, then work out why, and set tripwires and off-ramps.",
+   "why": "Gary Klein's project pre-mortem helps teams find failure modes before they happen.",
+   "mvp": "Walk an escalation ladder for one flashpoint with a tripwire and off-ramp at each rung.",
+   "q": "It is five years from now and the war happened. What was the first missed off-ramp?",
+   "play": {
+    "engine": "premortem",
+    "params": {}
+   },
+   "src": "Klein 2007, Performing a Project Premortem, Harvard Business Review",
+   "url": "https://hbr.org/2007/09/performing-a-project-premortem",
+   "ev": "E",
+   "conf": "ok"
+  },
+  {
+   "id": "axelrod",
+   "name": "Evolution of cooperation",
+   "domain": "security",
+   "scale": "world",
+   "phase": "cultivate",
+   "horizon": "years",
+   "tags": [
+    "games",
+    "trust",
+    "cooperation"
+   ],
+   "what": "In repeated games, cooperation can emerge between self-interested players.",
+   "why": "In Axelrod's tournaments, tit-for-tat (nice, retaliatory, forgiving, clear) did well.",
+   "mvp": "Play 10 rounds of the prisoner's dilemma against five strategies, then run the tournament.",
+   "q": "What does 'forgiving' mean for a nation?",
+   "play": {
+    "engine": "dilemma",
+    "params": {
+     "game": "pd"
+    }
+   },
+   "src": "Axelrod & Hamilton 1981, Science",
+   "url": "https://doi.org/10.1126/science.7466396",
+   "ev": "E",
+   "conf": "ok"
+  },
+  {
+   "id": "stag-hunt",
+   "name": "The stag hunt",
+   "domain": "security",
+   "scale": "world",
+   "phase": "foster",
+   "horizon": "years",
+   "tags": [
+    "games",
+    "trust",
+    "cooperation"
+   ],
+   "what": "Hunting a stag together pays more, but only if both trust; hunting hare alone is safe.",
+   "why": "Skyrms' 2001 address, The Stag Hunt, makes the case that trust, not just self-interest, is the core problem of social cooperation.",
+   "mvp": "Play the stag hunt for 10 rounds and watch how trust forms or breaks.",
+   "q": "What is the stag the great powers could hunt together?",
+   "play": {
+    "engine": "dilemma",
+    "params": {
+     "game": "stag"
+    }
+   },
+   "src": "Skyrms 2001, The Stag Hunt, APA Proceedings",
+   "url": "https://doi.org/10.2307/3218711",
+   "ev": "E",
+   "conf": "ok"
+  },
+  {
+   "id": "early-warning",
+   "name": "Conflict early warning",
+   "domain": "technology",
+   "scale": "world",
+   "phase": "foster",
+   "horizon": "now",
+   "tags": [
+    "foresight",
+    "evidence",
+    "data"
+   ],
+   "what": "Forecasting where violence is likely, months ahead, from open data.",
+   "why": "ViEWS publishes open-source forecasts of armed conflict.",
+   "mvp": "Pick a forecast region and write what early action would look like.",
+   "q": "If you knew a war was 70% likely next year, what would you do this month?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "A forecast says conflict is likely in a region next year. What is the cheapest early action?"
+    }
+   },
+   "src": "ViEWS (Violence & Impacts Early-Warning System)",
+   "url": "https://viewsforecasting.org/",
+   "ev": "E",
+   "conf": "ok"
+  },
+  {
+   "id": "osint-verif",
+   "name": "Open satellite verification",
+   "domain": "technology",
+   "scale": "world",
+   "phase": "sustain",
+   "horizon": "now",
+   "tags": [
+    "verification",
+    "evidence",
+    "space"
+   ],
+   "what": "Open satellite imagery lets anyone check claims about troops, ships and damage.",
+   "why": "The EU's Copernicus programme publishes free Earth-observation data.",
+   "mvp": "Check one claim about a military build-up against open imagery.",
+   "q": "What claim would you check first if you had a satellite?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "Pick a claim in the news. What would satellite imagery need to show to confirm it?"
+    }
+   },
+   "src": "Copernicus (EU Earth observation)",
+   "url": "https://www.copernicus.eu/en",
+   "ev": "A",
+   "conf": "ok"
+  },
+  {
+   "id": "bridging-ranking",
+   "name": "Bridging-based ranking",
+   "domain": "technology",
+   "scale": "world",
+   "phase": "develop",
+   "horizon": "years",
+   "tags": [
+    "bridging",
+    "dialogue",
+    "attention"
+   ],
+   "what": "Rank content by whether people who usually disagree both rate it helpful.",
+   "why": "Community Notes (formerly Birdwatch) uses a bridging algorithm; Pol.is uses a similar idea to find consensus statements.",
+   "mvp": "Write a statement both sides could sign and check it for loaded and shared-value words.",
+   "q": "What could both sides of your sharpest disagreement sign?",
+   "play": {
+    "engine": "bridge",
+    "params": {}
+   },
+   "src": "Wojcik et al. 2022, Birdwatch: Crowd Wisdom and Bridging Algorithms (arXiv); Pol.is",
+   "url": "https://arxiv.org/abs/2210.15723",
+   "ev": "E",
+   "conf": "ok",
+   "refs": [
+    {
+     "label": "Community Notes source and docs",
+     "url": "https://github.com/twitter/communitynotes"
+    },
+    {
+     "label": "Pol.is (Computational Democracy Project)",
+     "url": "https://compdemocracy.org/"
+    }
+   ]
+  },
+  {
+   "id": "translation",
+   "name": "Machine translation for all",
+   "domain": "technology",
+   "scale": "world",
+   "phase": "cultivate",
+   "horizon": "years",
+   "tags": [
+    "translation",
+    "language",
+    "contact"
+   ],
+   "what": "Translation models covering 200 languages, including many low-resource ones.",
+   "why": "The NLLB project scaled neural machine translation to 200 languages.",
+   "mvp": "Read one article in another power's domestic press, machine-translated.",
+   "q": "What would you read if every language were open to you?",
+   "play": {
+    "engine": "words",
+    "params": {}
+   },
+   "src": "NLLB Team 2024, Nature",
+   "url": "https://doi.org/10.1038/s41586-024-07335-x",
+   "ev": "E",
+   "conf": "ok"
+  },
+  {
+   "id": "ai-safety",
+   "name": "AI safety cooperation",
+   "domain": "technology",
+   "scale": "world",
+   "phase": "develop",
+   "horizon": "years",
+   "tags": [
+    "science",
+    "norms",
+    "shared-risk"
+   ],
+   "what": "Joint evaluation and risk research on frontier AI.",
+   "why": "At Bletchley Park in November 2023, countries including the US and China signed a declaration on AI safety.",
+   "mvp": "Draft the smallest joint AI-safety step two rival labs could take.",
+   "q": "What AI risk is no one country able to manage alone?",
+   "play": {
+    "engine": "superordinate",
+    "params": {}
+   },
+   "src": "The Bletchley Declaration, 1–2 November 2023 (gov.uk)",
+   "url": "https://www.gov.uk/government/publications/ai-safety-summit-2023-the-bletchley-declaration/the-bletchley-declaration-by-countries-attending-the-ai-safety-summit-1-2-november-2023",
+   "ev": "C",
+   "conf": "ok"
+  },
+  {
+   "id": "cyber-norms",
+   "name": "Cyber norms",
+   "domain": "technology",
+   "scale": "world",
+   "phase": "sustain",
+   "horizon": "years",
+   "tags": [
+    "norms",
+    "trust",
+    "law"
+   ],
+   "what": "Voluntary norms of responsible state behaviour in cyberspace, such as not attacking critical infrastructure.",
+   "why": "The 2015 UN Group of Governmental Experts report (A/70/174) proposed voluntary norms.",
+   "mvp": "Log reciprocated restraint steps in a trust ledger.",
+   "q": "Which infrastructure should every power agree never to attack?",
+   "play": {
+    "engine": "grit",
+    "params": {}
+   },
+   "src": "UN GGE report A/70/174 (2015)",
+   "url": "https://docs.un.org/en/A/70/174",
+   "ev": "C",
+   "conf": "check"
+  },
+  {
+   "id": "open-gov",
+   "name": "Open government",
+   "domain": "technology",
+   "scale": "nation",
+   "phase": "sustain",
+   "horizon": "years",
+   "tags": [
+    "transparency",
+    "institutions",
+    "evidence"
+   ],
+   "what": "Governments co-create commitments with civil society on transparency and participation.",
+   "why": "Transparency makes intentions easier to read, which lowers the cost of trust.",
+   "mvp": "Pick one government dataset and check one claim against it.",
+   "q": "What would you want a rival government to publish?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "What one dataset would make you trust a rival government more?"
+    }
+   },
+   "src": "Open Government Partnership",
+   "url": "https://www.opengovpartnership.org/",
+   "ev": "D",
+   "conf": "check"
+  },
+  {
+   "id": "sesame",
+   "name": "SESAME synchrotron",
+   "domain": "technology",
+   "scale": "world",
+   "phase": "develop",
+   "horizon": "decades",
+   "tags": [
+    "science",
+    "cooperation",
+    "contact"
+   ],
+   "what": "A shared research light source in Jordan whose members include states with tense relations.",
+   "why": "Science facilities give rivals a reason to sit at the same table for decades.",
+   "mvp": "Name one instrument two rival powers could build and run together.",
+   "q": "What would scientists from rival powers build if politics allowed?",
+   "play": {
+    "engine": "superordinate",
+    "params": {}
+   },
+   "src": "SESAME",
+   "url": "https://www.sesame.org.jo/",
+   "ev": "D",
+   "conf": "check"
+  },
+  {
+   "id": "big-science",
+   "name": "Big science (CERN)",
+   "domain": "technology",
+   "scale": "world",
+   "phase": "develop",
+   "horizon": "generations",
+   "tags": [
+    "science",
+    "cooperation",
+    "long-term"
+   ],
+   "what": "Large shared laboratories run by many countries.",
+   "why": "CERN, running since 1954, is governed jointly by its member states and hosts scientists from around the world.",
+   "mvp": "Sketch a shared lab for a problem the powers all face.",
+   "q": "What question is big enough to need every power?",
+   "play": {
+    "engine": "superordinate",
+    "params": {}
+   },
+   "src": "CERN",
+   "url": "https://home.cern/",
+   "ev": "D",
+   "conf": "ok"
+  },
+  {
+   "id": "planetary-defense",
+   "name": "Planetary defense",
+   "domain": "technology",
+   "scale": "world",
+   "phase": "develop",
+   "horizon": "decades",
+   "tags": [
+    "space",
+    "shared-risk",
+    "science"
+   ],
+   "what": "Finding and deflecting asteroids that could hit Earth.",
+   "why": "NASA's DART spacecraft deliberately hit the asteroid Dimorphos and altered its orbit: the first successful planetary-defense test.",
+   "mvp": "Draft the joint protocol if an asteroid were found on a collision course.",
+   "q": "Would a shared threat from space change how rivals treat each other?",
+   "play": {
+    "engine": "superordinate",
+    "params": {}
+   },
+   "src": "NASA DART mission",
+   "url": "https://science.nasa.gov/mission/dart/",
+   "ev": "A",
+   "conf": "ok",
+   "refs": [
+    {
+     "label": "International Asteroid Warning Network",
+     "url": "https://iawn.net/"
+    }
+   ]
+  },
+  {
+   "id": "peace-parks",
+   "name": "Peace parks",
+   "domain": "ecology",
+   "scale": "nation",
+   "phase": "sustain",
+   "horizon": "decades",
+   "tags": [
+    "ecology",
+    "commons",
+    "contact"
+   ],
+   "what": "Conservation areas that cross national borders.",
+   "why": "The Peace Parks Foundation supports transfrontier conservation areas in southern Africa.",
+   "mvp": "Find one border ecosystem and sketch a joint park.",
+   "q": "Which animal migrates across the border you care about?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "Pick a border. What lives on both sides, and who protects it?"
+    }
+   },
+   "src": "Peace Parks Foundation",
+   "url": "https://www.peaceparks.org/",
+   "ev": "D",
+   "conf": "ok"
+  },
+  {
+   "id": "climate",
+   "name": "Climate cooperation",
+   "domain": "ecology",
+   "scale": "world",
+   "phase": "develop",
+   "horizon": "generations",
+   "tags": [
+    "shared-risk",
+    "commons",
+    "ecology"
+   ],
+   "what": "Shared targets and transparency on emissions.",
+   "why": "The Paris Agreement asks every party to set and report nationally determined contributions.",
+   "mvp": "Draft one joint climate step for two rival powers.",
+   "q": "Is the climate a shared enemy, or a new arena for rivalry?",
+   "play": {
+    "engine": "superordinate",
+    "params": {}
+   },
+   "src": "UNFCCC: The Paris Agreement",
+   "url": "https://unfccc.int/process-and-meetings/the-paris-agreement",
+   "ev": "C",
+   "conf": "check"
+  },
+  {
+   "id": "antarctic",
+   "name": "Antarctic Treaty",
+   "domain": "ecology",
+   "scale": "world",
+   "phase": "sustain",
+   "horizon": "generations",
+   "tags": [
+    "law",
+    "science",
+    "commons"
+   ],
+   "what": "A continent set aside for peace and science, with inspections.",
+   "why": "Signed in Washington on 1 December 1959 by the twelve countries active in Antarctica, in the middle of the Cold War: 'Antarctica shall be used for peaceful purposes only'.",
+   "mvp": "Pick another commons (the Moon, the deep sea, the Arctic) and draft its first article.",
+   "q": "What other place should belong to no one?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "Draft Article 1 of a treaty for another commons."
+    }
+   },
+   "src": "Secretariat of the Antarctic Treaty",
+   "url": "https://www.ats.aq/",
+   "ev": "C",
+   "conf": "ok"
+  },
+  {
+   "id": "env-peace",
+   "name": "Environmental peacebuilding",
+   "domain": "ecology",
+   "scale": "community",
+   "phase": "foster",
+   "horizon": "years",
+   "tags": [
+    "ecology",
+    "cooperation",
+    "water"
+   ],
+   "what": "Using shared natural resources as a reason to cooperate, not compete.",
+   "why": "The Environmental Peacebuilding Association connects research and practice on this.",
+   "mvp": "Map one shared resource between two communities and one joint management step.",
+   "q": "What natural resource could two rival communities manage together?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "Name a shared resource between two rivals and one joint step."
+    }
+   },
+   "src": "Environmental Peacebuilding Association",
+   "url": "https://www.environmentalpeacebuilding.org/",
+   "ev": "E",
+   "conf": "ok"
+  },
+  {
+   "id": "seedvault",
+   "name": "Global seed vault",
+   "domain": "ecology",
+   "scale": "world",
+   "phase": "sustain",
+   "horizon": "generations",
+   "tags": [
+    "commons",
+    "long-term",
+    "science"
+   ],
+   "what": "A backup of the world's crop diversity, deposited by gene banks from many countries.",
+   "why": "Insurance that outlives any one government.",
+   "mvp": "List what you would put in a vault for the year 3000.",
+   "q": "What should humanity back up?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "What would you put in a vault for the year 3000, and why?"
+    }
+   },
+   "src": "Svalbard Global Seed Vault",
+   "url": "https://www.seedvault.no/",
+   "ev": "D",
+   "conf": "ok"
+  },
+  {
+   "id": "disaster-dipl",
+   "name": "Disaster diplomacy",
+   "domain": "ecology",
+   "scale": "nation",
+   "phase": "foster",
+   "horizon": "now",
+   "tags": [
+    "shared-risk",
+    "contact",
+    "trust"
+   ],
+   "what": "Disasters can open windows for rivals to help each other, as after the 1999 earthquakes in Turkey and Greece.",
+   "why": "Research on disaster diplomacy finds such windows real but usually short unless other ties exist.",
+   "mvp": "Plan what your country would offer a rival after an earthquake.",
+   "q": "Would you accept help from your rival after a disaster?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "A rival suffers a disaster. What would your country offer, and how?"
+    }
+   },
+   "src": "Disaster Diplomacy (Kelman)",
+   "url": "https://www.disasterdiplomacy.org/",
+   "ev": "E",
+   "conf": "check"
+  },
+  {
+   "id": "health-bridge",
+   "name": "Health as a bridge",
+   "domain": "ecology",
+   "scale": "world",
+   "phase": "sustain",
+   "horizon": "decades",
+   "tags": [
+    "health",
+    "cooperation",
+    "shared-risk"
+   ],
+   "what": "Joint campaigns against disease across political lines.",
+   "why": "WHO's intensified smallpox eradication campaign began in 1967; eradication was certified in December 1979.",
+   "mvp": "Pick one disease and list what each power would contribute.",
+   "q": "What disease could the great powers end together?",
+   "play": {
+    "engine": "superordinate",
+    "params": {}
+   },
+   "src": "WHO: Smallpox",
+   "url": "https://www.who.int/health-topics/smallpox",
+   "ev": "C",
+   "conf": "ok"
+  },
+  {
+   "id": "debiaser",
+   "name": "News de-biaser: form your own opinion",
+   "domain": "information",
+   "scale": "self",
+   "phase": "foster",
+   "horizon": "now",
+   "tags": [
+    "attention",
+    "evidence",
+    "media"
+   ],
+   "what": "Write your take first, then compare versions of a story: loaded words, unattributed claims, omissions and evidence rungs.",
+   "why": "Short prebunking videos improved recognition of manipulation techniques (Roozenbeek et al. 2022). Professional fact-checkers read laterally, leaving a site to check who is behind it, while historians and students read vertically (Wineburg & McGrew 2019). Risk: in one field experiment, following opposing views made Republicans more conservative (Bail et al. 2018).",
+   "mvp": "Paste 2–3 versions of a story and see the highlights and omission diff before revisiting your take.",
+   "q": "What did you believe about this story before you read any version of it?",
+   "play": {
+    "engine": "debias",
+    "params": {
+     "mode": "full"
+    }
+   },
+   "src": "Roozenbeek et al. 2022, Science Advances",
+   "url": "https://doi.org/10.1126/sciadv.abo6254",
+   "ev": "E",
+   "conf": "ok",
+   "refs": [
+    {
+     "label": "Wineburg & McGrew 2019, Teachers College Record",
+     "url": "https://doi.org/10.1177/016146811912101102"
+    },
+    {
+     "label": "Bail et al. 2018, PNAS",
+     "url": "https://doi.org/10.1073/pnas.1804840115"
+    }
+   ]
+  },
+  {
+   "id": "accuracy-nudge",
+   "name": "Accuracy nudge",
+   "domain": "information",
+   "scale": "self",
+   "phase": "cultivate",
+   "horizon": "now",
+   "tags": [
+    "attention",
+    "evidence",
+    "media"
+   ],
+   "what": "Before sharing, ask: is this accurate?",
+   "why": "Subtly shifting attention to accuracy improved the quality of news people shared, in surveys and a Twitter field experiment.",
+   "mvp": "A 'how accurate is this?' prompt before each share for one week.",
+   "q": "What did you share last week that you never checked?",
+   "play": {
+    "engine": "debias",
+    "params": {
+     "mode": "accuracy"
+    }
+   },
+   "src": "Pennycook et al. 2021, Nature",
+   "url": "https://doi.org/10.1038/s41586-021-03344-2",
+   "ev": "E",
+   "conf": "ok"
+  },
+  {
+   "id": "mirror-headlines",
+   "name": "Mirror headlines",
+   "domain": "information",
+   "scale": "world",
+   "phase": "sustain",
+   "horizon": "years",
+   "tags": [
+    "media",
+    "evidence",
+    "perspective"
+   ],
+   "what": "Line up headlines from different outlets on the same event and compare tone.",
+   "why": "Outlets differ measurably in slant; Groseclose and Milyo proposed one way to measure it.",
+   "mvp": "Paste headlines from three outlets and compare loaded-word counts.",
+   "q": "Which outlet's version did you believe first, and why?",
+   "play": {
+    "engine": "debias",
+    "params": {
+     "mode": "mirror"
+    }
+   },
+   "src": "Groseclose & Milyo 2005, Quarterly Journal of Economics",
+   "url": "https://doi.org/10.1162/003355305775097542",
+   "ev": "E",
+   "conf": "ok"
+  },
+  {
+   "id": "domestic-news",
+   "name": "Read their domestic news",
+   "domain": "information",
+   "scale": "relation",
+   "phase": "cultivate",
+   "horizon": "now",
+   "tags": [
+    "media",
+    "translation",
+    "perspective"
+   ],
+   "what": "Read what another country's media tell their own public, translated, not what they tell foreigners.",
+   "why": "The Reuters Institute Digital News Report shows how news use differs from country to country.",
+   "mvp": "One translated domestic article a week from each of the three powers.",
+   "q": "What does a rival's public hear about your country?",
+   "play": {
+    "engine": "reflect",
+    "params": {
+     "prompt": "Read one translated domestic article from another power. What surprised you?"
+    }
+   },
+   "src": "Reuters Institute Digital News Report 2025",
+   "url": "https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2025",
+   "ev": "E",
+   "conf": "ok"
+  },
+  {
+   "id": "slow-news",
+   "name": "Slow news",
+   "domain": "information",
+   "scale": "self",
+   "phase": "sustain",
+   "horizon": "now",
+   "tags": [
+    "attention",
+    "humility",
+    "long-term"
+   ],
+   "what": "Save a headline and your take now; revisit after a week to see what turned out to be true.",
+   "why": "First reports are often wrong; a delay shows how much your view depended on them.",
+   "mvp": "A 7-day revisit list for headlines.",
+   "q": "Which of last month's headlines turned out wrong?",
+   "play": {
+    "engine": "slow",
+    "params": {}
+   },
+   "src": "Reuters Institute Digital News Report 2025",
+   "url": "https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2025",
+   "ev": "E",
+   "conf": "ok"
+  },
+  {
+   "id": "provenance",
+   "name": "Opinion provenance",
+   "domain": "information",
+   "scale": "self",
+   "phase": "cultivate",
+   "horizon": "now",
+   "tags": [
+    "evidence",
+    "humility",
+    "attention"
+   ],
+   "what": "For each strongly held view, record where it came from on the evidence ladder (A–F).",
+   "why": "Mercier and Sperber argue reasoning evolved to argue, so we are better at finding support for our views than at testing them.",
+   "mvp": "A chart of your own views by evidence rung.",
+   "q": "How many of your views rest on state media or a friend's say-so?",
+   "play": {
+    "engine": "provenance",
+    "params": {}
+   },
+   "src": "Mercier & Sperber 2011, Behavioral and Brain Sciences",
+   "url": "https://doi.org/10.1017/S0140525X10000968",
+   "ev": "E",
+   "conf": "ok"
+  },
+  {
+   "id": "itt-game",
+   "name": "Ideological Turing test",
+   "domain": "information",
+   "scale": "relation",
+   "phase": "foster",
+   "horizon": "now",
+   "tags": [
+    "perspective",
+    "dialogue",
+    "empathy"
+   ],
+   "what": "Can you state the other side's view so well that they would think you hold it?",
+   "why": "Bryan Caplan proposed the test in 2011 as a measure of understanding.",
+   "mvp": "Write the other side's view, score it on a rubric, then send it to a real person from that side.",
+   "q": "Could you pass as the other side?",
+   "play": {
+    "engine": "itt",
+    "params": {
+     "topic": "a contested question between the powers"
+    }
+   },
+   "src": "Caplan 2011, The Ideological Turing Test (Econlib)",
+   "url": "https://www.econlib.org/archives/2011/06/the_ideological.html",
+   "ev": "E",
+   "conf": "ok"
+  },
+  {
+   "id": "omission-diff",
+   "name": "Omission diff",
+   "domain": "information",
+   "scale": "nation",
+   "phase": "foster",
+   "horizon": "now",
+   "tags": [
+    "media",
+    "evidence",
+    "attention"
+   ],
+   "what": "Find what one version of a story leaves out that another includes.",
+   "why": "McCombs and Shaw showed media shape what the public thinks is important; what is omitted shapes it too.",
+   "mvp": "Paste two versions of a story and list sentences missing from each.",
+   "q": "What did your usual source leave out this week?",
+   "play": {
+    "engine": "debias",
+    "params": {
+     "mode": "omission"
+    }
+   },
+   "src": "McCombs & Shaw 1972, Public Opinion Quarterly",
+   "url": "https://doi.org/10.1086/267990",
+   "ev": "E",
+   "conf": "ok"
+  },
+  {
+   "id": "trust-ledger",
+   "name": "Trust ledger",
+   "domain": "information",
+   "scale": "community",
+   "phase": "sustain",
+   "horizon": "years",
+   "tags": [
+    "trust",
+    "games",
+    "evidence"
+   ],
+   "what": "Keep a record of small conciliatory acts and whether they were returned.",
+   "why": "Lindskold reviewed the evidence on GRIT: how conciliatory acts, announced and carried out, affect trust in conflict.",
+   "mvp": "A shared ledger for two groups, reviewed monthly.",
+   "q": "What would your ledger with a rival look like this year?",
+   "play": {
+    "engine": "grit",
+    "params": {}
+   },
+   "src": "Lindskold 1978, Psychological Bulletin",
+   "url": "https://doi.org/10.1037/0033-2909.85.4.772",
+   "ev": "E",
+   "conf": "ok"
+  }
+ ],
+ "words": [
+  {
+   "w": "和平",
+   "rom": "hépíng",
+   "lang": "Chinese",
+   "lit": "和 harmony + 平 level, calm: peace, a state free of war",
+   "url": "https://en.wiktionary.org/wiki/%E5%92%8C%E5%B9%B3",
+   "conf": "ok"
+  },
+  {
+   "w": "平和",
+   "rom": "heiwa",
+   "lang": "Japanese",
+   "lit": "the same two characters in reverse order: peace, a peaceful situation; also calm",
+   "url": "https://en.wiktionary.org/wiki/%E5%B9%B3%E5%92%8C",
+   "conf": "ok"
+  },
+  {
+   "w": "평화",
+   "rom": "pyeonghwa",
+   "lang": "Korean",
+   "lit": "from the Sino-Korean 平和: peace, harmony",
+   "url": "https://en.wiktionary.org/wiki/%ED%8F%89%ED%99%94",
+   "conf": "ok"
+  },
+  {
+   "w": "мир",
+   "rom": "mir",
+   "lang": "Russian",
+   "lit": "peace, and also world, universe",
+   "url": "https://en.wiktionary.org/wiki/%D0%BC%D0%B8%D1%80",
+   "conf": "ok"
+  },
+  {
+   "w": "शांति",
+   "rom": "shānti",
+   "lang": "Hindi / Sanskrit",
+   "lit": "peace, tranquility, quiet, ease",
+   "url": "https://en.wiktionary.org/wiki/%E0%A4%B6%E0%A4%BE%E0%A4%82%E0%A4%A4%E0%A4%BF",
+   "conf": "ok"
+  },
+  {
+   "w": "سلام",
+   "rom": "salām",
+   "lang": "Arabic",
+   "lit": "peace, well-being; also a greeting. Root s-l-m",
+   "url": "https://en.wiktionary.org/wiki/%D8%B3%D9%84%D8%A7%D9%85",
+   "conf": "ok"
+  },
+  {
+   "w": "שלום",
+   "rom": "shalom",
+   "lang": "Hebrew",
+   "lit": "peace; also hello and goodbye. Same Semitic root as salām",
+   "url": "https://en.wiktionary.org/wiki/%D7%A9%D7%9C%D7%95%D7%9D",
+   "conf": "ok"
+  },
+  {
+   "w": "Frieden",
+   "rom": "Frieden",
+   "lang": "German",
+   "lit": "peace; the opposite of Krieg (war)",
+   "url": "https://en.wiktionary.org/wiki/Frieden",
+   "conf": "ok"
+  },
+  {
+   "w": "pax",
+   "rom": "pax",
+   "lang": "Latin",
+   "lit": "peace; poetically rest, quiet, ease",
+   "url": "https://en.wiktionary.org/wiki/pax",
+   "conf": "ok"
+  }
+ ],
+ "problems": [
+  {
+   "id": "planetary",
+   "name": "Planetary defense",
+   "needs": [
+    "US",
+    "CN",
+    "RU",
+    "EU",
+    "JP",
+    "IN"
+   ],
+   "why": "An impactor does not check passports; detection needs telescopes on every longitude."
+  },
+  {
+   "id": "pandemic",
+   "name": "Pandemic early warning",
+   "needs": [
+    "US",
+    "CN",
+    "RU",
+    "EU",
+    "IN"
+   ],
+   "why": "Pathogen data has to be shared within days to matter."
+  },
+  {
+   "id": "ai-evals",
+   "name": "AI safety evaluations",
+   "needs": [
+    "US",
+    "CN",
+    "UK",
+    "EU"
+   ],
+   "why": "A dangerous capability found in one lab is a risk to all."
+  },
+  {
+   "id": "arctic-sar",
+   "name": "Arctic search and rescue",
+   "needs": [
+    "US",
+    "RU",
+    "EU"
+   ],
+   "why": "Ships and planes in the Arctic depend on whoever is closest."
+  },
+  {
+   "id": "nuclear-accident",
+   "name": "Nuclear accident response",
+   "needs": [
+    "US",
+    "CN",
+    "RU",
+    "UK",
+    "IN"
+   ],
+   "why": "Fallout ignores borders; notification and assistance need standing channels."
+  },
+  {
+   "id": "debris",
+   "name": "Space debris",
+   "needs": [
+    "US",
+    "CN",
+    "RU",
+    "EU",
+    "JP",
+    "IN"
+   ],
+   "why": "Every collision makes orbit more dangerous for everyone."
+  },
+  {
+   "id": "climate-adapt",
+   "name": "Climate adaptation in shared river basins",
+   "needs": [
+    "CN",
+    "IN",
+    "RU"
+   ],
+   "why": "Glacier melt changes rivers that cross several borders."
+  },
+  {
+   "id": "antimicrobial",
+   "name": "Antimicrobial resistance",
+   "needs": [
+    "US",
+    "CN",
+    "IN",
+    "EU"
+   ],
+   "why": "Resistant bacteria spread through trade, travel and food."
+  }
+ ],
+ "deck": [
+  {
+   "id": "veil",
+   "title": "Veil of ignorance",
+   "setup": "You will be born into one of the seven powers, in a random role: leader, soldier, farmer, student. Before you know which, you write the rules between them.",
+   "qs": [
+    "Which rule would you insist on if you might be born in the weakest power?",
+    "Which current rule would you abolish?",
+    "What would you want to be true about borders?"
+   ]
+  },
+  {
+   "id": "stag",
+   "title": "Stag hunt",
+   "setup": "Two hunters can each catch a hare alone, or catch a stag together, but only if both stay at their posts.",
+   "qs": [
+    "What is the stag the great powers could hunt together?",
+    "What makes each side defect to the hare?",
+    "What signal would make you stay at your post?"
+   ]
+  },
+  {
+   "id": "ipd",
+   "title": "Forgiving nations",
+   "setup": "In repeated prisoner's dilemmas, strategies that forgive an occasional defection often do better than strategies that never forget.",
+   "qs": [
+    "What does 'forgiving' mean for a nation?",
+    "How many defections should a nation forgive?",
+    "Who keeps score, and can the scorekeeper be trusted?"
+   ]
+  },
+  {
+   "id": "tank",
+   "title": "Today's broken water tank",
+   "setup": "At Robbers Cave, rival groups made peace when the camp's water supply failed and they had to fix it together.",
+   "qs": [
+    "What is today's broken water tank?",
+    "Who would have to carry the pipe?",
+    "What happens after it is fixed?"
+   ]
+  },
+  {
+   "id": "overview",
+   "title": "Overview effect for leaders",
+   "setup": "Every head of state must spend a week in orbit before taking office.",
+   "qs": [
+    "What would change in their first speech?",
+    "Which leader would change the most?",
+    "What would they miss seeing from up there?"
+   ]
+  },
+  {
+   "id": "swap",
+   "title": "Swapped childhoods",
+   "setup": "Two rival leaders discover they were swapped at birth, each raised in the other's country.",
+   "qs": [
+    "Which of their beliefs would stay the same?",
+    "What would each defend most fiercely?",
+    "What would they say to each other?"
+   ]
+  },
+  {
+   "id": "mir",
+   "title": "мир = peace = world",
+   "setup": "In Russian one word, мир, means both 'peace' and 'world'.",
+   "qs": [
+    "What if your language used one word for both?",
+    "Is peace a place or a state?",
+    "Which other word would you merge with 'peace'?"
+   ]
+  },
+  {
+   "id": "audit1000",
+   "title": "A 1000-year audit",
+   "setup": "Historians in the year 3000 write one paragraph about today's great-power rivalry.",
+   "qs": [
+    "What do they find absurd?",
+    "What do they praise?",
+    "What do they say we should have seen?"
+   ]
+  },
+  {
+   "id": "theseus",
+   "title": "Ship of Theseus for treaties",
+   "setup": "A treaty is amended clause by clause until no original text remains.",
+   "qs": [
+    "Is it still the same treaty?",
+    "What must never change for it to stay itself?",
+    "Which treaty today is mostly replaced planks?"
+   ]
+  },
+  {
+   "id": "orchestra",
+   "title": "Harmony without uniformity",
+   "setup": "An orchestra where no two instruments play the same melody, yet the piece works.",
+   "qs": [
+    "What makes it music and not noise?",
+    "Who is the conductor, or is there none?",
+    "Which instrument is your country?"
+   ]
+  },
+  {
+   "id": "galtung",
+   "title": "Galtung's inversion",
+   "setup": "Every war stops tomorrow.",
+   "qs": [
+    "What violence remains?",
+    "Who still suffers, and why?",
+    "Which of it could end within a decade?"
+   ]
+  },
+  {
+   "id": "hospitality",
+   "title": "Universal hospitality",
+   "setup": "Kant proposed a right of every stranger not to be treated with hostility on arrival.",
+   "qs": [
+    "What would that ask of your country's border?",
+    "What would it ask of you, at your door?",
+    "Where does hospitality end?"
+   ]
+  },
+  {
+   "id": "zerosum",
+   "title": "Zero-sum audit",
+   "setup": "List every way the great powers compete, then mark which ones are truly zero-sum.",
+   "qs": [
+    "How many are really zero-sum?",
+    "Which only look zero-sum?",
+    "Which could become positive-sum with one rule change?"
+   ]
+  },
+  {
+   "id": "chair",
+   "title": "The empty chair",
+   "setup": "At every summit, one chair is left empty for future generations and other species.",
+   "qs": [
+    "What would the chair say?",
+    "Who should speak for it?",
+    "What decision would it veto?"
+   ]
+  },
+  {
+   "id": "promise",
+   "title": "The smallest verifiable promise",
+   "setup": "Two rivals may make only one promise this year, and it must be checkable by the other.",
+   "qs": [
+    "What is the smallest promise worth making?",
+    "How would each side check it?",
+    "What would the second promise be?"
+   ]
+  },
+  {
+   "id": "fermi",
+   "title": "A Fermi estimate of peace work",
+   "setup": "Estimate how many people work full-time on peace today, and what would double it.",
+   "qs": [
+    "What is your estimate, and how did you get it?",
+    "What counts as peace work?",
+    "What would double it in ten years?"
+   ]
+  }
+ ],
+ "loop": [
+  {
+   "stage": "Notice",
+   "on": "Mark a headline or node that caught you.",
+   "off": "Carry a small notebook; note one moment of tension or kindness each day."
+  },
+  {
+   "stage": "Ponder",
+   "on": "Answer the node's question in the journal.",
+   "off": "Walk for 10 minutes holding the question; steelman the other side."
+  },
+  {
+   "stage": "Combine",
+   "on": "Collide two nodes from different domains.",
+   "off": "Talk to someone from another field and swap one idea."
+  },
+  {
+   "stage": "Make",
+   "on": "Compose an MVP from up to five nodes.",
+   "off": "Make one physical thing: a letter, a melody, a sketch, a meal."
+  },
+  {
+   "stage": "Test",
+   "on": "Run the MVP's smallest test and log it.",
+   "off": "Try it with one real person this week."
+  },
+  {
+   "stage": "Share",
+   "on": "Export the pocket card.",
+   "off": "Share what you made with someone who disagrees with you."
+  },
+  {
+   "stage": "Reflect",
+   "on": "Revisit your journal entries.",
+   "off": "Once a month, re-read your notes in a quiet place and re-rank the nodes."
+  }
+ ],
+ "practices": {
+  "daily": [
+   {
+    "id": "silence",
+    "title": "A minute of silence",
+    "how": "At a fixed time each day, stop for one minute of silence for those living through war."
+   },
+   {
+    "id": "word",
+    "title": "One word for peace",
+    "how": "Learn one word for 'peace' in another language, with its literal meaning."
+   },
+   {
+    "id": "steelman",
+    "title": "Steelman while walking",
+    "how": "On a walk, state an opposing view in its strongest form, out loud or in your head."
+   }
+  ],
+  "weekly": [
+   {
+    "id": "meal",
+    "title": "A meal or call across a divide",
+    "how": "Share a meal or call with someone across a border or a political line. Ask: what do you fear, what do you hope?"
+   },
+   {
+    "id": "combine",
+    "title": "Combine two traditions",
+    "how": "Make something that combines two traditions, e.g. a melody in a pentatonic scale over a Russian minor progression."
+   },
+   {
+    "id": "supply",
+    "title": "Trace a supply chain",
+    "how": "Trace one object you own across the powers: where was each part made?"
+   }
+  ],
+  "monthly": [
+   {
+    "id": "letter",
+    "title": "A letter you won't send",
+    "how": "Write a letter to a leader of another country. Keep it."
+   },
+   {
+    "id": "test",
+    "title": "Run one small test",
+    "how": "Run the smallest test from one MVP you composed, with a real person."
+   },
+   {
+    "id": "memory",
+    "title": "Visit a place of memory",
+    "how": "Visit a memorial, museum or cemetery, and write what it asks of you."
+   }
+  ],
+  "yearly": [
+   {
+    "id": "review",
+    "title": "Review the journal",
+    "how": "Read the whole year's journal. What changed in you?"
+   },
+   {
+    "id": "rerank",
+    "title": "Re-rank the nodes",
+    "how": "Rank the approaches again. Which moved up, and why?"
+   },
+   {
+    "id": "publish",
+    "title": "Publish one piece",
+    "how": "Publish one essay, song, talk or tool that came out of the year."
+   }
+  ]
+ }
+}

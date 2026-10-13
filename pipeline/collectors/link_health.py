@@ -30,6 +30,14 @@ def all_urls():
         for link in ch.get("links", []):
             if link.get("url"):
                 urls.add(link["url"])
+    peace = read_json(CURATED / "peace.json", {}) or {}
+    for node in peace.get("nodes", []):
+        for u in [node.get("url")] + [r.get("url") for r in node.get("refs", [])]:
+            if u:
+                urls.add(u)
+    for word in peace.get("words", []):
+        if word.get("url"):
+            urls.add(word["url"])
     return sorted(urls)
 
 
