@@ -11,8 +11,12 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Event-driven",
   "watch": "Near-full transcripts of Putin's talks, press conferences and joint statements with Xi and US envoys.",
@@ -30,8 +34,12 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Daily",
   "watch": "Leader-call readouts, daily press transcripts and policy papers such as the Global AI Governance Initiative.",
@@ -49,8 +57,12 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Daily",
   "watch": "Statements on arms control, strategic stability and talks with Washington and Beijing.",
@@ -67,8 +79,12 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Event-driven",
   "watch": "US readouts of calls and summits, with fact sheets after major meetings.",
@@ -87,8 +103,11 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Per session",
   "watch": "Recorded votes of all three on the same texts, including resolutions on AI in the military domain, disarmament and Ukraine.",
@@ -106,8 +125,12 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Continuous",
   "watch": "Who signed and ratified what, including reservations and withdrawals.",
@@ -123,9 +146,13 @@
    "diplo"
   ],
   "cov": [
-   "CN",
+   "US",
+   "UK",
+   "EU",
    "RU",
-   "US"
+   "IN",
+   "CN",
+   "JP"
   ],
   "cad": "Continuous",
   "watch": "Full texts of China's bilateral agreements, including with Russia.",
@@ -161,8 +188,12 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Daily",
   "watch": "Export-control rules, tariff actions and Entity List additions, published as binding text.",
@@ -181,8 +212,12 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Weekly",
   "watch": "Nonpartisan briefs on arms control, sanctions and China–Russia ties, with citations.",
@@ -218,9 +253,13 @@
    "trade"
   ],
   "cov": [
-   "CN",
+   "US",
+   "UK",
+   "EU",
    "RU",
-   "US"
+   "IN",
+   "CN",
+   "JP"
   ],
   "cad": "Monthly",
   "watch": "China–Russia trade by HS code: chips, machine tools, vehicles, oil. Russia stopped publishing detailed data in 2022.",
@@ -254,8 +293,12 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Monthly/annual",
   "watch": "Mirror statistics: compare what A says it exported with what B says it imported.",
@@ -272,8 +315,12 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Monthly/quarterly",
   "watch": "Direction of trade and currency composition of reserves. Measures de-dollarization in actual numbers.",
@@ -291,8 +338,12 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Daily",
   "watch": "Port calls and chokepoint transits built from satellite ship tracking. A near-live view of trade.",
@@ -309,7 +360,12 @@
   ],
   "cov": [
    "US",
-   "CN"
+   "UK",
+   "EU",
+   "RU",
+   "IN",
+   "CN",
+   "JP"
   ],
   "cad": "Weekly/monthly",
   "watch": "Soybean, grain and meat sales to China. A quick test of whether trade-truce purchase pledges are being kept.",
@@ -325,8 +381,11 @@
    "trade"
   ],
   "cov": [
+   "EU",
    "RU",
-   "CN"
+   "IN",
+   "CN",
+   "JP"
   ],
   "cad": "Daily/monthly",
   "watch": "Russian oil, gas and coal exports by buyer and by ship.",
@@ -375,7 +434,10 @@
   ],
   "cov": [
    "US",
-   "CN"
+   "UK",
+   "IN",
+   "CN",
+   "JP"
   ],
   "cad": "Monthly",
   "watch": "Chinese holdings of US Treasuries.",
@@ -408,8 +470,12 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Quarterly",
   "watch": "Cross-border bank claims between the three countries.",
@@ -426,8 +492,12 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Event-driven",
   "watch": "Formal complaints between the US and China, and the panel rulings.",
@@ -444,6 +514,9 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "EU",
+   "IN",
    "CN"
   ],
   "cad": "Event-driven",
@@ -461,8 +534,10 @@
    "ai"
   ],
   "cov": [
+   "US",
+   "EU",
    "CN",
-   "US"
+   "JP"
   ],
   "cad": "Event-driven",
   "watch": "Rare earth, gallium and germanium controls, and US firms placed on blacklists. These are China's countermoves, written as law.",
@@ -480,8 +555,9 @@
   ],
   "cov": [
    "US",
-   "CN",
-   "RU"
+   "RU",
+   "IN",
+   "CN"
   ],
   "cad": "Annual (Jan–Feb)",
   "watch": "How dependent the US is on Chinese and Russian rare earths, gallium, titanium and uranium.",
@@ -571,6 +647,7 @@
    "military"
   ],
   "cov": [
+   "EU",
    "RU",
    "CN"
   ],
@@ -662,8 +739,11 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Several sessions/yr",
   "watch": "Each state's written positions on lethal autonomous weapons, side by side in one forum.",
@@ -681,8 +761,12 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Annual dialogue",
   "watch": "The one AI governance forum where all three take part, created by the General Assembly in 2025.",
@@ -700,8 +784,10 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "RU",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Rolling",
   "watch": "The list of endorsing states shows who has joined the US-led norms on military AI.",
@@ -719,8 +805,12 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Weekly",
   "watch": "Raw counts of US–China and China–Russia co-authored papers, a measure of cooperation that persists through politics.",
@@ -737,7 +827,12 @@
   ],
   "cov": [
    "US",
-   "CN"
+   "UK",
+   "EU",
+   "RU",
+   "IN",
+   "CN",
+   "JP"
   ],
   "cad": "Rolling",
   "watch": "Open datasets on AI research, patents, chips and investment.",
@@ -754,6 +849,8 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "EU",
    "CN"
   ],
   "cad": "Rolling",
@@ -771,8 +868,12 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Annual (Apr)",
   "watch": "The annual cross-country benchmark for AI talent, investment, papers and policy.",
@@ -790,8 +891,12 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Weekly",
   "watch": "Patent filings by applicant country in AI, semiconductors and batteries.",
@@ -827,8 +932,11 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Continuous",
   "watch": "The global network of seismic, radionuclide and infrasound sensors. All three countries host stations and share data.",
@@ -845,8 +953,11 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Continuous",
   "watch": "Raw waveforms from stations near Lop Nur, Novaya Zemlya and Nevada, the test sites at the centre of resumed-testing claims.",
@@ -864,8 +975,11 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Continuous",
   "watch": "Every power reactor, including the Rosatom-built units at Tianwan and Xudapu in China.",
@@ -881,9 +995,12 @@
    "nuclear"
   ],
   "cov": [
-   "RU",
    "US",
-   "CN"
+   "UK",
+   "RU",
+   "IN",
+   "CN",
+   "JP"
   ],
   "cad": "Event-driven",
   "watch": "Reports from inspectors on site at Zaporizhzhia, plus board statements where all three speak.",
@@ -936,8 +1053,10 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "RU",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Five-yearly",
   "watch": "National reports and working papers of the three nuclear powers. Compare with P5 joint statements.",
@@ -975,8 +1094,10 @@
   ],
   "cov": [
    "US",
-   "CN",
-   "RU"
+   "UK",
+   "RU",
+   "IN",
+   "CN"
   ],
   "cad": "Periodic",
   "watch": "Warhead estimates built from satellite imagery, budgets and official data, such as China's silo fields.",
@@ -994,8 +1115,10 @@
   ],
   "cov": [
    "US",
-   "CN",
-   "RU"
+   "UK",
+   "RU",
+   "IN",
+   "CN"
   ],
   "cad": "Annual (Jun)",
   "watch": "The annual inventory of the world's nuclear forces.",
@@ -1011,8 +1134,9 @@
    "military"
   ],
   "cov": [
+   "RU",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Event-driven",
   "watch": "Maps, flight tracks and photos of joint China–Russia bomber flights and naval transits.",
@@ -1118,8 +1242,10 @@
   ],
   "cov": [
    "US",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Monthly + events",
   "watch": "Announcements of joint exercises with Russia and readouts of talks with the US military.",
@@ -1154,8 +1280,12 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Continuous",
   "watch": "The official public satellite catalog: proximity operations, debris events and new launches.",
@@ -1172,8 +1302,12 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Continuous",
   "watch": "Orbital data and analysis tools, independent of any government.",
@@ -1191,8 +1325,12 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Continuous",
   "watch": "A meticulous independent launch and satellite log.",
@@ -1210,8 +1348,11 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Rolling",
   "watch": "What each state formally declares it launched. Compare against tracking data.",
@@ -1229,8 +1370,11 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Annual (Mar & Apr)",
   "watch": "Russian arms exports to China and military spending of all three in comparable dollars.",
@@ -1247,8 +1391,11 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Annual",
   "watch": "Self-reported arms imports and exports.",
@@ -1264,7 +1411,8 @@
    "military"
   ],
   "cov": [
-   "RU"
+   "RU",
+   "IN"
   ],
   "cad": "Weekly",
   "watch": "Coded events from the war in Ukraine.",
@@ -1282,8 +1430,12 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Near real time",
   "watch": "Heat signatures from refinery strikes, depot fires and industrial activity.",
@@ -1319,8 +1471,12 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Real time",
   "watch": "Unfiltered aircraft transponder data, including some military, VIP and tanker flights.",
@@ -1339,8 +1495,12 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Every few days",
   "watch": "Free optical and radar imagery of ports, bases, test sites and borders. Radar sees through cloud.",
@@ -1358,8 +1518,12 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Every 8–16 days",
   "watch": "A free imagery archive going back decades, for before-and-after comparisons.",
@@ -1377,8 +1541,12 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Daily",
   "watch": "Night lights show industrial activity, blackouts and new infrastructure.",
@@ -1397,8 +1565,12 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Near real time",
   "watch": "Ship tracking and detection of dark vessels from radar and transponders, including tankers serving Russia's shadow fleet to China.",
@@ -1415,7 +1587,8 @@
   ],
   "cov": [
    "US",
-   "RU"
+   "RU",
+   "JP"
   ],
   "cad": "Continuous",
   "watch": "US–Russia integrated crews and seat swaps continue despite the war.",
@@ -1433,8 +1606,11 @@
   ],
   "cov": [
    "US",
+   "EU",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Periodic",
   "watch": "All three countries are members and deliver hardware to one reactor.",
@@ -1452,8 +1628,11 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Annual meeting",
   "watch": "All three are consultative parties. Inspection reports cover each other's bases.",
@@ -1471,8 +1650,10 @@
   ],
   "cov": [
    "US",
+   "EU",
+   "RU",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Annual",
   "watch": "A fisheries body where all three still set catch limits together.",
@@ -1489,8 +1670,11 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Continuous",
   "watch": "The global system through which national weather services share observations. It has kept working through every crisis.",
@@ -1507,8 +1691,11 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Continuous",
   "watch": "A satellite rescue-beacon system founded by the US and the Soviet Union. China runs ground stations in it.",
@@ -1526,8 +1713,12 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Annual",
   "watch": "Research collaboration scores between each pair of countries.",
@@ -1545,7 +1736,10 @@
   ],
   "cov": [
    "US",
-   "CN"
+   "UK",
+   "IN",
+   "CN",
+   "JP"
   ],
   "cad": "Annual (Nov)",
   "watch": "Chinese student numbers in the US, a slow-moving measure of people-to-people ties.",
@@ -1562,8 +1756,12 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Annual (spring–summer)",
   "watch": "How people in many countries view the US, China and Russia, with comparable questions across countries.",
@@ -1579,9 +1777,10 @@
    "sentiment"
   ],
   "cov": [
+   "US",
+   "EU",
    "RU",
-   "CN",
-   "US"
+   "CN"
   ],
   "cad": "Monthly",
   "watch": "Russian views of the US and China, tracked over decades.",
@@ -1616,8 +1815,12 @@
   ],
   "cov": [
    "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
    "CN",
-   "RU"
+   "JP"
   ],
   "cad": "Annual",
   "watch": "American views of China and Russia, tracked since 1974.",
@@ -1656,5 +1859,522 @@
   "cad": "Continuous",
   "watch": "The Kremlin's narrative, and often the first report of Russian statements.",
   "cav": "Read for intent, never for fact."
+ },
+ {
+  "id": "fcdo",
+  "name": "UK FCDO & No 10 readouts",
+  "url": "https://www.gov.uk/government/organisations/foreign-commonwealth-development-office",
+  "pub": "UK Foreign, Commonwealth & Development Office",
+  "ev": "D",
+  "topics": [
+   "diplo"
+  ],
+  "cov": [
+   "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
+   "CN",
+   "JP"
+  ],
+  "cad": "Event-driven",
+  "watch": "Readouts of the Prime Minister's and Foreign Secretary's talks, joint statements (UK–EU, UK–India, UK–China) and statements on summoning ambassadors.",
+  "cav": "UK framing. Compare with the counterpart's readout of the same meeting."
+ },
+ {
+  "id": "uktreaty",
+  "name": "UK Treaty Series",
+  "url": "https://www.gov.uk/government/collections/bilateral-and-multilateral-treaties-published-in-the-treaty-series-2018",
+  "pub": "UK Foreign, Commonwealth & Development Office",
+  "ev": "C",
+  "topics": [
+   "diplo",
+   "military",
+   "nuclear"
+  ],
+  "cov": [
+   "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
+   "CN",
+   "JP"
+  ],
+  "cad": "Monthly",
+  "watch": "Treaty texts with signature and entry-into-force dates, e.g. the UK–US Mutual Defence Agreement amendment, the UK–Japan Reciprocal Access Agreement and the GCAP convention.",
+  "cav": "Publication can lag entry into force by months; the monthly Treaty Action Bulletin is faster."
+ },
+ {
+  "id": "ons",
+  "name": "ONS trade and balance of payments",
+  "url": "https://www.ons.gov.uk/economy/nationalaccounts/balanceofpayments",
+  "pub": "UK Office for National Statistics",
+  "ev": "B",
+  "topics": [
+   "trade"
+  ],
+  "cov": [
+   "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
+   "CN",
+   "JP"
+  ],
+  "cad": "Monthly/quarterly",
+  "watch": "UK trade in goods and services by partner country, and the balance of payments.",
+  "cav": "Services by partner are quarterly and heavily revised. Goods routed via EU ports (the Rotterdam effect) blur the true origin."
+ },
+ {
+  "id": "boe",
+  "name": "Bank of England Database",
+  "url": "https://www.bankofengland.co.uk/boeapps/database",
+  "pub": "Bank of England",
+  "ev": "B",
+  "topics": [
+   "trade"
+  ],
+  "cov": [
+   "UK"
+  ],
+  "cad": "Daily/monthly",
+  "watch": "Sterling exchange rates, interest rates and UK banking and monetary statistics.",
+  "cav": "UK-centred; cross-border banking by counterparty country is better compared in the BIS statistics."
+ },
+ {
+  "id": "hansard",
+  "name": "UK Parliament Hansard",
+  "url": "https://hansard.parliament.uk",
+  "pub": "UK Parliament",
+  "ev": "C",
+  "topics": [
+   "diplo",
+   "military"
+  ],
+  "cov": [
+   "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
+   "CN",
+   "JP"
+  ],
+  "cad": "Per sitting day",
+  "watch": "Verbatim debates, ministerial statements and written answers on relations with each power.",
+  "cav": "Ministers' answers are the government line. The site blocks automated fetches (HTTP 403), so it is a manual check."
+ },
+ {
+  "id": "uksanctions",
+  "name": "UK Sanctions List",
+  "url": "https://www.gov.uk/government/publications/the-uk-sanctions-list",
+  "pub": "UK Foreign, Commonwealth & Development Office",
+  "ev": "C",
+  "topics": [
+   "trade",
+   "military"
+  ],
+  "cov": [
+   "UK",
+   "RU",
+   "CN"
+  ],
+  "cad": "Rolling",
+  "watch": "Every UK designation under the Russia regime and others, including third-country suppliers to Russia's military.",
+  "cav": "A listing is a legal act, not proof of the conduct alleged. OFSI enforcement is a separate record."
+ },
+ {
+  "id": "eeas",
+  "name": "EEAS statements",
+  "url": "https://www.eeas.europa.eu/eeas/press-material_en",
+  "pub": "European External Action Service",
+  "ev": "D",
+  "topics": [
+   "diplo",
+   "military"
+  ],
+  "cov": [
+   "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
+   "CN",
+   "JP"
+  ],
+  "cad": "Event-driven",
+  "watch": "High Representative statements, summit and strategic-dialogue readouts with China, Japan, India and others, and EU–Russia policy.",
+  "cav": "EU framing. Pages render with JavaScript; delegation pages often republish Council releases."
+ },
+ {
+  "id": "ecpress",
+  "name": "European Commission press corner",
+  "url": "https://ec.europa.eu/commission/presscorner/home/en",
+  "pub": "European Commission",
+  "ev": "D",
+  "topics": [
+   "diplo",
+   "trade"
+  ],
+  "cov": [
+   "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
+   "CN",
+   "JP"
+  ],
+  "cad": "Daily",
+  "watch": "Commission statements and joint statements on trade talks (EU–China consultations, EU–India, EU–US framework) and summits.",
+  "cav": "Rendered with JavaScript; the public API (presscorner/api/documents?reference=...) returns the same text."
+ },
+ {
+  "id": "eurlex",
+  "name": "EUR-Lex",
+  "url": "https://eur-lex.europa.eu",
+  "pub": "Publications Office of the European Union",
+  "ev": "C",
+  "topics": [
+   "trade",
+   "diplo"
+  ],
+  "cov": [
+   "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
+   "CN",
+   "JP"
+  ],
+  "cad": "Daily",
+  "watch": "Official Journal: Council decisions, sanctions regulations and the texts of EU agreements with each partner.",
+  "cav": "Authoritative but slow to search. It serves a bot challenge (HTTP 202) to automated fetches."
+ },
+ {
+  "id": "eurostat",
+  "name": "Eurostat international trade in goods",
+  "url": "https://ec.europa.eu/eurostat/web/international-trade-in-goods",
+  "pub": "Eurostat (European Commission)",
+  "ev": "B",
+  "topics": [
+   "trade"
+  ],
+  "cov": [
+   "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
+   "CN",
+   "JP"
+  ],
+  "cad": "Monthly",
+  "watch": "EU trade with each partner, including the Comext database by product and partner.",
+  "cav": "Member-state transit trade (Rotterdam, Antwerp) inflates some partners. Compare with the partner's mirror data."
+ },
+ {
+  "id": "ecbdata",
+  "name": "ECB Data Portal",
+  "url": "https://data.ecb.europa.eu",
+  "pub": "European Central Bank",
+  "ev": "B",
+  "topics": [
+   "trade"
+  ],
+  "cov": [
+   "EU"
+  ],
+  "cad": "Daily/monthly",
+  "watch": "Euro reference exchange rates, euro-area balance of payments and the international role of the euro.",
+  "cav": "Euro-area aggregate, not the whole EU."
+ },
+ {
+  "id": "epoeil",
+  "name": "European Parliament Legislative Observatory",
+  "url": "https://oeil.secure.europarl.europa.eu",
+  "pub": "European Parliament",
+  "ev": "C",
+  "topics": [
+   "diplo",
+   "trade"
+  ],
+  "cov": [
+   "EU"
+  ],
+  "cad": "Rolling",
+  "watch": "Procedure files for consent to trade agreements and for sanctions-related and foreign-policy files.",
+  "cav": "Tracks procedure, not substance; read the adopted text."
+ },
+ {
+  "id": "mea",
+  "name": "India MEA statements & briefings",
+  "url": "https://www.mea.gov.in",
+  "pub": "Ministry of External Affairs, India",
+  "ev": "D",
+  "topics": [
+   "diplo"
+  ],
+  "cov": [
+   "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
+   "CN",
+   "JP"
+  ],
+  "cad": "Event-driven",
+  "watch": "Joint statements, outcome lists and weekly briefings on India's relations with each power.",
+  "cav": "Indian framing. The site returns HTTP 403 to automated fetches; the same texts often appear on PIB or PM India."
+ },
+ {
+  "id": "pib",
+  "name": "Press Information Bureau (PIB)",
+  "url": "https://pib.gov.in",
+  "pub": "Government of India",
+  "ev": "D",
+  "topics": [
+   "diplo",
+   "military",
+   "trade"
+  ],
+  "cov": [
+   "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
+   "CN",
+   "JP"
+  ],
+  "cad": "Daily",
+  "watch": "Releases from all ministries, including Defence and Commerce: defence frameworks, trade agreements, joint statements.",
+  "cav": "Government press releases; check ministry originals for figures."
+ },
+ {
+  "id": "tradestat",
+  "name": "India TradeStat (export-import data bank)",
+  "url": "https://tradestat.commerce.gov.in",
+  "pub": "Department of Commerce, India",
+  "ev": "B",
+  "topics": [
+   "trade"
+  ],
+  "cov": [
+   "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
+   "CN",
+   "JP"
+  ],
+  "cad": "Monthly",
+  "watch": "India's exports and imports by partner country and commodity.",
+  "cav": "Mirror data with China and Russia show large gaps; oil imports may be booked by refinery rather than origin."
+ },
+ {
+  "id": "rbi",
+  "name": "Reserve Bank of India statistics",
+  "url": "https://www.rbi.org.in/Scripts/Statistics.aspx",
+  "pub": "Reserve Bank of India",
+  "ev": "B",
+  "topics": [
+   "trade"
+  ],
+  "cov": [
+   "IN"
+  ],
+  "cad": "Weekly/monthly",
+  "watch": "Reserves, exchange rates, balance of payments and rupee trade-settlement data.",
+  "cav": "The DBIE data portal (data.rbi.org.in) rejects automated clients; this statistics index works."
+ },
+ {
+  "id": "isro",
+  "name": "ISRO",
+  "url": "https://www.isro.gov.in",
+  "pub": "Indian Space Research Organisation",
+  "ev": "D",
+  "topics": [
+   "coop"
+  ],
+  "cov": [
+   "US",
+   "IN",
+   "JP"
+  ],
+  "cad": "Event-driven",
+  "watch": "Launches and joint missions, e.g. NISAR with NASA and lunar cooperation with JAXA.",
+  "cav": "Agency announcements; launch facts can be checked against the space catalogues."
+ },
+ {
+  "id": "sansad",
+  "name": "Parliament of India (Lok Sabha)",
+  "url": "https://sansad.in/ls",
+  "pub": "Parliament of India",
+  "ev": "C",
+  "topics": [
+   "diplo",
+   "military"
+  ],
+  "cov": [
+   "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
+   "CN",
+   "JP"
+  ],
+  "cad": "Per session",
+  "watch": "Questions and answers in which ministers state India's position on each power, border talks and trade.",
+  "cav": "Written answers repeat the government line. The digital library (eparlib.sansad.in) refused automated connections."
+ },
+ {
+  "id": "mofaj",
+  "name": "Japan MOFA readouts & press releases",
+  "url": "https://www.mofa.go.jp",
+  "pub": "Ministry of Foreign Affairs of Japan",
+  "ev": "D",
+  "topics": [
+   "diplo"
+  ],
+  "cov": [
+   "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
+   "CN",
+   "JP"
+  ],
+  "cad": "Event-driven",
+  "watch": "Readouts of summits and talks, 2+2 joint statements and the dates of maritime and fisheries consultations.",
+  "cav": "Japanese framing. The site returns HTTP 403 to automated fetches; Kantei summaries often cover the same meetings."
+ },
+ {
+  "id": "kantei",
+  "name": "Prime Minister's Office of Japan (Kantei)",
+  "url": "https://japan.kantei.go.jp",
+  "pub": "Prime Minister's Office of Japan",
+  "ev": "D",
+  "topics": [
+   "diplo"
+  ],
+  "cov": [
+   "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
+   "CN",
+   "JP"
+  ],
+  "cad": "Event-driven",
+  "watch": "Summaries of the prime minister's summits and press conferences (provisional English translations).",
+  "cav": "Provisional translations; the Japanese original prevails."
+ },
+ {
+  "id": "jpcustoms",
+  "name": "Trade Statistics of Japan",
+  "url": "https://www.customs.go.jp/toukei/info/index_e.htm",
+  "pub": "Ministry of Finance, Japan",
+  "ev": "B",
+  "topics": [
+   "trade"
+  ],
+  "cov": [
+   "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
+   "CN",
+   "JP"
+  ],
+  "cad": "Monthly",
+  "watch": "Japan's trade by partner country and HS code, published monthly.",
+  "cav": "Country of origin rules differ from partners'. Compare with mirror data."
+ },
+ {
+  "id": "boj",
+  "name": "BOJ Time-Series Data Search",
+  "url": "https://www.stat-search.boj.or.jp/index_en.html",
+  "pub": "Bank of Japan",
+  "ev": "B",
+  "topics": [
+   "trade"
+  ],
+  "cov": [
+   "JP"
+  ],
+  "cad": "Daily/monthly",
+  "watch": "Balance of payments, international investment position and exchange rates.",
+  "cav": "Japan-centred aggregates; partner breakdowns are limited."
+ },
+ {
+  "id": "jaxa",
+  "name": "JAXA",
+  "url": "https://global.jaxa.jp",
+  "pub": "Japan Aerospace Exploration Agency",
+  "ev": "D",
+  "topics": [
+   "coop"
+  ],
+  "cov": [
+   "US",
+   "IN",
+   "JP"
+  ],
+  "cad": "Event-driven",
+  "watch": "Launches and international missions (ISS Kibo, Artemis, LUPEX with ISRO).",
+  "cav": "Agency announcements; check launch facts against the space catalogues."
+ },
+ {
+  "id": "kokkai",
+  "name": "Japan Diet record search (Kokkai)",
+  "url": "https://kokkai.ndl.go.jp",
+  "pub": "National Diet Library, Japan",
+  "ev": "C",
+  "topics": [
+   "diplo",
+   "military"
+  ],
+  "cov": [
+   "US",
+   "UK",
+   "EU",
+   "RU",
+   "IN",
+   "CN",
+   "JP"
+  ],
+  "cad": "Per sitting day",
+  "watch": "Full-text minutes of the Diet, including the exchanges behind diplomatic disputes (e.g. Nov 2025 remarks on a Taiwan contingency).",
+  "cav": "Japanese only. Minutes are posted with a delay of days to weeks."
+ },
+ {
+  "id": "jfa",
+  "name": "Japan Fisheries Agency press releases",
+  "url": "https://www.jfa.maff.go.jp/j/press/index.html",
+  "pub": "Fisheries Agency, Japan",
+  "ev": "D",
+  "topics": [
+   "coop",
+   "trade"
+  ],
+  "cov": [
+   "RU",
+   "CN",
+   "JP"
+  ],
+  "cad": "Event-driven",
+  "watch": "Results of Japan–Russia salmon and EEZ fishing talks and Japan–China fisheries consultations.",
+  "cav": "Japanese only. One of the few still-working Japan–Russia channels."
  }
 ]

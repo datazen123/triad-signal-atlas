@@ -3,7 +3,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&display=swap">
 <style>
-/* Layout: a night-sky observatory. Two rotatable 3D instruments (the triad of sources, the web of powers), then flat instruments: channels, bridges, live pulse, ladder, calendar, catalog, pipeline health. One deliberate dark look. */
+/* Layout: a night-sky observatory. Two rotatable 3D instruments (the seven-pillar source constellation, the web of powers), then flat instruments: channels, bridges, live pulse, ladder, calendar, catalog, pipeline health. One deliberate dark look. */
 :root{
   color-scheme: dark;
   --void:#0a0f1e; --panel:#111a2e; --panel-2:#16213a; --rule:#23304e;
@@ -95,7 +95,7 @@ dl.kv dd{margin:2px 0 0}
 /* channels */
 .dyads{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:24px;align-items:start}
 @media (max-width:880px){.dyads{grid-template-columns:minmax(0,1fr)}}
-.tri{width:100%;max-width:420px;height:auto;display:block;margin:0 auto}
+.tri{width:100%;max-width:520px;height:auto;display:block;margin:0 auto}
 .tri .edge{cursor:pointer}
 .tri text{font-family:var(--f-mono)}
 .channels{display:grid;border-top:1px solid var(--rule)}
@@ -357,7 +357,7 @@ mark.ld{background:rgba(255,110,90,.3)} mark.un{background:rgba(242,193,78,.32)}
   <section id="sec-sky" aria-labelledby="h-sky">
     <div class="sec-head">
       <h2 id="h-sky">The source constellation</h2>
-      <p>The three pillars are the US, China and Russia, and each level is a topic. A star sits closer to the countries its source covers. Brighter stars are harder evidence. Drag sideways to rotate. Hover a star for its evidence card, or tap to pin it.</p>
+      <p>Seven pillars stand in a ring, one for each power (US, UK, EU, Russia, India, China, Japan), and each level is a topic. A star sits closer to the powers its source covers, so sources that cover everyone gather near the middle. Brighter stars are harder evidence. Drag sideways to rotate. Hover a star for its evidence card, or tap to pin it.</p>
     </div>
     <div class="chips" id="topicChips" role="group" aria-label="Filter by topic"></div>
     <div class="legend" id="evLegend" aria-label="Evidence classes"></div>
@@ -373,10 +373,10 @@ mark.ld{background:rgba(255,110,90,.3)} mark.un{background:rgba(242,193,78,.32)}
   <section id="sec-ch" aria-labelledby="h-ch">
     <div class="sec-head">
       <h2 id="h-ch">Where the channels stand</h2>
-      <p>Working channels between each pair, and the bodies where all three still sit together. Hover a row for its evidence card, or tap to open it in place. Rows marked "unconfirmed" are not yet backed by a primary page we could open, so treat them as leads.</p>
+      <p>Working channels between each pair of the seven powers, and the multilateral bodies where they still sit together. Each line in the ring is a pair, thicker with more channels and coloured by their most common status; tap a line or a tab. Hover a row for its evidence card, or tap to open it in place. Rows marked "unconfirmed" are not yet backed by a primary page we could open, so treat them as leads.</p>
     </div>
     <div class="dyads">
-      <svg class="tri" id="tri" viewBox="0 0 420 380" role="img" aria-label="Triangle of the three bilateral relationships"></svg>
+      <svg class="tri" id="tri" viewBox="-70 0 560 392" role="img" aria-label="Ring of the seven powers; each line is a pair with working channels, coloured by their most common status"></svg>
       <div>
         <div class="chips" id="dyadTabs" role="tablist"></div>
         <div class="channels" id="channels"></div>
@@ -493,13 +493,13 @@ const EV={
 };
 const POWERS=[{k:'US',name:'United States',hex:'#6fa8ff'},{k:'UK',name:'United Kingdom',hex:'#4fd6e8'},{k:'EU',name:'European Union',hex:'#a98bff'},{k:'RU',name:'Russia',hex:'#f2c14e'},{k:'IN',name:'India',hex:'#57d68d'},{k:'CN',name:'China',hex:'#ff6e5a'},{k:'JP',name:'Japan',hex:'#ff8fc7'}];
 const PW=Object.fromEntries(POWERS.map(p=>[p.k,p]));
-const TRIAD=['US','CN','RU'];
+const PK=POWERS.map(p=>p.k);
 const CATS={science:'#8fe3d2',academia:'#b6a7ff',medicine:'#ff9b9b',business:'#f2c14e',politics:'#6fa8ff',religion:'#ffd9a0',arts:'#ff8fc7',sport:'#57d68d'};
 const DOMAINS={space:'#b6d4ff',science:'#8fe3d2',health:'#ff9b9b',nuclear:'#f2c14e',environment:'#57d68d',maritime:'#4fd6e8',finance:'#ffd9a0',culture:'#ff8fc7'};
 const NOW_YEAR=new Date().getUTCFullYear();
 const S=A.sources||[], PEOPLE=A.people||[], PROJECTS=A.projects||[], CHANNELS=A.channels||[];
 const LIVE=A.live||{};
-const covHTML=cov=>'<span class="cov">'+TRIAD.map(c=>`<i style="color:${PW[c].hex}" class="${cov.includes(c)?'':'off'}">${c}</i>`).join('')+'</span>';
+const covHTML=cov=>'<span class="cov">'+PK.map(c=>`<i style="color:${PW[c].hex}" class="${cov.includes(c)?'':'off'}">${c}</i>`).join('')+'</span>';
 const pdot=k=>`<i class="dot" style="background:${(PW[k]||{}).hex||'#888'}"></i>`;
 const tlabel=k=>(TOPICS.find(t=>t.k===k)||{}).label||k;
 
@@ -569,19 +569,19 @@ class Orbit{
 
 /* ---------- view 1: source constellation ---------- */
 let activeTopic='all', selected='gacs', query='';
-const corners={US:{x:Math.cos(Math.PI*7/6),z:Math.sin(Math.PI*7/6)},CN:{x:Math.cos(-Math.PI/6),z:Math.sin(-Math.PI/6)},RU:{x:Math.cos(Math.PI/2),z:Math.sin(Math.PI/2)}};
+const corners={};POWERS.forEach((p,i)=>{const a=i/POWERS.length*Math.PI*2+Math.PI/2;corners[p.k]={x:Math.cos(a),z:Math.sin(a)};});
 const yOf=k=>{const i=TOPICS.findIndex(t=>t.k===k);return 1.2-i*(2.4/(TOPICS.length-1));};
-S.forEach(s=>{let x=0,z=0;const w=1/s.cov.length;s.cov.forEach(c=>{x+=corners[c].x*w;z+=corners[c].z*w;});
+S.forEach(s=>{s.cov=(s.cov||[]).filter(c=>corners[c]);if(!s.cov.length)s.cov=PK.slice();let x=0,z=0;const w=1/s.cov.length;s.cov.forEach(c=>{x+=corners[c].x*w;z+=corners[c].z*w;});
   const k=s.cov.length===1?.62:.7,a=hash(s.id)*Math.PI*2,r=.08+hash(s.id+'r')*.17;
   s.p={x:x*k+Math.cos(a)*r,y:yOf(s.topics[0])+(hash(s.id+'y')-.5)*.16,z:z*k+Math.sin(a)*r};});
 function matches(s){const t=activeTopic==='all'||s.topics.includes(activeTopic);if(!query)return t;return t&&(s.name+' '+s.pub+' '+s.watch+' '+s.cav+' '+s.topics.join(' ')).toLowerCase().includes(query);}
 const sky=new Orbit($('#sky'),{draw(o){
   const c=o.ctx;
-  TOPICS.forEach(t=>{const y=yOf(t.k),on=activeTopic==='all'||activeTopic===t.k;const P=TRIAD.map(k=>o.proj({x:corners[k].x,y,z:corners[k].z}));
+  TOPICS.forEach(t=>{const y=yOf(t.k),on=activeTopic==='all'||activeTopic===t.k;const P=PK.map(k=>o.proj({x:corners[k].x,y,z:corners[k].z}));
     c.strokeStyle=on?'rgba(159,230,214,.28)':'rgba(142,153,182,.08)';c.lineWidth=1;c.setLineDash([3,5]);c.beginPath();c.moveTo(P[0].x,P[0].y);P.slice(1).forEach(p=>c.lineTo(p.x,p.y));c.closePath();c.stroke();c.setLineDash([]);
-    const L=o.proj({x:(corners.US.x+corners.CN.x)/2*1.12,y,z:(corners.US.z+corners.CN.z)/2*1.12});c.font='500 10px "IBM Plex Mono",monospace';c.fillStyle=on?'rgba(231,235,245,.75)':'rgba(142,153,182,.3)';c.textAlign='center';c.fillText(t.label.toUpperCase(),L.x,L.y+3);});
-  TRIAD.forEach(k=>{const top=o.proj({x:corners[k].x,y:1.45,z:corners[k].z}),bot=o.proj({x:corners[k].x,y:-1.4,z:corners[k].z});const g=c.createLinearGradient(top.x,top.y,bot.x,bot.y);g.addColorStop(0,PW[k].hex);g.addColorStop(1,PW[k].hex+'22');o.line(top,bot,g,2.2);
-    c.fillStyle=PW[k].hex;c.beginPath();c.arc(top.x,top.y,5,0,7);c.fill();c.font='700 14px "Bricolage Grotesque",sans-serif';c.textAlign='center';c.fillText(PW[k].name,top.x,top.y-12);});
+    const L=o.proj({x:(corners[PK[0]].x+corners[PK[1]].x)/2*1.12,y,z:(corners[PK[0]].z+corners[PK[1]].z)/2*1.12});c.font='500 10px "IBM Plex Mono",monospace';c.fillStyle=on?'rgba(231,235,245,.75)':'rgba(142,153,182,.3)';c.textAlign='center';c.fillText(t.label.toUpperCase(),L.x,L.y+3);});
+  const placed=[];PK.forEach(k=>{const top=o.proj({x:corners[k].x,y:1.45,z:corners[k].z}),bot=o.proj({x:corners[k].x,y:-1.4,z:corners[k].z});const g=c.createLinearGradient(top.x,top.y,bot.x,bot.y);g.addColorStop(0,PW[k].hex);g.addColorStop(1,PW[k].hex+'22');o.line(top,bot,g,2.2);
+    c.fillStyle=PW[k].hex;c.beginPath();c.arc(top.x,top.y,5,0,7);c.fill();c.font='700 13px "Bricolage Grotesque",sans-serif';c.textAlign='center';const t=o.W<560?k:PW[k].name,tw=c.measureText(t).width;let ty=top.y-12;for(let n=0;n<6&&placed.some(q=>Math.abs(q.x-top.x)<(q.w+tw)/2+6&&Math.abs(q.y-ty)<15);n++)ty-=15;placed.push({x:top.x,y:ty,w:tw});c.fillText(t,top.x,ty);});
   const pts=S.map(s=>({s,...o.proj(s.p)})).sort((a,b)=>a.z-b.z);
   pts.forEach(n=>{const on=matches(n.s),sel=n.s.id===selected;n.s.cov.forEach(k=>{const a=o.proj({x:corners[k].x,y:n.s.p.y,z:corners[k].z});o.line(n,a,sel?PW[k].hex+'cc':(on?PW[k].hex+'26':PW[k].hex+'08'),sel?1.4:.8);});});
   pts.forEach(n=>{const s=n.s,on=matches(s),sel=s.id===selected,hov=o.hover==='src:'+s.id,e=EV[s.ev];const r=(2.2+e.hard*3.2)*n.sc*(sel?1.6:1);
@@ -590,7 +590,7 @@ const sky=new Orbit($('#sky'),{draw(o){
     c.fillStyle=e.hex;c.beginPath();c.arc(n.x,n.y,r,0,7);c.fill();
     if(sel||hov){c.strokeStyle='#e7ebf5';c.lineWidth=1.2;c.beginPath();c.arc(n.x,n.y,r+5,0,7);c.stroke();}
     c.globalAlpha=1; if(on) o.items.push({x:n.x,y:n.y,key:'src:'+s.id});});
-},onPick(it){select(it.key.split(':')[1]);}});
+},onPick(it){select(it.key.split(':')[1]);},pitch:.5});
 sky.controls($('#skyBtns'));
 $('#evLegend').innerHTML=Object.entries(EV).map(([k,e])=>`<span><i class="dot" style="background:${e.hex}"></i>${k} ${e.name.toLowerCase()}</span>`).join('');
 function select(id){ selected=id; const s=S.find(x=>x.id===id); if(!s) return; const e=EV[s.ev];
@@ -604,25 +604,32 @@ function renderChips(){ const opts=[{k:'all',label:'All'},...TOPICS];
   $('#topicChips').querySelectorAll('.chip').forEach(b=>b.onclick=()=>{activeTopic=b.dataset.k;renderChips();renderCat();const sel=S.find(s=>s.id===selected);if(!sel||!matches(sel)){const f=S.find(matches);if(f)select(f.id);}}); }
 
 /* ---------- channels ---------- */
-const DYADS=['US–CN','US–RU','CN–RU','All three']; let dyad='All three';
+const MULTI='Multilateral';
+const dyadKey=(a,b)=>{const k1=a+'–'+b,k2=b+'–'+a;return CHANNELS.some(c=>c.dyad===k1)?k1:CHANNELS.some(c=>c.dyad===k2)?k2:null;};
+const DYADS=[MULTI,...[...new Set(CHANNELS.map(c=>c.dyad).filter(k=>k!==MULTI))].sort((a,b)=>CHANNELS.filter(c=>c.dyad===b).length-CHANNELS.filter(c=>c.dyad===a).length)];
+let dyad=MULTI;
+const memHTML=c=>(c.members||[]).length?`<span class="cov">${PK.map(k=>`<i style="color:${PW[k].hex}" class="${c.members.includes(k)?'':'off'}">${k}</i>`).join('')}</span>`:'';
 function renderDyad(){
   $('#dyadTabs').innerHTML=DYADS.map(k=>`<button class="chip" role="tab" aria-selected="${k===dyad}" aria-pressed="${k===dyad}" data-k="${k}">${k}<span class="n">${CHANNELS.filter(c=>c.dyad===k).length}</span></button>`).join('');
   $('#dyadTabs').querySelectorAll('.chip').forEach(b=>b.onclick=()=>{dyad=b.dataset.k;renderDyad();});
   $('#channels').innerHTML=CHANNELS.filter(c=>c.dyad===dyad).map(c=>`<div class="ch" tabindex="0" role="button" aria-expanded="false" data-card="ch:${c.id}">
      <h4>${esc(c.title)}${(c.links||[]).length?'':' <span class="flag">unconfirmed</span>'}</h4><span class="pill ${c.status}">${esc(c.status)}</span>
-     <div class="more"><span>${esc(c.desc)}</span><div class="links">${(c.links||[]).map(l=>link(l.url,l.label)).join('')||'<span class="flag">No primary page verified yet</span>'}</div>${/\d/.test(c.asof||'')?`<span class="mono" style="font-size:11px">as of ${esc(c.asof)}</span>`:''}</div></div>`).join('');
+     <div class="more"><span>${esc(c.desc)}</span>${memHTML(c)}<div class="links">${(c.links||[]).map(l=>link(l.url,l.label)).join('')||'<span class="flag">No primary page verified yet</span>'}</div>${/\d/.test(c.asof||'')?`<span class="mono" style="font-size:11px">as of ${esc(c.asof)}</span>`:''}</div></div>`).join('');
   $('#channels').querySelectorAll('.ch').forEach(r=>{const t=()=>{r.classList.toggle('open');r.setAttribute('aria-expanded',r.classList.contains('open'));hideCard();};r.addEventListener('click',e=>{if(e.target.closest('a'))return;t();});r.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();t();}});});
   drawTri(); }
-function drawTri(){ const P={US:[70,320],CN:[350,320],RU:[210,70]};const pairs=[['US','CN','US–CN'],['US','RU','US–RU'],['CN','RU','CN–RU']];
+function drawTri(){ const cx=210,cy=200,R=135,P={};POWERS.forEach((p,i)=>{const a=i/POWERS.length*Math.PI*2-Math.PI/2;P[p.k]=[cx+Math.cos(a)*R,cy+Math.sin(a)*R,a];});
   const SC={active:'#6fd39a',limited:'#f2c14e',contested:'#ff9d7a',dormant:'#8e99b6',ended:'#ff6e5a'}; let h='';
-  pairs.forEach(([a,b,k])=>{const on=dyad===k||dyad==='All three';const ch=CHANNELS.filter(c=>c.dyad===k);const [x1,y1]=P[a],[x2,y2]=P[b];
-    h+=`<g class="edge" data-k="${k}" tabindex="0" role="button" aria-label="${k} channels"><line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="transparent" stroke-width="28"/><line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${on?'#e7ebf5':'#3a4868'}" stroke-width="${on?3:1.5}"/>`;
-    const mx=(x1+x2)/2,my=(y1+y2)/2,off=k==='US–CN'?[0,32]:k==='US–RU'?[-58,-6]:[58,-6];let bx=mx+off[0]-ch.length*4.5;const by=my+off[1];
-    Object.keys(SC).forEach(t=>ch.filter(c=>c.status===t).forEach(()=>{h+=`<rect x="${bx}" y="${by-5}" width="7" height="10" rx="1.5" fill="${SC[t]}"/>`;bx+=9;}));
-    h+=`<text x="${mx+off[0]}" y="${by-11}" text-anchor="middle" font-size="11" fill="${on?'#e7ebf5':'#8e99b6'}">${k}</text></g>`;});
-  h+=`<circle cx="210" cy="237" r="${dyad==='All three'?30:24}" fill="#111a2e" stroke="${dyad==='All three'?'#9fe6d6':'#3a4868'}" stroke-width="1.5" class="edge" data-k="All three" tabindex="0" role="button" aria-label="Channels shared by all three"/><text x="210" y="235" text-anchor="middle" font-size="10" fill="#9fe6d6" pointer-events="none">ALL</text><text x="210" y="248" text-anchor="middle" font-size="10" fill="#9fe6d6" pointer-events="none">THREE</text>`;
-  TRIAD.forEach(c=>{const [x,y]=P[c];h+=`<circle cx="${x}" cy="${y}" r="15" fill="${PW[c].hex}"/><text x="${x}" y="${y+4}" text-anchor="middle" font-size="11" font-weight="500" fill="#0a0f1e">${c}</text><text x="${x}" y="${c==='RU'?y-24:y+34}" text-anchor="middle" font-size="12" fill="#e7ebf5">${PW[c].name}</text>`;});
-  let lx=12;Object.entries(SC).forEach(([t,col])=>{h+=`<rect x="${lx}" y="10" width="7" height="10" rx="1.5" fill="${col}"/><text x="${lx+11}" y="19" font-size="10" fill="#8e99b6">${t}</text>`;lx+=t.length*6.4+24;});
+  const sel=dyad.split('–'), edges=[];
+  for(let i=0;i<PK.length;i++)for(let j=i+1;j<PK.length;j++){const k=dyadKey(PK[i],PK[j]);if(k)edges.push([PK[i],PK[j],k]);}
+  edges.sort((x,y)=>(x[2]===dyad)-(y[2]===dyad)).forEach(([a,b,k])=>{const on=dyad===k,dim=dyad!==MULTI&&!on;const ch=CHANNELS.filter(c=>c.dyad===k);
+    const cnt={};ch.forEach(c=>cnt[c.status]=(cnt[c.status]||0)+1);const top=Object.keys(SC).sort((x,y)=>(cnt[y]||0)-(cnt[x]||0))[0];
+    const [x1,y1]=P[a],[x2,y2]=P[b];const sum=Object.entries(cnt).map(([t,n])=>`${n} ${t}`).join(', ');
+    h+=`<g class="edge" data-k="${k}" tabindex="0" role="button" aria-label="${k}: ${ch.length} channels (${sum})"><line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="transparent" stroke-width="14"/><line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${on?'#e7ebf5':SC[top]}" stroke-opacity="${on?1:dim?.18:.55}" stroke-width="${on?3.5:1+ch.length*.6}"/></g>`;});
+  const multi=dyad===MULTI;
+  h+=`<circle cx="${cx}" cy="${cy}" r="${multi?27:22}" fill="#111a2e" stroke="${multi?'#9fe6d6':'#3a4868'}" stroke-width="1.5" class="edge" data-k="${MULTI}" tabindex="0" role="button" aria-label="Multilateral channels"/><text x="${cx}" y="${cy+4}" text-anchor="middle" font-size="10" fill="#9fe6d6" pointer-events="none">MULTI</text>`;
+  POWERS.forEach(p=>{const [x,y,a]=P[p.k];const on=sel.includes(p.k);const lx=cx+Math.cos(a)*(R+30),ly=cy+Math.sin(a)*(R+30)+4;
+    h+=`<circle cx="${x}" cy="${y}" r="${on?16:14}" fill="${p.hex}" stroke="${on?'#e7ebf5':'none'}" stroke-width="2"/><text x="${x}" y="${y+4}" text-anchor="middle" font-size="11" font-weight="500" fill="#0a0f1e" pointer-events="none">${p.k}</text><text x="${lx}" y="${ly}" text-anchor="${Math.abs(Math.cos(a))<.3?'middle':Math.cos(a)>0?'start':'end'}" font-size="11" fill="#e7ebf5" pointer-events="none">${p.name}</text>`;});
+  let lx=12;Object.entries(SC).forEach(([t,col])=>{h+=`<rect x="${lx}" y="372" width="7" height="10" rx="1.5" fill="${col}"/><text x="${lx+11}" y="381" font-size="10" fill="#8e99b6">${t}</text>`;lx+=t.length*6.4+24;});
   const svg=$('#tri');svg.innerHTML=h;svg.querySelectorAll('.edge').forEach(g=>{const go=()=>{dyad=g.dataset.k;renderDyad();};g.addEventListener('click',go);g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}});}); }
 
 /* ---------- view 2: powers web ---------- */

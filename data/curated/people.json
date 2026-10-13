@@ -27,10 +27,10 @@
   "type": "resident",
   "cat": "science",
   "years": "1979–1989",
-  "did": "Founded the China-U.S. Physics Examination and Application (CUSPEA) program, which sent Chinese students to US graduate schools and helped train 915 doctoral students.",
-  "url": "https://english.cas.cn/newsroom/cas_media/202408/t20240806_681340.shtml",
-  "src": "Chinese Academy of Sciences",
-  "caveat": "Nobel Prize in Physics 1957; Columbia University professor. Died in San Francisco in 2024.",
+  "did": "Founded the China-U.S. Physics Examination and Application (CUSPEA) programme, which from the 1979 pilot exam to its last 1988-89 cohort sent 915 Chinese students to US graduate schools.",
+  "url": "https://tdllib.sjtu.edu.cn/lzd/czqh.htm",
+  "src": "T.D. Lee Library, Shanghai Jiao Tong University",
+  "caveat": "Nobel Prize in Physics 1957; Columbia University professor. Died at home in San Francisco on 4 Aug 2024 (obituary hosted by the CAS Institute of High Energy Physics: http://ihep.cas.cn/zt/dnlzd/fg/). The previous CAS English link returned 404.",
   "confidence": "high"
  },
  {
@@ -98,7 +98,7 @@
   "did": "Founded the Silk Road Project in 1998 to bring together musicians from different traditions, including Chinese musicians, in cross-cultural collaboration.",
   "url": "https://www.praemiumimperiale.org/en/laureate/ma/",
   "src": "Praemium Imperiale",
-  "caveat": "Born in Paris to Chinese parents and raised in the US. Listed by the Committee of 100 (founded 1990 to foster positive US–China relations) among its first members. Contribution is cultural rather than measured in numbers.",
+  "caveat": "Born in Paris to Chinese parents and raised in the US. Listed by the Committee of 100 (founded 1990 to foster positive US–China relations) among its first members. Contribution is cultural rather than measured in numbers. Tried silkroad.org/about: it confirms Ma conceived Silkroad in 1998 with musicians 'from the lands of the Silk Road' but does not name Chinese musicians, so confidence stays medium.",
   "confidence": "medium"
  },
  {
@@ -198,10 +198,10 @@
   "cat": "science",
   "years": "2017–2019",
   "did": "As Chief Scientist of Google AI she announced and co-led the Google AI China Center in Beijing, Google's first AI research center in Asia, in December 2017.",
-  "url": "https://blog.google/around-the-globe/google-asia/google-ai-china-center/",
+  "url": "https://blog.google/company-news/inside-google/around-the-globe/google-asia/google-ai-china-center/",
   "src": "Google (official blog)",
-  "caveat": "Born in Beijing; moved to the US at 16 (per AWIS). Google says the center was disbanded about two years later.",
-  "confidence": "medium"
+  "caveat": "Born in Beijing; moved to the US at 16 (per AWIS, not on the cited page). Google's update on the post says the center was disbanded two years later.",
+  "confidence": "high"
  },
  {
   "id": "jon-huntsman-jr",
@@ -318,10 +318,10 @@
   "type": "envoy",
   "cat": "sport",
   "years": "1971",
-  "did": "His April 1971 encounter with Zhuang Zedong at the World Table Tennis Championships in Japan preceded China's invitation to the US team, an opening that led to Kissinger's secret trip that July.",
-  "url": "https://china.usc.edu/node/2611",
+  "did": "In April 1971 at the World Table Tennis Championships in Nagoya, Japan, he boarded the Chinese team bus and received a gift from Zhuang Zedong; two days later the US team was invited to China, an opening that preceded Kissinger's secret trip that July.",
+  "url": "https://china.usc.edu/getting-beijing-henry-kissingers-secret-1971-trip",
   "src": "USC US-China Institute",
-  "caveat": "Whether the encounter was spontaneous is disputed; Kissinger believed Chinese players had instructions to befriend Americans.",
+  "caveat": "Whether the encounter was spontaneous is disputed; Kissinger believed Chinese players had instructions to befriend Americans (not stated on the cited page). The previous USC link (node/2611) returned 404.",
   "confidence": "high"
  },
  {
@@ -335,10 +335,10 @@
   "type": "envoy",
   "cat": "sport",
   "years": "1971",
-  "did": "The three-time world table tennis champion greeted American player Glenn Cowan with a gift in April 1971, an encounter followed by China's invitation to the US team ('ping-pong diplomacy').",
-  "url": "https://china.usc.edu/node/2611",
+  "did": "The three-time world table tennis champion gave American player Glenn Cowan a gift on the Chinese team bus in Nagoya in April 1971; two days later China invited the US team ('ping-pong diplomacy').",
+  "url": "https://china.usc.edu/getting-beijing-henry-kissingers-secret-1971-trip",
   "src": "USC US-China Institute",
-  "caveat": "Later became China's sports minister during the Cultural Revolution and was detained after 1976.",
+  "caveat": "Later became China's sports minister during the Cultural Revolution and was detained after 1976 (not stated on the cited page). He spoke about the encounter at USC in 2007. The previous USC link (node/2611) returned 404.",
   "confidence": "high"
  },
  {
@@ -386,11 +386,11 @@
   "type": "envoy",
   "cat": "science",
   "years": "2020",
-  "did": "His Fudan University team sequenced SARS-CoV-2 and he sent the genome to Edward Holmes, who posted it publicly on virological.org at 01:05 on 11 January 2020, the first public release.",
-  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10129129",
-  "src": "The Lancet Microbe (2023)",
-  "caveat": "A global rather than bilateral contribution; partner Holmes is UK-born and Sydney-based. GISAID claims an earlier release, which the cited article disputes.",
-  "confidence": "medium"
+  "did": "His Fudan University-led consortium sequenced SARS-CoV-2, and Edward Holmes posted the genome on its behalf on virological.org at 01:05 on 11 January 2020, widely acknowledged as the first public release.",
+  "url": "https://virological.org/t/novel-2019-coronavirus-genome/319",
+  "src": "virological.org (original 11 Jan 2020 post)",
+  "caveat": "A global rather than bilateral contribution; partner Holmes is UK-born and Sydney-based. GISAID claims an earlier release, which a 2023 Lancet Microbe report disputes (https://pmc.ncbi.nlm.nih.gov/articles/PMC10129129).",
+  "confidence": "high"
  },
  {
   "id": "edward-holmes",
@@ -404,10 +404,10 @@
   "cat": "science",
   "years": "2020",
   "did": "Posted the SARS-CoV-2 genome sequenced by Zhang Yongzhen's Fudan University team on virological.org on 11 January 2020, making it publicly available worldwide.",
-  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10129129",
-  "src": "The Lancet Microbe (2023)",
-  "caveat": "UK-born; based at the University of Sydney (Australia is not one of the listed powers).",
-  "confidence": "medium"
+  "url": "https://virological.org/t/novel-2019-coronavirus-genome/319",
+  "src": "virological.org (original 11 Jan 2020 post)",
+  "caveat": "UK-born; based at the University of Sydney (Australia is not one of the listed powers). The 'first public release' status is disputed by GISAID (Lancet Microbe 2023: https://pmc.ncbi.nlm.nih.gov/articles/PMC10129129).",
+  "confidence": "high"
  },
  {
   "id": "yuan-longping",
@@ -420,11 +420,11 @@
   "type": "envoy",
   "cat": "science",
   "years": "1964–2021",
-  "did": "The 'Father of Hybrid Rice' helped triple China's rice output within about a generation; his methods spread across Asia, Africa and the Americas, and he shared the 2004 World Food Prize.",
-  "url": "https://usinfo.org/wf-archive/2004/040330/epf206.htm",
-  "src": "US State Department Washington File (2004)",
+  "did": "The 'Father of Hybrid Rice' developed three-line and two-line hybrid rice, helped move China from food deficiency to food security within three decades, spread his techniques across Asia, Africa and the Americas, and shared the 2004 World Food Prize.",
+  "url": "https://2001-2009.state.gov/e/eeb/rls/fs/30937.htm",
+  "src": "US State Department (2004 World Food Prize laureates fact sheet)",
   "caveat": "The cited source does not name specific adopting countries; the US link reflects the US-based World Food Prize rather than residence.",
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "id": "billy-graham",
@@ -441,7 +441,7 @@
   "url": "https://billygrahamlibrary.org/blog-inside-the-archives-chinese-tea-set/",
   "src": "Billy Graham Library",
   "caveat": "He also preached in the USSR (1982, 1984), which is not covered by the cited page; his 1982 Moscow remarks were criticised in the US as naive about religious freedom there.",
-  "confidence": "medium"
+  "confidence": "high"
  },
  {
   "id": "wassily-leontief",
@@ -573,10 +573,10 @@
   "type": "resident",
   "cat": "arts",
   "years": "1974–1994",
-  "did": "Music director of the US National Symphony Orchestra for 17 years from 1977, he led it on a 1990 tour to Moscow, after which his Soviet citizenship (revoked in 1978) was restored.",
+  "did": "As conductor of the US National Symphony Orchestra he led it to Moscow in February 1990, his first return since leaving in 1974; his Soviet citizenship, revoked in 1978, was restored that year.",
   "url": "https://adst.org/2016/06/russia-love-back-rostropovichs-exile-return/",
   "src": "Association for Diplomatic Studies and Training",
-  "caveat": "Born in Baku, Azerbaijan SSR (now Azerbaijan). He left the USSR after supporting dissidents.",
+  "caveat": "Born in Baku, Azerbaijan SSR (now Azerbaijan). He left the USSR after supporting dissidents. ADST's page carries oral histories from US diplomats in Paris and Moscow. His NSO music directorship (1977-1994) is not stated on the cited page; Kennedy Center and Library of Congress pages returned 403 to automated fetches.",
   "confidence": "high"
  },
  {
@@ -726,10 +726,10 @@
   "type": "envoy",
   "cat": "science",
   "years": "1975–2019",
-  "did": "Led the Soviet side of the Apollo-Soyuz Test Project, whose Soyuz docked with Apollo on 17 July 1975, where he and Thomas Stafford shook hands in orbit.",
-  "url": "https://www.collectspace.com/news/news-101119a-cosmonaut-alexei-leonov-obituary.html",
-  "src": "collectSPACE",
-  "caveat": "First person to walk in space (1965).",
+  "did": "Commanded Soyuz 19 in the Apollo-Soyuz Test Project, whose Soyuz docked with Apollo on 17 July 1975, where he and Thomas Stafford shook hands in orbit.",
+  "url": "https://www.nasa.gov/history/45-years-ago-historic-handshake-in-space/",
+  "src": "NASA",
+  "caveat": "First person to walk in space, on 18 March 1965 (ESA obituary: https://www.esa.int/About_Us/50_years_of_ESA/Alexei_Leonov_the_first_spacewalker_passes_away). His command of Soyuz 19 is stated by NASA at https://www.nasa.gov/image-article/legendary-cosmonaut-alexey-leonov/. Replaces the collectSPACE (news) source.",
   "confidence": "high"
  },
  {
@@ -884,7 +884,7 @@
   "did": "Led a group of 28 Soviet bridge specialists who gave technical guidance on the Wuhan Yangtze River Bridge, the first bridge over the main Yangtze, opened in 1957.",
   "url": "https://www.rmzxw.com.cn/c/2021-07-30/2918114.shtml",
   "src": "People's Political Consultative Daily (CPPCC)",
-  "caveat": "Years of his stay are not given precisely in the source.",
+  "caveat": "Years of his stay are not given precisely in the source. The source (CPPCC newspaper) names him as leader of the 28-member Soviet expert group; no government or university page naming him was found.",
   "confidence": "medium"
  },
  {
@@ -949,11 +949,11 @@
   "type": "resident",
   "cat": "arts",
   "years": "1940–1945",
-  "did": "The Macau-born composer went to the USSR in 1940 to study and work, composing symphonies and the 'Chinese Rhapsody' there before dying in Moscow in 1945.",
-  "url": "https://library.um.edu.mo/resources/electronic_resources/macau_music/musician/m01",
-  "src": "University of Macau Library",
-  "caveat": "Bridge role is cultural rather than diplomatic.",
-  "confidence": "medium"
+  "did": "The Macau-born composer went to the USSR in May 1940 to score a documentary, was stranded there by the war, composed symphonies and the 'Chinese Rhapsody', and died in Moscow in 1945.",
+  "url": "http://www.mod.gov.cn/gfbw/zt/gfbwzt/2018_213791/mhyxlsp/4838595.html",
+  "src": "PRC Ministry of National Defense (Xinhua profile)",
+  "caveat": "Bridge role is cultural rather than diplomatic. Replaces a University of Macau Library page whose text is marked as transcribed from Wikipedia.",
+  "confidence": "high"
  },
  {
   "id": "matteo-ricci",
