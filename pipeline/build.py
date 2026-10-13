@@ -1,10 +1,15 @@
 """Builds the self-contained page from curated data, live data and health.
 
-Output: site/index.html (deployed to GitHub Pages). The same file can be
-published anywhere as one HTML file; all data is embedded.
+Outputs:
+  site/index.html     the full document for GitHub Pages: doctype, charset, viewport,
+                      description and Open Graph tags wrapped around the template.
+  site/artifact.html  the same page unwrapped, for publishing as a claude.ai artifact
+                      (the artifact host adds its own document skeleton).
+All data is embedded; neither file makes network calls for data.
 """
 from __future__ import annotations
 
+import html as htmllib
 import json
 import os
 import sys
@@ -15,6 +20,11 @@ from common import CURATED, DATA, LIVE, ROOT, now_iso, read_json  # noqa: E402
 
 TEMPLATE = ROOT / "template" / "atlas.html"
 OUT = ROOT / "site" / "index.html"
+OUT_ARTIFACT = ROOT / "site" / "artifact.html"
+BODY_MARK = '<div class="wrap">'
+TITLE = "Triad Signal Atlas"
+DESCRIPTION = ("Primary evidence on how the US, China, Russia and the other powers relate: channels, joint projects, "
+               "bridge people, live data, and a Peace Lab of playable approaches to building peace.")
 PLACEHOLDER = "/*__ATLAS_DATA__*/"
 LIVE_KEYS = ["openalex", "nobel", "fedreg", "comtrade", "portwatch", "satcat", "migrants"]
 MAX_BYTES = 15 * 1024 * 1024
@@ -48,6 +58,7 @@ def compose() -> dict:
         "people": read_json(CURATED / "people.json", []),
         "live": live,
         "health": health,
+        "peace": read_json(CURATED / "peace.json", {}) or {},
         "links": {"healed": links.get("healed", {}), "counts": links.get("counts", {})},
     }
 
@@ -60,6 +71,36 @@ def render(data: dict) -> str:
     return tpl.replace(PLACEHOLDER, blob)
 
 
+def wrap(page: str, live_url: str) -> str:
+    """Wraps the template output in a standards-mode document for GitHub Pages."""
+    if page.count(BODY_MARK) != 1:
+        raise SystemExit(f"template must contain {BODY_MARK!r} exactly once")
+    head, body = page.split(BODY_MARK, 1)
+    e = htmllib.escape
+    meta = "\n".join([
+        "<!doctype html>",
+        '<html lang="en">',
+        "<head>",
+        '<meta charset="utf-8">',
+        '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">',
+        '<meta name="color-scheme" content="dark">',
+        '<meta name="theme-color" content="#0a0f1e">',
+        f'<meta name="description" content="{e(DESCRIPTION)}">',
+        '<meta property="og:type" content="website">',
+        f'<meta property="og:title" content="{e(TITLE)}">',
+        f'<meta property="og:description" content="{e(DESCRIPTION)}">',
+        f'<meta property="og:url" content="{e(live_url)}">',
+        '<meta property="og:site_name" content="Triad Signal Atlas">',
+        '<meta name="twitter:card" content="summary">',
+        f'<meta name="twitter:title" content="{e(TITLE)}">',
+        f'<meta name="twitter:description" content="{e(DESCRIPTION)}">',
+        f'<link rel="canonical" href="{e(live_url)}">',
+        "<link rel=\"icon\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E"
+        "%3Ccircle cx='16' cy='16' r='14' fill='%230a0f1e'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%239fe6d6'/%3E%3C/svg%3E\">",
+    ])
+    return f"{meta}\n{head.strip()}\n</head>\n<body>\n{BODY_MARK}{body.rstrip()}\n</body>\n</html>\n"
+
+
 def check(html: str, data: dict) -> list[str]:
     problems = []
     if len(html.encode()) > MAX_BYTES:
@@ -67,6 +108,8 @@ def check(html: str, data: dict) -> list[str]:
     for key in ("sources", "channels", "projects", "people"):
         if not data[key]:
             problems.append(f"no {key} in curated data")
+    if not (data.get("peace") or {}).get("nodes"):
+        problems.append("no Peace Lab nodes in curated data (data/curated/peace.json)")
     start = html.index('type="application/json">') + len('type="application/json">')
     end = html.index("</script>", start)
     json.loads(html[start:end])  # raises if the embedded data is not valid JSON
@@ -80,10 +123,13 @@ def main() -> int:
     if problems:
         print("BUILD FAILED:", *problems, sep="\n  ")
         return 1
+    page = wrap(html, data["live_url"])
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(html, encoding="utf-8")
+    OUT.write_text(page, encoding="utf-8")
+    OUT_ARTIFACT.write_text(html, encoding="utf-8")
     (OUT.parent / ".nojekyll").write_text("")
-    print(f"built {OUT.relative_to(ROOT)} ({len(html.encode()) // 1024} KB, live datasets: {', '.join(data['live']) or 'none yet'})")
+    print(f"built {OUT.relative_to(ROOT)} ({len(page.encode()) // 1024} KB) and {OUT_ARTIFACT.relative_to(ROOT)} (unwrapped), "
+          f"live datasets: {', '.join(data['live']) or 'none yet'}")
     return 0
 
 

@@ -16,7 +16,7 @@
 }
 *{box-sizing:border-box}
 html,body{background:var(--void);color:var(--ink)}
-body{font-family:var(--f-body);font-size:15px;line-height:1.55;padding-inline:16px;padding-block:0 64px}
+body{margin:0;font-family:var(--f-body);font-size:15px;line-height:1.55;padding-inline:max(16px,env(safe-area-inset-left)) max(16px,env(safe-area-inset-right));padding-block:0 max(64px,env(safe-area-inset-bottom))}
 a{color:var(--all)}
 a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--all);outline-offset:2px}
 .wrap{max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:64px}
@@ -80,6 +80,7 @@ dl.kv dd{margin:2px 0 0}
 .visible-list button:hover,.visible-list button:focus-visible{color:var(--all)}
 
 /* floating evidence card */
+[hidden]{display:none!important}
 #card{position:fixed;z-index:50;max-width:min(360px,calc(100vw - 24px));background:var(--panel-2);border:1px solid var(--muted);border-radius:6px;padding:14px 16px;box-shadow:0 12px 40px rgba(0,0,0,.5);display:grid;gap:8px;font-size:14px}
 #card h4{margin:0;font-family:var(--f-display);font-size:17px;line-height:1.2;padding-right:22px}
 #card p{margin:0}
@@ -185,6 +186,76 @@ table.mx td.self{background:transparent}
 @media (max-width:760px){.row{grid-template-columns:minmax(0,1fr)}}
 .health-wrap{overflow-x:auto}
 footer{color:var(--faint);font-size:13px;max-width:78ch;display:grid;gap:8px}
+
+/* Peace Lab */
+.lab{grid-template-columns:minmax(0,1fr) 400px}
+@media (max-width:980px){.lab{grid-template-columns:minmax(0,1fr)}}
+.lab-tools{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:8px}
+.lab-tools .sep{width:1px;height:20px;background:var(--rule);margin:0 4px}
+.lens-hint{font-family:var(--f-mono);font-size:12px;color:var(--muted);margin:0 0 12px}
+.breath{position:absolute;top:14px;left:50%;transform:translateX(-50%);font-family:var(--f-mono);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--all);background:rgba(10,15,30,.7);padding:5px 12px;border-radius:999px;pointer-events:none;white-space:nowrap}
+.contq{position:absolute;left:16px;right:16px;top:52px;margin:0 auto;max-width:36ch;text-align:center;font-family:var(--f-display);font-weight:500;font-size:clamp(17px,2.4vw,24px);line-height:1.25;pointer-events:none;text-wrap:balance;text-shadow:0 2px 12px rgba(10,15,30,.9)}
+.lab-side{align-content:start;overflow-wrap:anywhere}
+.tabs{display:flex;flex-wrap:wrap;gap:4px;border-bottom:1px solid var(--rule);padding-bottom:10px}
+.tabs button{font-family:var(--f-mono);font-size:12px;background:transparent;color:var(--muted);border:1px solid var(--rule);border-radius:999px;padding:5px 10px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--void);border-color:var(--ink)}
+.tabs .n{opacity:.65}
+.pl{display:grid;gap:10px;min-width:0}
+.pl p{margin:0}
+.pl h3{font-size:22px;line-height:1.15;text-wrap:balance}
+.pl h4{margin:0;font-family:var(--f-display);font-size:17px}
+.pl .q{font-family:var(--f-display);font-size:17px;line-height:1.3;color:var(--all)}
+.pl details summary{cursor:pointer;color:var(--muted);font-size:13px}
+.pl details p{margin-top:6px;font-size:14px}
+.pl .links{display:grid;gap:4px;font-size:13px}
+.pl textarea,.pl input[type=text],.pl select{width:100%;min-width:0;background:var(--panel-2);border:1px solid var(--rule);color:var(--ink);font:inherit;font-size:14px;padding:8px 10px;border-radius:4px}
+.pl textarea{min-height:84px;resize:vertical}
+.pl input[type=range]{width:100%;accent-color:var(--all)}
+.pl label{font-size:13px;color:var(--muted)}
+.row2{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.note{font-size:12px;color:var(--muted)}
+.eng{display:grid;gap:10px;border-top:1px solid var(--rule);padding-top:12px;min-width:0}
+.steps{margin:0;padding-left:20px;display:grid;gap:12px}
+.steps li{display:grid;gap:6px}
+.made-up{font-family:var(--f-mono);font-size:11px;color:var(--warn);border:1px dashed var(--warn);border-radius:4px;padding:6px 8px}
+.hl{font-size:13px;line-height:1.7;background:var(--panel-2);border:1px solid var(--rule);border-radius:4px;padding:8px 10px;max-height:240px;overflow:auto}
+mark{color:inherit;border-radius:2px;padding:0 1px}
+mark.ld{background:rgba(255,110,90,.3)} mark.un{background:rgba(242,193,78,.32)} mark.nm{background:rgba(111,168,255,.28)} mark.qt{background:rgba(182,167,255,.26)} mark.en{background:none;border-bottom:1px dotted var(--all)} mark.ok{background:rgba(111,211,154,.28)}
+.mkey{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:11px;font-family:var(--f-mono);color:var(--muted)}
+.counts{display:flex;flex-wrap:wrap;gap:4px 12px;font-family:var(--f-mono);font-size:11px;color:var(--muted)}
+.claims{display:grid;gap:4px;font-size:13px}
+.claims div{display:grid;grid-template-columns:28px minmax(0,1fr);gap:8px;align-items:start}
+.rk{font-family:var(--f-mono);font-size:11px;font-weight:500;text-align:center;border-radius:3px;color:var(--void);padding:1px 0}
+.hist{display:flex;flex-wrap:wrap;gap:3px}
+.hist i{width:16px;height:16px;border-radius:3px;display:inline-grid;place-items:center;font-style:normal;font-family:var(--f-mono);font-size:9px;color:var(--void)}
+.meter2{height:10px;background:var(--panel-2);border-radius:5px;overflow:hidden}
+.meter2 i{display:block;height:100%;border-radius:5px;transition:width .4s}
+.items{display:grid;gap:0;border-top:1px solid var(--rule)}
+.items>div{display:grid;gap:4px;padding:8px 0;border-bottom:1px solid var(--rule);font-size:13px}
+.items .x2{all:unset;cursor:pointer;color:var(--muted);font-family:var(--f-mono);font-size:11px}
+.items .x2:hover{color:var(--bad)}
+.word{padding:8px 0;border-bottom:1px solid var(--rule);display:grid;gap:2px}
+.word b{font-size:22px;font-family:var(--f-display)}
+.word.today{background:var(--panel-2);padding:8px;border-radius:4px;border:1px solid var(--all)}
+.phasebar{display:grid;grid-template-columns:repeat(4,1fr);gap:3px}
+.phasebar span{font-family:var(--f-mono);font-size:10px;text-align:center;padding:4px 0;border-radius:3px;background:var(--panel-2);color:var(--faint)}
+.phasebar span.on{background:var(--all);color:var(--void)}
+.canvas-mvp{display:grid;gap:10px}
+.canvas-mvp dt{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+.canvas-mvp dd{margin:2px 0 0;font-size:14px}
+.canvas-mvp ul{margin:4px 0 0;padding-left:18px}
+.ring{width:100%;max-width:300px;height:auto;display:block;margin:0 auto}
+.ring g{cursor:pointer}
+.ring text{font-family:var(--f-mono)}
+.deck-wrap{margin-top:16px}
+.deckcard{background:var(--panel);border:1px solid var(--rule);border-radius:6px;padding:18px;display:grid;gap:10px;max-width:760px}
+.deckcard h3{font-size:22px}
+.deckcard p,.deckcard ol{margin:0}
+.deckcard textarea{width:100%;background:var(--panel-2);border:1px solid var(--rule);color:var(--ink);font:inherit;font-size:14px;padding:8px 10px;border-radius:4px;min-height:70px;resize:vertical}
+.deep-out{font-size:14px;white-space:pre-wrap;background:var(--panel-2);border:1px solid var(--rule);border-radius:4px;padding:10px}
+.deepen{display:none}
+.has-sample .deepen{display:inline-block}
+.copybox{width:100%;min-height:140px;font-family:var(--f-mono);font-size:12px;background:var(--panel-2);color:var(--ink);border:1px solid var(--rule);border-radius:4px;padding:8px}
 </style>
 
 <script id="atlas-data" type="application/json">/*__ATLAS_DATA__*/</script>
@@ -196,9 +267,35 @@ footer{color:var(--faint);font-size:13px;max-width:78ch;display:grid;gap:8px}
     <p class="lede">Primary evidence on how the great powers actually relate: the channels they keep open, the projects they build together, the people who carry ideas between them, and live data that refreshes itself. Every claim links to its source. Hover or tap anything to see the evidence.</p>
     <div class="status-line" id="statusLine"></div>
     <nav class="jump" aria-label="Sections">
-      <a href="#sec-sky">Sources</a><a href="#sec-ch">Channels</a><a href="#sec-web">Powers web</a><a href="#sec-bridges">Bridges</a><a href="#sec-pulse">Live pulse</a><a href="#sec-ladder">Evidence ladder</a><a href="#sec-cal">Calendar</a><a href="#sec-cat">Catalog</a><a href="#sec-health">Data health</a>
+      <a href="#sec-peace">Peace Lab</a><a href="#sec-sky">Sources</a><a href="#sec-ch">Channels</a><a href="#sec-web">Powers web</a><a href="#sec-bridges">Bridges</a><a href="#sec-pulse">Live pulse</a><a href="#sec-ladder">Evidence ladder</a><a href="#sec-cal">Calendar</a><a href="#sec-cat">Catalog</a><a href="#sec-health">Data health</a>
     </nav>
   </header>
+
+  <section id="sec-peace" aria-labelledby="h-peace">
+    <div class="sec-head">
+      <h2 id="h-peace">Peace Lab</h2>
+      <p>Every approach we could find to fostering, cultivating, sustaining and developing peace, as one shape you can turn, reshape and play with. Each point is an approach, coloured by domain; hollow points still need their source checked. Pick a lens to reshape the field, tap a point to play its mini-prototype, collide two ideas, compose an MVP, or sit with a question. Nothing leaves your browser.</p>
+    </div>
+    <div class="lab-tools" id="lensChips" role="group" aria-label="Lenses and actions"></div>
+    <p class="lens-hint" id="lensHint"></p>
+    <div class="legend" id="peaceLegend"></div>
+    <div class="observatory lab">
+      <div class="sky">
+        <canvas id="peace" role="img" aria-label="Rotatable, shape-shifting 3D field of approaches to peace"></canvas>
+        <div class="breath" id="breathText" hidden></div>
+        <p class="contq" id="contQ" hidden></p>
+        <div class="sky-ui"><div class="btns" id="peaceBtns"></div><span class="hint">Drag to rotate · tap an approach</span></div>
+      </div>
+      <aside class="side lab-side">
+        <div class="tabs" role="tablist" aria-label="Peace Lab tools" id="labTabs"></div>
+        <div id="labPanel" aria-live="polite"></div>
+      </aside>
+    </div>
+    <div class="deck-wrap">
+      <h3 style="font-size:20px;margin-bottom:10px">Thought-experiment deck</h3>
+      <div id="deck"></div>
+    </div>
+  </section>
 
   <section id="sec-sky" aria-labelledby="h-sky">
     <div class="sec-head">
@@ -345,7 +442,8 @@ const card=$('#card'); let hideT=null, pinned=false;
 function placeCard(x,y){ const r=card.getBoundingClientRect(); let L=x+16,T=y+16;
   if(L+r.width>innerWidth-8) L=x-r.width-16; if(L<8) L=8; if(T+r.height>innerHeight-8) T=Math.max(8,y-r.height-16);
   card.style.left=L+'px'; card.style.top=T+'px'; }
-function showCard(html,x,y,pin){ clearTimeout(hideT); pinned=!!pin;
+let pinY=0;
+function showCard(html,x,y,pin){ clearTimeout(hideT); pinned=!!pin; pinY=scrollY;
   card.innerHTML=html+(pin?'<button class="x" aria-label="Close evidence card">×</button>':''); card.hidden=false; placeCard(x,y);
   const b=card.querySelector('.x'); if(b) b.onclick=hideCard; }
 function hideCard(){ pinned=false; card.hidden=true; }
@@ -354,7 +452,7 @@ card.addEventListener('pointerenter',()=>clearTimeout(hideT));
 card.addEventListener('pointerleave',softHide);
 document.addEventListener('keydown',e=>{ if(e.key==='Escape') hideCard(); });
 document.addEventListener('pointerdown',e=>{ if(card.hidden||card.contains(e.target)||e.target.closest('[data-card]')||e.target.tagName==='CANVAS') return; hideCard(); });
-addEventListener('scroll',()=>{ if(!pinned) card.hidden=true; },{passive:true});
+addEventListener('scroll',()=>{ if(!pinned||Math.abs(scrollY-pinY)>80) hideCard(); },{passive:true});
 
 const CARD={
  src(s){const e=EV[s.ev];return `<h4>${esc(s.name)}</h4><div class="meta"><span class="ev" style="background:${e.hex}">${s.ev} · ${e.name}</span>${covHTML(s.cov)}</div><p>${esc(s.watch)}</p><p class="muted">${esc(s.cav)}</p><div class="links">${link(s.url)}</div>`;},
@@ -372,7 +470,7 @@ document.addEventListener('pointerout',e=>{ const el=e.target.closest('[data-car
 function cardFor(key){ const [kind,id]=key.split(':');
   if(kind==='src'){const s=S.find(x=>x.id===id);return s&&CARD.src(s);} if(kind==='ch'){const c=CHANNELS.find(x=>x.id===id);return c&&CARD.ch(c);}
   if(kind==='project'){const p=PROJECTS.find(x=>x.id===id);return p&&CARD.project(p);} if(kind==='person'){const p=PEOPLE.find(x=>x.id===id);return p&&CARD.person(p);}
-  if(kind==='power') return CARD.power(id); return null; }
+  if(kind==='power') return CARD.power(id); if(kind==='peace'){const n=PBY[id];return n&&CARD.peace(n);} return null; }
 
 /* ---------- 3D orbit engine ---------- */
 class Orbit{
@@ -606,9 +704,508 @@ function renderHealth(){ const H=A.health||{}; const cs=H.collectors||{}; const 
   $('#health').innerHTML=`<div class="health-wrap"><table class="tbl"><tr><th>Dataset</th><th>Status</th><th>Last good data</th><th>Checks every</th><th>Note</th></tr>${names.map(n=>{const e=cs[n];const st=e.stale?'suspect':(e.status||'pending');return `<tr><td>${esc(e.title||n)}</td><td><span class="pill ${st}">${e.stale?'stale':esc(e.status||'pending')}</span></td><td class="n">${fmtDate(e.last_success)}</td><td class="n">${e.every_days} d</td><td style="color:var(--muted);font-size:12px">${esc((e.error||'').slice(0,140))}</td></tr>`;}).join('')}</table></div>
    <p class="mono" style="font-size:12px;color:var(--muted)">Last pipeline run ${fmtDate(H.last_run)}.${lk?` Evidence links: ${lk.ok||0} working, ${(lk.unverifiable||0)+(lk.unreachable||0)} block or time out on automated checks, ${(lk.dead||0)+(lk.error||0)} failing, ${Object.keys(healed).length} replaced with archived copies.`:''}</p>`; }
 
+/* ---------- Peace Lab: data, storage, capabilities ---------- */
+const PEACE=A.peace||{}, PN=PEACE.nodes||[], DECK=PEACE.deck||[];
+const PDOM={mind:'#b6a7ff',relation:'#ff8fc7',culture:'#ffd9a0',economy:'#f2c14e',institution:'#6fa8ff',security:'#ff9d7a',technology:'#4fd6e8',ecology:'#57d68d',information:'#9fe6d6'};
+const DKEYS=Object.keys(PDOM), SCALES=['self','relation','community','nation','world'], PHASES=['foster','cultivate','sustain','develop'], HORIZ=['now','years','decades','generations'];
+const PBY=Object.fromEntries(PN.map(n=>[n.id,n]));
+const PENG={reflect:'Reflect',debias:'News de-biaser',dilemma:'Repeated dilemma',itt:'Ideological Turing test',grit:'Trust ledger (GRIT)',fermi:'Fermi estimate',breathe:'Breathe',premortem:'War pre-mortem',words:'Words for peace',veil:'Veil of ignorance',provenance:'Opinion provenance',superordinate:'Shared problems',slow:'Slow news',bridge:'Bridge statement'};
+const TAU=Math.PI*2;
+const dayIndex=()=>Math.floor(Date.now()/864e5);
+const pick=a=>a[Math.floor(Math.random()*a.length)];
+(function prepPeace(){ const by=f=>{const g={};PN.forEach(n=>{const k=f(n);(g[k]=g[k]||[]).push(n);});return Object.values(g);};
+  PN.forEach(n=>{n.tags=n.tags||[];n.play=n.play||{engine:'reflect',params:{}};});
+  [...PN].sort((a,b)=>DKEYS.indexOf(a.domain)-DKEYS.indexOf(b.domain)||a.id.localeCompare(b.id)).forEach((n,i)=>{n._o=i;});
+  by(n=>n.domain).forEach(g=>g.sort((a,b)=>a._o-b._o).forEach((n,k)=>{n._k=k;n._km=g.length;}));
+  by(n=>n.horizon).forEach(g=>g.sort((a,b)=>a._o-b._o).forEach((n,k)=>{n._h=k;n._hm=g.length;}));
+  by(n=>n.scale).forEach(g=>g.sort((a,b)=>a._o-b._o).forEach((n,k)=>{n._l=k;n._lm=g.length;}));
+  by(n=>n.domain+'|'+n.scale+'|'+n.horizon).forEach(g=>g.forEach((n,k)=>{n._c=k;n._cm=g.length;}));
+  PN.forEach(n=>{n._nb=PN.filter(m=>m!==n&&m.tags.some(t=>n.tags.includes(t))).map(m=>m.id);}); })();
+const PAIRS=[];PN.forEach((a,i)=>PN.slice(i+1).forEach(b=>{if(a.tags.filter(t=>b.tags.includes(t)).length>=2)PAIRS.push([a,b]);}));
+
+// Journal: one localStorage key, every read and write guarded (private windows and sandboxes can throw).
+const JKEY='peacelab.journal.v1';
+const STORE_OK=(()=>{try{const k='peacelab.probe';localStorage.setItem(k,'1');localStorage.removeItem(k);return true;}catch(e){return false;}})();
+function jload(){const base={entries:[],grit:[],slow:[],prov:[],tray:[]};try{const j=JSON.parse(localStorage.getItem(JKEY)||'null');if(j&&typeof j==='object'){for(const k of Object.keys(base))if(Array.isArray(j[k]))base[k]=j[k];}}catch(e){}base.tray=base.tray.filter(id=>PBY[id]).slice(0,5);return base;}
+let J=jload();
+function jsave(){try{localStorage.setItem(JKEY,JSON.stringify(J));return true;}catch(e){return false;}}
+function jadd(kind,node,text){ if(!String(text||'').trim()) return null; J.entries.unshift({t:new Date().toISOString(),kind,node:node||null,text:String(text).slice(0,8000)}); return jsave(); }
+const SAVED_NOTE='Saved in this browser — export to keep it.';
+const savedMsg=ok=>ok===null?'Write something first.':ok?SAVED_NOTE:'This browser blocks storage here. It is kept until you close the page; use Journal → Copy to keep it.';
+const say=(box,sel,msg)=>{const e=box.querySelector(sel);if(e)e.textContent=msg;};
+
+// Optional claude.ai capabilities. On GitHub Pages there is no window.claude, so none of this runs.
+let SAMPLE=null, DL=null;
+(async()=>{ const use=window.claude&&typeof window.claude.use==='function'?window.claude.use.bind(window.claude):null; if(!use) return;
+  try{ DL=(await use('downloads'))||null; }catch(e){ DL=null; }
+  try{ SAMPLE=(await use('sample'))||null; if(SAMPLE) document.body.classList.add('has-sample'); }catch(e){ SAMPLE=null; } })();
+function copyText(text,st){ const fallback=()=>{ if(!st) return; st.innerHTML='Copy this text:'; const ta=document.createElement('textarea'); ta.className='copybox'; ta.value=text; ta.readOnly=true; st.appendChild(ta); ta.focus(); ta.select(); };
+  try{ if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(()=>{if(st)st.textContent='Copied to clipboard.';},fallback); return; } }catch(e){} fallback(); }
+async function saveFile(name,text,st){
+  if(DL){ try{ await DL.save({filename:name,data:text}); if(st) st.textContent='Saved '+name+'.'; return; }
+    catch(e){ if(e&&e.code==='declined'){ if(st) st.textContent='Download declined.'; return; } } }
+  if(!window.claude){ try{ const u=URL.createObjectURL(new Blob([text],{type:'text/markdown;charset=utf-8'})); const a=document.createElement('a'); a.href=u; a.download=name; document.body.appendChild(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(u),4000); if(st) st.textContent='Downloaded '+name+'.'; return; }catch(e){} }
+  copyText(text,st); }
+
+/* ---------- Peace Lab: lenses and morphs ---------- */
+const LENSES={
+ globe:{label:'Globe',hint:'Globe: a Fibonacci sphere. Each domain forms a band.',pos(n){const N=PN.length,y=1-2*(n._o+.5)/N,r=Math.sqrt(Math.max(0,1-y*y)),a=n._o*2.399963;return {x:Math.cos(a)*r*1.2,y:y*1.2,z:Math.sin(a)*r*1.2};}},
+ lotus:{label:'Lotus',hint:'Lotus: one petal per domain. It slowly opens and closes.',pos(n,t){const a0=DKEYS.indexOf(n.domain)/DKEYS.length*TAU,u=(n._k+1)/(n._km+1),open=reduce?.75:.6+.4*Math.sin(t/3800),phi=(.3+open*1.05)*(.55+.45*u),r=.25+u*1.15,w=Math.sin(u*Math.PI)*.2*(n._k%2?1:-1),rho=r*Math.sin(phi);
+   return {x:Math.cos(a0)*rho-Math.sin(a0)*w,y:-.45+r*Math.cos(phi),z:Math.sin(a0)*rho+Math.cos(a0)*w};}},
+ torus:{label:'Torus of practice',hint:'Torus: around the ring, foster → cultivate → sustain → develop. Around the tube, self → world.',pos(n){const th=(PHASES.indexOf(n.phase)+.12+.76*hash(n.id))/4*TAU,ph=SCALES.indexOf(n.scale)/5*TAU+(hash(n.id+'s')-.5)*.6,R=1.05,r=.42;return {x:(R+r*Math.cos(ph))*Math.cos(th),y:r*Math.sin(ph),z:(R+r*Math.cos(ph))*Math.sin(th)};}},
+ spiral:{label:'Spiral of time',hint:'Spiral: height is the horizon, from now at the bottom to generations at the top.',pos(n){const s=HORIZ.indexOf(n.horizon)+(n._h+.5)/n._hm,a=s*TAU;return {x:Math.cos(a)*.95,y:-1.15+s*.58,z:Math.sin(a)*.95};}},
+ ladder:{label:'Ladder of scale',hint:'Ladder: stacked rings, from self at the bottom to the world at the top.',pos(n){const L=SCALES.indexOf(n.scale),a=n._l/n._lm*TAU+L*.4,r=.3+L*.2;return {x:Math.cos(a)*r,y:-1+L*.5,z:Math.sin(a)*r};}},
+ lattice:{label:'Lattice',hint:'Lattice: X = domain, Y = scale, Z = horizon.',pos(n){const a=n._cm>1?n._c/n._cm*TAU:0,o=n._cm>1?.07:0;return {x:-1.2+DKEYS.indexOf(n.domain)*.3+Math.cos(a)*o,y:-.9+SCALES.indexOf(n.scale)*.45+Math.sin(a)*o,z:-.9+HORIZ.indexOf(n.horizon)*.6};}},
+};
+const LAB={lens:'globe',sel:null,threads:false,tab:'play',pair:null,from:null,t0:0,dur:1200,scatter:false,breath:null,after:null,contQ:null};
+PN.forEach(n=>{n.cur=LENSES.globe.pos(n,0);n._sc=n.cur;});
+const ease=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+// A morph always starts from where the points are now, so a new lens can interrupt one mid-flight.
+function morph(dur){LAB.from=PN.map(n=>({x:n.cur.x,y:n.cur.y,z:n.cur.z}));LAB.t0=performance.now();LAB.dur=reduce?0:dur;}
+function setLens(k){ if(!LENSES[k]) return; LAB.lens=k; LAB.scatter=false; morph(1200); renderLensChips(); }
+function shake(){ PN.forEach(n=>{n._sc={x:(Math.random()-.5)*3.4,y:(Math.random()-.5)*2.6,z:(Math.random()-.5)*3.4};}); LAB.scatter=true; morph(480); }
+function stepMorph(now){ const L=LENSES[LAB.lens]; let e=1;
+  if(LAB.from) e=ease(LAB.dur?clamp((now-LAB.t0)/LAB.dur,0,1):1);
+  PN.forEach((n,i)=>{const tg=LAB.scatter?n._sc:L.pos(n,now); if(LAB.from){const f=LAB.from[i];n.cur={x:f.x+(tg.x-f.x)*e,y:f.y+(tg.y-f.y)*e,z:f.z+(tg.z-f.z)*e};} else n.cur=tg;});
+  if(LAB.from&&e>=1){ LAB.from=null; if(LAB.scatter){ LAB.scatter=false; morph(1400); } }
+  return LAB.scatter?0:LAB.from?e:1; }
+const BREATH_MS=60000/5.5; // about 5.5 breaths a minute
+function breathK(now){ if(!LAB.breath||reduce) return 1; const ph=((now-LAB.breath.t0)%BREATH_MS)/BREATH_MS; return 1+.09*Math.sin(ph*TAU-Math.PI/2); }
+function startBreath(min,q,onEnd){ const now=performance.now(); LAB.breath={t0:now,end:min?now+min*60000:null,q:q||'',onEnd:onEnd||null}; lastOv=''; overlay(now); renderLensChips(); }
+function endBreath(done){ const b=LAB.breath; LAB.breath=null; lastOv=''; overlay(performance.now()); renderLensChips(); if(b&&done&&b.onEnd) b.onEnd(); }
+function fmtClock(ms){const s=Math.max(0,Math.ceil(ms/1000));return Math.floor(s/60)+':'+String(s%60).padStart(2,'0');}
+let lastOv='';
+function overlay(now){ const b=LAB.breath; let t='',q='';
+  if(b){ const ph=((now-b.t0)%BREATH_MS)/BREATH_MS; t=(ph<.5?'breathe in':'breathe out')+(b.end?' · '+fmtClock(b.end-now):''); q=b.q; }
+  const key=t+'|'+q; if(key===lastOv) return; lastOv=key; const bt=$('#breathText'),cq=$('#contQ'); bt.hidden=!t; bt.textContent=t; cq.hidden=!q; cq.textContent=q; }
+function guide(o,al){ const c=o.ctx; c.save(); c.globalAlpha=al; c.font='500 10px "IBM Plex Mono",monospace'; c.textAlign='center';
+  const txt=(s,p,col)=>{const q=o.proj(p);c.fillStyle=col||'rgba(231,235,245,.72)';c.fillText(String(s).toUpperCase(),q.x,q.y);};
+  const path=pts=>{c.strokeStyle='rgba(159,230,214,.2)';c.lineWidth=1;c.setLineDash([3,6]);c.beginPath();pts.forEach((p,i)=>{const q=o.proj(p);i?c.lineTo(q.x,q.y):c.moveTo(q.x,q.y);});c.stroke();c.setLineDash([]);};
+  const circ=(r,y,k=48)=>Array.from({length:k+1},(_,i)=>({x:Math.cos(i/k*TAU)*r,y,z:Math.sin(i/k*TAU)*r}));
+  const L=LAB.lens;
+  if(L==='lotus') DKEYS.forEach((d,i)=>{const a=i/DKEYS.length*TAU;txt(d,{x:Math.cos(a)*1.32,y:-.55,z:Math.sin(a)*1.32},PDOM[d]);});
+  if(L==='torus'){ path(circ(1.05,0,72)); PHASES.forEach((p,i)=>{const th=(i+.5)/4*TAU;txt(p,{x:Math.cos(th)*1.72,y:.02,z:Math.sin(th)*1.72});}); }
+  if(L==='spiral'){ path(Array.from({length:161},(_,i)=>{const s=i/40,a=s*TAU;return {x:Math.cos(a)*.95,y:-1.15+s*.58,z:Math.sin(a)*.95};})); HORIZ.forEach((h,i)=>txt(h,{x:0,y:-1.15+(i+.5)*.58,z:0})); }
+  if(L==='ladder') SCALES.forEach((s,i)=>{const r=.3+i*.2;path(circ(r,-1+i*.5));txt(s,{x:0,y:-1+i*.5+.06,z:0});});
+  if(L==='lattice'){ const O={x:-1.35,y:-1.05,z:-1.05},ax=b=>o.line(o.proj(O),o.proj(b),'rgba(159,230,214,.35)',1);
+    ax({x:1.35,y:-1.05,z:-1.05});ax({x:-1.35,y:1.05,z:-1.05});ax({x:-1.35,y:-1.05,z:1.05});
+    DKEYS.forEach((d,i)=>txt(d.slice(0,5),{x:-1.2+i*.3,y:-1.22,z:-1.05},PDOM[d])); SCALES.forEach((s,i)=>txt(s,{x:-1.62,y:-.9+i*.45,z:-1.05})); HORIZ.forEach((h,i)=>txt(h,{x:-1.35,y:-1.22,z:-.9+i*.6+.1})); }
+  c.restore(); }
+const peace=new Orbit($("#peace"),{yaw:.5,pitch:.28,k:1.5,y0:0,draw(o){
+  const c=o.ctx,now=performance.now(),g=stepMorph(now),bk=breathK(now);
+  if(LAB.breath&&!o.drag) o.yaw+=o.spin?-.0013:.0009; // slower, steadier turn while breathing
+  if(g>.02) guide(o,g);
+  const P=new Map(); PN.forEach(n=>{const p=n.cur;P.set(n.id,{n,...o.proj({x:p.x*bk,y:p.y*bk,z:p.z*bk})});});
+  if(LAB.threads) PAIRS.forEach(([a,b])=>o.line(P.get(a.id),P.get(b.id),'rgba(159,230,214,.08)',1));
+  const sel=LAB.sel&&PBY[LAB.sel]; if(sel) sel._nb.forEach(id=>o.line(P.get(sel.id),P.get(id),PDOM[sel.domain]+'80',1));
+  if(LAB.pair){const a=P.get(LAB.pair[0]),b=P.get(LAB.pair[1]);if(a&&b){c.setLineDash([4,5]);o.line(a,b,'rgba(231,235,245,.75)',1.5);c.setLineDash([]);}}
+  const tray=new Set(J.tray);
+  [...P.values()].sort((a,b)=>a.z-b.z).forEach(q=>{ const n=q.n,isSel=n.id===LAB.sel,hov=o.hover==='peace:'+n.id,inPair=!!(LAB.pair&&LAB.pair.includes(n.id)),col=PDOM[n.domain]||'#ccc';
+    let r=(n.conf==='ok'?4.2:3.2)*q.sc*(isSel?1.5:1)*(hov?1.25:1); if(inPair) r*=1.3+.3*Math.sin(now/170);
+    const gl=c.createRadialGradient(q.x,q.y,0,q.x,q.y,r*3.2); gl.addColorStop(0,col+'55'); gl.addColorStop(1,col+'00'); c.fillStyle=gl; c.beginPath(); c.arc(q.x,q.y,r*3.2,0,7); c.fill();
+    if(n.conf==='ok'){c.fillStyle=col;c.beginPath();c.arc(q.x,q.y,r,0,7);c.fill();} else {c.strokeStyle=col;c.lineWidth=1.5;c.beginPath();c.arc(q.x,q.y,r,0,7);c.stroke();}
+    if(isSel||hov||inPair||tray.has(n.id)){ c.strokeStyle='#e7ebf5'; c.lineWidth=1; c.beginPath(); c.arc(q.x,q.y,r+4,0,7); c.stroke();
+      c.font='600 12px "IBM Plex Sans",sans-serif'; c.textAlign='center'; c.fillStyle='#e7ebf5'; c.fillText(n.name.length>36?n.name.slice(0,35)+'…':n.name,q.x,q.y-r-8); }
+    o.items.push({x:q.x,y:q.y,key:'peace:'+n.id}); });
+  overlay(now);
+},onPick(it){ selectPeace(it.key.split(':')[1]); }});
+peace.controls($('#peaceBtns'));
+function renderLensChips(){
+  $('#lensChips').innerHTML=Object.entries(LENSES).map(([k,l])=>`<button class="chip" data-lens="${k}" aria-pressed="${LAB.lens===k}">${esc(l.label)}</button>`).join('')
+   +`<span class="sep" aria-hidden="true"></span><button class="chip" data-act="shake">Shake</button><button class="chip" data-act="breathe" aria-pressed="${!!LAB.breath}">Breathe</button><button class="chip" data-act="threads" aria-pressed="${LAB.threads}">Threads</button>`;
+  $('#lensHint').textContent=LENSES[LAB.lens].hint+(LAB.threads?' Threads link approaches that share two or more tags.':''); }
+$('#lensChips').addEventListener('click',e=>{ const b=e.target.closest('button'); if(!b) return;
+  if(b.dataset.lens) setLens(b.dataset.lens);
+  else if(b.dataset.act==='shake') shake();
+  else if(b.dataset.act==='breathe'){ if(LAB.breath) endBreath(false); else startBreath(0,''); }
+  else if(b.dataset.act==='threads'){ LAB.threads=!LAB.threads; renderLensChips(); } });
+$('#peaceLegend').innerHTML=DKEYS.map(d=>`<span><i class="dot" style="background:${PDOM[d]}"></i>${esc(d)} <span style="color:var(--faint)">${PN.filter(n=>n.domain===d).length}</span></span>`).join('')+'<span><i class="dot" style="border:1.5px solid var(--muted)"></i>hollow = check source</span>';
+
+/* ---------- Peace Lab: cards and side panel ---------- */
+const srcLinks=n=>link(n.url,n.src)+(n.refs||[]).map(r=>link(r.url,r.label)).join('');
+const flagHTML=n=>n.conf==='check'?'<span class="flag">Check source: not yet verified against the page</span>':'';
+const metaHTML=n=>`<div class="meta"><span class="tag" style="color:${PDOM[n.domain]}">${esc(n.domain)}</span><span class="tag">${esc(n.scale)}</span><span class="tag">${esc(n.phase)}</span><span class="tag">${esc(n.horizon)}</span></div>`;
+CARD.peace=n=>`<h4>${esc(n.name)}</h4>${metaHTML(n)}<p>${esc(n.what)}</p><p class="muted">${esc(n.why)}</p><div class="links">${srcLinks(n)}</div>${flagHTML(n)}`;
+function selectPeace(id){ if(!PBY[id]) return; LAB.sel=id; LAB.tab='play'; renderLab(); }
+const pickerHTML=()=>`<label for="pPick">Choose an approach</label><select id="pPick"><option value="">${PN.length} approaches…</option>${DKEYS.map(d=>`<optgroup label="${esc(d)}">${PN.filter(n=>n.domain===d).map(n=>`<option value="${esc(n.id)}"${n.id===LAB.sel?' selected':''}>${esc(n.name)}${n.conf==='check'?' (check source)':''}</option>`).join('')}</optgroup>`).join('')}</select>`;
+function wirePicker(box){ const s=box.querySelector('#pPick'); if(s) s.onchange=()=>{ if(s.value) selectPeace(s.value); }; }
+const ENGINES={};
+const PANELS={
+ play(box){ const n=PBY[LAB.sel];
+  if(!n){ box.innerHTML=`<div class="pl"><div class="eyebrow">Peace Lab</div><h3>Pick an approach to play with</h3><p class="note">Every approach has a mini-prototype that runs right here. Tap a point in the shape, choose from the list, or let chance pick.</p>${pickerHTML()}<div class="row2"><button class="btn" id="pRand">Surprise me</button></div><p class="note">${STORE_OK?SAVED_NOTE:'This browser blocks storage here, so notes last until you close the page. Export them from the Journal.'}</p></div>`;
+    wirePicker(box); box.querySelector('#pRand').onclick=()=>selectPeace(pick(PN).id); return; }
+  box.innerHTML=`<div class="pl">${pickerHTML()}<div class="eyebrow" style="color:${PDOM[n.domain]}">${esc(n.domain)} · plays as ${esc(PENG[n.play.engine]||n.play.engine)}</div><h3>${esc(n.name)}</h3>${metaHTML(n)}<p>${esc(n.what)}</p>
+    <details><summary>Why it might work, and the smallest test</summary><p>${esc(n.why)}</p><p><b>MVP:</b> ${esc(n.mvp)}</p></details><p class="q">${esc(n.q)}</p><div class="links">${srcLinks(n)}</div>${flagHTML(n)}
+    <div class="row2"><button class="btn" id="pAdd">${J.tray.includes(n.id)?'✓ In Compose tray':'+ Compose'}</button>${PANELS.collide?'<button class="btn" id="pCol">Collide</button>':''}<button class="btn deepen" id="pDeep">Deepen with Claude</button></div><div class="deep-out" id="deepOut" hidden></div><div id="engine"></div></div>`;
+  wirePicker(box); box.querySelector('#pAdd').onclick=()=>addTray(n.id); const pc=box.querySelector('#pCol'); if(pc) pc.onclick=()=>collide(n.id);
+  box.querySelector('#pDeep').onclick=()=>deepen(n,box.querySelector('#deepOut'));
+  (ENGINES[n.play.engine]||ENGINES.reflect)(n,n.play.params||{},box.querySelector('#engine')); },
+};
+const TABS=[['play','Play'],['collide','Collide'],['compose','Compose MVP'],['contemplate','Contemplate'],['practices','Practices'],['journal','Journal']];
+function renderLab(){ const tabs=TABS.filter(([k])=>PANELS[k]); if(!PANELS[LAB.tab]) LAB.tab='play';
+  $('#labTabs').innerHTML=tabs.map(([k,l])=>`<button role="tab" data-tab="${k}" aria-selected="${LAB.tab===k}">${l}${k==='compose'&&J.tray.length?` <span class="n">${J.tray.length}</span>`:''}${k==='journal'&&J.entries.length?` <span class="n">${J.entries.length}</span>`:''}</button>`).join('');
+  PANELS[LAB.tab]($('#labPanel')); }
+$('#labTabs').addEventListener('click',e=>{ const b=e.target.closest('[data-tab]'); if(b){ LAB.tab=b.dataset.tab; renderLab(); } });
+function addTray(id){ if(!J.tray.includes(id)){ if(J.tray.length>=5){ LAB.tab='compose'; renderLab(); say($('#labPanel'),'#cSt','The tray holds five. Remove one first.'); return; } J.tray.push(id); jsave(); } renderLab(); }
+async function deepen(n,out){ if(!SAMPLE||!out) return; out.hidden=false; out.textContent='Thinking…';
+  const prompt=`You are a thoughtful thinking partner in a "Peace Lab". The viewer is exploring this approach to peace:\nName: ${n.name}\nWhat: ${n.what}\nWhy it might work: ${n.why}\nSmallest test: ${n.mvp}\nQuestion: ${n.q}\nSource: ${n.src}\n\nReply in plain text, under 180 words: (1) one strongest objection to this approach, (2) one way to combine it with an approach from a different field, (3) one off-screen exercise for this week. Do not invent statistics or quotes.`;
+  try{ const r=await SAMPLE(prompt,{onText:({text})=>{out.textContent=text;}}); out.textContent=(r&&r.text)||out.textContent; }
+  catch(e){ const code=e&&e.code; out.textContent=code==='rate_limited'?'Claude is busy. Try again in a minute.':'Claude is not available here.'; if(code==='not_granted'){ SAMPLE=null; document.body.classList.remove('has-sample'); } } }
+ENGINES.reflect=(n,p,box)=>{ const prompt=p.prompt||n.q;
+  box.innerHTML=`<div class="eng"><h4>Reflect</h4><p>${esc(prompt)}</p><textarea id="eTxt" aria-label="Your reflection" placeholder="Write freely. Nothing leaves this browser."></textarea><div class="row2"><button class="btn" id="eSave">Save to journal</button><span class="note" id="eSt"></span></div></div>`;
+  box.querySelector('#eSave').onclick=()=>{ const t=box.querySelector('#eTxt').value; say(box,'#eSt',savedMsg(jadd('reflect',n.id,t.trim()?prompt+'\n\n'+t:''))); renderTabsOnly(); }; };
+function renderTabsOnly(){ const sel=LAB.tab; $('#labTabs').querySelectorAll('[data-tab]').forEach(b=>{ const k=b.dataset.tab; if(k==='journal'||k==='compose'){ const n=k==='journal'?J.entries.length:J.tray.length; b.innerHTML=TABS.find(t=>t[0]===k)[1]+(n?` <span class="n">${n}</span>`:''); } b.setAttribute('aria-selected',k===sel); }); }
+
+/* ---------- Peace Lab: text tools shared by the de-biaser, ITT and bridge engines ---------- */
+const reWords=ws=>new RegExp('\\b('+ws.map(w=>w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&').replace(/ /g,'\\s+')).join('|')+')\\b','gi');
+const POSW=['heroic','heroically','glorious','historic','triumph','triumphant','landmark','brave','bravely','decisive','resolute','visionary'];
+const NEGW=['regime','aggression','aggressive','aggressor','provocation','provocative','propaganda','puppet','thugs','terrorist','terrorists','extremist','extremists','radical','hardline','hawkish','brutal','crackdown','slammed','blasted','lashed out','rams','scheme','plot','so-called','admitted','insisted','defiant','bullying','hegemony','hegemonic','reckless','menace','sinister','lies','lying','shocking','outrageous','humiliating','humiliation','invasion','warmonger','warmongers','illegitimate','staged','evil','traitor','traitors','enemy','enemies','unanswered'];
+const RE_LOADED=reWords(NEGW.concat(POSW)), RE_POS=reWords(POSW);
+const UNATTR=['sources say','sources said','according to sources','reportedly','it is believed','it is understood','allegedly','some say','critics say','experts say','observers say','analysts say','officials said','officials say','officials called','insiders','people familiar with','is said to','unconfirmed','anonymous'];
+const RE_UNATTR=reWords(UNATTR), RE_UNATTR1=new RegExp(RE_UNATTR.source,'i');
+const RE_NUM=/\b\d[\d,.]*(\s?(%|percent|per cent|million|billion|thousand))?/gi;
+const RE_QUOTE=/[“"«„][^“”"«»„]{3,300}[”"»“]/g;
+const SHARED=['safety','safe','children','child','family','families','fair','fairness','future','dignity','security','health','peace','home','homes','work','jobs','respect','freedom','community','honest','honesty','together','both','shared','common','neighbours','neighbors','water','food','trust','grandchildren','lives','life','everyone','all of us'];
+const RE_SHARED=reWords(SHARED), RE_USTHEM=reWords(['they always','they never','those people','enemy','enemies','regime','evil','traitor','traitors','us versus them','never']);
+const STOP=new Set('the a an and or but of to in on at by for with from as is are was were be been being this that these those it its their there they them he she his her we our you your not no yes than then so such into over after before about also has have had will would can could may might said says say which who whom whose what when where while during both each other more most some any all one two three four five near within'.split(' '));
+const norm=t=>String(t||'').replace(/\s+/g,' ').trim();
+const sentences=t=>(norm(t).match(/[^.!?]+[.!?]*["”»]?/g)||[]).map(s=>s.trim()).filter(s=>s.length>2);
+const cwords=s=>new Set((s.toLowerCase().match(/[\p{L}\d]+/gu)||[]).filter(w=>w.length>3&&!STOP.has(w)));
+const jacc=(a,b)=>{let n=0;a.forEach(w=>{if(b.has(w))n++;});return n/((a.size+b.size-n)||1);};
+const countRe=(re,T)=>(T.match(re)||[]).length;
+function markRanges(T,extra){ const R=[]; const add=(re,cls)=>{re.lastIndex=0;let m;while((m=re.exec(T))){R.push([m.index,m.index+m[0].length,cls]);if(!m[0].length)re.lastIndex++;}};
+  add(RE_QUOTE,'qt'); add(RE_UNATTR,'un'); add(RE_LOADED,'ld'); add(RE_NUM,'nm'); if(extra) add(extra,'ok');
+  const reE=/\b[A-Z][a-z]+(?:[\s-][A-Z][a-z]+)*/g; let m; while((m=reE.exec(T))){ const b=T.slice(0,m.index).trimEnd(); if(b&&!/[.!?:"“”«(]$/.test(b)) R.push([m.index,m.index+m[0].length,'en']); }
+  R.sort((a,b)=>a[0]-b[0]||b[1]-a[1]); const out=[]; let end=-1; R.forEach(r=>{if(r[0]>=end){out.push(r);end=r[1];}}); return out; }
+function hlHTML(T,R){ let h='',i=0; R.forEach(([a,b,c])=>{h+=esc(T.slice(i,a))+`<mark class="${c}">${esc(T.slice(a,b))}</mark>`;i=b;}); return h+esc(T.slice(i)); }
+const MKEY='<div class="mkey"><span><mark class="ld">loaded word</mark></span><span><mark class="un">unattributed</mark></span><span><mark class="nm">number</mark></span><span><mark class="qt">quote</mark></span><span><mark class="en">name</mark></span></div>';
+const RUNG_RULES=[['A',/satellite|imagery|sensor|seismic|radar|transponder|ship-tracking|tracking data/i],['B',/statistic|data show|customs|census|per ?cent|%/i],['C',/treaty|\blaw\b|court|resolution|sanction|ruling|legislation/i],['F',/state media|state television|state tv|news agency/i],['E',/study|researchers|university|survey|poll|independent monitor/i],['D',/ministry|spokes|official|government|agency|statement|\bsaid\b/i]];
+function rungOf(s){ if(RE_UNATTR1.test(s)) return '?'; for(const [k,re] of RUNG_RULES) if(re.test(s)) return k; return null; }
+const rkHTML=k=>k==='?'?'<span class="rk" style="background:var(--warn)" title="Unattributed">?</span>':`<span class="rk" style="background:${EV[k].hex}" title="${EV[k].name}">${k}</span>`;
+
+// Made-up sample texts: fictional countries, fictional outlets, fictional spokespeople. No real outlets, people or quotes.
+const DEBIAS_SAMPLE={note:'Made-up example. A fictional collision between two fictional countries, Northland and Southland, as three fictional outlets might report it. No real outlets, people, places or quotes.',
+ v:['Reckless Southland coast guard rams cargo ship in the Amber Strait. The regime\'s patrol boat slammed into the Northland freighter Brightwater on Tuesday, sources say, in what officials called a shocking provocation. Twelve crew were injured. "This aggression will not go unanswered," a Northland ministry spokesperson said. Satellite imagery reportedly shows the patrol boat changing course minutes before the collision.',
+    'Northland freighter strikes coast-guard patrol in Southland waters. The freighter Brightwater ignored repeated radio warnings before colliding with a Southland coast-guard patrol on Tuesday, the Southland Maritime Agency said. Three officers were hurt. "Our crew acted heroically to protect our waters," the agency\'s statement said. Experts say the Northland side has staged similar incidents before.',
+    'Two vessels collide in the Amber Strait; both sides trade blame. A cargo ship and a coast-guard patrol collided in the Amber Strait on Tuesday. Northland officials said 12 crew members were injured; Southland officials said 3 officers were hurt. Each side says the other changed course. Ship-tracking data published by an independent monitor shows both vessels within 200 metres at 14:05 local time. The two governments last used their maritime hotline two years ago.'],
+ h:['Reckless Southland regime rams Northland ship in shocking provocation','Northland freighter strikes Southland patrol after ignoring warnings','Two vessels collide in Amber Strait; both sides trade blame']};
+
+/* ---------- Peace Lab: play engines (batch 1) ---------- */
+ENGINES.debias=(n,p,box)=>{ const mode=p.mode||'full', mirror=mode==='mirror';
+  const title={full:'Form your own opinion',mirror:'Mirror headlines',omission:'Omission diff',accuracy:'Accuracy check'}[mode]||'Form your own opinion';
+  box.innerHTML=`<div class="eng"><h4>${title}</h4><ol class="steps">
+    <li><b>Write first.</b> Your take before you read any version, so nothing below can anchor you.<textarea id="dTake" aria-label="Your take, written first" placeholder="What do you think happened, and why?"></textarea></li>
+    <li><b>Paste ${mirror?'headlines':'two or three versions'}</b> of the same story from different outlets.<div class="row2"><button class="btn" id="dSample">Load sample (made-up)</button></div><p class="made-up" id="dNote" hidden></p>
+      ${[0,1,2].map(i=>mirror?`<input type="text" id="dV${i}" aria-label="Headline ${i+1}" placeholder="Headline from outlet ${i+1}${i===2?' (optional)':''}">`:`<textarea id="dV${i}" aria-label="Version ${'ABC'[i]}" placeholder="Version ${'ABC'[i]}${i===2?' (optional)':''}"></textarea>`).join('')}</li>
+    ${mode==='accuracy'?'<li><b>Before you share:</b> how accurate is version A, from 0 to 100? <input type="range" id="dAcc" min="0" max="100" value="50" aria-label="Accuracy estimate"><span class="mono" id="dAccV">50</span></li>':''}
+    <li><div class="row2"><button class="btn" id="dGo">Analyze</button><span class="note" id="dSt"></span></div></li></ol><div id="dOut" class="pl"></div></div>`;
+  const q=s=>box.querySelector(s);
+  if(q('#dAcc')) q('#dAcc').oninput=()=>{q('#dAccV').textContent=q('#dAcc').value;};
+  q('#dSample').onclick=()=>{ (mirror?DEBIAS_SAMPLE.h:DEBIAS_SAMPLE.v).forEach((t,i)=>{q('#dV'+i).value=t;}); const nt=q('#dNote'); nt.hidden=false; nt.textContent=DEBIAS_SAMPLE.note; };
+  q('#dGo').onclick=()=>{ const take=q('#dTake').value.trim(); if(!take){ say(box,'#dSt','Write your take first. That is the point.'); q('#dTake').focus(); return; }
+    const V=[0,1,2].map(i=>({label:mirror?'Headline '+(i+1):'Version '+'ABC'[i],T:norm(q('#dV'+i).value)})).filter(v=>v.T);
+    if(V.length<(mirror?2:2)){ say(box,'#dSt','Paste at least two versions.'); return; } say(box,'#dSt','');
+    let h=MKEY;
+    V.forEach(v=>{ const ld=countRe(RE_LOADED,v.T),pos=countRe(RE_POS,v.T); v.ld=ld; v.pos=pos;
+      h+=`<div><b>${esc(v.label)}</b><div class="counts"><span>loaded ${ld}${pos?` (${pos} glowing)`:''}</span><span>unattributed ${countRe(RE_UNATTR,v.T)}</span><span>numbers ${countRe(RE_NUM,v.T)}</span><span>quotes ${countRe(RE_QUOTE,v.T)}</span></div><div class="hl">${hlHTML(v.T,markRanges(v.T))}</div></div>`; });
+    if(mirror){ const W=V.map(v=>cwords(v.T));
+      h+=`<div><h4>Tone, side by side</h4>${V.map((v,i)=>{const uniq=[...W[i]].filter(w=>W.every((o,j)=>j===i||!o.has(w)));return `<p class="note"><b>${esc(v.label)}</b>: ${v.ld} loaded word${v.ld===1?'':'s'}${v.pos?`, ${v.pos} glowing`:''}. Only here: ${uniq.length?esc(uniq.join(', ')):'nothing'}.</p>`;}).join('')}<p class="note">The words only one outlet uses are its frame. Which frame did you meet first?</p></div>`; }
+    else { const S=V.map(v=>sentences(v.T).map(s=>({s,w:cwords(s)}))); const nums=V.map(v=>new Set((v.T.match(/\b\d[\d,.]*/g)||[])));
+      h+=`<div><h4>Omission diff</h4>${V.map((v,i)=>{const only=S[i].filter(x=>x.w.size>=3&&S.every((o,j)=>j===i||!o.some(y=>jacc(x.w,y.w)>=.18)));const nOnly=[...nums[i]].filter(x=>nums.every((o,j)=>j===i||!o.has(x)));
+        return `<p class="note"><b>Only in ${esc(v.label)}</b>${nOnly.length?` · numbers only here: ${esc(nOnly.join(', '))}`:''}</p>${only.length?`<ul class="note" style="margin:0;padding-left:18px">${only.map(x=>`<li>${esc(x.s)}</li>`).join('')}</ul>`:'<p class="note">Nothing that the others leave out.</p>'}`;}).join('')}</div>`;
+      h+=`<div><h4>Claim ladder</h4><p class="note">An automatic guess at each claim's evidence rung (A sensor … F state media; ? = unattributed). Your judgment overrides it.</p><div class="claims">${V.map((v,i)=>S[i].map(x=>{const k=rungOf(x.s);return k?`<div>${rkHTML(k)}<span>${esc(v.label.slice(-1))}: ${esc(x.s.length>170?x.s.slice(0,169)+'…':x.s)}</span></div>`:'';}).join('')).join('')}</div></div>`; }
+    if(mode==='accuracy') h+=`<p class="note">You rated version A at ${esc(q('#dAcc').value)}/100 before sharing. In surveys and a field experiment on Twitter, simply prompting people to think about accuracy improved the quality of what they shared (Pennycook et al. 2021).</p>`;
+    h+=`<div><h4>Revisit</h4><p>Read your first take again. Did your view change, harden, or gain nuance?</p><div class="row2" id="dRv">${['changed','hardened','gained nuance','stayed the same'].map(k=>`<button class="chip" data-v="${k}" aria-pressed="false">${k}</button>`).join('')}</div><textarea id="dWhy" aria-label="What moved you" placeholder="What moved you, or what held you in place?"></textarea><div class="row2"><button class="btn" id="dSave">Save to journal</button><span class="note" id="dSt2"></span></div></div>`;
+    const out=q('#dOut'); out.innerHTML=h; let verdict='';
+    out.querySelector('#dRv').onclick=e=>{const b=e.target.closest('[data-v]');if(!b)return;verdict=b.dataset.v;out.querySelectorAll('#dRv .chip').forEach(c=>c.setAttribute('aria-pressed',c===b));};
+    out.querySelector('#dSave').onclick=()=>{ say(out,'#dSt2',savedMsg(jadd('debias',n.id,`My first take: ${take}\n\nVersions compared: ${V.map(v=>v.label).join(', ')}.\nAfter comparing, my view ${verdict||'(not marked)'}.\n${out.querySelector('#dWhy').value}`))); renderTabsOnly(); }; }; };
+
+const STRATS={tft:{name:'Tit-for-tat',f:(m,t)=>t.length?t[t.length-1]:'C'},gtft:{name:'Generous tit-for-tat',f:(m,t)=>t.length&&t[t.length-1]==='D'&&Math.random()>1/3?'D':'C'},grudger:{name:'Grudger',f:(m,t)=>t.includes('D')?'D':'C'},alld:{name:'Always defect',f:()=>'D'},rand:{name:'Random',f:()=>Math.random()<.5?'C':'D'},allc:{name:'Always cooperate',f:()=>'C'}};
+const GAMES={pd:{name:"Prisoner's dilemma",C:'Cooperate',D:'Defect',pay:{CC:[3,3],CD:[0,5],DC:[5,0],DD:[1,1]}},stag:{name:'Stag hunt',C:'Hunt stag',D:'Hunt hare',pay:{CC:[4,4],CD:[0,2],DC:[2,0],DD:[2,2]}}};
+ENGINES.dilemma=(n,p,box)=>{ const G=GAMES[p.game]||GAMES.pd; let opp='tft',me=[],them=[],score=[0,0];
+  box.innerHTML=`<div class="eng"><h4>${G.name}</h4><p class="note">Payoffs per round (you, them): both ${G.C.toLowerCase()} ${G.pay.CC.join('/')}, you ${G.C.toLowerCase()} and they don't ${G.pay.CD.join('/')}, the reverse ${G.pay.DC.join('/')}, neither ${G.pay.DD.join('/')}. Play 10 rounds.</p>
+    <label for="gOpp">Opponent</label><select id="gOpp">${Object.entries(STRATS).map(([k,s])=>`<option value="${k}">${s.name}</option>`).join('')}</select>
+    <div class="row2"><button class="btn" id="gC">${G.C}</button><button class="btn" id="gD">${G.D}</button><button class="btn" id="gR">New game</button><span class="mono" id="gS"></span></div><div id="gH"></div><div id="gEnd"></div>
+    <h4>Axelrod's tournament</h4><p class="note">Every strategy plays every other (and itself) for 200 rounds.</p><div class="row2"><label><input type="checkbox" id="gNoise"> 5% mistakes</label><button class="btn" id="gT">Run tournament</button></div><div id="gTour"></div></div>`;
+  const q=s=>box.querySelector(s);
+  const draw=()=>{ const sq=(a,col)=>`<i style="background:${a==='C'?'var(--ok)':'var(--bad)'}" title="${a==='C'?G.C:G.D}">${a}</i>`;
+    q('#gH').innerHTML=me.length?`<div class="note">You</div><div class="hist">${me.map(a=>sq(a)).join('')}</div><div class="note">${STRATS[opp].name}</div><div class="hist">${them.map(a=>sq(a)).join('')}</div>`:'';
+    q('#gS').textContent=`round ${me.length}/10 · you ${score[0]} · them ${score[1]}`; const done=me.length>=10; q('#gC').disabled=done; q('#gD').disabled=done;
+    q('#gEnd').innerHTML=done?`<p class="note">${score[0]>=score[1]?'You came out level or ahead.':'They came out ahead.'} Joint total ${score[0]+score[1]} of a possible ${G.pay.CC[0]*20}.</p><textarea id="gTxt" aria-label="Reflection" placeholder="What does 'forgiving' mean for a nation? When would you have cooperated again?"></textarea><div class="row2"><button class="btn" id="gSave">Save to journal</button><span class="note" id="gSt"></span></div>`:'';
+    if(done) q('#gSave').onclick=()=>{ say(box,'#gSt',savedMsg(jadd('dilemma',n.id,`${G.name} vs ${STRATS[opp].name}: you ${score[0]}, them ${score[1]}. Moves: ${me.join('')} / ${them.join('')}\n\n${q('#gTxt').value}`))); renderTabsOnly(); }; };
+  const play=a=>{ if(me.length>=10) return; const b=STRATS[opp].f(them,me); const pay=G.pay[a+b]; me.push(a); them.push(b); score[0]+=pay[0]; score[1]+=pay[1]; draw(); };
+  const reset=()=>{ me=[];them=[];score=[0,0];draw(); };
+  q('#gOpp').onchange=()=>{opp=q('#gOpp').value;reset();}; q('#gC').onclick=()=>play('C'); q('#gD').onclick=()=>play('D'); q('#gR').onclick=reset;
+  q('#gT').onclick=()=>{ const ks=Object.keys(STRATS),tot=Object.fromEntries(ks.map(k=>[k,0])),noise=q('#gNoise').checked;
+    const flip=a=>noise&&Math.random()<.05?(a==='C'?'D':'C'):a;
+    ks.forEach((a,i)=>ks.slice(i).forEach(b=>{ const ha=[],hb=[]; let sa=0,sb=0; for(let r=0;r<200;r++){ const x=flip(STRATS[a].f(ha,hb)),y=flip(STRATS[b].f(hb,ha)); const pay=G.pay[x+y]; ha.push(x); hb.push(y); sa+=pay[0]; sb+=pay[1]; } tot[a]+=sa; if(a!==b) tot[b]+=sb; }));
+    const rows=ks.sort((a,b)=>tot[b]-tot[a]),mx=tot[rows[0]]||1;
+    q('#gTour').innerHTML=rows.map((k,i)=>`<div class="hbar"><span>${i+1}. ${STRATS[k].name}</span><div class="track"><i style="width:${tot[k]/mx*100}%;background:var(--all)"></i></div><span class="n">${tot[k]}</span></div>`).join('')+'<p class="note">Strategies that are nice, retaliate, forgive and stay clear tend to do well, but the ranking depends on who else is in the field. Random and generous strategies vary by run.</p>'; };
+  draw(); };
+
+ENGINES.itt=(n,p,box)=>{ const RUB=[['values','I named what they value most'],['fears','I named what they fear'],['evidence','I gave their best evidence, not their worst'],['nod','Someone from that side would nod, not wince']];
+  box.innerHTML=`<div class="eng"><h4>Ideological Turing test</h4><label for="iTopic">Topic</label><input type="text" id="iTopic" value="${esc(p.topic||'')}"><label for="iTxt">Write the other side's view as they would put it</label><textarea id="iTxt" placeholder="We believe… because… What worries us is…"></textarea>
+    <div class="items">${RUB.map(([k,l])=>`<div><label><input type="checkbox" data-r="${k}"> ${l}</label></div>`).join('')}</div>
+    <div class="row2"><button class="btn" id="iScore">Score</button><button class="btn" id="iCopy">Copy for a real person</button><button class="btn" id="iSave">Save to journal</button></div><div class="note" id="iSt"></div><div id="iOut"></div></div>`;
+  const q=s=>box.querySelector(s);
+  const score=()=>{ const t=norm(q('#iTxt').value),ld=countRe(RE_LOADED,t),ticks=[...box.querySelectorAll('[data-r]')].filter(c=>c.checked).length,s=ticks+(t&&!ld?1:0);
+    q('#iOut').innerHTML=t?`<p class="note">Self-score ${s}/5. ${ld?`${ld} loaded word${ld>1?'s':''} found: would they use them about themselves?`:'No loaded words found.'}</p><div class="hl">${hlHTML(t,markRanges(t))}</div>`:''; return s; };
+  q('#iScore').onclick=score;
+  q('#iCopy').onclick=()=>{ const t=q('#iTxt').value.trim(); if(!t){say(box,'#iSt','Write their view first.');return;} copyText(`I tried to state your view on "${q('#iTopic').value}" as fairly as I can. Would you sign this? What did I miss or get wrong?\n\n${t}`,q('#iSt')); };
+  q('#iSave').onclick=()=>{ const t=q('#iTxt').value.trim(); say(box,'#iSt',savedMsg(jadd('itt',n.id,t?`Topic: ${q('#iTopic').value}\nSelf-score: ${score()}/5\n\n${t}`:''))); renderTabsOnly(); }; };
+
+function tension(){ let t=70; J.grit.slice().reverse().forEach(g=>{ if(g.recip===true) t-=10; else if(g.recip===false) t+=3; }); return clamp(t,0,100); }
+ENGINES.grit=(n,p,box)=>{
+  const draw=()=>{ const t=tension(),col=t>60?'var(--bad)':t>30?'var(--warn)':'var(--ok)';
+    box.innerHTML=`<div class="eng"><h4>Trust ledger (GRIT)</h4><p class="note">Osgood's rules: announce a small step in advance, carry it out whether or not it is returned, and keep going. Log steps by either side and mark whether they were reciprocated.</p>
+      <div><div class="row2" style="justify-content:space-between"><span class="note">Tension</span><span class="mono">${t}/100</span></div><div class="meter2" role="meter" aria-valuenow="${t}" aria-valuemin="0" aria-valuemax="100" aria-label="Tension"><i style="width:${t}%;background:${col}"></i></div></div>
+      <label for="gStep">A small step</label><input type="text" id="gStep" placeholder="e.g. Shared our exercise calendar a month ahead"><div class="row2"><select id="gWho" aria-label="Who took the step" style="width:auto"><option value="us">We took it</option><option value="them">They took it</option></select><button class="btn" id="gLog">Log step</button><span class="note" id="gSt"></span></div>
+      <div class="items">${J.grit.map((g,i)=>`<div><span>${esc(g.who==='them'?'They':'We')}: ${esc(g.step)} <span class="mono note">${fmtDate(g.t)}</span></span><div class="row2">${[['yes','Returned',true],['no','Not returned',false],['wait','Pending',null]].map(([k,l,v])=>`<button class="chip" data-i="${i}" data-k="${k}" aria-pressed="${g.recip===v}">${l}</button>`).join('')}<button class="x2" data-del="${i}" aria-label="Delete step">delete</button></div></div>`).join('')||'<p class="note">No steps yet.</p>'}</div></div>`;
+    const q=s=>box.querySelector(s);
+    q('#gLog').onclick=()=>{ const s=q('#gStep').value.trim(); if(!s) return; J.grit.unshift({t:new Date().toISOString(),step:s.slice(0,500),who:q('#gWho').value,recip:null}); const ok=jsave(); draw(); say(box,'#gSt',savedMsg(ok)); };
+    box.querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>{ J.grit[+b.dataset.i].recip={yes:true,no:false,wait:null}[b.dataset.k]; jsave(); draw(); });
+    box.querySelectorAll('[data-del]').forEach(b=>b.onclick=()=>{ J.grit.splice(+b.dataset.del,1); jsave(); draw(); }); };
+  draw(); };
+
+const FERMI={
+ workers:{title:'How many people do peace work today?',vars:[['pop','Adults in the world, billions (your figure)',1,8,5,.1],['per','Full-time peace workers per 100,000 adults (your guess)',1,300,20,1],['mult','How much your idea would multiply it',1,3,1.5,.1]],calc:v=>{const k=v.pop*1e9*v.per/1e5;return [`≈ ${big(k)} people`,`With your idea: ≈ ${big(k*v.mult)}`];}},
+ cost:{title:'The cost of violence against spending on peace',vars:[['mil','Global military spending, $ billions a year (your figure)',100,5000,2000,50],['share','Share you would redirect, %',0,20,1,.5],['prog','Cost of one peacebuilding programme, $ millions',1,200,20,1]],calc:v=>{const d=v.mil*1e9*v.share/100;return [`Redirected: $${big(d)} a year`,`≈ ${big(d/(v.prog*1e6))} programmes a year`];}},
+ keepers:{title:'Peacekeepers for a region',vars:[['pop','Population of the region, millions',1,100,10,1],['per','Peacekeepers per 1,000 people',.1,5,1,.1],['cost','Cost per peacekeeper a year, $ thousands',10,200,50,5]],calc:v=>{const k=v.pop*1e6*v.per/1000;return [`≈ ${big(k)} peacekeepers`,`≈ $${big(k*v.cost*1e3)} a year`];}}};
+ENGINES.fermi=(n,p,box)=>{ const M=FERMI[p.model]||FERMI.workers;
+  box.innerHTML=`<div class="eng"><h4>Fermi estimate: ${esc(M.title)}</h4><p class="note">These are your inputs, not data. Look up real figures from a source you trust (for military spending, SIPRI) and plug them in.</p>
+    ${M.vars.map(([k,l,mn,mx,v,st])=>`<label for="f_${k}">${esc(l)}: <span class="mono" id="fv_${k}">${v}</span></label><input type="range" id="f_${k}" min="${mn}" max="${mx}" step="${st}" value="${v}">`).join('')}
+    <div class="stat-row" id="fOut"></div><label for="fTxt">What would double it?</label><textarea id="fTxt"></textarea><div class="row2"><button class="btn" id="fSave">Save to journal</button><span class="note" id="fSt"></span></div></div>`;
+  const q=s=>box.querySelector(s); const vals=()=>Object.fromEntries(M.vars.map(([k])=>[k,+q('#f_'+k).value]));
+  const upd=()=>{ const v=vals(); M.vars.forEach(([k])=>{q('#fv_'+k).textContent=v[k];}); q('#fOut').innerHTML=M.calc(v).map(s=>`<div class="stat"><b style="font-size:20px">${esc(s)}</b></div>`).join(''); };
+  M.vars.forEach(([k])=>{q('#f_'+k).oninput=upd;}); upd();
+  q('#fSave').onclick=()=>{ const v=vals(),t=q('#fTxt').value; say(box,'#fSt',savedMsg(jadd('fermi',n.id,`${M.title}\nInputs: ${M.vars.map(([k,l])=>`${l} = ${v[k]}`).join('; ')}\nResult: ${M.calc(v).join('; ')}\n\n${t}`))); renderTabsOnly(); }; };
+
+ENGINES.breathe=(n,p,box)=>{ let min=p.minutes||5; const phrase=p.phrase||n.q;
+  const after=LAB.after&&LAB.after.id===n.id;
+  box.innerHTML=`<div class="eng"><h4>Breathe</h4><p class="q">${esc(phrase)}</p><p class="note">About 5.5 breaths a minute. The whole shape breathes with you; follow the in and out.</p>
+    <div class="row2" id="bMin">${[3,5,10].map(m=>`<button class="chip" data-m="${m}" aria-pressed="${m===min}">${m} min</button>`).join('')}</div>
+    <div class="row2"><button class="btn" id="bGo">${LAB.breath?'Stop':'Start'}</button></div>
+    ${after?`<p>One line, while it is fresh:</p><input type="text" id="bLine" aria-label="One line"><div class="row2"><button class="btn" id="bSave">Save to journal</button><span class="note" id="bSt"></span></div>`:''}</div>`;
+  const q=s=>box.querySelector(s);
+  q('#bMin').onclick=e=>{const b=e.target.closest('[data-m]');if(!b)return;min=+b.dataset.m;q('#bMin').querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed',c===b));};
+  q('#bGo').onclick=()=>{ if(LAB.breath){ endBreath(false); q('#bGo').textContent='Start'; return; } LAB.after=null; startBreath(min,phrase,()=>{ LAB.after={id:n.id}; if(LAB.tab==='play'&&LAB.sel===n.id) renderLab(); }); q('#bGo').textContent='Stop'; $('#peace').scrollIntoView({block:'center',behavior:reduce?'auto':'smooth'}); };
+  if(after) q('#bSave').onclick=()=>{ say(box,'#bSt',savedMsg(jadd('breathe',n.id,q('#bLine').value))); LAB.after=null; renderTabsOnly(); }; };
+
+const LADDER=['Incident: a near miss or a collision','Public accusations and rival stories','Expulsions, sanctions or broken contacts','Military signalling: exercises and deployments','Blockade, cyberattack or a limited strike','A direct clash between forces','Wider war'];
+const FLASH=['A collision at sea','A disputed island or strait','A satellite or space incident','A cyberattack on a power grid','An accident near a border','A missile test over a neighbour','A crisis in a third country'];
+ENGINES.premortem=(n,p,box)=>{ const S={a:'US',b:'CN',f:0,step:-1,trip:[],off:[]};
+  const draw=()=>{
+    if(S.step<0){ box.innerHTML=`<div class="eng"><h4>War pre-mortem</h4><p class="note">Imagine it is five years from now and a war happened. Walk the escalation ladder and, at each rung, set a tripwire (how you would know you are here) and an off-ramp (what lets both sides step back).</p>
+      <div class="row2"><select id="pA" aria-label="First power" style="width:auto">${POWERS.map(x=>`<option value="${x.k}"${x.k===S.a?' selected':''}>${esc(x.name)}</option>`).join('')}</select><span>and</span><select id="pB" aria-label="Second power" style="width:auto">${POWERS.map(x=>`<option value="${x.k}"${x.k===S.b?' selected':''}>${esc(x.name)}</option>`).join('')}</select></div>
+      <label for="pF">Flashpoint</label><select id="pF">${FLASH.map((f,i)=>`<option value="${i}"${i===S.f?' selected':''}>${esc(f)}</option>`).join('')}</select><div class="row2"><button class="btn" id="pGo">Begin</button></div></div>`;
+      box.querySelector('#pGo').onclick=()=>{ S.a=box.querySelector('#pA').value; S.b=box.querySelector('#pB').value; S.f=+box.querySelector('#pF').value; S.step=0; draw(); }; return; }
+    if(S.step<LADDER.length){ const k=S.step;
+      box.innerHTML=`<div class="eng"><h4>${esc(PW[S.a].name)} and ${esc(PW[S.b].name)}: ${esc(FLASH[S.f].toLowerCase())}</h4><div class="note">Rung ${k+1} of ${LADDER.length}</div><div class="meter2"><i style="width:${(k+1)/LADDER.length*100}%;background:${k>4?'var(--bad)':k>2?'var(--warn)':'var(--all)'}"></i></div><p class="q">${esc(LADDER[k])}</p>
+        <label for="pT">Tripwire: how would you know you are here?</label><input type="text" id="pT" value="${esc(S.trip[k]||'')}"><label for="pO">Off-ramp: what lets both sides step back?</label><input type="text" id="pO" value="${esc(S.off[k]||'')}">
+        <div class="row2"><button class="btn" id="pBack">← Back</button><button class="btn" id="pNext">${k===LADDER.length-1?'Finish':'Next rung →'}</button></div></div>`;
+      const keep=()=>{S.trip[k]=box.querySelector('#pT').value;S.off[k]=box.querySelector('#pO').value;};
+      box.querySelector('#pBack').onclick=()=>{keep();S.step--;draw();}; box.querySelector('#pNext').onclick=()=>{keep();S.step++;draw();}; return; }
+    const md=`Pre-mortem: ${PW[S.a].name} and ${PW[S.b].name}, ${FLASH[S.f].toLowerCase()}\n\n`+LADDER.map((r,i)=>`${i+1}. ${r}\n   Tripwire: ${S.trip[i]||'—'}\n   Off-ramp: ${S.off[i]||'—'}`).join('\n');
+    const firstGap=LADDER.findIndex((r,i)=>!(S.off[i]||'').trim());
+    box.innerHTML=`<div class="eng"><h4>Your pre-mortem</h4>${firstGap>=0?`<p class="note">The first rung without an off-ramp is ${firstGap+1}: ${esc(LADDER[firstGap].toLowerCase())}. That is where to work.</p>`:'<p class="note">Every rung has an off-ramp. Which one is weakest?</p>'}<pre class="hl" style="white-space:pre-wrap;font-family:var(--f-mono);font-size:12px">${esc(md)}</pre><div class="row2"><button class="btn" id="pCopy">Copy</button><button class="btn" id="pSave">Save to journal</button><button class="btn" id="pAgain">Start again</button></div><div class="note" id="pSt"></div></div>`;
+    box.querySelector('#pCopy').onclick=()=>copyText(md,box.querySelector('#pSt'));
+    box.querySelector('#pSave').onclick=()=>{ say(box,'#pSt',savedMsg(jadd('premortem',n.id,md))); renderTabsOnly(); };
+    box.querySelector('#pAgain').onclick=()=>{ S.step=-1; S.trip=[]; S.off=[]; draw(); }; };
+  draw(); };
+
+/* ---------- Peace Lab: play engines (batch 2) ---------- */
+ENGINES.words=(n,p,box)=>{ const W=PEACE.words||[]; const d=W.length?dayIndex()%W.length:0;
+  box.innerHTML=`<div class="eng"><h4>The word for peace</h4><p class="note">Each word carries a different picture of peace. Today's word is highlighted.</p>
+    <div>${W.map((w,i)=>`<div class="word${i===d?' today':''}"><span><b>${esc(w.w)}</b> <span class="mono">${esc(w.rom)}</span> · ${esc(w.lang)}${i===d?' · <span class="mono" style="color:var(--all)">today</span>':''}</span><span class="note">${esc(w.lit)}</span><span style="font-size:12px">${link(w.url,'dictionary entry')}${w.conf==='check'?' <span class="flag">check source</span>':''}</span></div>`).join('')}</div>
+    <label for="wTxt">Which picture of peace is closest to yours? Which is furthest?</label><textarea id="wTxt"></textarea><div class="row2"><button class="btn" id="wSave">Save to journal</button><span class="note" id="wSt"></span></div></div>`;
+  box.querySelector('#wSave').onclick=()=>{ say(box,'#wSt',savedMsg(jadd('words',n.id,box.querySelector('#wTxt').value))); renderTabsOnly(); }; };
+
+const ROLES=['a head of government','a soldier','a farmer','a factory worker','a student','a diplomat','a refugee','a scientist','a nurse','a child born today','a fisher','a border guard'];
+ENGINES.veil=(n,p,box)=>{ let lot=null;
+  const draw=()=>{ box.innerHTML=`<div class="eng"><h4>Veil of ignorance</h4><p class="note">Write rules for how the US, China and Russia (and the other powers) treat each other. You don't yet know which country you will be born into, or in what role.</p>
+    <label for="vRules">Your rules</label><textarea id="vRules" placeholder="1. …&#10;2. …&#10;3. …">${esc(LAB.veilRules||'')}</textarea><div class="row2"><button class="btn" id="vLift">${lot?'Lift it again':'Lift the veil'}</button></div>
+    ${lot?`<p class="q">You are ${esc(lot.role)} in ${esc(PW[lot.k].name)}.</p><label for="vTxt">Would you keep your rules from here? Which would you change first?</label><textarea id="vTxt"></textarea><div class="row2"><button class="btn" id="vSave">Save to journal</button><span class="note" id="vSt"></span></div>`:''}</div>`;
+    const q=s=>box.querySelector(s); q('#vRules').oninput=()=>{LAB.veilRules=q('#vRules').value;};
+    q('#vLift').onclick=()=>{ LAB.veilRules=q('#vRules').value; if(!LAB.veilRules.trim()){ q('#vRules').focus(); return; } lot={k:pick(POWERS).k,role:pick(ROLES)}; draw(); };
+    if(lot) q('#vSave').onclick=()=>{ say(box,'#vSt',savedMsg(jadd('veil',n.id,`Rules:\n${LAB.veilRules}\n\nThen I was ${lot.role} in ${PW[lot.k].name}.\n${q('#vTxt').value}`))); renderTabsOnly(); }; };
+  draw(); };
+
+ENGINES.provenance=(n,p,box)=>{
+  const draw=()=>{ const counts={};J.prov.forEach(x=>{counts[x.r]=(counts[x.r]||0)+1;}); const ks=[...Object.keys(EV),'?'],mx=Math.max(1,...ks.map(k=>counts[k]||0));
+    box.innerHTML=`<div class="eng"><h4>Where did my opinions come from?</h4><p class="note">Enter a view you hold strongly, then pick the hardest evidence it actually rests on.</p>
+      <label for="prView">A strongly held view</label><input type="text" id="prView"><label for="prRung">It mostly rests on</label><select id="prRung">${Object.entries(EV).map(([k,e])=>`<option value="${k}">${k} · ${esc(e.name)}</option>`).join('')}<option value="?">? · a friend, a feed, or I don't know</option></select>
+      <div class="row2"><button class="btn" id="prAdd">Add</button><span class="note" id="prSt"></span></div>
+      <div style="display:grid;gap:4px">${ks.map(k=>`<div class="hbar"><span>${k==='?'?'? unknown':k+' '+esc(EV[k].name.toLowerCase())}</span><div class="track"><i style="width:${(counts[k]||0)/mx*100}%;background:${k==='?'?'var(--warn)':EV[k].hex}"></i></div><span class="n">${counts[k]||0}</span></div>`).join('')}</div>
+      <div class="items">${J.prov.map((x,i)=>`<div><span>${rkHTML(x.r)} ${esc(x.v)}</span><button class="x2" data-del="${i}" aria-label="Delete view">delete</button></div>`).join('')}</div></div>`;
+    const q=s=>box.querySelector(s);
+    q('#prAdd').onclick=()=>{ const v=q('#prView').value.trim(); if(!v){ q('#prView').focus(); return; } J.prov.unshift({t:new Date().toISOString(),v:v.slice(0,500),r:q('#prRung').value}); const ok=jsave(); draw(); say(box,'#prSt',savedMsg(ok)); };
+    box.querySelectorAll('[data-del]').forEach(b=>b.onclick=()=>{ J.prov.splice(+b.dataset.del,1); jsave(); draw(); }); };
+  draw(); };
+
+ENGINES.superordinate=(n,p,box)=>{ const PR=PEACE.problems||[]; let cur=null;
+  const draw=()=>{ box.innerHTML=`<div class="eng"><h4>Shared problems</h4><p class="note">Problems no single power can solve alone. Pick one and draft the smallest joint step.</p>
+    <div class="items">${PR.map(x=>`<div><button class="chip" data-prob="${esc(x.id)}" aria-pressed="${cur===x.id}">${esc(x.name)}</button><span class="note">${(x.needs||[]).filter(k=>PW[k]).map(k=>pdot(k)+' '+esc(k)).join(' ')}</span></div>`).join('')}</div>
+    ${cur?(()=>{const x=PR.find(y=>y.id===cur);return `<p class="q">${esc(x.name)}</p><p class="note">${esc(x.why)}</p><label for="sStep">The smallest joint step</label><textarea id="sStep" placeholder="Who does what, by when, and how would each side check it?"></textarea><label for="sFirst">Who moves first?</label><select id="sFirst">${(x.needs||[]).filter(k=>PW[k]).map(k=>`<option value="${k}">${esc(PW[k].name)}</option>`).join('')}</select><div class="row2"><button class="btn" id="sSave">Save to journal</button><span class="note" id="sSt"></span></div>`;})():''}</div>`;
+    box.querySelectorAll('[data-prob]').forEach(b=>b.onclick=()=>{cur=b.dataset.prob;draw();});
+    if(cur) box.querySelector('#sSave').onclick=()=>{ const x=PR.find(y=>y.id===cur); say(box,'#sSt',savedMsg(jadd('superordinate',n.id,box.querySelector('#sStep').value.trim()?`${x.name}: first mover ${box.querySelector('#sFirst').value}\n\n${box.querySelector('#sStep').value}`:''))); renderTabsOnly(); }; };
+  draw(); };
+
+ENGINES.slow=(n,p,box)=>{
+  const draw=()=>{ const now=Date.now();
+    box.innerHTML=`<div class="eng"><h4>Slow news</h4><p class="note">Save a headline and your take now. After seven days it comes due: compare what you thought with what turned out to be true.</p>
+      <label for="slH">Headline</label><input type="text" id="slH"><label for="slT">Your take now</label><textarea id="slT"></textarea><div class="row2"><button class="btn" id="slAdd">Save for a week</button><span class="note" id="slSt"></span></div>
+      <div class="items">${J.slow.map((x,i)=>{const age=Math.floor((now-new Date(x.t))/864e5),due=age>=7&&!x.out;
+        return `<div><b>${esc(x.h)}</b><span class="note">${fmtDate(x.t)} · ${age} day${age===1?'':'s'} ago${due?' · <span style="color:var(--warn)">due</span>':x.out?' · revisited':` · due in ${7-age} day${7-age===1?'':'s'}`}</span><span>Then: ${esc(x.take)}</span>${x.out?`<span>What turned out true: ${esc(x.out)}</span>`:''}${due?`<textarea data-out="${i}" aria-label="What turned out to be true"></textarea><div class="row2"><button class="btn" data-rev="${i}">Save what turned out true</button></div>`:''}<button class="x2" data-del="${i}" aria-label="Delete headline">delete</button></div>`;}).join('')}</div></div>`;
+    const q=s=>box.querySelector(s);
+    q('#slAdd').onclick=()=>{ const h=q('#slH').value.trim(),t=q('#slT').value.trim(); if(!h||!t){ say(box,'#slSt','Add both a headline and your take.'); return; } J.slow.unshift({t:new Date().toISOString(),h:h.slice(0,300),take:t.slice(0,2000),out:''}); const ok=jsave(); draw(); say(box,'#slSt',savedMsg(ok)); };
+    box.querySelectorAll('[data-rev]').forEach(b=>b.onclick=()=>{ const i=+b.dataset.rev,v=box.querySelector(`[data-out="${i}"]`).value.trim(); if(!v) return; J.slow[i].out=v.slice(0,2000); jadd('slow',n.id,`${J.slow[i].h}\nThen: ${J.slow[i].take}\nTurned out: ${v}`); jsave(); draw(); });
+    box.querySelectorAll('[data-del]').forEach(b=>b.onclick=()=>{ J.slow.splice(+b.dataset.del,1); jsave(); draw(); }); };
+  draw(); };
+
+ENGINES.bridge=(n,p,box)=>{
+  box.innerHTML=`<div class="eng"><h4>A statement both sides could sign</h4><p class="note">Bridging systems such as Community Notes and Pol.is surface statements that people who usually disagree both rate well. Draft one, then check its words.</p>
+    <label for="brTxt">Your statement</label><textarea id="brTxt" placeholder="We both want…"></textarea><div class="row2"><button class="btn" id="brGo">Check it</button><button class="btn" id="brSave">Save to journal</button><span class="note" id="brSt"></span></div><div id="brOut" class="pl"></div></div>`;
+  const q=s=>box.querySelector(s);
+  const check=()=>{ const t=norm(q('#brTxt').value); if(!t){ q('#brOut').innerHTML=''; return null; } const ld=countRe(RE_LOADED,t),sh=countRe(RE_SHARED,t),us=countRe(RE_USTHEM,t),score=sh*2-ld*2-us;
+    const tips=[]; if(ld) tips.push('Swap loaded words for plain ones each side would use about itself.'); if(us) tips.push('Replace "they" framings with the shared subject.'); if(!sh) tips.push('Name something both sides value: safety, children, a fair future.'); if(t.length>280) tips.push('Shorter statements are easier to sign.');
+    q('#brOut').innerHTML=`<div class="counts"><span>shared-value words ${sh}</span><span>loaded words ${ld}</span><span>us-and-them words ${us}</span><span>bridge score ${score}</span></div><div class="hl">${hlHTML(t,markRanges(t,RE_SHARED))}</div><p class="note"><mark class="ok">green</mark> = shared-value word. ${tips.length?esc(tips.join(' ')):'Ready to test on one real person from each side.'}</p>`; return score; };
+  q('#brGo').onclick=check;
+  q('#brSave').onclick=()=>{ const s=check(); say(box,'#brSt',savedMsg(jadd('bridge',n.id,s===null?'':`Bridge score ${s}\n\n${q('#brTxt').value}`))); renderTabsOnly(); }; };
+
+/* ---------- Peace Lab: global tools ---------- */
+function collide(id){ const a=PBY[id]||pick(PN); const others=PN.filter(m=>m.domain!==a.domain&&m.id!==a.id); const b=pick(others.length?others:PN);
+  LAB.pair=[a.id,b.id]; LAB.sel=a.id; LAB.tab='collide'; renderLab(); }
+function collision(a,b){ const h=hash(a.id+'|'+b.id), shared=a.tags.filter(t=>b.tags.includes(t));
+  const span=SCALES.indexOf(a.scale)===SCALES.indexOf(b.scale)?`both at the ${a.scale} scale`:`from the ${a.scale} to the ${b.scale} scale`;
+  const T=[`What would ${a.name} look like if it were designed by people who practise ${b.name}?`,`Use ${b.name} to test whether ${a.name} works. What would you measure, and when?`,`Where do ${a.name} and ${b.name} share a blind spot?`,`Run ${a.name} on the timescale of ${b.name} (${b.horizon}). What breaks, and what grows?`,`Someone who lives by ${b.name} critiques ${a.name}. What is their sharpest point?`,`Combine them into one project that ${a.phase==='foster'?'starts trust':'keeps going'} ${span}. What is its first week?`];
+  return {q:T[Math.floor(h*T.length)],span,shared,
+    ex:`Take the question from ${a.name}: "${a.q}" Answer it the way someone devoted to ${b.name} would. Then do the reverse with "${b.q}"`,
+    test:`Smallest test: ${a.mvp} Then add one element from ${b.name}: ${lc(b.mvp)}`}; }
+const lc=s=>{s=String(s||'');return s.charAt(0).toLowerCase()+s.slice(1);};
+PANELS.collide=box=>{ const pr=LAB.pair&&LAB.pair.map(id=>PBY[id]);
+  if(!pr||!pr[0]||!pr[1]){ box.innerHTML=`<div class="pl"><div class="eyebrow">Collide</div><h3>What if two ideas met?</h3><p class="note">Pick an approach, and chance brings one from another domain. The two pulse in the shape.</p>${pickerHTML()}<div class="row2"><button class="btn" id="cGo">Collide ${LAB.sel?'the selected one':'a random pair'}</button></div></div>`;
+    box.querySelector('#pPick').onchange=e=>{ if(e.target.value){ LAB.sel=e.target.value; collide(LAB.sel); } }; box.querySelector('#cGo').onclick=()=>collide(LAB.sel); return; }
+  const [a,b]=pr, C=collision(a,b);
+  box.innerHTML=`<div class="pl"><div class="eyebrow">Collide</div><h3>What if ${esc(a.name)} met ${esc(b.name)}?</h3>
+    <div class="meta"><span class="tag" style="color:${PDOM[a.domain]}">${esc(a.domain)}</span><span class="tag">×</span><span class="tag" style="color:${PDOM[b.domain]}">${esc(b.domain)}</span><span class="tag">${esc(C.span)}</span></div>
+    <p class="q">${esc(C.q)}</p><p><b>Exercise.</b> ${esc(C.ex)}</p><p class="note">${esc(C.test)}</p>
+    <p class="note">${C.shared.length?'They share: '+esc(C.shared.join(', '))+'.':'No shared tags: a true collision.'}</p>
+    <div class="links">${link(a.url,a.src)}${link(b.url,b.src)}</div>
+    <textarea id="cTxt" aria-label="Your thought experiment" placeholder="Think out loud…"></textarea>
+    <div class="row2"><button class="btn" id="cSave">Save to journal</button><button class="btn" id="cAdd">+ Both to Compose</button><button class="btn" id="cAgain">Another partner</button><button class="btn" id="cSwap">Swap</button><button class="btn deepen" id="cDeep">Deepen with Claude</button></div><div class="note" id="cSt"></div><div class="deep-out" id="cOut" hidden></div></div>`;
+  const q=s=>box.querySelector(s);
+  q('#cSave').onclick=()=>{ say(box,'#cSt',savedMsg(jadd('collide',a.id,`What if ${a.name} met ${b.name}?\n${C.q}\n\n${q('#cTxt').value}`))); renderTabsOnly(); };
+  q('#cAdd').onclick=()=>{ [a.id,b.id].forEach(id=>{ if(!J.tray.includes(id)&&J.tray.length<5) J.tray.push(id); }); say(box,'#cSt',savedMsg(jsave())); renderTabsOnly(); };
+  q('#cAgain').onclick=()=>collide(a.id); q('#cSwap').onclick=()=>{ LAB.pair=[b.id,a.id]; LAB.sel=b.id; renderLab(); };
+  q('#cDeep').onclick=()=>deepen({name:`${a.name} × ${b.name}`,what:`${a.what} / ${b.what}`,why:`${a.why} / ${b.why}`,mvp:C.test,q:C.q,src:`${a.src}; ${b.src}`},q('#cOut')); };
+
+const RISKS={contact:['Contact works best under equal status, common goals, cooperation and institutional support (Allport); badly run contact can backfire.','https://doi.org/10.1037/0022-3514.90.5.751'],
+ perspective:['Showing people the other side can harden views rather than soften them (Bail et al. 2018).','https://doi.org/10.1073/pnas.1804840115'],
+ media:['Exposure to opposing content can polarize (Bail et al. 2018); pair it with a write-first step.','https://doi.org/10.1073/pnas.1804840115'],
+ trust:['Unreturned steps can look like weakness at home. Keep them small, announced and reversible.',''],
+ games:['Models simplify: real conflicts have many players and unknown payoffs.',''],
+ verification:['Verification needs access both sides accept; plan for disputes over the data itself.',''],
+ nuclear:['Talks on nuclear risk are slow and fragile; protect the channel itself.',''],
+ evidence:['Automatic labels mislabel. Keep a human judgment step.',''],
+ attention:['Nudges fade; measure after a week, not a minute.',''],
+ 'shared-risk':['A shared threat can become a new arena for rivalry.',''],
+ commons:['Commons need monitoring and graduated sanctions, or free riders take over (Ostrom).',''],
+ ritual:['Symbols without follow-through breed cynicism.',''],
+ dialogue:['Dialogue with no path to decisions can feel like talk for its own sake.',''],
+ law:['Rules bind only those who accept them; plan for non-compliance.',''],
+ empathy:['Empathy can be parochial: it flows easily to one\'s own group.',''],
+ repair:['Repair processes can re-traumatize if rushed or imposed.','']};
+const METRIC={mind:'Warmth toward the other group (a 0–100 feeling thermometer), before, after and a month later',relation:'Repeat contacts three months later',culture:'Shared works made, and who comes back',economy:'Value or volume shared across the divide',institution:'Agreements implemented, not just signed',security:'Reciprocated steps per month',technology:'Users on both sides, and claims checked',ecology:'A measured change in the shared resource',information:'Share of your claims resting on rungs A–C'};
+function mvpModel(tray){ const ns=tray.map(id=>PBY[id]).filter(Boolean); if(!ns.length) return null;
+  const phases=PHASES.map(p=>ns.some(n=>n.phase===p)), sc=ns.map(n=>SCALES.indexOf(n.scale)), lo=Math.min(...sc), hi=Math.max(...sc);
+  const first=[...ns].sort((a,b)=>HORIZ.indexOf(a.horizon)-HORIZ.indexOf(b.horizon))[0];
+  const tags=[...new Set(ns.flatMap(n=>n.tags))], risks=tags.filter(t=>RISKS[t]).map(t=>RISKS[t]);
+  return {ns,phases,lo,hi,first,risks:risks.length?risks:[['Name the way this could make things worse before you test it.','']],metrics:[...new Set(ns.map(n=>METRIC[n.domain]).filter(Boolean))]}; }
+function mvpMD(m){ return `# Peace MVP canvas\n\nApproaches: ${m.ns.map(n=>n.name).join(' + ')}\n\n## Mechanism\n${m.ns.map(n=>`- ${n.name}: ${n.what}`).join('\n')}\n\n## Smallest test\n${m.first.mvp}\n\n## Phase coverage\n${PHASES.map((p,i)=>(m.phases[i]?'[x] ':'[ ] ')+p).join('  ')}\n\n## Scale span\n${SCALES[m.lo]} → ${SCALES[m.hi]}\n\n## Evidence to read\n${m.ns.map(n=>`- ${n.src}: ${n.url}${n.conf==='check'?' (check source)':''}`).join('\n')}\n\n## Risks\n${m.risks.map(r=>'- '+r[0]).join('\n')}\n\n## Metric to watch\n${m.metrics.map(x=>'- '+x).join('\n')}\n`; }
+PANELS.compose=box=>{ const m=mvpModel(J.tray);
+  box.innerHTML=`<div class="pl"><div class="eyebrow">Compose MVP</div><h3>Build a minimum viable peace project</h3><p class="note">Add up to five approaches to the tray. The canvas updates as you go.</p>
+    <div class="row2">${J.tray.map(id=>PBY[id]).filter(Boolean).map(n=>`<span class="tag" style="color:${PDOM[n.domain]}" data-card="peace:${esc(n.id)}">${esc(n.name)} <button class="x2" data-rm="${esc(n.id)}" aria-label="Remove ${esc(n.name)}">×</button></span>`).join('')||'<span class="note">The tray is empty.</span>'}</div>
+    <div class="row2">${LAB.sel&&!J.tray.includes(LAB.sel)?`<button class="btn" id="cAddSel">+ ${esc(PBY[LAB.sel].name)}</button>`:''}<button class="btn" id="cAddRand">+ A random one</button><span class="note" id="cSt"></span></div>
+    ${m?`<dl class="canvas-mvp"><div><dt>Mechanism</dt><dd><ul>${m.ns.map(n=>`<li><b>${esc(n.name)}</b>: ${esc(n.what)}</li>`).join('')}</ul></dd></div>
+      <div><dt>Smallest test</dt><dd>${esc(m.first.mvp)}</dd></div>
+      <div><dt>Phase coverage</dt><dd><div class="phasebar">${PHASES.map((p,i)=>`<span class="${m.phases[i]?'on':''}">${p}</span>`).join('')}</div></dd></div>
+      <div><dt>Scale span</dt><dd><div class="phasebar" style="grid-template-columns:repeat(5,1fr)">${SCALES.map((s,i)=>`<span class="${i>=m.lo&&i<=m.hi?'on':''}">${s}</span>`).join('')}</div></dd></div>
+      <div><dt>Evidence to read</dt><dd class="links">${m.ns.map(n=>link(n.url,n.src)+(n.conf==='check'?' <span class="flag">check source</span>':'')).join('<br>')}</dd></div>
+      <div><dt>Risks</dt><dd><ul>${m.risks.map(r=>`<li>${esc(r[0])}${r[1]?' '+link(r[1],'source'):''}</li>`).join('')}</ul></dd></div>
+      <div><dt>Metric to watch</dt><dd><ul>${m.metrics.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></dd></div></dl>
+      <div class="row2"><button class="btn" id="cSave">Save to journal</button><button class="btn" id="cCopy">Copy as Markdown</button><button class="btn" id="cClear">Clear tray</button></div><div class="note" id="cSt2"></div>`:''}</div>`;
+  const q=s=>box.querySelector(s);
+  box.querySelectorAll('[data-rm]').forEach(b=>b.onclick=()=>{ J.tray=J.tray.filter(x=>x!==b.dataset.rm); jsave(); renderLab(); });
+  if(q('#cAddSel')) q('#cAddSel').onclick=()=>addTray(LAB.sel);
+  q('#cAddRand').onclick=()=>{ const rest=PN.filter(n=>!J.tray.includes(n.id)); if(rest.length) addTray(pick(rest).id); };
+  if(m){ q('#cSave').onclick=()=>{ say(box,'#cSt2',savedMsg(jadd('compose',null,mvpMD(m)))); renderTabsOnly(); }; q('#cCopy').onclick=()=>copyText(mvpMD(m),q('#cSt2')); q('#cClear').onclick=()=>{ J.tray=[]; jsave(); renderLab(); }; } };
+
+PANELS.contemplate=box=>{ const n=PBY[LAB.sel]; const opts=[]; if(LAB.contQ) opts.push(LAB.contQ); if(n) opts.push(n.q); DECK.forEach(d=>opts.push(d.qs[0])); const qs=[...new Set(opts)];
+  let min=5; const after=LAB.after&&LAB.after.id==='contemplate';
+  box.innerHTML=`<div class="pl"><div class="eyebrow">Contemplate</div><h3>Sit with one question</h3><p class="note">The shape slows and breathes at about 5.5 breaths a minute, with your question on screen. No answers needed until the end.</p>
+    <label for="ctQ">Question</label><select id="ctQ">${qs.map(x=>`<option>${esc(x)}</option>`).join('')}<option value="__own">My own question…</option></select><input type="text" id="ctOwn" hidden aria-label="Your own question">
+    <div class="row2" id="ctMin">${[3,5,10].map(m=>`<button class="chip" data-m="${m}" aria-pressed="${m===min}">${m} min</button>`).join('')}</div>
+    <div class="row2"><button class="btn" id="ctGo">${LAB.breath?'Stop':'Begin'}</button></div>
+    ${after?`<p>One line, while it is fresh:</p><input type="text" id="ctLine" aria-label="One line"><div class="row2"><button class="btn" id="ctSave">Save to journal</button><span class="note" id="ctSt"></span></div>`:''}</div>`;
+  const q=s=>box.querySelector(s);
+  q('#ctQ').onchange=()=>{ q('#ctOwn').hidden=q('#ctQ').value!=='__own'; };
+  q('#ctMin').onclick=e=>{const b=e.target.closest('[data-m]');if(!b)return;min=+b.dataset.m;q('#ctMin').querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed',c===b));};
+  q('#ctGo').onclick=()=>{ if(LAB.breath){ endBreath(false); q('#ctGo').textContent='Begin'; return; } const v=q('#ctQ').value==='__own'?q('#ctOwn').value.trim():q('#ctQ').value; if(!v) return;
+    LAB.after=null; LAB.contQ=v; startBreath(min,v,()=>{ LAB.after={id:'contemplate',q:v}; if(LAB.tab==='contemplate') renderLab(); }); q('#ctGo').textContent='Stop'; $('#peace').scrollIntoView({block:'center',behavior:reduce?'auto':'smooth'}); };
+  if(after) q('#ctSave').onclick=()=>{ say(box,'#ctSt',savedMsg(jadd('contemplate',LAB.sel,`${LAB.after.q}\n\n${q('#ctLine').value}`))); LAB.after=null; renderTabsOnly(); }; };
+
+function todays(){ const P=PEACE.practices||{},d=dayIndex(),now=new Date(); const at=(k,i)=>{const a=P[k]||[];return a.length?a[((i%a.length)+a.length)%a.length]:null;};
+  return {daily:at('daily',d),weekly:at('weekly',Math.floor(d/7)),monthly:at('monthly',now.getUTCFullYear()*12+now.getUTCMonth()),yearly:at('yearly',now.getUTCFullYear())}; }
+function pocketMD(){ const t=todays(),P=PEACE.practices||{},W=PEACE.words||[],w=W.length?W[dayIndex()%W.length]:null,ids=[...new Set([LAB.sel,...J.tray].filter(id=>PBY[id]))];
+  return `# Peace Lab pocket card\nWeek of ${new Date().toISOString().slice(0,10)}\n\n## Today\n- ${t.daily?t.daily.title+': '+t.daily.how:'—'}\n${w?`- Word for peace: ${w.w} (${w.rom}, ${w.lang}): ${w.lit}\n`:''}\n## Daily\n${(P.daily||[]).map(x=>`- [ ] ${x.title}: ${x.how}`).join('\n')}\n\n## This week\n${t.weekly?`- [ ] ${t.weekly.title}: ${t.weekly.how}`:''}\n\n## This month\n${t.monthly?`- [ ] ${t.monthly.title}: ${t.monthly.how}`:''}\n\n## This year\n${t.yearly?`- [ ] ${t.yearly.title}: ${t.yearly.how}`:''}\n\n## Approaches I'm carrying\n${ids.map(id=>{const n=PBY[id];return `- ${n.name}\n  - Question: ${n.q}\n  - Smallest test: ${n.mvp}`;}).join('\n')||'- (none chosen yet)'}\n\n## The loop, off-screen\n${(PEACE.loop||[]).map(s=>`- ${s.stage}: ${s.off}`).join('\n')}\n`; }
+PANELS.practices=box=>{ const L=PEACE.loop||[],t=todays(),k=LAB.stage||0,s=L[k];
+  const R=96,cx=150,cy=150,pts=L.map((_,i)=>{const a=i/L.length*TAU-Math.PI/2;return [cx+Math.cos(a)*R,cy+Math.sin(a)*R];});
+  const svg=`<svg class="ring" viewBox="0 0 300 300" role="group" aria-label="The creation loop"><circle cx="${cx}" cy="${cy}" r="${R}" fill="none" stroke="#23304e" stroke-width="2" stroke-dasharray="4 6"/>
+    ${pts.map(([x,y],i)=>{const [x2,y2]=pts[(i+1)%pts.length],mx=(x+x2)/2,my=(y+y2)/2,ang=Math.atan2(y2-y,x2-x)*180/Math.PI;return `<path d="M-4,-4 L4,0 L-4,4" fill="none" stroke="#5a6684" stroke-width="1.5" transform="translate(${mx.toFixed(1)},${my.toFixed(1)}) rotate(${ang.toFixed(1)})"/>`;}).join('')}
+    ${L.map((st,i)=>{const [x,y]=pts[i],on=i===k;return `<g data-st="${i}" tabindex="0" role="button" aria-pressed="${on}" aria-label="${esc(st.stage)}"><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${on?27:23}" fill="${on?'#9fe6d6':'#111a2e'}" stroke="#9fe6d6" stroke-width="1.5"/><text x="${x.toFixed(1)}" y="${(y+4).toFixed(1)}" text-anchor="middle" font-size="10" fill="${on?'#0a0f1e':'#e7ebf5'}">${esc(st.stage)}</text></g>`;}).join('')}
+    <text x="${cx}" y="${cy-4}" text-anchor="middle" font-size="11" fill="#8e99b6">continuous</text><text x="${cx}" y="${cy+11}" text-anchor="middle" font-size="11" fill="#8e99b6">creation</text></svg>`;
+  box.innerHTML=`<div class="pl"><div class="eyebrow">Practices, off-screen</div><h3>The creation loop</h3>${svg}
+    ${s?`<p class="q">${esc(s.stage)}</p><p><b>On this device:</b> ${esc(s.on)}</p><p><b>Off the device:</b> ${esc(s.off)}</p>`:''}
+    <h4>Today's practice</h4>${['daily','weekly','monthly','yearly'].map(c=>t[c]?`<p><span class="tag">${c}</span> <b>${esc(t[c].title)}</b>. ${esc(t[c].how)}</p>`:'').join('')}
+    <details><summary>All practices by cadence</summary>${['daily','weekly','monthly','yearly'].map(c=>`<p class="note" style="margin-top:8px"><b>${c}</b></p><ul class="note" style="margin:0;padding-left:18px">${((PEACE.practices||{})[c]||[]).map(x=>`<li>${esc(x.title)}: ${esc(x.how)}</li>`).join('')}</ul>`).join('')}</details>
+    <h4>Pocket card</h4><p class="note">This week's practices plus the approaches you are carrying, as a Markdown file for your phone or notebook.</p>
+    <div class="row2"><button class="btn" id="prDl">Download .md</button><button class="btn" id="prCp">Copy</button></div><div class="note" id="prSt"></div></div>`;
+  box.querySelectorAll('[data-st]').forEach(g=>{ const go=()=>{LAB.stage=+g.dataset.st;renderLab();}; g.addEventListener('click',go); g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}}); });
+  box.querySelector('#prDl').onclick=()=>saveFile('peace-lab-pocket-card.md',pocketMD(),box.querySelector('#prSt'));
+  box.querySelector('#prCp').onclick=()=>copyText(pocketMD(),box.querySelector('#prSt')); };
+
+function journalMD(){ const name=id=>PBY[id]?PBY[id].name:'';
+  return `# Peace Lab journal\nExported ${new Date().toISOString().slice(0,16).replace('T',' ')} UTC\n\n`+J.entries.map(e=>`## ${fmtDate(e.t)} · ${e.kind}${e.node&&name(e.node)?' · '+name(e.node):''}\n\n${e.text}\n`).join('\n')
+   +(J.grit.length?`\n## Trust ledger\n${J.grit.map(g=>`- ${fmtDate(g.t)} ${g.who==='them'?'They':'We'}: ${g.step} (${g.recip===true?'returned':g.recip===false?'not returned':'pending'})`).join('\n')}\n`:'')
+   +(J.slow.length?`\n## Slow news\n${J.slow.map(x=>`- ${fmtDate(x.t)} ${x.h}\n  - Then: ${x.take}${x.out?`\n  - Turned out: ${x.out}`:''}`).join('\n')}\n`:'')
+   +(J.prov.length?`\n## Opinion provenance\n${J.prov.map(x=>`- [${x.r}] ${x.v}`).join('\n')}\n`:'')
+   +(J.tray.length?`\n## Compose tray\n${J.tray.map(id=>'- '+name(id)).join('\n')}\n`:''); }
+PANELS.journal=box=>{ const name=id=>PBY[id]?PBY[id].name:'';
+  box.innerHTML=`<div class="pl"><div class="eyebrow">Journal</div><h3>${J.entries.length} entr${J.entries.length===1?'y':'ies'}</h3><p class="note">${STORE_OK?SAVED_NOTE:'This browser blocks storage here, so entries last until you close the page. Export or copy them.'}</p>
+    <div class="row2"><button class="btn" id="jDl">Export .md</button><button class="btn" id="jCp">Copy</button><button class="btn" id="jClr">Clear all</button></div><div class="note" id="jSt"></div>
+    <div class="items">${J.entries.slice(0,60).map((e,i)=>`<div><span class="note">${fmtDate(e.t)} · ${esc(e.kind)}${e.node&&name(e.node)?' · '+esc(name(e.node)):''}</span><span style="white-space:pre-wrap">${esc(e.text.length>600?e.text.slice(0,600)+'…':e.text)}</span><button class="x2" data-del="${i}" aria-label="Delete entry">delete</button></div>`).join('')||'<p class="note">Nothing yet. Every engine has a Save to journal button.</p>'}</div>
+    ${J.entries.length>60?`<p class="note">Showing the latest 60. Export includes all ${J.entries.length}.</p>`:''}</div>`;
+  const q=s=>box.querySelector(s);
+  q('#jDl').onclick=()=>saveFile(`peace-lab-journal-${new Date().toISOString().slice(0,10)}.md`,journalMD(),q('#jSt'));
+  q('#jCp').onclick=()=>copyText(journalMD(),q('#jSt'));
+  q('#jClr').onclick=()=>{ if(!J.entries.length&&!J.grit.length&&!J.slow.length&&!J.prov.length) return; if(!confirm('Delete every journal entry, ledger step, slow-news item and view from this browser? Export first if you want to keep them.')) return; J={entries:[],grit:[],slow:[],prov:[],tray:J.tray}; jsave(); renderLab(); };
+  box.querySelectorAll('[data-del]').forEach(b=>b.onclick=()=>{ J.entries.splice(+b.dataset.del,1); jsave(); renderLab(); }); };
+
+let deckI=DECK.length?dayIndex()%DECK.length:0;
+function renderDeck(){ if(!DECK.length) return; const d=DECK[deckI];
+  $('#deck').innerHTML=`<div class="deckcard"><div class="eyebrow">Card ${deckI+1} of ${DECK.length}</div><h3>${esc(d.title)}</h3><p>${esc(d.setup)}</p><ol>${d.qs.map(x=>`<li>${esc(x)}</li>`).join('')}</ol>
+    <textarea id="dkTxt" aria-label="Your answer" placeholder="Answer one of the questions, or argue with the setup."></textarea>
+    <div class="row2"><button class="btn" id="dkPrev" aria-label="Previous card">←</button><button class="btn" id="dkNext" aria-label="Next card">→</button><button class="btn" id="dkShuf">Shuffle</button><button class="btn" id="dkCont">Contemplate this</button><button class="btn" id="dkSave">Save answer</button><span class="note" id="dkSt"></span></div></div>`;
+  const q=s=>$('#deck').querySelector(s);
+  q('#dkPrev').onclick=()=>{deckI=(deckI-1+DECK.length)%DECK.length;renderDeck();}; q('#dkNext').onclick=()=>{deckI=(deckI+1)%DECK.length;renderDeck();};
+  q('#dkShuf').onclick=()=>{ let i=deckI; if(DECK.length>1) while(i===deckI) i=Math.floor(Math.random()*DECK.length); deckI=i; renderDeck(); };
+  q('#dkCont').onclick=()=>{ LAB.contQ=d.qs[0]; LAB.tab='contemplate'; renderLab(); $('#sec-peace').scrollIntoView({behavior:reduce?'auto':'smooth'}); };
+  q('#dkSave').onclick=()=>{ const v=q('#dkTxt').value; say($('#deck'),'#dkSt',savedMsg(jadd('deck',null,v.trim()?`${d.title}\n${d.setup}\n\n${v}`:''))); renderTabsOnly(); }; }
+
 /* ---------- boot ---------- */
-$('#statusLine').innerHTML=`<span>Built ${fmtDate(A.built_at)}</span>${A.live_url?`<span class="live">● ${link(A.live_url,'Live, auto-updating version')}</span>`:''}${A.repo_url?`<span>${link(A.repo_url,'Pipeline source')}</span>`:''}<span>${S.length} sources · ${PROJECTS.length} joint projects · ${PEOPLE.length} bridge people · ${CHANNELS.length} channels</span>`;
+$('#statusLine').innerHTML=`<span>Built ${fmtDate(A.built_at)}</span>${A.live_url?`<span class="live">● ${link(A.live_url,'Live, auto-updating version')}</span>`:''}${A.repo_url?`<span>${link(A.repo_url,'Pipeline source')}</span>`:''}<span>${S.length} sources · ${PROJECTS.length} joint projects · ${PEOPLE.length} bridge people · ${CHANNELS.length} channels · ${PN.length} peace approaches</span>`;
 $('#footBuild').textContent=`Snapshot built ${A.built_at||'—'}.`;
 renderChips(); renderCat(); renderDyad(); select(selected); renderBridges(); renderPulse(); renderHealth(); setYear(NOW_YEAR,true);
-(function loop(){ sky.frame(); web.frame(); requestAnimationFrame(loop); })();
+renderLensChips(); renderLab(); if(typeof renderDeck==='function') renderDeck();
+(function loop(){ const b=LAB.breath; if(b&&b.end&&performance.now()>=b.end) endBreath(true); peace.frame(); sky.frame(); web.frame(); requestAnimationFrame(loop); })();
 </script>

@@ -18,6 +18,7 @@ The auto-updating version will live at https://datazen123.github.io/triad-signal
   - `channels.json`: a dict keyed by id, holding dyad, status, desc, links, asof and note.
   - `projects.json`: start, end, members (US/CN/RU/EU/IN/JP/UK), achieved, url, confidence.
   - `people.json`: from, to, type (resident or envoy), cat, years, did, url, caveat, confidence.
+  - `peace.json`: the Peace Lab. Approach nodes (domain, scale, phase, horizon, tags, what/why/mvp/q, play.engine, src, url, conf `ok` or `check`), the 16-card deck, the creation loop, practices by cadence, words for peace and shared problems. Nodes marked `check` show a "check source" flag until verified.
 - `data/live/`: collector outputs (last-known-good). Suspect results go to `quarantine/`.
 - `data/health.json`: per-collector status, failure streaks, alerts.
 - `pipeline/`:

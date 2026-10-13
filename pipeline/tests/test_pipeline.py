@@ -300,10 +300,85 @@ class RegistryAndBuildTests(unittest.TestCase):
         self.assertNotIn(build.PLACEHOLDER, html)
         self.assertEqual(build.check(html, data), [])
 
+    def test_pages_output_is_a_full_document(self):
+        import build
+        data = build.compose()
+        page = build.wrap(build.render(data), data["live_url"])
+        self.assertTrue(page.startswith("<!doctype html>"), "Pages output must be standards mode")
+        for needle in ('<meta charset="utf-8">', 'name="viewport"', "viewport-fit=cover", 'name="description"',
+                       'property="og:title"', 'property="og:url"', "<body>", "</html>"):
+            self.assertIn(needle, page)
+        self.assertLess(page.index("</head>"), page.index('<div class="wrap">'))
+        self.assertEqual(page.count("<title>"), 1)
+
+    def test_artifact_output_stays_unwrapped(self):
+        import build
+        html = build.render(build.compose())
+        self.assertNotIn("<!doctype", html.lower())
+        self.assertNotIn("<html", html.lower())
+
     def test_curated_people_and_projects_are_sourced(self):
         for name in ("people", "projects"):
             for item in common.read_json(common.CURATED / f"{name}.json"):
                 self.assertTrue(item.get("url", "").startswith("http"), f"{name}: {item.get('id')} has no source URL")
+
+
+class PeaceLabDataTests(unittest.TestCase):
+    DOMAINS = {"mind", "relation", "culture", "economy", "institution", "security", "technology", "ecology", "information"}
+    SCALES = {"self", "relation", "community", "nation", "world"}
+    PHASES = {"foster", "cultivate", "sustain", "develop"}
+    HORIZONS = {"now", "years", "decades", "generations"}
+    ENGINES = {"reflect", "debias", "dilemma", "itt", "grit", "fermi", "breathe", "premortem", "words", "veil",
+               "provenance", "superordinate", "slow", "bridge"}
+
+    @classmethod
+    def setUpClass(cls):
+        cls.peace = common.read_json(common.CURATED / "peace.json")
+        cls.nodes = cls.peace["nodes"]
+
+    def test_nodes_are_sourced(self):
+        self.assertGreaterEqual(len(self.nodes), 60)
+        for n in self.nodes:
+            self.assertTrue(n.get("url", "").startswith("http"), f"peace: {n.get('id')} has no source URL")
+            self.assertTrue(n.get("src"), f"peace: {n['id']} has no source label")
+            self.assertIn(n.get("conf"), {"ok", "check"}, f"peace: {n['id']} conf must be ok or check")
+            for ref in n.get("refs", []):
+                self.assertTrue(ref["url"].startswith("http"), f"peace: {n['id']} has a bad extra reference")
+
+    def test_node_enums(self):
+        for n in self.nodes:
+            self.assertIn(n["domain"], self.DOMAINS, n["id"])
+            self.assertIn(n["scale"], self.SCALES, n["id"])
+            self.assertIn(n["phase"], self.PHASES, n["id"])
+            self.assertIn(n["horizon"], self.HORIZONS, n["id"])
+            self.assertIn(n["play"]["engine"], self.ENGINES, n["id"])
+            self.assertIsInstance(n["play"].get("params", {}), dict, n["id"])
+            for field in ("name", "what", "why", "mvp", "q"):
+                self.assertTrue(n.get(field), f"peace: {n['id']} lacks {field}")
+
+    def test_ids_unique(self):
+        ids = [n["id"] for n in self.nodes]
+        self.assertEqual(len(ids), len(set(ids)), "duplicate peace node ids")
+
+    def test_every_domain_and_engine_is_used(self):
+        self.assertEqual({n["domain"] for n in self.nodes}, self.DOMAINS)
+        self.assertEqual({n["play"]["engine"] for n in self.nodes}, self.ENGINES)
+
+    def test_deck_words_and_practices(self):
+        deck = self.peace["deck"]
+        self.assertEqual(len(deck), 16)
+        for c in deck:
+            self.assertEqual(len(c["qs"]), 3, c["id"])
+        for w in self.peace["words"]:
+            self.assertTrue(w["url"].startswith("http"), w["w"])
+            self.assertIn(w["conf"], {"ok", "check"})
+        self.assertEqual(set(self.peace["practices"]), {"daily", "weekly", "monthly", "yearly"})
+        self.assertEqual(len(self.peace["loop"]), 7)
+
+    def test_peace_links_are_checked_weekly(self):
+        urls = link_health.all_urls()
+        for n in self.nodes:
+            self.assertIn(n["url"], urls)
 
 
 if __name__ == "__main__":
