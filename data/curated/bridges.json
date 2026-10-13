@@ -1080,6 +1080,431 @@
       ],
       "conf": "ok",
       "note": "The 2021 survey covered 47,004 living applicants; 82% had yet to confirm whether their relatives in the North were alive. Reunions depended on the political climate and stopped after 2018; most applicants are over 80. The August 2018 date is from press reports in search results, not the fetched pages."
+    },
+    {
+      "id": "ru-ua-pow-exchanges",
+      "pair": [
+        "RU",
+        "UA"
+      ],
+      "sides": [
+        "Russia",
+        "Ukraine"
+      ],
+      "year": "2025-05",
+      "kind": "humanitarian",
+      "who": "Governments of Russia and Ukraine; mediators; OHCHR monitoring mission",
+      "title": "Prisoner exchanges continue during the war",
+      "what": "Throughout the full-scale war, Russia and Ukraine have repeatedly exchanged prisoners of war and some civilian detainees. Between late May and August 2025 they carried out the largest exchanges since 2022, releasing more than three thousand people from both sides.",
+      "why_it_matters": "Even at war, both sides keep a working channel to bring captives home.",
+      "src": [
+        {
+          "label": "UN Human Rights Monitoring Mission in Ukraine: Report on the Human Rights Situation in Ukraine, 1 June–30 November 2025",
+          "url": "https://ukraine.ohchr.org/en/Report-on-the-Human-Rights-Situation-in-Ukraine-1-June-30-November-2025",
+          "lang": "en"
+        }
+      ],
+      "conf": "ok",
+      "note": "OHCHR reports that released Ukrainian POWs described torture and ill-treatment, including sexual violence, and deaths in custody in 2025, and that the exchanges brought no improvement in treatment of those still held. The bridge is the exchange channel, not the conditions."
+    },
+    {
+      "id": "ru-ua-2022-black-sea-grain-initiative",
+      "pair": [
+        "RU",
+        "UA"
+      ],
+      "sides": [
+        "Russia",
+        "Ukraine"
+      ],
+      "year": "2022-07",
+      "kind": "economic",
+      "who": "Russia, Ukraine, Türkiye and the United Nations (Joint Coordination Centre, Istanbul)",
+      "title": "Black Sea Grain Initiative: wartime corridor for food exports",
+      "what": "Under the July 2022 Black Sea Initiative, brokered by the UN and Türkiye, ships carried about 32.9 million tonnes of food from three Ukrainian ports in 1,004 voyages, inspected by a joint centre with Russian and Ukrainian officials in Istanbul.",
+      "why_it_matters": "Warring parties sat in the same room daily to keep food moving to world markets.",
+      "src": [
+        {
+          "label": "UN: The Black Sea Grain Initiative — What was achieved?",
+          "url": "https://www.un.org/en/black-sea-grain-initiative/achievements",
+          "lang": "en"
+        },
+        {
+          "label": "UN: Update from the Office of the UN Coordinator, 15 July 2023",
+          "url": "https://www.un.org/en/black-sea-grain-initiative/update-15-july-2023",
+          "lang": "en"
+        }
+      ],
+      "conf": "ok",
+      "note": "Russia did not agree to renew the initiative after its third term expired on 17 July 2023, and withdrew security guarantees for shipping in the north-western Black Sea."
+    },
+    {
+      "id": "il-ps-parents-circle-families-forum",
+      "pair": [
+        "IL",
+        "PS"
+      ],
+      "sides": [
+        "Israelis",
+        "Palestinians"
+      ],
+      "year": "1995",
+      "kind": "personal",
+      "who": "Yitzhak Frankenthal and bereaved Israeli and Palestinian families",
+      "title": "Parents Circle–Families Forum: bereaved families on both sides speak together",
+      "what": "Founded in 1995 by Yitzhak Frankenthal, whose son was killed by Hamas, and a group of Israeli families, the forum held its first joint meeting with bereaved Palestinian families from Gaza in 1998. It now has over 800 Israeli and Palestinian members who have each lost an immediate family member to the conflict and who speak together in schools and public dialogues.",
+      "why_it_matters": "People who lost the most chose joint grief and dialogue over revenge, and have kept doing so for three decades.",
+      "src": [
+        {
+          "label": "Parents Circle–Families Forum: About PCFF",
+          "url": "https://www.theparentscircle.org/en/about_eng-2/",
+          "lang": "en"
+        }
+      ],
+      "conf": "ok",
+      "note": "Source is the organisation's own site. After the Second Intifada began in 2000, contact with Gaza was cut and partnerships shifted to the West Bank and East Jerusalem (per the site). The group has critics, including NGO Monitor, who question its funding and political positions. The detail that Frankenthal's son was killed by Hamas comes from search-result summaries, not the fetched page."
+    },
+    {
+      "id": "il-ps-west-eastern-divan-orchestra",
+      "pair": [
+        "IL",
+        "PS"
+      ],
+      "sides": [
+        "Israelis",
+        "Palestinians and Arab states"
+      ],
+      "year": "1999",
+      "kind": "cultural",
+      "who": "Daniel Barenboim; Edward Said; young Israeli and Arab musicians; Government of Andalusia",
+      "title": "West-Eastern Divan Orchestra: Israeli and Arab musicians in one orchestra",
+      "what": "In 1999 conductor Daniel Barenboim and Palestinian-American scholar Edward Said created the West-Eastern Divan Orchestra, a meeting place for Arab and Israeli musicians that they saw as a school of democracy. Andalusia's regional government later offered it a base.",
+      "why_it_matters": "Young people from opposing sides learned to listen to each other in the most literal way, for over 25 years.",
+      "src": [
+        {
+          "label": "Fundación Barenboim-Said (homepage)",
+          "url": "https://barenboim-said.org/",
+          "lang": "es"
+        }
+      ],
+      "conf": "ok",
+      "note": "Source is the foundation's own site (Spanish). The orchestra is not a political dialogue body; Barenboim and Said described it as a space for encounter, not a solution. Its first workshop in Weimar (1999) is reported by secondary sources, not the fetched page."
+    },
+    {
+      "id": "et-er-2018-joint-declaration",
+      "pair": [
+        "ET",
+        "ER"
+      ],
+      "sides": [
+        "Ethiopia",
+        "Eritrea"
+      ],
+      "year": "2018-07",
+      "kind": "institutional",
+      "who": "Prime Minister Abiy Ahmed; President Isaias Afwerki",
+      "title": "Ethiopia and Eritrea declare the state of war over",
+      "what": "On 9 July 2018 in Asmara, Abiy Ahmed and Isaias Afwerki signed a Joint Declaration of Peace and Friendship ending the state of war that followed the 1998–2000 conflict, restoring transport, trade, telecommunications and diplomatic ties, after Ethiopia agreed to honour the border commission ruling.",
+      "why_it_matters": "Two decades of 'no war, no peace' ended quickly once one leader accepted a long-refused ruling.",
+      "src": [
+        {
+          "label": "PA-X Peace Agreements Database (University of Edinburgh): Joint Declaration of Peace and Friendship between Eritrea and Ethiopia",
+          "url": "https://www.peaceagreements.org/agreements/2097/",
+          "lang": "en"
+        },
+        {
+          "label": "International Crisis Group: 'Pulling Ethiopia and Eritrea Back from War' (page blocks automated fetching)",
+          "url": "https://www.crisisgroup.org/alr/africa/ethiopia-eritrea/pulling-ethiopia-and-eritrea-back-from-war",
+          "lang": "en"
+        }
+      ],
+      "conf": "ok",
+      "note": "The peace did not hold as hoped. Relations deteriorated after the 2022 Pretoria agreement on Tigray, and by 2025–2026 Crisis Group warned of a high risk of war, linked to Ethiopia's push for Red Sea access (search-result summary; crisisgroup.org returned HTTP 403)."
+    },
+    {
+      "id": "us-cu-2014-normalization",
+      "pair": [
+        "US",
+        "CU"
+      ],
+      "sides": [
+        "United States",
+        "Cuba"
+      ],
+      "year": "2014-12",
+      "kind": "institutional",
+      "who": "Barack Obama; Raúl Castro; with Pope Francis's appeal and Canada hosting talks",
+      "title": "US and Cuba restore diplomatic relations after 54 years",
+      "what": "On 17 December 2014 Obama announced talks to restore relations severed since January 1961, and both countries reopened embassies after agreeing to re-establish relations from 20 July 2015.",
+      "why_it_matters": "Two neighbours that had been enemies through the Cold War showed a relationship could be reset.",
+      "src": [
+        {
+          "label": "White House archive: Statement by the President on Cuba Policy Changes, 17 Dec 2014",
+          "url": "https://obamawhitehouse.archives.gov/the-press-office/2014/12/17/statement-president-cuba-policy-changes",
+          "lang": "en"
+        },
+        {
+          "label": "White House archive: Letter from Raúl Castro re-establishing diplomatic relations, 1 Jul 2015",
+          "url": "https://obamawhitehouse.archives.gov/the-press-office/2015/07/01/presidential-letter-re-establishing-diplomatic-relations-and-permanent",
+          "lang": "en"
+        },
+        {
+          "label": "US State Department (2017–2021 archive): Cuba Sanctions",
+          "url": "https://2017-2021.state.gov/cuba-sanctions/",
+          "lang": "en"
+        }
+      ],
+      "conf": "ok",
+      "note": "Partly reversed: on 16 June 2017 a new US administration issued a memorandum strengthening policy toward Cuba, and the embargo itself remained in place throughout. Obama's statement credits a personal appeal from Pope Francis and talks hosted by Canada."
+    },
+    {
+      "id": "uk-ar-falklands-darwin-identification",
+      "pair": [
+        "UK",
+        "AR"
+      ],
+      "sides": [
+        "United Kingdom",
+        "Argentina"
+      ],
+      "year": "2017-12",
+      "kind": "humanitarian",
+      "who": "Governments of Argentina and the UK; ICRC forensic team; families of Argentine soldiers",
+      "title": "Naming the Argentine war dead on the Falklands/Malvinas",
+      "what": "Following ICRC-facilitated talks, Argentina and the UK entrusted the ICRC with identifying Argentine soldiers buried in Darwin cemetery as 'known only to God'. A forensic team exhumed and DNA-tested 122 sets of remains in 2017, and 115 soldiers have since been identified; a second plan covers one remaining grave.",
+      "why_it_matters": "Two states still disputing sovereignty cooperated so families on one side could finally know where their sons lie.",
+      "src": [
+        {
+          "label": "ICRC: ICRC presents Argentina and the United Kingdom with results of humanitarian forensic identification project",
+          "url": "https://www.icrc.org/en/document/falklandmalvinas-islands-icrc-presents-argentina-and-united-kingdom-results-humanitarian",
+          "lang": "en"
+        },
+        {
+          "label": "ICRC: Second humanitarian plan to identify Argentine soldiers buried in Darwin Cemetery",
+          "url": "https://www.icrc.org/en/document/falkland-islands-islas-malvinas-humanitarian-plan-identify-argentine-soldiers-buried-darwin",
+          "lang": "en"
+        }
+      ],
+      "conf": "ok",
+      "note": "Naming follows the ICRC's neutral usage 'Falkland Islands (Islas Malvinas)'. The sovereignty dispute is unchanged; the first results identified 88 soldiers, later rising to 115."
+    },
+    {
+      "id": "us-vn-dioxin-remediation",
+      "pair": [
+        "US",
+        "VN"
+      ],
+      "sides": [
+        "United States",
+        "Vietnam"
+      ],
+      "year": "2018-11",
+      "kind": "humanitarian",
+      "who": "USAID; Vietnam Ministry of National Defense",
+      "title": "Cleaning up Agent Orange dioxin at Danang and Bien Hoa",
+      "what": "The United States and Vietnam jointly cleaned dioxin contamination left by Agent Orange at Danang airport, completed in 2018, and then, at Vietnam's request, began the larger Bien Hoa airbase clean-up, the main wartime Agent Orange storage site.",
+      "why_it_matters": "Former enemies worked on a war legacy together, at the request of the side that was harmed.",
+      "src": [
+        {
+          "label": "US Embassy & Consulate in Vietnam: Fact Sheets — Dioxin Remediation at Bien Hoa Airbase Area",
+          "url": "https://vn.usembassy.gov/fact-sheets-dioxin-remediation-at-bien-hoa-airbase-area/",
+          "lang": "en"
+        }
+      ],
+      "conf": "ok",
+      "note": "The embassy fact sheet lists a current Bien Hoa budget of US$183 million. Agent Orange health effects and compensation remain contested; this story covers environmental remediation only. USAID's archived fact sheet failed a TLS handshake and CRS pages returned 403, so they are not cited."
+    },
+    {
+      "id": "kp-us-2018-korean-war-remains",
+      "pair": [
+        "KP",
+        "US"
+      ],
+      "sides": [
+        "North Korea",
+        "United States"
+      ],
+      "year": "2018-07",
+      "kind": "humanitarian",
+      "who": "Kim Jong Un; Donald Trump; UN Command; Defense POW/MIA Accounting Agency (DPAA)",
+      "title": "North Korea returns 55 boxes of Korean War remains",
+      "what": "On 27 July 2018, after the Singapore summit, North Korea turned over 55 boxes said to contain remains of US service members killed in the Korean War. DPAA scientists in Hawaii have since identified individual soldiers from them.",
+      "why_it_matters": "A summit pledge produced a concrete humanitarian return for families who had waited nearly 70 years.",
+      "src": [
+        {
+          "label": "DPAA service-member profile (Sgt. Charles Edwin Beaty), describing the 2018 turnover",
+          "url": "https://dpaa-mil.sites.crmforce.mil/dpaaProfile?id=a0Jt000000ffRF3EAM",
+          "lang": "en"
+        },
+        {
+          "label": "US DoD: 'U.S. Receives Fallen Service Members' Remains From North Korea' (page blocks automated fetching)",
+          "url": "https://www.defense.gov/News/News-Stories/Article/Article/1586122/us-receives-fallen-service-members-remains-from-north-korea/",
+          "lang": "en"
+        }
+      ],
+      "conf": "ok",
+      "note": "The remains are commingled and identification is slow; officials noted some might belong to other nations' soldiers (search-result summary of DoD reporting)."
+    },
+    {
+      "id": "pl-de-1965-bishops-letter",
+      "pair": [
+        "PL",
+        "DE"
+      ],
+      "sides": [
+        "Poland",
+        "Germany"
+      ],
+      "year": "1965-11",
+      "kind": "statement",
+      "who": "Archbishop Bolesław Kominek, Cardinal Stefan Wyszyński, Karol Wojtyła and 33 other Polish bishops",
+      "title": "Polish bishops to German bishops: 'We forgive and ask for forgiveness'",
+      "what": "On 18 November 1965, twenty years after the war, 36 Polish Catholic bishops wrote to their German counterparts inviting them to Poland's millennium and declaring: 'We forgive and ask for forgiveness.'",
+      "why_it_matters": "Members of the more harmed nation offered forgiveness first, and the letter became a milestone of Polish–German reconciliation.",
+      "src": [
+        {
+          "label": "European Network Remembrance and Solidarity: Letter of Reconciliation of the Polish Bishops to the German Bishops",
+          "url": "https://enrs.eu/news/letter-of-reconciliation-of-the-polish-bishops-to-the-german-bishops",
+          "lang": "en"
+        }
+      ],
+      "conf": "ok",
+      "note": "Poland's communist authorities attacked the bishops for the letter, and the German bishops' reply in December 1965 was seen as cautious (both from search-result summaries, not the fetched page)."
+    },
+    {
+      "id": "fr-de-1963-elysee-treaty-youth-office",
+      "pair": [
+        "FR",
+        "DE"
+      ],
+      "sides": [
+        "France",
+        "Germany"
+      ],
+      "year": "1963-07",
+      "kind": "institutional",
+      "who": "Charles de Gaulle; Konrad Adenauer; Franco-German Youth Office (OFAJ/DFJW)",
+      "title": "Élysée Treaty and the Franco-German Youth Office",
+      "what": "The Élysée Treaty of 22 January 1963 announced, and on 5 July 1963 the two states founded, a joint youth office. Over sixty years it has let more than ten million young French and Germans meet through more than 400,000 programmes.",
+      "why_it_matters": "After repeated wars, two countries invested in letting their young people meet, at scale and for generations.",
+      "src": [
+        {
+          "label": "OFAJ: L'histoire de l'Office franco-allemand pour la Jeunesse",
+          "url": "https://www.ofaj.org/institution/lhistoire-de-loffice-franco-allemand-pour-la-jeunesse",
+          "lang": "fr"
+        }
+      ],
+      "conf": "ok",
+      "note": "OFAJ describes itself as the first supranational Franco-German organisation. Figures are the office's own."
+    },
+    {
+      "id": "us-jp-2016-hiroshima-pearl-harbor",
+      "pair": [
+        "US",
+        "JP"
+      ],
+      "sides": [
+        "United States",
+        "Japan"
+      ],
+      "year": "2016-05",
+      "kind": "statement",
+      "who": "Barack Obama; Shinzo Abe",
+      "title": "Obama at Hiroshima, Abe at Pearl Harbor",
+      "what": "On 27 May 2016 Obama visited Hiroshima with Abe and said 'the scientific revolution that led to the splitting of an atom requires a moral revolution, as well.' On 27 December 2016 Abe spoke at Pearl Harbor of 'the power of reconciliation, made possible through the spirit of tolerance.'",
+      "why_it_matters": "Each leader went to the other side's place of wartime grief within the same year.",
+      "src": [
+        {
+          "label": "White House archive: Remarks by President Obama and Prime Minister Abe at Hiroshima Peace Memorial, 27 May 2016",
+          "url": "https://obamawhitehouse.archives.gov/the-press-office/2016/05/27/remarks-President-obama-and-prime-minister-abe-japan-hiroshima-peace",
+          "lang": "en"
+        },
+        {
+          "label": "Prime Minister of Japan: 'The Power of Reconciliation', address at Pearl Harbor, 27 Dec 2016",
+          "url": "https://japan.kantei.go.jp/97_abe/statement/201612/1220678_11021.html",
+          "lang": "en"
+        }
+      ],
+      "conf": "ok",
+      "note": "Abe's Pearl Harbor address also thanked the United States for sending food to postwar Japan. Both visits were framed as reconciliation within an alliance; wider wartime disputes in East Asia are outside this story."
+    },
+    {
+      "id": "cy-cmp-missing-persons",
+      "pair": [
+        "CY-GC",
+        "CY-TC"
+      ],
+      "sides": [
+        "Greek Cypriots",
+        "Turkish Cypriots"
+      ],
+      "year": "1981-04",
+      "kind": "humanitarian",
+      "who": "Committee on Missing Persons in Cyprus (bi-communal, UN auspices); bi-communal forensic scientists",
+      "title": "Greek and Turkish Cypriots jointly find each other's missing",
+      "what": "Set up in April 1981 by agreement between the two communities under UN auspices, the CMP runs a bi-communal exhumation and identification project, operational since 2006. So far 1,085 missing persons from both communities have been identified and returned to their families.",
+      "why_it_matters": "On a still-divided island, mixed teams search for the dead of both sides and give them back to their families.",
+      "src": [
+        {
+          "label": "CMP press release (2026): Government of Ireland donates €30,000 to CMP",
+          "url": "https://www.cmp-cyprus.org/press-release/the-government-of-ireland-donates-e30000-to-cmp/",
+          "lang": "en"
+        }
+      ],
+      "conf": "ok",
+      "note": "Pair codes use 'CY-GC'/'CY-TC' for the two communities; no position on the island's status is implied."
+    },
+    {
+      "id": "uk-de-1914-christmas-truce",
+      "pair": [
+        "UK",
+        "DE"
+      ],
+      "sides": [
+        "British soldiers",
+        "German soldiers"
+      ],
+      "year": "1914-12",
+      "kind": "personal",
+      "who": "Ordinary British and German soldiers on the Western Front",
+      "title": "The 1914 Christmas truce",
+      "what": "At Christmas 1914, British and German soldiers on parts of the Western Front stopped fighting, sang carols, exchanged food, tobacco and badges in no-man's land, buried their dead, and in places played football.",
+      "why_it_matters": "Ordinary soldiers showed, unofficially, that the enemy was human.",
+      "src": [
+        {
+          "label": "National Army Museum: 'A First World War Christmas'",
+          "url": "https://www.nam.ac.uk/explore/christmas-ww1",
+          "lang": "en"
+        }
+      ],
+      "conf": "ok",
+      "note": "The truce was a one-off, was not observed everywhere, and high commands on both sides ordered it ended. The Imperial War Museums' account (iwm.org.uk) blocked automated fetching and is not cited."
+    },
+    {
+      "id": "us-su-1963-hotline",
+      "pair": [
+        "US",
+        "SU"
+      ],
+      "sides": [
+        "United States",
+        "Soviet Union"
+      ],
+      "year": "1963-06",
+      "kind": "institutional",
+      "who": "US and Soviet representatives to the Eighteen-Nation Disarmament Committee",
+      "title": "The Washington–Moscow hotline",
+      "what": "Eight months after the Cuban missile crisis, on 20 June 1963 in Geneva, the US and USSR signed a memorandum creating a direct communications link between their heads of government for use in emergencies.",
+      "why_it_matters": "Bitter rivals agreed they needed a reliable way to talk precisely when things are worst.",
+      "src": [
+        {
+          "label": "US State Department (2009–2017 archive): Hot Line Agreement — narrative and text",
+          "url": "https://2009-2017.state.gov/t/isn/4785.htm",
+          "lang": "en"
+        }
+      ],
+      "conf": "ok",
+      "note": "The State Department narrative says the Cuban missile crisis of October 1962 'compellingly underscored the importance of prompt, direct communication between heads of state'. Later modernisation agreements (1971, 1984) appear on related State Department pages found in search but not fetched."
     }
   ]
 }
