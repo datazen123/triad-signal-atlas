@@ -307,7 +307,7 @@ mark.ld{background:rgba(255,110,90,.3)} mark.un{background:rgba(242,193,78,.32)}
 .story p{margin:0;font-size:14px}
 .story .who{color:var(--muted);font-size:13px}
 .story .links{display:grid;gap:4px;font-size:13px}
-.story .lang{font-family:var(--f-mono);font-size:10px;color:var(--faint);border:1px solid var(--rule);border-radius:3px;padding:0 4px;margin-left:4px}
+.lang{font-family:var(--f-mono);font-size:10px;color:var(--faint);border:1px solid var(--rule);border-radius:3px;padding:0 4px;margin-left:4px}
 .story.conf-check{border-color:rgba(242,193,78,.45)}
 .story.conf-unconfirmed{border-style:dashed;border-color:rgba(255,110,90,.5)}
 .story:target,.story.flash{outline:2px solid var(--all);outline-offset:2px}
@@ -911,11 +911,13 @@ function schedPick(items,seen,active,now,rnd){
 /*SCHED:END*/
 
 const BR=A.bridges||{}, BST=Array.isArray(BR.stories)?BR.stories:[], BBY=Object.fromEntries(BST.map(b=>[b.id,b]));
-const BITEMS=BST.map(b=>({id:'b:'+b.id,group:'bridge',w:.35,kind:'b',text:b.title,story:b.id}));
-const AITEMS=PN.map(n=>({id:'a:'+n.id,group:n.domain,w:1,kind:'a',text:n.name,node:n.id})).concat(BITEMS);
+const BITEMS=BST.map(b=>({id:'b:'+b.id,group:b.pair.join('-'),w:1,kind:'b',text:b.title,story:b.id}));
+const AITEMS=PN.map(n=>({id:'a:'+n.id,group:n.domain,w:1,kind:'a',text:n.name,node:n.id}));
+// Bridge stories get a lower-weight slot of their own: about one prompt in eight, never two at once, picked by the same scheduler.
+const BRIDGE_SHARE=.12;
 const QS=(()=>{const seen=new Set(),out=[];const add=(id,group,text)=>{if(text&&!seen.has(text)){seen.add(text);out.push({id,group,w:1,kind:'q',text});}};
   PN.forEach(n=>add('q:n:'+n.id,n.domain,n.q)); DECK.forEach(d=>(d.qs||[]).forEach((t,i)=>add(`q:d:${d.id}:${i}`,'deck',t))); return out;})();
-const QITEMS=QS.concat(BITEMS);
+
 const DOME={el:$('#dome'),ph:[],next:0,rot:0,last:0,tick:0,anim:''};
 const DOME_COL=['--p1','--p2','--p3','--p4','--p5','--p6','--p7'];
 const domeMode=()=>LAB.breath?null:LAB.tab==='contemplate'?'q':'a';
@@ -937,7 +939,8 @@ function domeLeave(ph,fast){ if(ph.leaving) return; ph.leaving=true; const inn=p
   try{ inn.animate([{opacity:getComputedStyle(inn).opacity},{opacity:0}],{duration:fast?350:900,fill:'forwards',easing:'ease-out'}); }catch(e){}
   setTimeout(()=>{ ph.el.remove(); DOME.ph=DOME.ph.filter(x=>x!==ph); },fast?380:930); }
 function domeSpawn(o,now,mode){
-  const it=schedPick(mode==='q'?QITEMS:AITEMS,SEEN.items,DOME.ph.map(p=>p.id),Date.now(),Math.random); if(!it) return;
+  const useB=BITEMS.length&&!DOME.ph.some(p=>p.it.kind==='b')&&Math.random()<BRIDGE_SHARE;
+  const it=schedPick(useB?BITEMS:mode==='q'?QS:AITEMS,SEEN.items,DOME.ph.map(p=>p.id),Date.now(),Math.random); if(!it) return;
   const el=document.createElement('button'); el.type='button'; el.tabIndex=-1; el.className='ph '+it.kind;
   const used=new Set(DOME.ph.map(p=>p.col)), col=DOME_COL.filter(c=>!used.has(c)); const pc=pick(col.length?col:DOME_COL);
   const styles=reduce?['ph-fade']:it.kind==='a'?['ph-fade','ph-drift','ph-swell','ph-space','ph-rise']:['ph-fade','ph-drift','ph-swell','ph-rise','words'];
@@ -949,9 +952,10 @@ function domeSpawn(o,now,mode){
   else inn.textContent=it.text;
   el.appendChild(inn); el.setAttribute('aria-label',(it.kind==='q'?'Sit with: ':it.kind==='a'?'Open approach: ':'Bridge story: ')+it.text);
   DOME.el.appendChild(el); const w=el.offsetWidth,h=el.offsetHeight,zones=domeZones(o),W=o.W,H=o.H;
-  for(let t=0;t<40;t++){ const v=randDir(),p=domeProj(o,v); if(p.z>-.25) continue;
+  for(let t=0;t<60;t++){ const v=randDir(),p=domeProj(o,v); if(p.z>-.25) continue;
     const r={x:p.x-w/2,y:p.y-h/2,w,h}; if(r.x<8||r.y<8||r.x+w>W-8||r.y+h>H-8) continue;
-    const cx=(p.x-W/2)/(W*.2),cy=(p.y-H/2)/(H*.2); if(cx*cx+cy*cy<1) continue; // keep the dense middle of the shape clear
+    // Keep clear of the shape: first try only spots outside the whole cloud, then allow its sparse rim, never its core.
+    const cr=o.fit/o.dist*1.25*(t<40?1:.62), nx=clamp(W/2,r.x,r.x+w)-W/2, ny=clamp(H/2+o.y0,r.y,r.y+h)-H/2-o.y0; if(nx*nx+ny*ny<cr*cr) continue;
     if(zones.some(z=>rectHit(r,z,10))) continue;
     if(DOME.ph.some(q=>rectHit(r,q.r,18)||(v.x*q.v.x+v.y*q.v.y+v.z*q.v.z)>.94)) continue; // at least ~20° apart on the dome
     el.style.transform=`translate3d(${r.x.toFixed(1)}px,${r.y.toFixed(1)}px,0)`;
@@ -970,7 +974,7 @@ function domeFrame(o,now){ if(!DOME.el) return; const dt=DOME.last?Math.min(100,
     if(zones&&zones.some(z=>rectHit(ph.r,z,4))&&!ph.held) domeLeave(ph); });
   DOME.ph=DOME.ph.filter(ph=>!ph.leaving||ph.el.isConnected);
   if(check){ const live=DOME.ph.filter(p=>!p.leaving); for(let i=0;i<live.length;i++)for(let j=i+1;j<live.length;j++) if(rectHit(live[i].r,live[j].r,4)) domeLeave(live[i].born>live[j].born?live[i]:live[j]); }
-  if(mode&&now>=DOME.next){ DOME.next=now+(reduce?4500:2400)+Math.random()*(reduce?2500:1600);
+  if(mode&&now>=DOME.next){ DOME.next=now+(reduce?4500:1900)+Math.random()*(reduce?2500:1300);
     if(DOME.ph.filter(p=>!p.leaving).length<domeCap(W)) domeSpawn(o,now,mode); } }
 DOME.el&&DOME.el.addEventListener('click',e=>{ const b=e.target.closest('.ph'); if(!b) return; const ph=DOME.ph.find(p=>p.el===b); if(!ph) return; const it=ph.it;
   if(it.kind==='q') contemplateWith(it.text,it.id);
@@ -1400,7 +1404,7 @@ function renderDeck(){ if(!DECK.length) return; const d=DECK[deckI];
 const pairKey=b=>b.pair.join('–');
 const CONF_B={ok:['ok','sourced',''],check:['pending','check source','Check source: details not yet fully verified against the source.'],unconfirmed:['fail','unconfirmed','Unconfirmed: treat as a lead, not a fact.']};
 const confOf=c=>CONF_B[c]||CONF_B.unconfirmed;
-const srcB=b=>(b.src||[]).map(x=>link(x.url,x.label)+(x.lang?`<span class="lang">${esc(x.lang)}</span>`:'')).join('');
+const srcB=b=>(b.src||[]).map(x=>`<span>${link(x.url,x.label)}${x.lang?`<span class="lang">${esc(x.lang)}</span>`:''}</span>`).join('');
 const bMeta=b=>{const [cls,lab]=confOf(b.conf);return `<div class="meta">${b.year?`<span class="tag">${esc(b.year)}</span>`:''}<span class="tag">${esc(b.kind)}</span><span class="tag">${esc(b.sides[0])} – ${esc(b.sides[1])}</span><span class="pill ${cls}">${lab}</span></div>`;};
 CARD.bridge=b=>{const fl=confOf(b.conf)[2];return `<h4>${esc(b.title)}</h4>${bMeta(b)}<p>${esc(b.what)}</p>${b.why_it_matters?`<p class="muted">${esc(b.why_it_matters)}</p>`:''}${fl?`<span class="flag">${fl}</span>`:''}<div class="links">${srcB(b)}</div><a href="#story-${esc(b.id)}" class="note">All bridges across divides</a>`;};
 let divPair='all';
