@@ -749,7 +749,7 @@ async function saveFile(name,text,st){
 const LENSES={
  globe:{label:'Globe',hint:'Globe: a Fibonacci sphere. Each domain forms a band.',pos(n){const N=PN.length,y=1-2*(n._o+.5)/N,r=Math.sqrt(Math.max(0,1-y*y)),a=n._o*2.399963;return {x:Math.cos(a)*r*1.2,y:y*1.2,z:Math.sin(a)*r*1.2};}},
  lotus:{label:'Lotus',hint:'Lotus: one petal per domain. It slowly opens and closes.',pos(n,t){const a0=DKEYS.indexOf(n.domain)/DKEYS.length*TAU,u=(n._k+1)/(n._km+1),open=reduce?.75:.6+.4*Math.sin(t/3800),phi=(.3+open*1.05)*(.55+.45*u),r=.25+u*1.15,w=Math.sin(u*Math.PI)*.2*(n._k%2?1:-1),rho=r*Math.sin(phi);
-   return {x:Math.cos(a0)*rho-Math.sin(a0)*w,y:-.75+r*Math.cos(phi),z:Math.sin(a0)*rho+Math.cos(a0)*w};}},
+   return {x:Math.cos(a0)*rho-Math.sin(a0)*w,y:-.45+r*Math.cos(phi),z:Math.sin(a0)*rho+Math.cos(a0)*w};}},
  torus:{label:'Torus of practice',hint:'Torus: around the ring, foster → cultivate → sustain → develop. Around the tube, self → world.',pos(n){const th=(PHASES.indexOf(n.phase)+.12+.76*hash(n.id))/4*TAU,ph=SCALES.indexOf(n.scale)/5*TAU+(hash(n.id+'s')-.5)*.6,R=1.05,r=.42;return {x:(R+r*Math.cos(ph))*Math.cos(th),y:r*Math.sin(ph),z:(R+r*Math.cos(ph))*Math.sin(th)};}},
  spiral:{label:'Spiral of time',hint:'Spiral: height is the horizon, from now at the bottom to generations at the top.',pos(n){const s=HORIZ.indexOf(n.horizon)+(n._h+.5)/n._hm,a=s*TAU;return {x:Math.cos(a)*.95,y:-1.15+s*.58,z:Math.sin(a)*.95};}},
  ladder:{label:'Ladder of scale',hint:'Ladder: stacked rings, from self at the bottom to the world at the top.',pos(n){const L=SCALES.indexOf(n.scale),a=n._l/n._lm*TAU+L*.4,r=.3+L*.2;return {x:Math.cos(a)*r,y:-1+L*.5,z:Math.sin(a)*r};}},
@@ -769,7 +769,7 @@ function stepMorph(now){ const L=LENSES[LAB.lens]; let e=1;
   return LAB.scatter?0:LAB.from?e:1; }
 const BREATH_MS=60000/5.5; // about 5.5 breaths a minute
 function breathK(now){ if(!LAB.breath||reduce) return 1; const ph=((now-LAB.breath.t0)%BREATH_MS)/BREATH_MS; return 1+.09*Math.sin(ph*TAU-Math.PI/2); }
-function startBreath(min,q,onEnd){ const now=performance.now(); LAB.breath={t0:now,end:min?now+min*60000:null,q:q||'',onEnd:onEnd||null}; lastOv=''; renderLensChips(); }
+function startBreath(min,q,onEnd){ const now=performance.now(); LAB.breath={t0:now,end:min?now+min*60000:null,q:q||'',onEnd:onEnd||null}; lastOv=''; overlay(now); renderLensChips(); }
 function endBreath(done){ const b=LAB.breath; LAB.breath=null; lastOv=''; overlay(performance.now()); renderLensChips(); if(b&&done&&b.onEnd) b.onEnd(); }
 function fmtClock(ms){const s=Math.max(0,Math.ceil(ms/1000));return Math.floor(s/60)+':'+String(s%60).padStart(2,'0');}
 let lastOv='';
@@ -781,7 +781,7 @@ function guide(o,al){ const c=o.ctx; c.save(); c.globalAlpha=al; c.font='500 10p
   const path=pts=>{c.strokeStyle='rgba(159,230,214,.2)';c.lineWidth=1;c.setLineDash([3,6]);c.beginPath();pts.forEach((p,i)=>{const q=o.proj(p);i?c.lineTo(q.x,q.y):c.moveTo(q.x,q.y);});c.stroke();c.setLineDash([]);};
   const circ=(r,y,k=48)=>Array.from({length:k+1},(_,i)=>({x:Math.cos(i/k*TAU)*r,y,z:Math.sin(i/k*TAU)*r}));
   const L=LAB.lens;
-  if(L==='lotus') DKEYS.forEach((d,i)=>{const a=i/DKEYS.length*TAU;txt(d,{x:Math.cos(a)*1.55,y:-.85,z:Math.sin(a)*1.55},PDOM[d]);});
+  if(L==='lotus') DKEYS.forEach((d,i)=>{const a=i/DKEYS.length*TAU;txt(d,{x:Math.cos(a)*1.32,y:-.55,z:Math.sin(a)*1.32},PDOM[d]);});
   if(L==='torus'){ path(circ(1.05,0,72)); PHASES.forEach((p,i)=>{const th=(i+.5)/4*TAU;txt(p,{x:Math.cos(th)*1.72,y:.02,z:Math.sin(th)*1.72});}); }
   if(L==='spiral'){ path(Array.from({length:161},(_,i)=>{const s=i/40,a=s*TAU;return {x:Math.cos(a)*.95,y:-1.15+s*.58,z:Math.sin(a)*.95};})); HORIZ.forEach((h,i)=>txt(h,{x:0,y:-1.15+(i+.5)*.58,z:0})); }
   if(L==='ladder') SCALES.forEach((s,i)=>{const r=.3+i*.2;path(circ(r,-1+i*.5));txt(s,{x:0,y:-1+i*.5+.06,z:0});});
@@ -1069,6 +1069,136 @@ ENGINES.bridge=(n,p,box)=>{
     q('#brOut').innerHTML=`<div class="counts"><span>shared-value words ${sh}</span><span>loaded words ${ld}</span><span>us-and-them words ${us}</span><span>bridge score ${score}</span></div><div class="hl">${hlHTML(t,markRanges(t,RE_SHARED))}</div><p class="note"><mark class="ok">green</mark> = shared-value word. ${tips.length?esc(tips.join(' ')):'Ready to test on one real person from each side.'}</p>`; return score; };
   q('#brGo').onclick=check;
   q('#brSave').onclick=()=>{ const s=check(); say(box,'#brSt',savedMsg(jadd('bridge',n.id,s===null?'':`Bridge score ${s}\n\n${q('#brTxt').value}`))); renderTabsOnly(); }; };
+
+/* ---------- Peace Lab: global tools ---------- */
+function collide(id){ const a=PBY[id]||pick(PN); const others=PN.filter(m=>m.domain!==a.domain&&m.id!==a.id); const b=pick(others.length?others:PN);
+  LAB.pair=[a.id,b.id]; LAB.sel=a.id; LAB.tab='collide'; renderLab(); }
+function collision(a,b){ const h=hash(a.id+'|'+b.id), shared=a.tags.filter(t=>b.tags.includes(t));
+  const span=SCALES.indexOf(a.scale)===SCALES.indexOf(b.scale)?`both at the ${a.scale} scale`:`from the ${a.scale} to the ${b.scale} scale`;
+  const T=[`What would ${a.name} look like if it were designed by people who practise ${b.name}?`,`Use ${b.name} to test whether ${a.name} works. What would you measure, and when?`,`Where do ${a.name} and ${b.name} share a blind spot?`,`Run ${a.name} on the timescale of ${b.name} (${b.horizon}). What breaks, and what grows?`,`Someone who lives by ${b.name} critiques ${a.name}. What is their sharpest point?`,`Combine them into one project that ${a.phase==='foster'?'starts trust':'keeps going'} ${span}. What is its first week?`];
+  return {q:T[Math.floor(h*T.length)],span,shared,
+    ex:`Take the question from ${a.name}: "${a.q}" Answer it the way someone devoted to ${b.name} would. Then do the reverse with "${b.q}"`,
+    test:`Smallest test: ${a.mvp} Then add one element from ${b.name}: ${lc(b.mvp)}`}; }
+const lc=s=>{s=String(s||'');return s.charAt(0).toLowerCase()+s.slice(1);};
+PANELS.collide=box=>{ const pr=LAB.pair&&LAB.pair.map(id=>PBY[id]);
+  if(!pr||!pr[0]||!pr[1]){ box.innerHTML=`<div class="pl"><div class="eyebrow">Collide</div><h3>What if two ideas met?</h3><p class="note">Pick an approach, and chance brings one from another domain. The two pulse in the shape.</p>${pickerHTML()}<div class="row2"><button class="btn" id="cGo">Collide ${LAB.sel?'the selected one':'a random pair'}</button></div></div>`;
+    box.querySelector('#pPick').onchange=e=>{ if(e.target.value){ LAB.sel=e.target.value; collide(LAB.sel); } }; box.querySelector('#cGo').onclick=()=>collide(LAB.sel); return; }
+  const [a,b]=pr, C=collision(a,b);
+  box.innerHTML=`<div class="pl"><div class="eyebrow">Collide</div><h3>What if ${esc(a.name)} met ${esc(b.name)}?</h3>
+    <div class="meta"><span class="tag" style="color:${PDOM[a.domain]}">${esc(a.domain)}</span><span class="tag">×</span><span class="tag" style="color:${PDOM[b.domain]}">${esc(b.domain)}</span><span class="tag">${esc(C.span)}</span></div>
+    <p class="q">${esc(C.q)}</p><p><b>Exercise.</b> ${esc(C.ex)}</p><p class="note">${esc(C.test)}</p>
+    <p class="note">${C.shared.length?'They share: '+esc(C.shared.join(', '))+'.':'No shared tags: a true collision.'}</p>
+    <div class="links">${link(a.url,a.src)}${link(b.url,b.src)}</div>
+    <textarea id="cTxt" aria-label="Your thought experiment" placeholder="Think out loud…"></textarea>
+    <div class="row2"><button class="btn" id="cSave">Save to journal</button><button class="btn" id="cAdd">+ Both to Compose</button><button class="btn" id="cAgain">Another partner</button><button class="btn" id="cSwap">Swap</button><button class="btn deepen" id="cDeep">Deepen with Claude</button></div><div class="note" id="cSt"></div><div class="deep-out" id="cOut" hidden></div></div>`;
+  const q=s=>box.querySelector(s);
+  q('#cSave').onclick=()=>{ say(box,'#cSt',savedMsg(jadd('collide',a.id,`What if ${a.name} met ${b.name}?\n${C.q}\n\n${q('#cTxt').value}`))); renderTabsOnly(); };
+  q('#cAdd').onclick=()=>{ [a.id,b.id].forEach(id=>{ if(!J.tray.includes(id)&&J.tray.length<5) J.tray.push(id); }); say(box,'#cSt',savedMsg(jsave())); renderTabsOnly(); };
+  q('#cAgain').onclick=()=>collide(a.id); q('#cSwap').onclick=()=>{ LAB.pair=[b.id,a.id]; LAB.sel=b.id; renderLab(); };
+  q('#cDeep').onclick=()=>deepen({name:`${a.name} × ${b.name}`,what:`${a.what} / ${b.what}`,why:`${a.why} / ${b.why}`,mvp:C.test,q:C.q,src:`${a.src}; ${b.src}`},q('#cOut')); };
+
+const RISKS={contact:['Contact works best under equal status, common goals, cooperation and institutional support (Allport); badly run contact can backfire.','https://doi.org/10.1037/0022-3514.90.5.751'],
+ perspective:['Showing people the other side can harden views rather than soften them (Bail et al. 2018).','https://doi.org/10.1073/pnas.1804840115'],
+ media:['Exposure to opposing content can polarize (Bail et al. 2018); pair it with a write-first step.','https://doi.org/10.1073/pnas.1804840115'],
+ trust:['Unreturned steps can look like weakness at home. Keep them small, announced and reversible.',''],
+ games:['Models simplify: real conflicts have many players and unknown payoffs.',''],
+ verification:['Verification needs access both sides accept; plan for disputes over the data itself.',''],
+ nuclear:['Talks on nuclear risk are slow and fragile; protect the channel itself.',''],
+ evidence:['Automatic labels mislabel. Keep a human judgment step.',''],
+ attention:['Nudges fade; measure after a week, not a minute.',''],
+ 'shared-risk':['A shared threat can become a new arena for rivalry.',''],
+ commons:['Commons need monitoring and graduated sanctions, or free riders take over (Ostrom).',''],
+ ritual:['Symbols without follow-through breed cynicism.',''],
+ dialogue:['Dialogue with no path to decisions can feel like talk for its own sake.',''],
+ law:['Rules bind only those who accept them; plan for non-compliance.',''],
+ empathy:['Empathy can be parochial: it flows easily to one\'s own group.',''],
+ repair:['Repair processes can re-traumatize if rushed or imposed.','']};
+const METRIC={mind:'Warmth toward the other group (a 0–100 feeling thermometer), before, after and a month later',relation:'Repeat contacts three months later',culture:'Shared works made, and who comes back',economy:'Value or volume shared across the divide',institution:'Agreements implemented, not just signed',security:'Reciprocated steps per month',technology:'Users on both sides, and claims checked',ecology:'A measured change in the shared resource',information:'Share of your claims resting on rungs A–C'};
+function mvpModel(tray){ const ns=tray.map(id=>PBY[id]).filter(Boolean); if(!ns.length) return null;
+  const phases=PHASES.map(p=>ns.some(n=>n.phase===p)), sc=ns.map(n=>SCALES.indexOf(n.scale)), lo=Math.min(...sc), hi=Math.max(...sc);
+  const first=[...ns].sort((a,b)=>HORIZ.indexOf(a.horizon)-HORIZ.indexOf(b.horizon))[0];
+  const tags=[...new Set(ns.flatMap(n=>n.tags))], risks=tags.filter(t=>RISKS[t]).map(t=>RISKS[t]);
+  return {ns,phases,lo,hi,first,risks:risks.length?risks:[['Name the way this could make things worse before you test it.','']],metrics:[...new Set(ns.map(n=>METRIC[n.domain]).filter(Boolean))]}; }
+function mvpMD(m){ return `# Peace MVP canvas\n\nApproaches: ${m.ns.map(n=>n.name).join(' + ')}\n\n## Mechanism\n${m.ns.map(n=>`- ${n.name}: ${n.what}`).join('\n')}\n\n## Smallest test\n${m.first.mvp}\n\n## Phase coverage\n${PHASES.map((p,i)=>(m.phases[i]?'[x] ':'[ ] ')+p).join('  ')}\n\n## Scale span\n${SCALES[m.lo]} → ${SCALES[m.hi]}\n\n## Evidence to read\n${m.ns.map(n=>`- ${n.src}: ${n.url}${n.conf==='check'?' (check source)':''}`).join('\n')}\n\n## Risks\n${m.risks.map(r=>'- '+r[0]).join('\n')}\n\n## Metric to watch\n${m.metrics.map(x=>'- '+x).join('\n')}\n`; }
+PANELS.compose=box=>{ const m=mvpModel(J.tray);
+  box.innerHTML=`<div class="pl"><div class="eyebrow">Compose MVP</div><h3>Build a minimum viable peace project</h3><p class="note">Add up to five approaches to the tray. The canvas updates as you go.</p>
+    <div class="row2">${J.tray.map(id=>PBY[id]).filter(Boolean).map(n=>`<span class="tag" style="color:${PDOM[n.domain]}" data-card="peace:${esc(n.id)}">${esc(n.name)} <button class="x2" data-rm="${esc(n.id)}" aria-label="Remove ${esc(n.name)}">×</button></span>`).join('')||'<span class="note">The tray is empty.</span>'}</div>
+    <div class="row2">${LAB.sel&&!J.tray.includes(LAB.sel)?`<button class="btn" id="cAddSel">+ ${esc(PBY[LAB.sel].name)}</button>`:''}<button class="btn" id="cAddRand">+ A random one</button><span class="note" id="cSt"></span></div>
+    ${m?`<dl class="canvas-mvp"><div><dt>Mechanism</dt><dd><ul>${m.ns.map(n=>`<li><b>${esc(n.name)}</b>: ${esc(n.what)}</li>`).join('')}</ul></dd></div>
+      <div><dt>Smallest test</dt><dd>${esc(m.first.mvp)}</dd></div>
+      <div><dt>Phase coverage</dt><dd><div class="phasebar">${PHASES.map((p,i)=>`<span class="${m.phases[i]?'on':''}">${p}</span>`).join('')}</div></dd></div>
+      <div><dt>Scale span</dt><dd><div class="phasebar" style="grid-template-columns:repeat(5,1fr)">${SCALES.map((s,i)=>`<span class="${i>=m.lo&&i<=m.hi?'on':''}">${s}</span>`).join('')}</div></dd></div>
+      <div><dt>Evidence to read</dt><dd class="links">${m.ns.map(n=>link(n.url,n.src)+(n.conf==='check'?' <span class="flag">check source</span>':'')).join('<br>')}</dd></div>
+      <div><dt>Risks</dt><dd><ul>${m.risks.map(r=>`<li>${esc(r[0])}${r[1]?' '+link(r[1],'source'):''}</li>`).join('')}</ul></dd></div>
+      <div><dt>Metric to watch</dt><dd><ul>${m.metrics.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></dd></div></dl>
+      <div class="row2"><button class="btn" id="cSave">Save to journal</button><button class="btn" id="cCopy">Copy as Markdown</button><button class="btn" id="cClear">Clear tray</button></div><div class="note" id="cSt2"></div>`:''}</div>`;
+  const q=s=>box.querySelector(s);
+  box.querySelectorAll('[data-rm]').forEach(b=>b.onclick=()=>{ J.tray=J.tray.filter(x=>x!==b.dataset.rm); jsave(); renderLab(); });
+  if(q('#cAddSel')) q('#cAddSel').onclick=()=>addTray(LAB.sel);
+  q('#cAddRand').onclick=()=>{ const rest=PN.filter(n=>!J.tray.includes(n.id)); if(rest.length) addTray(pick(rest).id); };
+  if(m){ q('#cSave').onclick=()=>{ say(box,'#cSt2',savedMsg(jadd('compose',null,mvpMD(m)))); renderTabsOnly(); }; q('#cCopy').onclick=()=>copyText(mvpMD(m),q('#cSt2')); q('#cClear').onclick=()=>{ J.tray=[]; jsave(); renderLab(); }; } };
+
+PANELS.contemplate=box=>{ const n=PBY[LAB.sel]; const opts=[]; if(LAB.contQ) opts.push(LAB.contQ); if(n) opts.push(n.q); DECK.forEach(d=>opts.push(d.qs[0])); const qs=[...new Set(opts)];
+  let min=5; const after=LAB.after&&LAB.after.id==='contemplate';
+  box.innerHTML=`<div class="pl"><div class="eyebrow">Contemplate</div><h3>Sit with one question</h3><p class="note">The shape slows and breathes at about 5.5 breaths a minute, with your question on screen. No answers needed until the end.</p>
+    <label for="ctQ">Question</label><select id="ctQ">${qs.map(x=>`<option>${esc(x)}</option>`).join('')}<option value="__own">My own question…</option></select><input type="text" id="ctOwn" hidden aria-label="Your own question">
+    <div class="row2" id="ctMin">${[3,5,10].map(m=>`<button class="chip" data-m="${m}" aria-pressed="${m===min}">${m} min</button>`).join('')}</div>
+    <div class="row2"><button class="btn" id="ctGo">${LAB.breath?'Stop':'Begin'}</button></div>
+    ${after?`<p>One line, while it is fresh:</p><input type="text" id="ctLine" aria-label="One line"><div class="row2"><button class="btn" id="ctSave">Save to journal</button><span class="note" id="ctSt"></span></div>`:''}</div>`;
+  const q=s=>box.querySelector(s);
+  q('#ctQ').onchange=()=>{ q('#ctOwn').hidden=q('#ctQ').value!=='__own'; };
+  q('#ctMin').onclick=e=>{const b=e.target.closest('[data-m]');if(!b)return;min=+b.dataset.m;q('#ctMin').querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed',c===b));};
+  q('#ctGo').onclick=()=>{ if(LAB.breath){ endBreath(false); q('#ctGo').textContent='Begin'; return; } const v=q('#ctQ').value==='__own'?q('#ctOwn').value.trim():q('#ctQ').value; if(!v) return;
+    LAB.after=null; LAB.contQ=v; startBreath(min,v,()=>{ LAB.after={id:'contemplate',q:v}; if(LAB.tab==='contemplate') renderLab(); }); q('#ctGo').textContent='Stop'; $('#peace').scrollIntoView({block:'center',behavior:reduce?'auto':'smooth'}); };
+  if(after) q('#ctSave').onclick=()=>{ say(box,'#ctSt',savedMsg(jadd('contemplate',LAB.sel,`${LAB.after.q}\n\n${q('#ctLine').value}`))); LAB.after=null; renderTabsOnly(); }; };
+
+function todays(){ const P=PEACE.practices||{},d=dayIndex(),now=new Date(); const at=(k,i)=>{const a=P[k]||[];return a.length?a[((i%a.length)+a.length)%a.length]:null;};
+  return {daily:at('daily',d),weekly:at('weekly',Math.floor(d/7)),monthly:at('monthly',now.getUTCFullYear()*12+now.getUTCMonth()),yearly:at('yearly',now.getUTCFullYear())}; }
+function pocketMD(){ const t=todays(),P=PEACE.practices||{},W=PEACE.words||[],w=W.length?W[dayIndex()%W.length]:null,ids=[...new Set([LAB.sel,...J.tray].filter(id=>PBY[id]))];
+  return `# Peace Lab pocket card\nWeek of ${new Date().toISOString().slice(0,10)}\n\n## Today\n- ${t.daily?t.daily.title+': '+t.daily.how:'—'}\n${w?`- Word for peace: ${w.w} (${w.rom}, ${w.lang}): ${w.lit}\n`:''}\n## Daily\n${(P.daily||[]).map(x=>`- [ ] ${x.title}: ${x.how}`).join('\n')}\n\n## This week\n${t.weekly?`- [ ] ${t.weekly.title}: ${t.weekly.how}`:''}\n\n## This month\n${t.monthly?`- [ ] ${t.monthly.title}: ${t.monthly.how}`:''}\n\n## This year\n${t.yearly?`- [ ] ${t.yearly.title}: ${t.yearly.how}`:''}\n\n## Approaches I'm carrying\n${ids.map(id=>{const n=PBY[id];return `- ${n.name}\n  - Question: ${n.q}\n  - Smallest test: ${n.mvp}`;}).join('\n')||'- (none chosen yet)'}\n\n## The loop, off-screen\n${(PEACE.loop||[]).map(s=>`- ${s.stage}: ${s.off}`).join('\n')}\n`; }
+PANELS.practices=box=>{ const L=PEACE.loop||[],t=todays(),k=LAB.stage||0,s=L[k];
+  const R=96,cx=150,cy=150,pts=L.map((_,i)=>{const a=i/L.length*TAU-Math.PI/2;return [cx+Math.cos(a)*R,cy+Math.sin(a)*R];});
+  const svg=`<svg class="ring" viewBox="0 0 300 300" role="group" aria-label="The creation loop"><circle cx="${cx}" cy="${cy}" r="${R}" fill="none" stroke="#23304e" stroke-width="2" stroke-dasharray="4 6"/>
+    ${pts.map(([x,y],i)=>{const [x2,y2]=pts[(i+1)%pts.length],mx=(x+x2)/2,my=(y+y2)/2,ang=Math.atan2(y2-y,x2-x)*180/Math.PI;return `<path d="M-4,-4 L4,0 L-4,4" fill="none" stroke="#5a6684" stroke-width="1.5" transform="translate(${mx.toFixed(1)},${my.toFixed(1)}) rotate(${ang.toFixed(1)})"/>`;}).join('')}
+    ${L.map((st,i)=>{const [x,y]=pts[i],on=i===k;return `<g data-st="${i}" tabindex="0" role="button" aria-pressed="${on}" aria-label="${esc(st.stage)}"><circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${on?27:23}" fill="${on?'#9fe6d6':'#111a2e'}" stroke="#9fe6d6" stroke-width="1.5"/><text x="${x.toFixed(1)}" y="${(y+4).toFixed(1)}" text-anchor="middle" font-size="10" fill="${on?'#0a0f1e':'#e7ebf5'}">${esc(st.stage)}</text></g>`;}).join('')}
+    <text x="${cx}" y="${cy-4}" text-anchor="middle" font-size="11" fill="#8e99b6">continuous</text><text x="${cx}" y="${cy+11}" text-anchor="middle" font-size="11" fill="#8e99b6">creation</text></svg>`;
+  box.innerHTML=`<div class="pl"><div class="eyebrow">Practices, off-screen</div><h3>The creation loop</h3>${svg}
+    ${s?`<p class="q">${esc(s.stage)}</p><p><b>On this device:</b> ${esc(s.on)}</p><p><b>Off the device:</b> ${esc(s.off)}</p>`:''}
+    <h4>Today's practice</h4>${['daily','weekly','monthly','yearly'].map(c=>t[c]?`<p><span class="tag">${c}</span> <b>${esc(t[c].title)}</b>. ${esc(t[c].how)}</p>`:'').join('')}
+    <details><summary>All practices by cadence</summary>${['daily','weekly','monthly','yearly'].map(c=>`<p class="note" style="margin-top:8px"><b>${c}</b></p><ul class="note" style="margin:0;padding-left:18px">${((PEACE.practices||{})[c]||[]).map(x=>`<li>${esc(x.title)}: ${esc(x.how)}</li>`).join('')}</ul>`).join('')}</details>
+    <h4>Pocket card</h4><p class="note">This week's practices plus the approaches you are carrying, as a Markdown file for your phone or notebook.</p>
+    <div class="row2"><button class="btn" id="prDl">Download .md</button><button class="btn" id="prCp">Copy</button></div><div class="note" id="prSt"></div></div>`;
+  box.querySelectorAll('[data-st]').forEach(g=>{ const go=()=>{LAB.stage=+g.dataset.st;renderLab();}; g.addEventListener('click',go); g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}}); });
+  box.querySelector('#prDl').onclick=()=>saveFile('peace-lab-pocket-card.md',pocketMD(),box.querySelector('#prSt'));
+  box.querySelector('#prCp').onclick=()=>copyText(pocketMD(),box.querySelector('#prSt')); };
+
+function journalMD(){ const name=id=>PBY[id]?PBY[id].name:'';
+  return `# Peace Lab journal\nExported ${new Date().toISOString().slice(0,16).replace('T',' ')} UTC\n\n`+J.entries.map(e=>`## ${fmtDate(e.t)} · ${e.kind}${e.node&&name(e.node)?' · '+name(e.node):''}\n\n${e.text}\n`).join('\n')
+   +(J.grit.length?`\n## Trust ledger\n${J.grit.map(g=>`- ${fmtDate(g.t)} ${g.who==='them'?'They':'We'}: ${g.step} (${g.recip===true?'returned':g.recip===false?'not returned':'pending'})`).join('\n')}\n`:'')
+   +(J.slow.length?`\n## Slow news\n${J.slow.map(x=>`- ${fmtDate(x.t)} ${x.h}\n  - Then: ${x.take}${x.out?`\n  - Turned out: ${x.out}`:''}`).join('\n')}\n`:'')
+   +(J.prov.length?`\n## Opinion provenance\n${J.prov.map(x=>`- [${x.r}] ${x.v}`).join('\n')}\n`:'')
+   +(J.tray.length?`\n## Compose tray\n${J.tray.map(id=>'- '+name(id)).join('\n')}\n`:''); }
+PANELS.journal=box=>{ const name=id=>PBY[id]?PBY[id].name:'';
+  box.innerHTML=`<div class="pl"><div class="eyebrow">Journal</div><h3>${J.entries.length} entr${J.entries.length===1?'y':'ies'}</h3><p class="note">${STORE_OK?SAVED_NOTE:'This browser blocks storage here, so entries last until you close the page. Export or copy them.'}</p>
+    <div class="row2"><button class="btn" id="jDl">Export .md</button><button class="btn" id="jCp">Copy</button><button class="btn" id="jClr">Clear all</button></div><div class="note" id="jSt"></div>
+    <div class="items">${J.entries.slice(0,60).map((e,i)=>`<div><span class="note">${fmtDate(e.t)} · ${esc(e.kind)}${e.node&&name(e.node)?' · '+esc(name(e.node)):''}</span><span style="white-space:pre-wrap">${esc(e.text.length>600?e.text.slice(0,600)+'…':e.text)}</span><button class="x2" data-del="${i}" aria-label="Delete entry">delete</button></div>`).join('')||'<p class="note">Nothing yet. Every engine has a Save to journal button.</p>'}</div>
+    ${J.entries.length>60?`<p class="note">Showing the latest 60. Export includes all ${J.entries.length}.</p>`:''}</div>`;
+  const q=s=>box.querySelector(s);
+  q('#jDl').onclick=()=>saveFile(`peace-lab-journal-${new Date().toISOString().slice(0,10)}.md`,journalMD(),q('#jSt'));
+  q('#jCp').onclick=()=>copyText(journalMD(),q('#jSt'));
+  q('#jClr').onclick=()=>{ if(!J.entries.length&&!J.grit.length&&!J.slow.length&&!J.prov.length) return; if(!confirm('Delete every journal entry, ledger step, slow-news item and view from this browser? Export first if you want to keep them.')) return; J={entries:[],grit:[],slow:[],prov:[],tray:J.tray}; jsave(); renderLab(); };
+  box.querySelectorAll('[data-del]').forEach(b=>b.onclick=()=>{ J.entries.splice(+b.dataset.del,1); jsave(); renderLab(); }); };
+
+let deckI=DECK.length?dayIndex()%DECK.length:0;
+function renderDeck(){ if(!DECK.length) return; const d=DECK[deckI];
+  $('#deck').innerHTML=`<div class="deckcard"><div class="eyebrow">Card ${deckI+1} of ${DECK.length}</div><h3>${esc(d.title)}</h3><p>${esc(d.setup)}</p><ol>${d.qs.map(x=>`<li>${esc(x)}</li>`).join('')}</ol>
+    <textarea id="dkTxt" aria-label="Your answer" placeholder="Answer one of the questions, or argue with the setup."></textarea>
+    <div class="row2"><button class="btn" id="dkPrev" aria-label="Previous card">←</button><button class="btn" id="dkNext" aria-label="Next card">→</button><button class="btn" id="dkShuf">Shuffle</button><button class="btn" id="dkCont">Contemplate this</button><button class="btn" id="dkSave">Save answer</button><span class="note" id="dkSt"></span></div></div>`;
+  const q=s=>$('#deck').querySelector(s);
+  q('#dkPrev').onclick=()=>{deckI=(deckI-1+DECK.length)%DECK.length;renderDeck();}; q('#dkNext').onclick=()=>{deckI=(deckI+1)%DECK.length;renderDeck();};
+  q('#dkShuf').onclick=()=>{ let i=deckI; if(DECK.length>1) while(i===deckI) i=Math.floor(Math.random()*DECK.length); deckI=i; renderDeck(); };
+  q('#dkCont').onclick=()=>{ LAB.contQ=d.qs[0]; LAB.tab='contemplate'; renderLab(); $('#sec-peace').scrollIntoView({behavior:reduce?'auto':'smooth'}); };
+  q('#dkSave').onclick=()=>{ const v=q('#dkTxt').value; say($('#deck'),'#dkSt',savedMsg(jadd('deck',null,v.trim()?`${d.title}\n${d.setup}\n\n${v}`:''))); renderTabsOnly(); }; }
 
 /* ---------- boot ---------- */
 $('#statusLine').innerHTML=`<span>Built ${fmtDate(A.built_at)}</span>${A.live_url?`<span class="live">● ${link(A.live_url,'Live, auto-updating version')}</span>`:''}${A.repo_url?`<span>${link(A.repo_url,'Pipeline source')}</span>`:''}<span>${S.length} sources · ${PROJECTS.length} joint projects · ${PEOPLE.length} bridge people · ${CHANNELS.length} channels · ${PN.length} peace approaches</span>`;
