@@ -1011,6 +1011,65 @@ ENGINES.premortem=(n,p,box)=>{ const S={a:'US',b:'CN',f:0,step:-1,trip:[],off:[]
     box.querySelector('#pAgain').onclick=()=>{ S.step=-1; S.trip=[]; S.off=[]; draw(); }; };
   draw(); };
 
+/* ---------- Peace Lab: play engines (batch 2) ---------- */
+ENGINES.words=(n,p,box)=>{ const W=PEACE.words||[]; const d=W.length?dayIndex()%W.length:0;
+  box.innerHTML=`<div class="eng"><h4>The word for peace</h4><p class="note">Each word carries a different picture of peace. Today's word is highlighted.</p>
+    <div>${W.map((w,i)=>`<div class="word${i===d?' today':''}"><span><b>${esc(w.w)}</b> <span class="mono">${esc(w.rom)}</span> · ${esc(w.lang)}${i===d?' · <span class="mono" style="color:var(--all)">today</span>':''}</span><span class="note">${esc(w.lit)}</span><span style="font-size:12px">${link(w.url,'dictionary entry')}${w.conf==='check'?' <span class="flag">check source</span>':''}</span></div>`).join('')}</div>
+    <label for="wTxt">Which picture of peace is closest to yours? Which is furthest?</label><textarea id="wTxt"></textarea><div class="row2"><button class="btn" id="wSave">Save to journal</button><span class="note" id="wSt"></span></div></div>`;
+  box.querySelector('#wSave').onclick=()=>{ say(box,'#wSt',savedMsg(jadd('words',n.id,box.querySelector('#wTxt').value))); renderTabsOnly(); }; };
+
+const ROLES=['a head of government','a soldier','a farmer','a factory worker','a student','a diplomat','a refugee','a scientist','a nurse','a child born today','a fisher','a border guard'];
+ENGINES.veil=(n,p,box)=>{ let lot=null;
+  const draw=()=>{ box.innerHTML=`<div class="eng"><h4>Veil of ignorance</h4><p class="note">Write rules for how the US, China and Russia (and the other powers) treat each other. You don't yet know which country you will be born into, or in what role.</p>
+    <label for="vRules">Your rules</label><textarea id="vRules" placeholder="1. …&#10;2. …&#10;3. …">${esc(LAB.veilRules||'')}</textarea><div class="row2"><button class="btn" id="vLift">${lot?'Lift it again':'Lift the veil'}</button></div>
+    ${lot?`<p class="q">You are ${esc(lot.role)} in ${esc(PW[lot.k].name)}.</p><label for="vTxt">Would you keep your rules from here? Which would you change first?</label><textarea id="vTxt"></textarea><div class="row2"><button class="btn" id="vSave">Save to journal</button><span class="note" id="vSt"></span></div>`:''}</div>`;
+    const q=s=>box.querySelector(s); q('#vRules').oninput=()=>{LAB.veilRules=q('#vRules').value;};
+    q('#vLift').onclick=()=>{ LAB.veilRules=q('#vRules').value; if(!LAB.veilRules.trim()){ q('#vRules').focus(); return; } lot={k:pick(POWERS).k,role:pick(ROLES)}; draw(); };
+    if(lot) q('#vSave').onclick=()=>{ say(box,'#vSt',savedMsg(jadd('veil',n.id,`Rules:\n${LAB.veilRules}\n\nThen I was ${lot.role} in ${PW[lot.k].name}.\n${q('#vTxt').value}`))); renderTabsOnly(); }; };
+  draw(); };
+
+ENGINES.provenance=(n,p,box)=>{
+  const draw=()=>{ const counts={};J.prov.forEach(x=>{counts[x.r]=(counts[x.r]||0)+1;}); const ks=[...Object.keys(EV),'?'],mx=Math.max(1,...ks.map(k=>counts[k]||0));
+    box.innerHTML=`<div class="eng"><h4>Where did my opinions come from?</h4><p class="note">Enter a view you hold strongly, then pick the hardest evidence it actually rests on.</p>
+      <label for="prView">A strongly held view</label><input type="text" id="prView"><label for="prRung">It mostly rests on</label><select id="prRung">${Object.entries(EV).map(([k,e])=>`<option value="${k}">${k} · ${esc(e.name)}</option>`).join('')}<option value="?">? · a friend, a feed, or I don't know</option></select>
+      <div class="row2"><button class="btn" id="prAdd">Add</button><span class="note" id="prSt"></span></div>
+      <div style="display:grid;gap:4px">${ks.map(k=>`<div class="hbar"><span>${k==='?'?'? unknown':k+' '+esc(EV[k].name.toLowerCase())}</span><div class="track"><i style="width:${(counts[k]||0)/mx*100}%;background:${k==='?'?'var(--warn)':EV[k].hex}"></i></div><span class="n">${counts[k]||0}</span></div>`).join('')}</div>
+      <div class="items">${J.prov.map((x,i)=>`<div><span>${rkHTML(x.r)} ${esc(x.v)}</span><button class="x2" data-del="${i}" aria-label="Delete view">delete</button></div>`).join('')}</div></div>`;
+    const q=s=>box.querySelector(s);
+    q('#prAdd').onclick=()=>{ const v=q('#prView').value.trim(); if(!v){ q('#prView').focus(); return; } J.prov.unshift({t:new Date().toISOString(),v:v.slice(0,500),r:q('#prRung').value}); const ok=jsave(); draw(); say(box,'#prSt',savedMsg(ok)); };
+    box.querySelectorAll('[data-del]').forEach(b=>b.onclick=()=>{ J.prov.splice(+b.dataset.del,1); jsave(); draw(); }); };
+  draw(); };
+
+ENGINES.superordinate=(n,p,box)=>{ const PR=PEACE.problems||[]; let cur=null;
+  const draw=()=>{ box.innerHTML=`<div class="eng"><h4>Shared problems</h4><p class="note">Problems no single power can solve alone. Pick one and draft the smallest joint step.</p>
+    <div class="items">${PR.map(x=>`<div><button class="chip" data-prob="${esc(x.id)}" aria-pressed="${cur===x.id}">${esc(x.name)}</button><span class="note">${(x.needs||[]).filter(k=>PW[k]).map(k=>pdot(k)+' '+esc(k)).join(' ')}</span></div>`).join('')}</div>
+    ${cur?(()=>{const x=PR.find(y=>y.id===cur);return `<p class="q">${esc(x.name)}</p><p class="note">${esc(x.why)}</p><label for="sStep">The smallest joint step</label><textarea id="sStep" placeholder="Who does what, by when, and how would each side check it?"></textarea><label for="sFirst">Who moves first?</label><select id="sFirst">${(x.needs||[]).filter(k=>PW[k]).map(k=>`<option value="${k}">${esc(PW[k].name)}</option>`).join('')}</select><div class="row2"><button class="btn" id="sSave">Save to journal</button><span class="note" id="sSt"></span></div>`;})():''}</div>`;
+    box.querySelectorAll('[data-prob]').forEach(b=>b.onclick=()=>{cur=b.dataset.prob;draw();});
+    if(cur) box.querySelector('#sSave').onclick=()=>{ const x=PR.find(y=>y.id===cur); say(box,'#sSt',savedMsg(jadd('superordinate',n.id,box.querySelector('#sStep').value.trim()?`${x.name}: first mover ${box.querySelector('#sFirst').value}\n\n${box.querySelector('#sStep').value}`:''))); renderTabsOnly(); }; };
+  draw(); };
+
+ENGINES.slow=(n,p,box)=>{
+  const draw=()=>{ const now=Date.now();
+    box.innerHTML=`<div class="eng"><h4>Slow news</h4><p class="note">Save a headline and your take now. After seven days it comes due: compare what you thought with what turned out to be true.</p>
+      <label for="slH">Headline</label><input type="text" id="slH"><label for="slT">Your take now</label><textarea id="slT"></textarea><div class="row2"><button class="btn" id="slAdd">Save for a week</button><span class="note" id="slSt"></span></div>
+      <div class="items">${J.slow.map((x,i)=>{const age=Math.floor((now-new Date(x.t))/864e5),due=age>=7&&!x.out;
+        return `<div><b>${esc(x.h)}</b><span class="note">${fmtDate(x.t)} · ${age} day${age===1?'':'s'} ago${due?' · <span style="color:var(--warn)">due</span>':x.out?' · revisited':` · due in ${7-age} day${7-age===1?'':'s'}`}</span><span>Then: ${esc(x.take)}</span>${x.out?`<span>What turned out true: ${esc(x.out)}</span>`:''}${due?`<textarea data-out="${i}" aria-label="What turned out to be true"></textarea><div class="row2"><button class="btn" data-rev="${i}">Save what turned out true</button></div>`:''}<button class="x2" data-del="${i}" aria-label="Delete headline">delete</button></div>`;}).join('')}</div></div>`;
+    const q=s=>box.querySelector(s);
+    q('#slAdd').onclick=()=>{ const h=q('#slH').value.trim(),t=q('#slT').value.trim(); if(!h||!t){ say(box,'#slSt','Add both a headline and your take.'); return; } J.slow.unshift({t:new Date().toISOString(),h:h.slice(0,300),take:t.slice(0,2000),out:''}); const ok=jsave(); draw(); say(box,'#slSt',savedMsg(ok)); };
+    box.querySelectorAll('[data-rev]').forEach(b=>b.onclick=()=>{ const i=+b.dataset.rev,v=box.querySelector(`[data-out="${i}"]`).value.trim(); if(!v) return; J.slow[i].out=v.slice(0,2000); jadd('slow',n.id,`${J.slow[i].h}\nThen: ${J.slow[i].take}\nTurned out: ${v}`); jsave(); draw(); });
+    box.querySelectorAll('[data-del]').forEach(b=>b.onclick=()=>{ J.slow.splice(+b.dataset.del,1); jsave(); draw(); }); };
+  draw(); };
+
+ENGINES.bridge=(n,p,box)=>{
+  box.innerHTML=`<div class="eng"><h4>A statement both sides could sign</h4><p class="note">Bridging systems such as Community Notes and Pol.is surface statements that people who usually disagree both rate well. Draft one, then check its words.</p>
+    <label for="brTxt">Your statement</label><textarea id="brTxt" placeholder="We both want…"></textarea><div class="row2"><button class="btn" id="brGo">Check it</button><button class="btn" id="brSave">Save to journal</button><span class="note" id="brSt"></span></div><div id="brOut" class="pl"></div></div>`;
+  const q=s=>box.querySelector(s);
+  const check=()=>{ const t=norm(q('#brTxt').value); if(!t){ q('#brOut').innerHTML=''; return null; } const ld=countRe(RE_LOADED,t),sh=countRe(RE_SHARED,t),us=countRe(RE_USTHEM,t),score=sh*2-ld*2-us;
+    const tips=[]; if(ld) tips.push('Swap loaded words for plain ones each side would use about itself.'); if(us) tips.push('Replace "they" framings with the shared subject.'); if(!sh) tips.push('Name something both sides value: safety, children, a fair future.'); if(t.length>280) tips.push('Shorter statements are easier to sign.');
+    q('#brOut').innerHTML=`<div class="counts"><span>shared-value words ${sh}</span><span>loaded words ${ld}</span><span>us-and-them words ${us}</span><span>bridge score ${score}</span></div><div class="hl">${hlHTML(t,markRanges(t,RE_SHARED))}</div><p class="note"><mark class="ok">green</mark> = shared-value word. ${tips.length?esc(tips.join(' ')):'Ready to test on one real person from each side.'}</p>`; return score; };
+  q('#brGo').onclick=check;
+  q('#brSave').onclick=()=>{ const s=check(); say(box,'#brSt',savedMsg(jadd('bridge',n.id,s===null?'':`Bridge score ${s}\n\n${q('#brTxt').value}`))); renderTabsOnly(); }; };
+
 /* ---------- boot ---------- */
 $('#statusLine').innerHTML=`<span>Built ${fmtDate(A.built_at)}</span>${A.live_url?`<span class="live">● ${link(A.live_url,'Live, auto-updating version')}</span>`:''}${A.repo_url?`<span>${link(A.repo_url,'Pipeline source')}</span>`:''}<span>${S.length} sources · ${PROJECTS.length} joint projects · ${PEOPLE.length} bridge people · ${CHANNELS.length} channels · ${PN.length} peace approaches</span>`;
 $('#footBuild').textContent=`Snapshot built ${A.built_at||'—'}.`;
