@@ -923,7 +923,7 @@ const DOME={el:$('#dome'),ph:[],next:0,rot:0,last:0,tick:0,anim:''};
 const DOME_COL=['--p1','--p2','--p3','--p4','--p5','--p6','--p7'];
 const domeMode=()=>LAB.breath?null:LAB.tab==='contemplate'?'q':'a';
 const domeCap=W=>W>=700?5:W>=520?4:W>=360?3:2;
-function domeProj(o,v){ const R=2.7,yaw=o.yaw*.35+DOME.rot,pitch=o.pitch*.5,x0=v.x*R,y0=v.y*R,z0=v.z*R;
+function domeProj(o,v){ const R=2.7,yaw=o.yaw*.2+DOME.rot,pitch=o.pitch*.5,x0=v.x*R,y0=v.y*R,z0=v.z*R;
   const cy=Math.cos(yaw),sy=Math.sin(yaw),x=x0*cy-z0*sy,z=x0*sy+z0*cy,cp=Math.cos(pitch),sp=Math.sin(pitch),y=y0*cp-z*sp,z2=y0*sp+z*cp,s=o.fit/(o.dist-z2);
   return {x:o.W/2+x*s,y:o.H/2-y*s+o.y0,z:z2/R}; }
 function domeGrid(o){ const c=o.ctx; c.save(); c.strokeStyle='rgba(200,215,255,.055)'; c.lineWidth=1;
