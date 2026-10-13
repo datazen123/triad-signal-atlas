@@ -300,6 +300,23 @@ class RegistryAndBuildTests(unittest.TestCase):
         self.assertNotIn(build.PLACEHOLDER, html)
         self.assertEqual(build.check(html, data), [])
 
+    def test_pages_output_is_a_full_document(self):
+        import build
+        data = build.compose()
+        page = build.wrap(build.render(data), data["live_url"])
+        self.assertTrue(page.startswith("<!doctype html>"), "Pages output must be standards mode")
+        for needle in ('<meta charset="utf-8">', 'name="viewport"', "viewport-fit=cover", 'name="description"',
+                       'property="og:title"', 'property="og:url"', "<body>", "</html>"):
+            self.assertIn(needle, page)
+        self.assertLess(page.index("</head>"), page.index('<div class="wrap">'))
+        self.assertEqual(page.count("<title>"), 1)
+
+    def test_artifact_output_stays_unwrapped(self):
+        import build
+        html = build.render(build.compose())
+        self.assertNotIn("<!doctype", html.lower())
+        self.assertNotIn("<html", html.lower())
+
     def test_curated_people_and_projects_are_sourced(self):
         for name in ("people", "projects"):
             for item in common.read_json(common.CURATED / f"{name}.json"):

@@ -16,7 +16,7 @@
 }
 *{box-sizing:border-box}
 html,body{background:var(--void);color:var(--ink)}
-body{font-family:var(--f-body);font-size:15px;line-height:1.55;padding-inline:16px;padding-block:0 64px}
+body{margin:0;font-family:var(--f-body);font-size:15px;line-height:1.55;padding-inline:max(16px,env(safe-area-inset-left)) max(16px,env(safe-area-inset-right));padding-block:0 max(64px,env(safe-area-inset-bottom))}
 a{color:var(--all)}
 a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--all);outline-offset:2px}
 .wrap{max-width:1180px;margin:0 auto;display:flex;flex-direction:column;gap:64px}
