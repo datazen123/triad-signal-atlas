@@ -854,6 +854,163 @@ ENGINES.reflect=(n,p,box)=>{ const prompt=p.prompt||n.q;
   box.querySelector('#eSave').onclick=()=>{ const t=box.querySelector('#eTxt').value; say(box,'#eSt',savedMsg(jadd('reflect',n.id,t.trim()?prompt+'\n\n'+t:''))); renderTabsOnly(); }; };
 function renderTabsOnly(){ const sel=LAB.tab; $('#labTabs').querySelectorAll('[data-tab]').forEach(b=>{ const k=b.dataset.tab; if(k==='journal'||k==='compose'){ const n=k==='journal'?J.entries.length:J.tray.length; b.innerHTML=TABS.find(t=>t[0]===k)[1]+(n?` <span class="n">${n}</span>`:''); } b.setAttribute('aria-selected',k===sel); }); }
 
+/* ---------- Peace Lab: text tools shared by the de-biaser, ITT and bridge engines ---------- */
+const reWords=ws=>new RegExp('\\b('+ws.map(w=>w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&').replace(/ /g,'\\s+')).join('|')+')\\b','gi');
+const POSW=['heroic','heroically','glorious','historic','triumph','triumphant','landmark','brave','bravely','decisive','resolute','visionary'];
+const NEGW=['regime','aggression','aggressive','aggressor','provocation','provocative','propaganda','puppet','thugs','terrorist','terrorists','extremist','extremists','radical','hardline','hawkish','brutal','crackdown','slammed','blasted','lashed out','rams','scheme','plot','so-called','admitted','insisted','defiant','bullying','hegemony','hegemonic','reckless','menace','sinister','lies','lying','shocking','outrageous','humiliating','humiliation','invasion','warmonger','warmongers','illegitimate','staged','evil','traitor','traitors','enemy','enemies','unanswered'];
+const RE_LOADED=reWords(NEGW.concat(POSW)), RE_POS=reWords(POSW);
+const UNATTR=['sources say','sources said','according to sources','reportedly','it is believed','it is understood','allegedly','some say','critics say','experts say','observers say','analysts say','officials said','officials say','officials called','insiders','people familiar with','is said to','unconfirmed','anonymous'];
+const RE_UNATTR=reWords(UNATTR), RE_UNATTR1=new RegExp(RE_UNATTR.source,'i');
+const RE_NUM=/\b\d[\d,.]*(\s?(%|percent|per cent|million|billion|thousand))?/gi;
+const RE_QUOTE=/[“"«„][^“”"«»„]{3,300}[”"»“]/g;
+const SHARED=['safety','safe','children','child','family','families','fair','fairness','future','dignity','security','health','peace','home','homes','work','jobs','respect','freedom','community','honest','honesty','together','both','shared','common','neighbours','neighbors','water','food','trust','grandchildren','lives','life','everyone','all of us'];
+const RE_SHARED=reWords(SHARED), RE_USTHEM=reWords(['they always','they never','those people','enemy','enemies','regime','evil','traitor','traitors','us versus them','never']);
+const STOP=new Set('the a an and or but of to in on at by for with from as is are was were be been being this that these those it its their there they them he she his her we our you your not no yes than then so such into over after before about also has have had will would can could may might said says say which who whom whose what when where while during both each other more most some any all one two three four five near within'.split(' '));
+const norm=t=>String(t||'').replace(/\s+/g,' ').trim();
+const sentences=t=>(norm(t).match(/[^.!?]+[.!?]*["”»]?/g)||[]).map(s=>s.trim()).filter(s=>s.length>2);
+const cwords=s=>new Set((s.toLowerCase().match(/[\p{L}\d]+/gu)||[]).filter(w=>w.length>3&&!STOP.has(w)));
+const jacc=(a,b)=>{let n=0;a.forEach(w=>{if(b.has(w))n++;});return n/((a.size+b.size-n)||1);};
+const countRe=(re,T)=>(T.match(re)||[]).length;
+function markRanges(T,extra){ const R=[]; const add=(re,cls)=>{re.lastIndex=0;let m;while((m=re.exec(T))){R.push([m.index,m.index+m[0].length,cls]);if(!m[0].length)re.lastIndex++;}};
+  add(RE_QUOTE,'qt'); add(RE_UNATTR,'un'); add(RE_LOADED,'ld'); add(RE_NUM,'nm'); if(extra) add(extra,'ok');
+  const reE=/\b[A-Z][a-z]+(?:[\s-][A-Z][a-z]+)*/g; let m; while((m=reE.exec(T))){ const b=T.slice(0,m.index).trimEnd(); if(b&&!/[.!?:"“”«(]$/.test(b)) R.push([m.index,m.index+m[0].length,'en']); }
+  R.sort((a,b)=>a[0]-b[0]||b[1]-a[1]); const out=[]; let end=-1; R.forEach(r=>{if(r[0]>=end){out.push(r);end=r[1];}}); return out; }
+function hlHTML(T,R){ let h='',i=0; R.forEach(([a,b,c])=>{h+=esc(T.slice(i,a))+`<mark class="${c}">${esc(T.slice(a,b))}</mark>`;i=b;}); return h+esc(T.slice(i)); }
+const MKEY='<div class="mkey"><span><mark class="ld">loaded word</mark></span><span><mark class="un">unattributed</mark></span><span><mark class="nm">number</mark></span><span><mark class="qt">quote</mark></span><span><mark class="en">name</mark></span></div>';
+const RUNG_RULES=[['A',/satellite|imagery|sensor|seismic|radar|transponder|ship-tracking|tracking data/i],['B',/statistic|data show|customs|census|per ?cent|%/i],['C',/treaty|\blaw\b|court|resolution|sanction|ruling|legislation/i],['F',/state media|state television|state tv|news agency/i],['E',/study|researchers|university|survey|poll|independent monitor/i],['D',/ministry|spokes|official|government|agency|statement|\bsaid\b/i]];
+function rungOf(s){ if(RE_UNATTR1.test(s)) return '?'; for(const [k,re] of RUNG_RULES) if(re.test(s)) return k; return null; }
+const rkHTML=k=>k==='?'?'<span class="rk" style="background:var(--warn)" title="Unattributed">?</span>':`<span class="rk" style="background:${EV[k].hex}" title="${EV[k].name}">${k}</span>`;
+
+// Made-up sample texts: fictional countries, fictional outlets, fictional spokespeople. No real outlets, people or quotes.
+const DEBIAS_SAMPLE={note:'Made-up example. A fictional collision between two fictional countries, Northland and Southland, as three fictional outlets might report it. No real outlets, people, places or quotes.',
+ v:['Reckless Southland coast guard rams cargo ship in the Amber Strait. The regime\'s patrol boat slammed into the Northland freighter Brightwater on Tuesday, sources say, in what officials called a shocking provocation. Twelve crew were injured. "This aggression will not go unanswered," a Northland ministry spokesperson said. Satellite imagery reportedly shows the patrol boat changing course minutes before the collision.',
+    'Northland freighter strikes coast-guard patrol in Southland waters. The freighter Brightwater ignored repeated radio warnings before colliding with a Southland coast-guard patrol on Tuesday, the Southland Maritime Agency said. Three officers were hurt. "Our crew acted heroically to protect our waters," the agency\'s statement said. Experts say the Northland side has staged similar incidents before.',
+    'Two vessels collide in the Amber Strait; both sides trade blame. A cargo ship and a coast-guard patrol collided in the Amber Strait on Tuesday. Northland officials said 12 crew members were injured; Southland officials said 3 officers were hurt. Each side says the other changed course. Ship-tracking data published by an independent monitor shows both vessels within 200 metres at 14:05 local time. The two governments last used their maritime hotline two years ago.'],
+ h:['Reckless Southland regime rams Northland ship in shocking provocation','Northland freighter strikes Southland patrol after ignoring warnings','Two vessels collide in Amber Strait; both sides trade blame']};
+
+/* ---------- Peace Lab: play engines (batch 1) ---------- */
+ENGINES.debias=(n,p,box)=>{ const mode=p.mode||'full', mirror=mode==='mirror';
+  const title={full:'Form your own opinion',mirror:'Mirror headlines',omission:'Omission diff',accuracy:'Accuracy check'}[mode]||'Form your own opinion';
+  box.innerHTML=`<div class="eng"><h4>${title}</h4><ol class="steps">
+    <li><b>Write first.</b> Your take before you read any version, so nothing below can anchor you.<textarea id="dTake" aria-label="Your take, written first" placeholder="What do you think happened, and why?"></textarea></li>
+    <li><b>Paste ${mirror?'headlines':'two or three versions'}</b> of the same story from different outlets.<div class="row2"><button class="btn" id="dSample">Load sample (made-up)</button></div><p class="made-up" id="dNote" hidden></p>
+      ${[0,1,2].map(i=>mirror?`<input type="text" id="dV${i}" aria-label="Headline ${i+1}" placeholder="Headline from outlet ${i+1}${i===2?' (optional)':''}">`:`<textarea id="dV${i}" aria-label="Version ${'ABC'[i]}" placeholder="Version ${'ABC'[i]}${i===2?' (optional)':''}"></textarea>`).join('')}</li>
+    ${mode==='accuracy'?'<li><b>Before you share:</b> how accurate is version A, from 0 to 100? <input type="range" id="dAcc" min="0" max="100" value="50" aria-label="Accuracy estimate"><span class="mono" id="dAccV">50</span></li>':''}
+    <li><div class="row2"><button class="btn" id="dGo">Analyze</button><span class="note" id="dSt"></span></div></li></ol><div id="dOut" class="pl"></div></div>`;
+  const q=s=>box.querySelector(s);
+  if(q('#dAcc')) q('#dAcc').oninput=()=>{q('#dAccV').textContent=q('#dAcc').value;};
+  q('#dSample').onclick=()=>{ (mirror?DEBIAS_SAMPLE.h:DEBIAS_SAMPLE.v).forEach((t,i)=>{q('#dV'+i).value=t;}); const nt=q('#dNote'); nt.hidden=false; nt.textContent=DEBIAS_SAMPLE.note; };
+  q('#dGo').onclick=()=>{ const take=q('#dTake').value.trim(); if(!take){ say(box,'#dSt','Write your take first. That is the point.'); q('#dTake').focus(); return; }
+    const V=[0,1,2].map(i=>({label:mirror?'Headline '+(i+1):'Version '+'ABC'[i],T:norm(q('#dV'+i).value)})).filter(v=>v.T);
+    if(V.length<(mirror?2:2)){ say(box,'#dSt','Paste at least two versions.'); return; } say(box,'#dSt','');
+    let h=MKEY;
+    V.forEach(v=>{ const ld=countRe(RE_LOADED,v.T),pos=countRe(RE_POS,v.T); v.ld=ld; v.pos=pos;
+      h+=`<div><b>${esc(v.label)}</b><div class="counts"><span>loaded ${ld}${pos?` (${pos} glowing)`:''}</span><span>unattributed ${countRe(RE_UNATTR,v.T)}</span><span>numbers ${countRe(RE_NUM,v.T)}</span><span>quotes ${countRe(RE_QUOTE,v.T)}</span></div><div class="hl">${hlHTML(v.T,markRanges(v.T))}</div></div>`; });
+    if(mirror){ const W=V.map(v=>cwords(v.T));
+      h+=`<div><h4>Tone, side by side</h4>${V.map((v,i)=>{const uniq=[...W[i]].filter(w=>W.every((o,j)=>j===i||!o.has(w)));return `<p class="note"><b>${esc(v.label)}</b>: ${v.ld} loaded word${v.ld===1?'':'s'}${v.pos?`, ${v.pos} glowing`:''}. Only here: ${uniq.length?esc(uniq.join(', ')):'nothing'}.</p>`;}).join('')}<p class="note">The words only one outlet uses are its frame. Which frame did you meet first?</p></div>`; }
+    else { const S=V.map(v=>sentences(v.T).map(s=>({s,w:cwords(s)}))); const nums=V.map(v=>new Set((v.T.match(/\b\d[\d,.]*/g)||[])));
+      h+=`<div><h4>Omission diff</h4>${V.map((v,i)=>{const only=S[i].filter(x=>x.w.size>=3&&S.every((o,j)=>j===i||!o.some(y=>jacc(x.w,y.w)>=.18)));const nOnly=[...nums[i]].filter(x=>nums.every((o,j)=>j===i||!o.has(x)));
+        return `<p class="note"><b>Only in ${esc(v.label)}</b>${nOnly.length?` · numbers only here: ${esc(nOnly.join(', '))}`:''}</p>${only.length?`<ul class="note" style="margin:0;padding-left:18px">${only.map(x=>`<li>${esc(x.s)}</li>`).join('')}</ul>`:'<p class="note">Nothing that the others leave out.</p>'}`;}).join('')}</div>`;
+      h+=`<div><h4>Claim ladder</h4><p class="note">An automatic guess at each claim's evidence rung (A sensor … F state media; ? = unattributed). Your judgment overrides it.</p><div class="claims">${V.map((v,i)=>S[i].map(x=>{const k=rungOf(x.s);return k?`<div>${rkHTML(k)}<span>${esc(v.label.slice(-1))}: ${esc(x.s.length>170?x.s.slice(0,169)+'…':x.s)}</span></div>`:'';}).join('')).join('')}</div></div>`; }
+    if(mode==='accuracy') h+=`<p class="note">You rated version A at ${esc(q('#dAcc').value)}/100 before sharing. In surveys and a field experiment on Twitter, simply prompting people to think about accuracy improved the quality of what they shared (Pennycook et al. 2021).</p>`;
+    h+=`<div><h4>Revisit</h4><p>Read your first take again. Did your view change, harden, or gain nuance?</p><div class="row2" id="dRv">${['changed','hardened','gained nuance','stayed the same'].map(k=>`<button class="chip" data-v="${k}" aria-pressed="false">${k}</button>`).join('')}</div><textarea id="dWhy" aria-label="What moved you" placeholder="What moved you, or what held you in place?"></textarea><div class="row2"><button class="btn" id="dSave">Save to journal</button><span class="note" id="dSt2"></span></div></div>`;
+    const out=q('#dOut'); out.innerHTML=h; let verdict='';
+    out.querySelector('#dRv').onclick=e=>{const b=e.target.closest('[data-v]');if(!b)return;verdict=b.dataset.v;out.querySelectorAll('#dRv .chip').forEach(c=>c.setAttribute('aria-pressed',c===b));};
+    out.querySelector('#dSave').onclick=()=>{ say(out,'#dSt2',savedMsg(jadd('debias',n.id,`My first take: ${take}\n\nVersions compared: ${V.map(v=>v.label).join(', ')}.\nAfter comparing, my view ${verdict||'(not marked)'}.\n${out.querySelector('#dWhy').value}`))); renderTabsOnly(); }; }; };
+
+const STRATS={tft:{name:'Tit-for-tat',f:(m,t)=>t.length?t[t.length-1]:'C'},gtft:{name:'Generous tit-for-tat',f:(m,t)=>t.length&&t[t.length-1]==='D'&&Math.random()>1/3?'D':'C'},grudger:{name:'Grudger',f:(m,t)=>t.includes('D')?'D':'C'},alld:{name:'Always defect',f:()=>'D'},rand:{name:'Random',f:()=>Math.random()<.5?'C':'D'},allc:{name:'Always cooperate',f:()=>'C'}};
+const GAMES={pd:{name:"Prisoner's dilemma",C:'Cooperate',D:'Defect',pay:{CC:[3,3],CD:[0,5],DC:[5,0],DD:[1,1]}},stag:{name:'Stag hunt',C:'Hunt stag',D:'Hunt hare',pay:{CC:[4,4],CD:[0,2],DC:[2,0],DD:[2,2]}}};
+ENGINES.dilemma=(n,p,box)=>{ const G=GAMES[p.game]||GAMES.pd; let opp='tft',me=[],them=[],score=[0,0];
+  box.innerHTML=`<div class="eng"><h4>${G.name}</h4><p class="note">Payoffs per round (you, them): both ${G.C.toLowerCase()} ${G.pay.CC.join('/')}, you ${G.C.toLowerCase()} and they don't ${G.pay.CD.join('/')}, the reverse ${G.pay.DC.join('/')}, neither ${G.pay.DD.join('/')}. Play 10 rounds.</p>
+    <label for="gOpp">Opponent</label><select id="gOpp">${Object.entries(STRATS).map(([k,s])=>`<option value="${k}">${s.name}</option>`).join('')}</select>
+    <div class="row2"><button class="btn" id="gC">${G.C}</button><button class="btn" id="gD">${G.D}</button><button class="btn" id="gR">New game</button><span class="mono" id="gS"></span></div><div id="gH"></div><div id="gEnd"></div>
+    <h4>Axelrod's tournament</h4><p class="note">Every strategy plays every other (and itself) for 200 rounds.</p><div class="row2"><label><input type="checkbox" id="gNoise"> 5% mistakes</label><button class="btn" id="gT">Run tournament</button></div><div id="gTour"></div></div>`;
+  const q=s=>box.querySelector(s);
+  const draw=()=>{ const sq=(a,col)=>`<i style="background:${a==='C'?'var(--ok)':'var(--bad)'}" title="${a==='C'?G.C:G.D}">${a}</i>`;
+    q('#gH').innerHTML=me.length?`<div class="note">You</div><div class="hist">${me.map(a=>sq(a)).join('')}</div><div class="note">${STRATS[opp].name}</div><div class="hist">${them.map(a=>sq(a)).join('')}</div>`:'';
+    q('#gS').textContent=`round ${me.length}/10 · you ${score[0]} · them ${score[1]}`; const done=me.length>=10; q('#gC').disabled=done; q('#gD').disabled=done;
+    q('#gEnd').innerHTML=done?`<p class="note">${score[0]>=score[1]?'You came out level or ahead.':'They came out ahead.'} Joint total ${score[0]+score[1]} of a possible ${G.pay.CC[0]*20}.</p><textarea id="gTxt" aria-label="Reflection" placeholder="What does 'forgiving' mean for a nation? When would you have cooperated again?"></textarea><div class="row2"><button class="btn" id="gSave">Save to journal</button><span class="note" id="gSt"></span></div>`:'';
+    if(done) q('#gSave').onclick=()=>{ say(box,'#gSt',savedMsg(jadd('dilemma',n.id,`${G.name} vs ${STRATS[opp].name}: you ${score[0]}, them ${score[1]}. Moves: ${me.join('')} / ${them.join('')}\n\n${q('#gTxt').value}`))); renderTabsOnly(); }; };
+  const play=a=>{ if(me.length>=10) return; const b=STRATS[opp].f(them,me); const pay=G.pay[a+b]; me.push(a); them.push(b); score[0]+=pay[0]; score[1]+=pay[1]; draw(); };
+  const reset=()=>{ me=[];them=[];score=[0,0];draw(); };
+  q('#gOpp').onchange=()=>{opp=q('#gOpp').value;reset();}; q('#gC').onclick=()=>play('C'); q('#gD').onclick=()=>play('D'); q('#gR').onclick=reset;
+  q('#gT').onclick=()=>{ const ks=Object.keys(STRATS),tot=Object.fromEntries(ks.map(k=>[k,0])),noise=q('#gNoise').checked;
+    const flip=a=>noise&&Math.random()<.05?(a==='C'?'D':'C'):a;
+    ks.forEach((a,i)=>ks.slice(i).forEach(b=>{ const ha=[],hb=[]; let sa=0,sb=0; for(let r=0;r<200;r++){ const x=flip(STRATS[a].f(ha,hb)),y=flip(STRATS[b].f(hb,ha)); const pay=G.pay[x+y]; ha.push(x); hb.push(y); sa+=pay[0]; sb+=pay[1]; } tot[a]+=sa; if(a!==b) tot[b]+=sb; }));
+    const rows=ks.sort((a,b)=>tot[b]-tot[a]),mx=tot[rows[0]]||1;
+    q('#gTour').innerHTML=rows.map((k,i)=>`<div class="hbar"><span>${i+1}. ${STRATS[k].name}</span><div class="track"><i style="width:${tot[k]/mx*100}%;background:var(--all)"></i></div><span class="n">${tot[k]}</span></div>`).join('')+'<p class="note">Strategies that are nice, retaliate, forgive and stay clear tend to do well, but the ranking depends on who else is in the field. Random and generous strategies vary by run.</p>'; };
+  draw(); };
+
+ENGINES.itt=(n,p,box)=>{ const RUB=[['values','I named what they value most'],['fears','I named what they fear'],['evidence','I gave their best evidence, not their worst'],['nod','Someone from that side would nod, not wince']];
+  box.innerHTML=`<div class="eng"><h4>Ideological Turing test</h4><label for="iTopic">Topic</label><input type="text" id="iTopic" value="${esc(p.topic||'')}"><label for="iTxt">Write the other side's view as they would put it</label><textarea id="iTxt" placeholder="We believe… because… What worries us is…"></textarea>
+    <div class="items">${RUB.map(([k,l])=>`<div><label><input type="checkbox" data-r="${k}"> ${l}</label></div>`).join('')}</div>
+    <div class="row2"><button class="btn" id="iScore">Score</button><button class="btn" id="iCopy">Copy for a real person</button><button class="btn" id="iSave">Save to journal</button></div><div class="note" id="iSt"></div><div id="iOut"></div></div>`;
+  const q=s=>box.querySelector(s);
+  const score=()=>{ const t=norm(q('#iTxt').value),ld=countRe(RE_LOADED,t),ticks=[...box.querySelectorAll('[data-r]')].filter(c=>c.checked).length,s=ticks+(t&&!ld?1:0);
+    q('#iOut').innerHTML=t?`<p class="note">Self-score ${s}/5. ${ld?`${ld} loaded word${ld>1?'s':''} found: would they use them about themselves?`:'No loaded words found.'}</p><div class="hl">${hlHTML(t,markRanges(t))}</div>`:''; return s; };
+  q('#iScore').onclick=score;
+  q('#iCopy').onclick=()=>{ const t=q('#iTxt').value.trim(); if(!t){say(box,'#iSt','Write their view first.');return;} copyText(`I tried to state your view on "${q('#iTopic').value}" as fairly as I can. Would you sign this? What did I miss or get wrong?\n\n${t}`,q('#iSt')); };
+  q('#iSave').onclick=()=>{ const t=q('#iTxt').value.trim(); say(box,'#iSt',savedMsg(jadd('itt',n.id,t?`Topic: ${q('#iTopic').value}\nSelf-score: ${score()}/5\n\n${t}`:''))); renderTabsOnly(); }; };
+
+function tension(){ let t=70; J.grit.slice().reverse().forEach(g=>{ if(g.recip===true) t-=10; else if(g.recip===false) t+=3; }); return clamp(t,0,100); }
+ENGINES.grit=(n,p,box)=>{
+  const draw=()=>{ const t=tension(),col=t>60?'var(--bad)':t>30?'var(--warn)':'var(--ok)';
+    box.innerHTML=`<div class="eng"><h4>Trust ledger (GRIT)</h4><p class="note">Osgood's rules: announce a small step in advance, carry it out whether or not it is returned, and keep going. Log steps by either side and mark whether they were reciprocated.</p>
+      <div><div class="row2" style="justify-content:space-between"><span class="note">Tension</span><span class="mono">${t}/100</span></div><div class="meter2" role="meter" aria-valuenow="${t}" aria-valuemin="0" aria-valuemax="100" aria-label="Tension"><i style="width:${t}%;background:${col}"></i></div></div>
+      <label for="gStep">A small step</label><input type="text" id="gStep" placeholder="e.g. Shared our exercise calendar a month ahead"><div class="row2"><select id="gWho" aria-label="Who took the step" style="width:auto"><option value="us">We took it</option><option value="them">They took it</option></select><button class="btn" id="gLog">Log step</button><span class="note" id="gSt"></span></div>
+      <div class="items">${J.grit.map((g,i)=>`<div><span>${esc(g.who==='them'?'They':'We')}: ${esc(g.step)} <span class="mono note">${fmtDate(g.t)}</span></span><div class="row2">${[['yes','Returned',true],['no','Not returned',false],['wait','Pending',null]].map(([k,l,v])=>`<button class="chip" data-i="${i}" data-k="${k}" aria-pressed="${g.recip===v}">${l}</button>`).join('')}<button class="x2" data-del="${i}" aria-label="Delete step">delete</button></div></div>`).join('')||'<p class="note">No steps yet.</p>'}</div></div>`;
+    const q=s=>box.querySelector(s);
+    q('#gLog').onclick=()=>{ const s=q('#gStep').value.trim(); if(!s) return; J.grit.unshift({t:new Date().toISOString(),step:s.slice(0,500),who:q('#gWho').value,recip:null}); const ok=jsave(); draw(); say(box,'#gSt',savedMsg(ok)); };
+    box.querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>{ J.grit[+b.dataset.i].recip={yes:true,no:false,wait:null}[b.dataset.k]; jsave(); draw(); });
+    box.querySelectorAll('[data-del]').forEach(b=>b.onclick=()=>{ J.grit.splice(+b.dataset.del,1); jsave(); draw(); }); };
+  draw(); };
+
+const FERMI={
+ workers:{title:'How many people do peace work today?',vars:[['pop','Adults in the world, billions (your figure)',1,8,5,.1],['per','Full-time peace workers per 100,000 adults (your guess)',1,300,20,1],['mult','How much your idea would multiply it',1,3,1.5,.1]],calc:v=>{const k=v.pop*1e9*v.per/1e5;return [`≈ ${big(k)} people`,`With your idea: ≈ ${big(k*v.mult)}`];}},
+ cost:{title:'The cost of violence against spending on peace',vars:[['mil','Global military spending, $ billions a year (your figure)',100,5000,2000,50],['share','Share you would redirect, %',0,20,1,.5],['prog','Cost of one peacebuilding programme, $ millions',1,200,20,1]],calc:v=>{const d=v.mil*1e9*v.share/100;return [`Redirected: $${big(d)} a year`,`≈ ${big(d/(v.prog*1e6))} programmes a year`];}},
+ keepers:{title:'Peacekeepers for a region',vars:[['pop','Population of the region, millions',1,100,10,1],['per','Peacekeepers per 1,000 people',.1,5,1,.1],['cost','Cost per peacekeeper a year, $ thousands',10,200,50,5]],calc:v=>{const k=v.pop*1e6*v.per/1000;return [`≈ ${big(k)} peacekeepers`,`≈ $${big(k*v.cost*1e3)} a year`];}}};
+ENGINES.fermi=(n,p,box)=>{ const M=FERMI[p.model]||FERMI.workers;
+  box.innerHTML=`<div class="eng"><h4>Fermi estimate: ${esc(M.title)}</h4><p class="note">These are your inputs, not data. Look up real figures from a source you trust (for military spending, SIPRI) and plug them in.</p>
+    ${M.vars.map(([k,l,mn,mx,v,st])=>`<label for="f_${k}">${esc(l)}: <span class="mono" id="fv_${k}">${v}</span></label><input type="range" id="f_${k}" min="${mn}" max="${mx}" step="${st}" value="${v}">`).join('')}
+    <div class="stat-row" id="fOut"></div><label for="fTxt">What would double it?</label><textarea id="fTxt"></textarea><div class="row2"><button class="btn" id="fSave">Save to journal</button><span class="note" id="fSt"></span></div></div>`;
+  const q=s=>box.querySelector(s); const vals=()=>Object.fromEntries(M.vars.map(([k])=>[k,+q('#f_'+k).value]));
+  const upd=()=>{ const v=vals(); M.vars.forEach(([k])=>{q('#fv_'+k).textContent=v[k];}); q('#fOut').innerHTML=M.calc(v).map(s=>`<div class="stat"><b style="font-size:20px">${esc(s)}</b></div>`).join(''); };
+  M.vars.forEach(([k])=>{q('#f_'+k).oninput=upd;}); upd();
+  q('#fSave').onclick=()=>{ const v=vals(),t=q('#fTxt').value; say(box,'#fSt',savedMsg(jadd('fermi',n.id,`${M.title}\nInputs: ${M.vars.map(([k,l])=>`${l} = ${v[k]}`).join('; ')}\nResult: ${M.calc(v).join('; ')}\n\n${t}`))); renderTabsOnly(); }; };
+
+ENGINES.breathe=(n,p,box)=>{ let min=p.minutes||5; const phrase=p.phrase||n.q;
+  const after=LAB.after&&LAB.after.id===n.id;
+  box.innerHTML=`<div class="eng"><h4>Breathe</h4><p class="q">${esc(phrase)}</p><p class="note">About 5.5 breaths a minute. The whole shape breathes with you; follow the in and out.</p>
+    <div class="row2" id="bMin">${[3,5,10].map(m=>`<button class="chip" data-m="${m}" aria-pressed="${m===min}">${m} min</button>`).join('')}</div>
+    <div class="row2"><button class="btn" id="bGo">${LAB.breath?'Stop':'Start'}</button></div>
+    ${after?`<p>One line, while it is fresh:</p><input type="text" id="bLine" aria-label="One line"><div class="row2"><button class="btn" id="bSave">Save to journal</button><span class="note" id="bSt"></span></div>`:''}</div>`;
+  const q=s=>box.querySelector(s);
+  q('#bMin').onclick=e=>{const b=e.target.closest('[data-m]');if(!b)return;min=+b.dataset.m;q('#bMin').querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed',c===b));};
+  q('#bGo').onclick=()=>{ if(LAB.breath){ endBreath(false); q('#bGo').textContent='Start'; return; } LAB.after=null; startBreath(min,phrase,()=>{ LAB.after={id:n.id}; if(LAB.tab==='play'&&LAB.sel===n.id) renderLab(); }); q('#bGo').textContent='Stop'; $('#peace').scrollIntoView({block:'center',behavior:reduce?'auto':'smooth'}); };
+  if(after) q('#bSave').onclick=()=>{ say(box,'#bSt',savedMsg(jadd('breathe',n.id,q('#bLine').value))); LAB.after=null; renderTabsOnly(); }; };
+
+const LADDER=['Incident: a near miss or a collision','Public accusations and rival stories','Expulsions, sanctions or broken contacts','Military signalling: exercises and deployments','Blockade, cyberattack or a limited strike','A direct clash between forces','Wider war'];
+const FLASH=['A collision at sea','A disputed island or strait','A satellite or space incident','A cyberattack on a power grid','An accident near a border','A missile test over a neighbour','A crisis in a third country'];
+ENGINES.premortem=(n,p,box)=>{ const S={a:'US',b:'CN',f:0,step:-1,trip:[],off:[]};
+  const draw=()=>{
+    if(S.step<0){ box.innerHTML=`<div class="eng"><h4>War pre-mortem</h4><p class="note">Imagine it is five years from now and a war happened. Walk the escalation ladder and, at each rung, set a tripwire (how you would know you are here) and an off-ramp (what lets both sides step back).</p>
+      <div class="row2"><select id="pA" aria-label="First power" style="width:auto">${POWERS.map(x=>`<option value="${x.k}"${x.k===S.a?' selected':''}>${esc(x.name)}</option>`).join('')}</select><span>and</span><select id="pB" aria-label="Second power" style="width:auto">${POWERS.map(x=>`<option value="${x.k}"${x.k===S.b?' selected':''}>${esc(x.name)}</option>`).join('')}</select></div>
+      <label for="pF">Flashpoint</label><select id="pF">${FLASH.map((f,i)=>`<option value="${i}"${i===S.f?' selected':''}>${esc(f)}</option>`).join('')}</select><div class="row2"><button class="btn" id="pGo">Begin</button></div></div>`;
+      box.querySelector('#pGo').onclick=()=>{ S.a=box.querySelector('#pA').value; S.b=box.querySelector('#pB').value; S.f=+box.querySelector('#pF').value; S.step=0; draw(); }; return; }
+    if(S.step<LADDER.length){ const k=S.step;
+      box.innerHTML=`<div class="eng"><h4>${esc(PW[S.a].name)} and ${esc(PW[S.b].name)}: ${esc(FLASH[S.f].toLowerCase())}</h4><div class="note">Rung ${k+1} of ${LADDER.length}</div><div class="meter2"><i style="width:${(k+1)/LADDER.length*100}%;background:${k>4?'var(--bad)':k>2?'var(--warn)':'var(--all)'}"></i></div><p class="q">${esc(LADDER[k])}</p>
+        <label for="pT">Tripwire: how would you know you are here?</label><input type="text" id="pT" value="${esc(S.trip[k]||'')}"><label for="pO">Off-ramp: what lets both sides step back?</label><input type="text" id="pO" value="${esc(S.off[k]||'')}">
+        <div class="row2"><button class="btn" id="pBack">← Back</button><button class="btn" id="pNext">${k===LADDER.length-1?'Finish':'Next rung →'}</button></div></div>`;
+      const keep=()=>{S.trip[k]=box.querySelector('#pT').value;S.off[k]=box.querySelector('#pO').value;};
+      box.querySelector('#pBack').onclick=()=>{keep();S.step--;draw();}; box.querySelector('#pNext').onclick=()=>{keep();S.step++;draw();}; return; }
+    const md=`Pre-mortem: ${PW[S.a].name} and ${PW[S.b].name}, ${FLASH[S.f].toLowerCase()}\n\n`+LADDER.map((r,i)=>`${i+1}. ${r}\n   Tripwire: ${S.trip[i]||'—'}\n   Off-ramp: ${S.off[i]||'—'}`).join('\n');
+    const firstGap=LADDER.findIndex((r,i)=>!(S.off[i]||'').trim());
+    box.innerHTML=`<div class="eng"><h4>Your pre-mortem</h4>${firstGap>=0?`<p class="note">The first rung without an off-ramp is ${firstGap+1}: ${esc(LADDER[firstGap].toLowerCase())}. That is where to work.</p>`:'<p class="note">Every rung has an off-ramp. Which one is weakest?</p>'}<pre class="hl" style="white-space:pre-wrap;font-family:var(--f-mono);font-size:12px">${esc(md)}</pre><div class="row2"><button class="btn" id="pCopy">Copy</button><button class="btn" id="pSave">Save to journal</button><button class="btn" id="pAgain">Start again</button></div><div class="note" id="pSt"></div></div>`;
+    box.querySelector('#pCopy').onclick=()=>copyText(md,box.querySelector('#pSt'));
+    box.querySelector('#pSave').onclick=()=>{ say(box,'#pSt',savedMsg(jadd('premortem',n.id,md))); renderTabsOnly(); };
+    box.querySelector('#pAgain').onclick=()=>{ S.step=-1; S.trip=[]; S.off=[]; draw(); }; };
+  draw(); };
+
 /* ---------- boot ---------- */
 $('#statusLine').innerHTML=`<span>Built ${fmtDate(A.built_at)}</span>${A.live_url?`<span class="live">● ${link(A.live_url,'Live, auto-updating version')}</span>`:''}${A.repo_url?`<span>${link(A.repo_url,'Pipeline source')}</span>`:''}<span>${S.length} sources · ${PROJECTS.length} joint projects · ${PEOPLE.length} bridge people · ${CHANNELS.length} channels · ${PN.length} peace approaches</span>`;
 $('#footBuild').textContent=`Snapshot built ${A.built_at||'—'}.`;
