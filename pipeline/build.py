@@ -16,15 +16,16 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from common import CURATED, DATA, LIVE, ROOT, now_iso, read_json  # noqa: E402
+from common import ATLAS_NAME, CURATED, DATA, LIVE, ROOT, now_iso, read_json  # noqa: E402
 
 TEMPLATE = ROOT / "template" / "atlas.html"
 OUT = ROOT / "site" / "index.html"
 OUT_ARTIFACT = ROOT / "site" / "artifact.html"
 BODY_MARK = '<div class="wrap">'
-TITLE = "Triad Signal Atlas"
-DESCRIPTION = ("Primary evidence on how the US, China, Russia and the other powers relate: channels, joint projects, "
-               "bridge people, live data, and a Peace Lab of playable approaches to building peace.")
+TITLE = ATLAS_NAME
+NAME_MARK = "__ATLAS_NAME__"  # every occurrence in the template becomes ATLAS_NAME
+DESCRIPTION = ("Primary evidence on how the world's leaders and powers relate, starting with the US, China and Russia: "
+               "channels, joint projects, bridge people, live data, and a Peace Lab of playable approaches to building peace.")
 PLACEHOLDER = "/*__ATLAS_DATA__*/"
 LIVE_KEYS = ["openalex", "nobel", "fedreg", "comtrade", "portwatch", "satcat", "migrants"]
 MAX_BYTES = 15 * 1024 * 1024
@@ -49,6 +50,7 @@ def compose() -> dict:
         e.pop("trace", None)  # stack traces belong in the issue, not on the public page
     live_url, repo_url = repo_urls()
     return {
+        "name": TITLE,
         "built_at": now_iso(),
         "live_url": live_url,
         "repo_url": repo_url,
@@ -67,8 +69,11 @@ def render(data: dict) -> str:
     tpl = TEMPLATE.read_text(encoding="utf-8")
     if tpl.count(PLACEHOLDER) != 1:
         raise SystemExit("template must contain the data placeholder exactly once")
+    if NAME_MARK not in tpl:
+        raise SystemExit(f"template must use the {NAME_MARK} placeholder for the display name")
     blob = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
-    return tpl.replace(PLACEHOLDER, blob)
+    # The name goes in before the data, so a data string that happens to contain the mark stays untouched.
+    return tpl.replace(NAME_MARK, htmllib.escape(TITLE)).replace(PLACEHOLDER, blob)
 
 
 def wrap(page: str, live_url: str) -> str:
@@ -90,7 +95,7 @@ def wrap(page: str, live_url: str) -> str:
         f'<meta property="og:title" content="{e(TITLE)}">',
         f'<meta property="og:description" content="{e(DESCRIPTION)}">',
         f'<meta property="og:url" content="{e(live_url)}">',
-        '<meta property="og:site_name" content="Triad Signal Atlas">',
+        f'<meta property="og:site_name" content="{e(TITLE)}">',
         '<meta name="twitter:card" content="summary">',
         f'<meta name="twitter:title" content="{e(TITLE)}">',
         f'<meta name="twitter:description" content="{e(DESCRIPTION)}">',

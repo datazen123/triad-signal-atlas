@@ -1,4 +1,4 @@
-"""Shared helpers for the Triad Signal Atlas pipeline.
+"""Shared helpers for the atlas pipeline (display name: ATLAS_NAME below).
 
 Standard library only, on purpose: nothing to pip-install means nothing that
 can break when a third-party package releases a new version.
@@ -20,6 +20,11 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 CURATED = DATA / "curated"
 LIVE = DATA / "live"
+
+# The product's display name. Change it here and nowhere else: build.py puts it into the page
+# (title, heading, meta tags) and notify.py into alert issues and emails. Internal identifiers
+# (repo name, Pages URL, user agent, localStorage keys) deliberately keep their old names.
+ATLAS_NAME = "World Signal Atlas"
 
 USER_AGENT = "TriadSignalAtlas/1.0 (+https://github.com/datazen123/triad-signal-atlas)"
 

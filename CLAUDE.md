@@ -1,7 +1,9 @@
-# Triad Signal Atlas: context for Claude Code
+# World Signal Atlas: context for Claude Code
 
 ## What this is
-An evidence board on how the great powers relate. The core is the US–China–Russia triad; the second view adds the EU, India, Japan and the UK. Everything is one self-contained HTML page (`site/index.html`) built from `template/atlas.html` plus JSON data. A zero-token pipeline (GitHub Actions + standard-library Python) keeps it updated. The owner is Data (Alex Kim), GitHub `datazen123`.
+World Signal Atlas (formerly Triad Signal Atlas) is an evidence board on how the world's leaders and powers relate, plus a Peace Lab. It started with the US–China–Russia triad; the second view adds the EU, India, Japan and the UK. `BACKLOG.md` plans a version for all peoples, not just states.
+
+The display name lives in one place: `ATLAS_NAME` in `pipeline/common.py`. `build.py` replaces every `__ATLAS_NAME__` in the template with it, and `notify.py` uses it in alerts. The repo, the Pages URL, the user agent and the localStorage keys keep their old `triad`/`peacelab` names on purpose, so links and saved journals keep working. Everything is one self-contained HTML page (`site/index.html`) built from `template/atlas.html` plus JSON data. A zero-token pipeline (GitHub Actions + standard-library Python) keeps it updated. The owner is Data (Alex Kim), GitHub `datazen123`.
 
 The page is also published as a claude.ai artifact, which is a static snapshot: https://claude.ai/artifact/3gN2WL2M1QJLGAS7r1Wqr9
 The auto-updating version will live at https://datazen123.github.io/triad-signal-atlas/ once the repo is pushed and Pages is on.
