@@ -160,11 +160,11 @@
   "domain": "science",
   "status": "completed",
   "achieved": "Twenty centres in six countries (US, UK, Japan, France, Germany, China) completed the reference human genome in 2003, with China sequencing about 1% (on chromosome 3).",
-  "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5876186/",
-  "src": "Peer-reviewed review (PMC)",
-  "caveat": "China joined in 1999 as the only developing-country participant. The PMC page sits behind a CAPTCHA and could not be read; genome.gov (fetched) confirms only Oct 1990–Apr 2003 and does not list countries.",
-  "confidence": "medium",
-  "url_status": "unreadable (CAPTCHA)"
+  "url": "https://www.genome.gov/about-genomics/educational-resources/fact-sheets/human-genome-project",
+  "src": "NHGRI (genome.gov) fact sheet",
+  "caveat": "NHGRI confirms 20 centres in the US, UK, France, Germany, Japan and China and the Oct 1990-Apr 2003 span. China's 1% share (about 30 Mb on chromosome 3, approved 8 Jul 1999, only developing-country participant) is from a Science and Technology Daily article republished on ncsti.gov.cn (https://www.ncsti.gov.cn/kjdt/ztbd/swyy/xwdt/202102/t20210210_26604.html).",
+  "confidence": "high",
+  "url_status": "ok"
  },
  {
   "id": "event-horizon-telescope",
@@ -205,8 +205,8 @@
   "achieved": "The LIGO–Virgo–KAGRA fourth observing run began on 24 May 2023 and was extended to 18 November 2025, with Virgo (Italy) and KAGRA (Japan) operating alongside the two US LIGO detectors.",
   "url": "https://ligo.org/ligo-virgo-kagra-to-resume-and-extend-the-o4-run/",
   "src": "LIGO Scientific Collaboration",
-  "caveat": "The first detection (GW150914) and GW170817 are well known but are not on the fetched page. India's role (LIGO-India, approved 2023) is not verified there.",
-  "confidence": "medium",
+  "caveat": "The first detection (GW150914) and GW170817 are well known but are not on the fetched page. India's role: the Government of India approved LIGO-India at Rs 2600 crore with DAE as lead agency (PIB, 10 Aug 2023: https://www.pib.gov.in/PressReleasePage.aspx?PRID=1947441&reg=48&lang=2); it is not yet an operating detector.",
+  "confidence": "high",
   "url_status": "ok"
  },
  {
@@ -267,8 +267,8 @@
   "achieved": "Delivered to the ISS by the Space Shuttle in 2011, AMS-02 is run by a team of 56 institutes from 16 countries, including the US, European states, China, Russia and Taiwan.",
   "url": "https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/DAMA_mission/The_antimatter_hunter",
   "src": "ESA",
-  "caveat": "DOE-sponsored and led by Samuel Ting. The 2011 date (STS-134) is not stated on the ESA page. The previous event-count claim has been removed.",
-  "confidence": "medium",
+  "caveat": "DOE-sponsored and led by Samuel Ting. NASA confirms launch on STS-134 on 16 May 2011 and installation on 19 May 2011 (https://www.nasa.gov/alpha-magnetic-spectrometer/about-alpha-magnetic-spectrometer/). NASA's page gives 44 institutions, the ESA page 56 institutes from 16 countries.",
+  "confidence": "high",
   "url_status": "ok"
  },
  {
@@ -284,11 +284,11 @@
   "others": 1,
   "domain": "space",
   "status": "completed",
-  "achieved": "After Chang'e-4 made the first soft landing on the lunar far side on 3 January 2019, NASA and CNSA coordinated so that NASA's LRO could image the lander (30 January) and LRO's LAMP instrument could search for landing exhaust signals.",
-  "url": "https://www.scientificamerican.com/article/farside-politics-the-west-eyes-moon-cooperation-with-china",
-  "src": "Scientific American",
-  "caveat": "Data coordination, not a joint mission. Payloads from Germany, the Netherlands, Sweden and Saudi Arabia are well documented but were not confirmed on the fetched page. NASA's own pages could not be fetched.",
-  "confidence": "medium",
+  "achieved": "After Chang'e-4 made the first soft landing on the lunar far side on 3 January 2019, NASA and CNSA discussed using LRO's LAMP instrument to look for the landing plume, LRO imaged the landing site, and the two agencies agreed to share significant findings at UN COPUOS in February 2019.",
+  "url": "https://www.nasa.gov/general/nasas-campaign-to-return-to-the-moon-with-global-partners/",
+  "src": "NASA",
+  "caveat": "Data coordination, not a joint mission. CNSA confirms payloads from the Netherlands, Germany, Sweden and Saudi Arabia, a Chinese-Russian radioisotope heat source, and LRO scientists' cooperation (https://www.cnsa.gov.cn/english/n6465719/c6805233/content.html). The 30 Jan 2019 LRO image is on NASA's 'First Look' page. Replaces the Scientific American source.",
+  "confidence": "high",
   "url_status": "ok"
  },
  {
@@ -348,10 +348,10 @@
   "domain": "environment",
   "status": "active",
   "achieved": "By its 20th anniversary in January 2019, Argo's array of about 4,000 floats had collected 2 million ocean profiles, with 26 countries deploying around 800 floats a year.",
-  "url": "https://wmo.int/node/11383",
+  "url": "https://wmo.int/media/news/argo-ocean-floats-achieve-2-million-profiles-20-years-support-new-research-ocean-heat",
   "src": "WMO",
-  "caveat": "Coordinated by IOC/WMO. Member list per country not on the fetched page.",
-  "confidence": "medium",
+  "caveat": "Coordinated by IOC/WMO. National Argo programmes in the US, Europe, UK, Japan, China and India (and Russia) are listed by the Argo programme office (https://argo.ucsd.edu/links/).",
+  "confidence": "high",
   "url_status": "ok"
  },
  {
@@ -372,8 +372,8 @@
   "achieved": "The 389-day expedition drew more than 80 institutes from 20 countries and seven icebreakers and research vessels, including Akademik Fedorov, Kapitan Dranitsyn, Admiral Makarov and Akademik Tryoshnikov.",
   "url": "https://mosaic-expedition.org/wp-content/uploads/2021/02/mosaic_factsheet_expedition-in-numbers_engl.pdf",
   "src": "MOSAiC/AWI factsheet",
-  "caveat": "Led by AWI (Germany). The factsheet does not state ship nationalities (the four named are Russian vessels) and lists no Chinese icebreaker. China took part through its scientists (correction to the original brief).",
-  "confidence": "medium",
+  "caveat": "Led by AWI (Germany). The factsheet does not state ship nationalities (the four named are Russian vessels) and lists no Chinese icebreaker. China took part through ten institutes, including the Polar Research Institute of China; Russia through AARI and Rosmorport; the US and UK through NOAA, NASA, NSF, BAS, NERC and others (partner list: https://mosaic-expedition.org/team/partner-institutions/).",
+  "confidence": "high",
   "url_status": "ok"
  },
  {
@@ -418,7 +418,7 @@
   "achieved": "Belle II at Japan's SuperKEKB collider brings together more than 1,000 physicists from more than 26 countries, including 16 US institutions.",
   "url": "https://usbelleii.bnl.gov/",
   "src": "US Belle II (Brookhaven National Laboratory)",
-  "caveat": "Start year 2019 (physics run) is not on the fetched page. Participation of Chinese, Indian and Russian institutes is not verified on that page.",
+  "caveat": "Start year 2019 (physics run) is not on the fetched page. Participation of Chinese, Indian and Russian institutes is not verified on that page. Belle II's institute list (belle2.org institutional map) loads via JavaScript and could not be read.",
   "confidence": "medium",
   "url_status": "ok"
  },
@@ -557,11 +557,11 @@
   "others": 0,
   "domain": "health",
   "status": "completed",
-  "achieved": "After Soviet virologists Chumakov and Smorodintsev visited Sabin in 1956, his oral vaccine strains were tested on millions of Soviet schoolchildren, proving the vaccine safe and leading to its adoption in the US from 1961.",
-  "url": "https://gulfnews.com/world/when-russian-and-us-scientists-worked-together-on-vaccines-1.1597530992539",
-  "src": "Gulf News (secondary)",
-  "caveat": "Secondary source (Gulf News); exact dose numbers are not given.",
-  "confidence": "medium",
+  "achieved": "After Soviet virologists Chumakov and Smorodintsev worked with Sabin from 1956, his oral vaccine was given to millions of Soviet children (77 million people in the USSR during 1959-1961), and the campaign's results led to licensure of the oral vaccine in the US in 1961.",
+  "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8888238/",
+  "src": "Emerging Infectious Diseases (peer-reviewed, via PMC)",
+  "caveat": "The 1956 State Department-facilitated contact between Sabin, Chumakov and Smorodintsev is from Hotez, PLoS Negl Trop Dis 2017 (https://pmc.ncbi.nlm.nih.gov/articles/PMC5444589/). Replaces the Gulf News source.",
+  "confidence": "high",
   "url_status": "ok"
  },
  {
@@ -623,10 +623,10 @@
   "domain": "health",
   "status": "completed",
   "achieved": "China publicly shared the genetic sequence of SARS-CoV-2 on 12 January 2020, giving laboratories worldwide the basis for developing diagnostic tests.",
-  "url": "https://www.who.int/news/item/08-04-2020-who-timeline---covid-19",
+  "url": "https://www.who.int/news/item/27-04-2020-who-timeline---covid-19",
   "src": "WHO (archived timeline)",
-  "caveat": "The WHO timeline does not give the 11 Jan virological.org posting or the first PCR protocol date. How quickly data were shared remains disputed.",
-  "confidence": "medium",
+  "caveat": "The WHO timeline does not give the 11 Jan virological.org posting (see https://virological.org/t/novel-2019-coronavirus-genome/319) or the first PCR protocol date. How quickly data were shared remains disputed.",
+  "confidence": "high",
   "url_status": "ok"
  },
  {
@@ -708,7 +708,7 @@
   "achieved": "The Cooperative Threat Reduction programme has deactivated more than 7,500 nuclear warheads in the former Soviet Union and helped states such as Kazakhstan, Ukraine and Belarus.",
   "url": "https://www.dtra.mil/Missions/Partnering/Cooperative-Threat-Reduction-Program/",
   "src": "DTRA",
-  "caveat": "The DTRA page says 'more than 7,500' and does not give a scorecard figure such as 7,599. It does not mention Russia ending cooperation (umbrella agreement lapsed 2013, Russia projects ended about 2014; general knowledge).",
+  "caveat": "The DTRA page says 'more than 7,500' and does not give a scorecard figure such as 7,599. It does not mention Russia ending cooperation (umbrella agreement lapsed 2013, Russia projects ended about 2014; general knowledge). The DTRA page and congress.gov CRS report R43143 returned 403 to automated fetches this session, so the 7,500 figure was not re-read.",
   "confidence": "medium",
   "url_status": "ok"
  },
@@ -965,11 +965,11 @@
   "others": null,
   "domain": "environment",
   "status": "active",
-  "achieved": "In June 2021 WMO's Executive Council endorsed a Unified Data Policy under which members provide core Earth-system data on a free and unrestricted basis.",
-  "url": "https://wmo.int/node/14000",
+  "achieved": "In October 2021 the Extraordinary World Meteorological Congress approved a Unified Data Policy that reaffirms the free and unrestricted exchange of weather, climate and related Earth-system data among WMO's 193 Members.",
+  "url": "https://wmo.int/media/news/wmo-overhauls-data-exchange-policy",
   "src": "WMO",
-  "caveat": "Adoption by the October 2021 extraordinary Congress is not confirmed on the fetched page. World Weather Watch has existed since 1963.",
-  "confidence": "medium",
+  "caveat": "World Weather Watch has existed since 1963 (not on the cited page). The June 2021 Executive Council endorsement is on https://wmo.int/node/14000.",
+  "confidence": "high",
   "url_status": "ok"
  },
  {
@@ -1037,8 +1037,8 @@
   "achieved": "SHADE, chaired in rotation by EU NAVFOR, NATO and CMF, drew about 120 government, industry and military representatives in 2016 to deconflict counter-piracy operations, with China, Russia and India among the 'independent deployers'.",
   "url": "https://combinedmaritimeforces.com/2016/05/01/combined-maritime-forces-in-bahrain-lead-the-shade-counter-piracy-conference/",
   "src": "Combined Maritime Forces",
-  "caveat": "Coordination only, not a joint command. Japan's participation, the forum's 2008 founding and piracy statistics are not on the fetched page. Piracy resurged in 2023–24.",
-  "confidence": "medium",
+  "caveat": "Coordination only, not a joint command. Japan joined CMF's CTF151 in 2013 per the Cabinet Secretariat's 2025 counter-piracy report (https://www.cas.go.jp/jp/gaiyou/jimu/pdf/siryou2/counter-piracy2025.pdf); the forum's 2008 founding and piracy statistics are not on the fetched pages. Piracy resurged in 2023-24.",
+  "confidence": "high",
   "url_status": "ok"
  },
  {
@@ -1078,7 +1078,7 @@
   "achieved": "Experts from the US (about 40 INDOPACOM personnel), UK diving teams, six Chinese cave-rescue experts and Japanese JICA drainage advisers joined Thai forces in the 8–10 July 2018 rescue, during which one retired Thai Navy SEAL died.",
   "url": "https://www.nationthailand.com/in-focus/30348966",
   "src": "The Nation (Thailand); US Air Force 353rd SOW",
-  "caveat": "'others' = Myanmar, Laos (per The Nation); Australia also took part (not in the fetched sources). Domain 'health' is used because no humanitarian or rescue category exists. US Air Force: www.353sow.af.mil/News/Article/2268380/thai-cave-rescue-two-years-later.",
+  "caveat": "'others' = Myanmar, Laos (per The Nation); Australia also took part (not in the fetched sources). Domain 'health' is used because no humanitarian or rescue category exists. US Air Force: www.353sow.af.mil/News/Article/2268380/thai-cave-rescue-two-years-later. The 353rd SOW page did not respond to automated fetches, and no PRC MFA or UK government page detailing the teams was found.",
   "confidence": "medium",
   "url_status": "ok"
  },

@@ -28,21 +28,34 @@
   "desc": "The MMCA (1998) is the annual US–PRC military maritime and air safety consultation. A working-group meeting was held in Hawaii on 28–29 May 2026; it reviewed implementation of the air–maritime encounter code of conduct since the 2025 round, which took place after the Busan summit in Nov 2025.",
   "links": [
    {
-    "label": "Sputnik China citing PLA Navy outlet 人民海军 (secondary) – May 2026 Hawaii round",
-    "url": "https://sputniknews.cn/20260602/1071625764.html"
+    "label": "PRC MND (EN): Chinese, U.S. militaries hold MMCA working group meeting in Hawaii, 28-29 May 2026",
+    "url": "http://eng.mod.gov.cn/2025xb/N/T/16464949.html"
+   },
+   {
+    "label": "PRC MND (EN): second MMCA working group meeting and annual session for 2025, Hawaii, 18-20 Nov 2025",
+    "url": "http://eng.mod.gov.cn/2025xb/N/T/16423311.html"
    }
   ],
-  "asof": "2026-06-02",
-  "note": "No DoD/INDOPACOM or PRC MND primary page confirmed for the 2026 round; the only fetched source is Sputnik, which is secondary."
+  "asof": "2026-06-01",
+  "note": "Both rounds confirmed from PRC MND English pages, replacing the Sputnik link. The MND readout says the sides evaluated the Rules of Behavior for Safety of Air and Maritime Encounters since the 2025 MMCA. The INDOPACOM release for the May 2026 round (pacom.mil article 4503301) returned HTTP 403 to automated fetches and was not read."
  },
  "uscn_dtl": {
   "title": "Defense Telephone Link (2008)",
   "dyad": "US–CN",
   "status": "limited",
-  "desc": "A defense hotline set up by a 2008 agreement between the US DoD and PRC MND. Its use has been episodic: Beijing suspended mil-mil channels after Aug 2022, and they were partially restored from 2024.",
-  "links": [],
-  "asof": "2025 (background)",
-  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use."
+  "desc": "A secure defense telephone link set up by a DoD-MND agreement signed in Shanghai on 29 Feb 2008. Use has been episodic: Beijing suspended mil-mil channels after Aug 2022. Defense-chief contact has since resumed, including a Dong Jun-Hegseth video call on 9 Sep 2025.",
+  "links": [
+   {
+    "label": "GovInfo: TIAS 08-229, Defense Telephone Link agreement between the US and China, signed at Shanghai 29 Feb 2008",
+    "url": "https://www.govinfo.gov/app/details/GOVPUB-S-PURL-gpo34414"
+   },
+   {
+    "label": "PRC MND (EN): Chinese defense minister holds video talk with U.S. counterpart (10 Sep 2025)",
+    "url": "http://eng.mod.gov.cn/xb/News_213114/TopStories/16408897.html"
+   }
+  ],
+  "asof": "2025-09-10",
+  "note": "The 2008 agreement is confirmed from the GovInfo TIAS record. The 2025 Dong-Hegseth video talk is confirmed, but neither readout says it used the 2008 link, so current use of the DTL itself is unconfirmed. The 2022 suspension is from background knowledge. state.gov/08-229 returned 403/504 to automated fetches."
  },
  "uscn_cn": {
   "title": "Counternarcotics working group / fentanyl cooperation",
@@ -81,9 +94,18 @@
   "dyad": "US–CN",
   "status": "limited",
   "desc": "At Lima on 16 Nov 2024, Biden and Xi affirmed the need to maintain human control over the decision to use nuclear weapons. It is a one-off leaders' statement, not a mechanism.",
-  "links": [],
-  "asof": "2024-11 (background)",
-  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use. Not known whether it has been reaffirmed under Trump."
+  "links": [
+   {
+    "label": "White House (archived): Readout of President Biden's meeting with President Xi, Lima (16 Nov 2024)",
+    "url": "https://bidenwhitehouse.archives.gov/briefing-room/statements-releases/2024/11/16/readout-of-president-joe-bidens-meeting-with-president-xi-jinping-of-the-peoples-republic-of-china-3/"
+   },
+   {
+    "label": "PRC MFA (EN): President Xi Jinping meets with U.S. President Joe Biden in Lima",
+    "url": "https://www.fmprc.gov.cn/mfa_eng/xw/zyxw/202411/t20241117_11527672.html"
+   }
+  ],
+  "asof": "2024-11-16",
+  "note": "Both readouts state that the leaders affirmed the need to maintain human control over the decision to use nuclear weapons. No reaffirmation under the Trump administration was found in the 2025-2026 PRC MFA readouts checked."
  },
  "uscn_exportctl": {
   "title": "Export controls (BIS chip rules; MOFCOM rare earth/gallium controls)",
@@ -112,9 +134,18 @@
   "dyad": "US–CN",
   "status": "active",
   "desc": "A protocol signed 13 Dec 2024 extended the 1979 S&T Agreement for five years, with a narrower scope and added safeguards. It limits cooperation to government-to-government basic research and excludes critical and emerging technologies.",
-  "links": [],
-  "asof": "2024-12 (background)",
-  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use."
+  "links": [
+   {
+    "label": "US State Dept (archived): Amendment and Extension of the U.S.-PRC Science and Technology Agreement (13 Dec 2024)",
+    "url": "https://2021-2025.state.gov/amendment-and-extension-of-the-u-s-prc-science-and-technology-agreement-sta/"
+   },
+   {
+    "label": "gov.cn: 中美续签两国政府科学技术合作协定 (extension for 5 years from 27 Aug 2024)",
+    "url": "https://www.gov.cn/lianbo/bumen/202412/content_6992558.htm"
+   }
+  ],
+  "asof": "2024-12-13",
+  "note": "State Dept confirms the 13 Dec 2024 protocol, the five-year extension, government-to-government scope and that it covers only basic research, not critical and emerging technologies. gov.cn (Xinhua relaying MOST) gives the effective start of the extension as 27 Aug 2024."
  },
  "usru_newstart": {
   "title": "New START",
@@ -123,62 +154,126 @@
   "desc": "Russia suspended its participation in Feb 2023, and the treaty expired on 5 Feb 2026. Putin had offered mutual voluntary adherence to the central limits for a year after expiry, but Russia's MFA said it received no formal US response. Moscow then declared both sides free of the treaty's obligations.",
   "links": [
    {
-    "label": "Xinhua: Russian MFA statement on New START expiry (5 Feb 2026)",
+    "label": "UN (India country team): Secretary-General statement on the expiration of New START (5 Feb 2026)",
+    "url": "https://india.un.org/en/311310-un-secretary-general-statement-expiration-treaty-measures-further-reduction-and-limitation"
+   },
+   {
+    "label": "US State Dept (archived): U.S. countermeasures in response to Russia's violations of New START (Russia's purported suspension, 28 Feb 2023)",
+    "url": "https://2021-2025.state.gov/u-s-countermeasures-in-response-to-russias-violations-of-the-new-start-treaty"
+   },
+   {
+    "label": "Xinhua (secondary): Russian MFA statement on New START expiry (5 Feb 2026)",
     "url": "https://www.news.cn/world/20260205/74c3432ca6e445deab59a0da8cbf8616/c.html"
    }
   ],
   "asof": "2026-02-05",
-  "note": "No post-expiry informal limits arrangement was found as of Feb 2026, and developments after Feb 2026 are not confirmed. The only link is Xinhua; no state.gov or mid.ru page was fetched."
+  "note": "Expiry on 5 Feb 2026 is confirmed by the UN Secretary-General's statement, and Russia's Feb 2023 suspension by State Dept. The Russian MFA statement (no formal US reply to Putin's offer; both sides free of obligations) is still sourced only to Xinhua, because mid.ru and kremlin.ru time out from this location (geo-blocking). No state.gov statement on the expiry was found. Developments after Feb 2026 are not confirmed."
  },
  "usru_bmlna": {
   "title": "1988 Ballistic Missile Launch Notification Agreement / Nuclear Risk Reduction Centers",
   "dyad": "US–RU",
   "status": "active",
-  "desc": "Under the 1988 agreement, each side notifies the other of ICBM and SLBM launches via the NRRCs, which were set up in 1987. Russia said in 2023 it would keep giving launch notifications despite suspending New START.",
-  "links": [],
-  "asof": "2023–2025 (background)",
-  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use. Status after New START expiry is not confirmed."
+  "desc": "Under the 1988 agreement, each side gives at least 24 hours' notice of any ICBM or SLBM launch through the Nuclear Risk Reduction Centers, which were set up under a 1987 agreement. In 2023 the US said it continues to give these notifications despite the New START dispute.",
+  "links": [
+   {
+    "label": "US State Dept (archived): Ballistic Missile Launch Notification Agreement, signed and in force 31 May 1988 (text and narrative)",
+    "url": "https://2009-2017.state.gov/t/avc/trty/187150.htm"
+   },
+   {
+    "label": "US State Dept (archived): History of the National and Nuclear Risk Reduction Center (NRRC agreement 15 Sep 1987; operations from 1 Apr 1988)",
+    "url": "https://2021-2025.state.gov/history-of-the-national-and-nuclear-risk-reduction-center/"
+   },
+   {
+    "label": "US State Dept (archived): U.S. countermeasures to Russia's New START violations (US continues 1988 launch notifications)",
+    "url": "https://2021-2025.state.gov/u-s-countermeasures-in-response-to-russias-violations-of-the-new-start-treaty"
+   }
+  ],
+  "asof": "2023 (US practice confirmed); post-Feb 2026 unconfirmed",
+  "note": "The agreement text, the NRRC history and the 2023 US statement are confirmed from State Dept pages. Russia's 2023 pledge to continue and any practice after New START's Feb 2026 expiry are unconfirmed (no primary page reachable; kremlin.ru and mid.ru are geo-blocked from here)."
  },
  "usru_incsea": {
   "title": "1972 Incidents at Sea Agreement",
   "dyad": "US–RU",
   "status": "limited",
-  "desc": "A 1972 US–Soviet navy agreement on avoiding dangerous manoeuvres at sea, with annual review talks. It remains in force, but the regular annual meetings have reportedly lapsed since 2022.",
-  "links": [],
-  "asof": "background",
-  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use."
+  "desc": "A 1972 US-Soviet agreement on avoiding dangerous manoeuvres on and over the high seas. Article IX provides for annual review meetings; a 1973 protocol bans simulated attacks on non-military ships.",
+  "links": [
+   {
+    "label": "US State Dept (archived): Incidents at Sea Agreement, signed and in force 25 May 1972 (text, 1973 protocol, narrative)",
+    "url": "https://2009-2017.state.gov/t/isn/4791.htm"
+   }
+  ],
+  "asof": "1972 text confirmed; recent meetings unconfirmed",
+  "note": "The agreement, the annual-review clause and the 1973 protocol are confirmed from the State Dept page. Whether annual meetings have lapsed since 2022 is unconfirmed; the US Navy INCSEA statement page (navy.mil) returned 403."
  },
  "usru_iss": {
   "title": "ISS integrated crew / seat swap agreement",
   "dyad": "US–RU",
   "status": "active",
-  "desc": "Under a NASA–Roscosmos integrated crew agreement, NASA astronauts fly on Soyuz and cosmonauts on US commercial crew vehicles. It was reportedly extended through 2027.",
-  "links": [],
-  "asof": "2025 (background)",
-  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use."
+  "desc": "Under a NASA-Roscosmos integrated crew agreement signed in July 2022, cosmonauts fly on US commercial crew vehicles and NASA astronauts on Soyuz, one swap per year. NASA's Crew-14 (no earlier than spring 2027) includes a Roscosmos cosmonaut.",
+  "links": [
+   {
+    "label": "NASA Advisory Council, Oct 2022 ISS briefing (PDF): integrated crew agreement signed July 2022, one crew swap per year",
+    "url": "https://www.nasa.gov/wp-content/uploads/2023/10/nac-oct2022-iss-final2.pdf"
+   },
+   {
+    "label": "NASA: SpaceX Crew-14 assignments, incl. Roscosmos cosmonaut Arutyun Kiviryan, launch NET spring 2027 (24 Sep 2026)",
+    "url": "https://www.nasa.gov/news-release/nasa-shares-spacex-crew-14-assignments-for-space-station-mission/"
+   }
+  ],
+  "asof": "2026-09-24",
+  "note": "The July 2022 agreement and the Crew-14 assignment are confirmed from NASA pages. The exact end date of the current seat-swap arrangement is not stated on either page."
  },
  "usru_ukraine": {
   "title": "Ukraine negotiations",
   "dyad": "US–RU",
   "status": "contested",
-  "desc": "After the Trump–Putin summit in Anchorage, Alaska on 15 Aug 2025, US–Ukraine–Russia trilateral rounds took place in Abu Dhabi (23–24 Jan and 4–5 Feb 2026) and Geneva (17–18 Feb 2026). A further Abu Dhabi round was floated for March 2026. Ukraine was discussed at the May and Sep 2026 Xi–Trump meetings.",
+  "desc": "After the Trump-Putin summit in Anchorage, Alaska on 15 Aug 2025, US-Ukraine-Russia trilateral rounds took place in Abu Dhabi (from 23 Jan and from 4 Feb 2026) and Geneva (from 17 Feb 2026). Ukraine was discussed at the May and Sep 2026 Xi-Trump meetings.",
   "links": [
    {
-    "label": "Xinhua: US–Ukraine Geneva talks end; next trilateral may be in Abu Dhabi (27 Feb 2026)",
-    "url": "https://www.news.cn/world/20260227/9755b93a3cd0473f980465d241127deb/c.html"
+    "label": "GovInfo DCPD-202500855: Trump remarks to reporters with Putin in Anchorage, Alaska (15 Aug 2025)",
+    "url": "https://www.govinfo.gov/app/details/DCPD-202500855"
+   },
+   {
+    "label": "UAE MOFA: trilateral Russia-Ukraine-US talks open in Abu Dhabi (23 Jan 2026)",
+    "url": "https://www.mofa.gov.ae/en/MediaHub/News/2026/1/23/UAE-Russia-Ukraine-United-States"
+   },
+   {
+    "label": "UAE MOFA: second round of trilateral talks begins in Abu Dhabi (4 Feb 2026)",
+    "url": "https://www.mofa.gov.ae/en/MediaHub/News/2026/2/4/UAE-Tripartite-talks"
+   },
+   {
+    "label": "Swiss FDFA: trilateral talks between the US, Ukraine and Russia in Geneva, opened 17 Feb 2026",
+    "url": "https://www.eda.admin.ch/en/switzerland-is-committed-to-peace-in-ukraine"
+   },
+   {
+    "label": "PRC MFA (EN): Xi-Trump talks in Beijing, 14 May 2026 (Ukraine crisis discussed)",
+    "url": "https://www.fmprc.gov.cn/mfa_eng/xw/zyxw/202605/t20260514_11910330.html"
+   },
+   {
+    "label": "PRC MFA: Xi-Trump talks at the White House, 24 Sep 2026 (乌克兰危机 discussed)",
+    "url": "https://www.mfa.gov.cn/gjhdq_676201/gj_676203/bmz_679954/1206_680528/xgxw_680534/202609/t20260925_12031134.shtml"
    }
   ],
-  "asof": "2026-02-27",
-  "note": "No primary source for the Alaska summit was fetched. Rounds after Feb 2026 and any ceasefire or settlement status are unconfirmed."
+  "asof": "2026-09-25",
+  "note": "All events above are confirmed from official pages (GovInfo, UAE MOFA, Swiss FDFA, PRC MFA), replacing the Xinhua link. A further Abu Dhabi round reportedly floated for March 2026, rounds after Feb 2026, and any ceasefire or settlement status are unconfirmed. president.gov.ua and press.un.org returned 403 or a bot challenge."
  },
  "usru_embassy": {
   "title": "Embassy operations talks (Istanbul 2025)",
   "dyad": "US–RU",
   "status": "limited",
   "desc": "US and Russian delegations met in Istanbul on 27 Feb and 10 Apr 2025 to discuss restoring diplomatic mission operations (staffing, banking, property).",
-  "links": [],
-  "asof": "2025-04 (background)",
-  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use. Later rounds unknown."
+  "links": [
+   {
+    "label": "US Embassy Russia: U.S.-Russia delegations meet in Istanbul on 27 Feb 2025 (State Dept media note)",
+    "url": "https://ru.usembassy.gov/february-27-meeting-in-istanbul/"
+   },
+   {
+    "label": "US Embassy Russia: April 10th meeting in Istanbul (State Dept media note, diplomatic banking notes exchanged)",
+    "url": "https://ru.usembassy.gov/april-10th-meeting-in-istanbul/"
+   }
+  ],
+  "asof": "2025-04-10",
+  "note": "Both rounds confirmed from State Dept media notes (mirrored on the US Embassy site). The April note says a follow-up meeting would be held 'as needed', date to be determined; later rounds are unconfirmed."
  },
  "usru_uranium": {
   "title": "US ban on Russian enriched uranium imports",
@@ -198,28 +293,59 @@
   "title": "China–Russia joint strategic air patrols",
   "dyad": "CN–RU",
   "status": "active",
-  "desc": "Joint bomber patrols over the Sea of Japan, East China Sea and western Pacific have been held roughly annually since July 2019. They included a 2024 patrol near Alaska and a Dec 2025 round.",
-  "links": [],
-  "asof": "2025 (background)",
-  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use. The PRC MND English front page carried a 30 Nov joint air strategic patrol item (year not shown, no article URL), so it is not linked."
+  "desc": "Joint bomber patrols over the Sea of Japan, East China Sea and western Pacific have been held roughly annually since 2019. The 8th (25 Jul 2024) was over the Bering Sea, the 10th on 9 Dec 2025 and the 11th on 27 Jun 2026.",
+  "links": [
+   {
+    "label": "PRC MND (EN): Chinese, Russian air forces conduct 11th joint strategic patrol (27 Jun 2026)",
+    "url": "http://eng.mod.gov.cn/2025xb/N/JE/16470142.html"
+   },
+   {
+    "label": "PRC MND (EN): China, Russia conduct 10th joint strategic air patrol (9 Dec 2025)",
+    "url": "http://eng.mod.gov.cn/2025xb/N/T/16426188.html"
+   },
+   {
+    "label": "PRC MND (EN): regular press conference, 25 Jul 2024 (Bering Sea patrol, 8th since 2019)",
+    "url": "http://eng.mod.gov.cn/xb/News_213114/NewsRelease/16328897.html"
+   }
+  ],
+  "asof": "2026-06-27",
+  "note": "All three patrols confirmed from PRC MND English pages."
  },
  "cnru_naval": {
   "title": "Joint naval exercises and 2024 coast guard patrol (Bering Sea/Arctic)",
   "dyad": "CN–RU",
   "status": "active",
-  "desc": "The two navies hold regular exercises (Joint Sea / Northern Interaction) and joint Pacific patrols. In late Sep–Oct 2024 the US Coast Guard reported Chinese and Russian coast guard vessels patrolling together in the Bering Sea.",
-  "links": [],
-  "asof": "2024–2025 (background)",
-  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use. The USCG press release URL was not fetched."
+  "desc": "The two navies hold regular exercises (Joint Sea-2026 was the 12th since 2012) followed by joint Pacific patrols. In Sep-Oct 2024 the two coast guards held their first joint patrol in the North Pacific high seas; the Chinese ships continued through the Bering Sea into the Arctic Ocean.",
+  "links": [
+   {
+    "label": "China Coast Guard: 'Pacific Patrol-2024' China-Russia coast guard joint exercise and patrol completed (17 Oct 2024)",
+    "url": "https://www.ccg.gov.cn/gjhz/202410/t20241017_2520.html"
+   },
+   {
+    "label": "PRC MND (EN): China, Russia wrap up Joint Sea-2026 naval exercise (13 Jul 2026)",
+    "url": "http://eng.mod.gov.cn/2025xb/N/T/16473492.html"
+   }
+  ],
+  "asof": "2026-07-13",
+  "note": "Confirmed from China Coast Guard and PRC MND pages. The US Coast Guard release on the Sep 2024 Bering Sea sighting (news.uscg.mil article 3922625) returned 403 and was not read."
  },
  "cnru_bmln": {
   "title": "2009 China–Russia ballistic missile launch notification agreement",
   "dyad": "CN–RU",
   "status": "active",
-  "desc": "Under a 2009 bilateral agreement, each side notifies the other of ballistic missile and space launches toward the other's territory. It was extended for 10 years in Dec 2021.",
-  "links": [],
-  "asof": "2021 extension (background)",
-  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use."
+  "desc": "Under a 13 Oct 2009 intergovernmental agreement, each side notifies the other of planned and completed ballistic missile and space launch vehicle launches. A protocol signed on 15 Dec 2020 extended it to 16 Dec 2030; Russia ratified the protocol in Nov 2021.",
+  "links": [
+   {
+    "label": "Russian Government: materials for 15 Jul 2021 meeting - protocol signed 15 Dec 2020 extends the 13 Oct 2009 agreement to 16 Dec 2030",
+    "url": "http://government.ru/announcements/42770/"
+   },
+   {
+    "label": "Federation Council: ratification of the extension protocol approved (10 Nov 2021)",
+    "url": "http://council.gov.ru/events/news/130890/"
+   }
+  ],
+  "asof": "2021-11-10",
+  "note": "Settles the date question: the extension protocol was signed on 15 Dec 2020 (Russian Government), and Russian ratification followed in Nov 2021 (Federation Council, 10 Nov 2021), which explains the '2021' in some accounts. No PRC-side page was found; the gov.cn English article on the signing now redirects to the homepage."
  },
  "cnru_pos": {
   "title": "Power of Siberia 1 & Power of Siberia 2",
@@ -239,10 +365,23 @@
   "title": "Rosatom-built Tianwan 7/8 and Xudapu 3/4",
   "dyad": "CN–RU",
   "status": "active",
-  "desc": "Four VVER-1200 units are being built in China under 2018 agreements: Tianwan 7/8 in Jiangsu and Xudapu 3/4 in Liaoning. The first unit is expected online around 2026.",
-  "links": [],
-  "asof": "background",
-  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use. Commissioning status not confirmed."
+  "desc": "Four Russian-designed VVER-1200 units are being built in China under a June 2018 package agreement: Tianwan 7/8 (Jiangsu) and Xudapu 3/4 (Liaoning), with construction started on 19 May 2021. Tianwan 7 received its operating licence on 11 Aug 2026 and completed first fuel loading on 18 Aug 2026.",
+  "links": [
+   {
+    "label": "gov.cn: 习近平同普京共同见证中俄核能合作项目开工仪式 (Tianwan 7/8, Xudapu 3/4 construction start, 19 May 2021)",
+    "url": "https://www.gov.cn/xinwen/2021-05/19/content_5608935.htm"
+   },
+   {
+    "label": "NNSA/MEE: operating licence for Tianwan unit 7 issued 11 Aug 2026",
+    "url": "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk09/202608/t20260813_1163971.html"
+   },
+   {
+    "label": "CAEA (relaying CNNC): Tianwan 7 first fuel loading completed 18 Aug 2026, first VVER-1200 in China",
+    "url": "https://www.caea.gov.cn/n6760338/n6760342/c10768957/content.html"
+   }
+  ],
+  "asof": "2026-08-19",
+  "note": "Confirmed from gov.cn, the National Nuclear Safety Administration and CAEA. Media reports of Tianwan 7's first grid connection on 8 Oct 2026, and of Xudapu 3 hot functional tests, were not confirmed from an official page."
  },
  "cnru_ilrs": {
   "title": "International Lunar Research Station (ILRS)",
@@ -266,30 +405,753 @@
   "title": "Local-currency settlement share",
   "dyad": "CN–RU",
   "status": "active",
-  "desc": "Russian officials have said that over 95% of Russia–China trade is settled in rubles and yuan.",
-  "links": [],
-  "asof": "2024–2025 (background)",
-  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use."
+  "desc": "Russian Prime Minister Mishustin said on 21 Aug 2024 that rubles and yuan already account for more than 95% of Russia-China mutual settlements.",
+  "links": [
+   {
+    "label": "Russian Government: Mishustin meets Li Qiang (21 Aug 2024) - ruble and yuan share of mutual settlements 'already above 95%'",
+    "url": "http://government.ru/news/52428/"
+   }
+  ],
+  "asof": "2024-08-21",
+  "note": "The 95% figure is confirmed from the Russian Government transcript. A later 99.1% figure attributed to Finance Minister Siluanov was found only in media reports and is unconfirmed. No PRC-side official figure was found."
+ },
+ "usuk_mda": {
+  "title": "UK–US Mutual Defence Agreement (1958)",
+  "dyad": "US–UK",
+  "status": "active",
+  "desc": "The 1958 agreement for cooperation on the uses of atomic energy for mutual defense purposes is the legal basis for UK–US exchange of nuclear-weapons and naval-propulsion information and material. An amending agreement signed in Washington on 25 Jul 2024 entered into force on 14 Nov 2024.",
+  "links": [
+   {
+    "label": "UK Treaty Series No. 41 (2026): Amendment to the UK–US Agreement for Cooperation on the Uses of Atomic Energy for Mutual Defense Purposes, Washington 25 Jul 2024 (entered into force 14 Nov 2024)",
+    "url": "https://assets.publishing.service.gov.uk/media/6ab3f7c8a9c3d267bcccedd6/TS_41.2026_UK_USA_Amendment_Agreement_Cooperation_Atomic_Energy_Mutual_Defense_Purposes.pdf"
+   }
+  ],
+  "asof": "2026-09",
+  "note": "Signature and entry-into-force dates confirmed from the UK Treaty Series text. That the amendment removed the agreement's ten-yearly renewal (making it open-ended) is from secondary reporting and was not checked against the treaty text. No US-side record was fetched."
+ },
+ "usuk_tpd": {
+  "title": "US–UK Technology Prosperity Deal (2025)",
+  "dyad": "US–UK",
+  "status": "limited",
+  "desc": "A non-binding MOU signed at Chequers on 18 Sep 2025 during Trump's state visit, covering AI, quantum, civil nuclear and other frontier technology cooperation. In Dec 2025 the US was widely reported to have paused implementation over wider trade disputes.",
+  "links": [
+   {
+    "label": "White House: MOU between the US and UK regarding the Technology Prosperity Deal (signed at Chequers, 18 Sep 2025)",
+    "url": "https://www.whitehouse.gov/presidential-actions/2025/09/memorandum-of-understanding-between-the-government-of-the-united-states-of-america-and-the-government-of-the-united-kingdom-of-great-britain-and-northern-ireland-regarding-the-technology-prosperity-deal/"
+   }
+  ],
+  "asof": "2025-09-18",
+  "note": "Signing confirmed from the White House text. The Dec 2025 pause and a reported Jan 2026 re-opening of the civil nuclear pillar come from press reports and a Commons Business and Trade Committee report; the committee report (publications.parliament.uk) returned HTTP 403 to automated fetches, so current status is unconfirmed. The gov.uk copy of the MOU returned 404."
+ },
+ "useu_trade": {
+  "title": "US–EU framework agreement on reciprocal trade (Aug 2025)",
+  "dyad": "US–EU",
+  "status": "active",
+  "desc": "Joint statement of 21 Aug 2025 setting out a Framework Agreement on Reciprocal, Fair and Balanced Trade: the EU to eliminate tariffs on US industrial goods and widen access for some US farm and seafood goods; the US to cap most tariffs on EU goods at 15%. Described as a first step that can be expanded.",
+  "links": [
+   {
+    "label": "GovInfo (Daily Compilation of Presidential Documents): Joint Statement between the US and the EU on a Framework Agreement (21 Aug 2025)",
+    "url": "https://www.govinfo.gov/content/pkg/DCPD-202500861/html/DCPD-202500861.htm"
+   },
+   {
+    "label": "European Commission (DG Trade): Joint Statement on a US–EU framework on an agreement on reciprocal, fair and balanced trade",
+    "url": "https://policy.trade.ec.europa.eu/news/joint-statement-united-states-european-union-framework-agreement-reciprocal-fair-and-balanced-trade-2025-08-21_en"
+   }
+  ],
+  "asof": "2025-08-21",
+  "note": "Both sides' published texts fetched. How far each commitment has been implemented since is not tracked here."
+ },
+ "useu_ttc": {
+  "title": "EU–US Trade and Technology Council (TTC)",
+  "dyad": "US–EU",
+  "status": "dormant",
+  "desc": "Set up at the June 2021 EU–US summit to coordinate on trade, tech standards and export controls; it held ministerial meetings during 2021–2024. The Commission's TTC community site now states that the format is no longer active and that the community closes on 30 Sep 2026.",
+  "links": [
+   {
+    "label": "European Commission Futurium, EU-US TTC community 'About' page: 'this cooperation format is no longer active'",
+    "url": "https://futurium.ec.europa.eu/en/node/5315"
+   }
+  ],
+  "asof": "2026-10 (fetched)",
+  "note": "Status taken from the Commission's own community page. No formal termination act was found, so this is marked dormant rather than ended. The last ministerial (Leuven, Apr 2024) is from background knowledge."
+ },
+ "useu_dpf": {
+  "title": "EU–US Data Privacy Framework",
+  "dyad": "US–EU",
+  "status": "active",
+  "desc": "The Commission's 2023 adequacy decision lets personal data flow to certified US companies. On 3 Sep 2025 the EU General Court dismissed an action for annulment (Latombe v Commission, T-553/23), confirming the US ensured adequate protection at the time of adoption.",
+  "links": [
+   {
+    "label": "Court of Justice of the EU press release No 106/25: General Court dismisses action against the EU–US data transfer framework (3 Sep 2025)",
+    "url": "https://curia.europa.eu/site/upload/docs/application/pdf/2025-09/cp250106en.pdf"
+   }
+  ],
+  "asof": "2025-09-03",
+  "note": "Judgment confirmed from the CJEU press release. An appeal (C-703/25 P) was reported as pending; its outcome is unconfirmed."
+ },
+ "usin_defense": {
+  "title": "Framework for the US–India Major Defense Partnership (2025)",
+  "dyad": "US–IN",
+  "status": "active",
+  "desc": "Rajnath Singh and Pete Hegseth signed a new 10-year framework for the US–India major defence partnership on 31 Oct 2025 in Kuala Lumpur, on the margins of the 12th ADMM-Plus, renewing the 2015 framework.",
+  "links": [
+   {
+    "label": "PIB (India Ministry of Defence): Raksha Mantri & US Secretary of War meet on the margins of 12th ADMM-Plus; ink 10-year framework",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2184622&reg=3&lang=2"
+   }
+  ],
+  "asof": "2025-10-31",
+  "note": "Confirmed from India's PIB release. The DoD fact sheet (media.defense.gov) and war.gov news story both returned HTTP 403 to automated fetches and were not read."
+ },
+ "usin_trade": {
+  "title": "US–India trade framework (Interim Agreement / BTA talks)",
+  "dyad": "US–IN",
+  "status": "active",
+  "desc": "On 6 Feb 2026 the two governments announced a framework for an Interim Agreement on reciprocal trade, reaffirming the broader Bilateral Trade Agreement negotiations launched in Feb 2025.",
+  "links": [
+   {
+    "label": "White House: United States–India Joint Statement (6 Feb 2026)",
+    "url": "https://www.whitehouse.gov/briefings-statements/2026/02/united-states-india-joint-statement/"
+   }
+  ],
+  "asof": "2026-02-06",
+  "note": "Joint statement fetched. Reported tariff details (an 18% US rate, removal of the extra Russian-oil duty) are from the White House fact sheet as described in search results; the fact sheet itself was not fetched. Whether the Interim Agreement has since been signed is unconfirmed."
+ },
+ "usjp_summits": {
+  "title": "US–Japan leader summits",
+  "dyad": "US–JP",
+  "status": "active",
+  "desc": "Trump visited Tokyo on 28 Oct 2025 for a summit with Takaichi, where documents including a critical-minerals framework were signed. Takaichi held a summit with Trump at the White House on 19 Mar 2026, announcing new alliance, economic-security and deterrence initiatives.",
+  "links": [
+   {
+    "label": "Kantei (EN): Japan–U.S. Summit Meeting, Signing Ceremony and Working Lunch (Summary), 28 Oct 2025",
+    "url": "https://japan.kantei.go.jp/104/diplomatic/202510/28usa.html"
+   },
+   {
+    "label": "Kantei (EN): Japan–U.S. Summit Meeting and Dinner Reception (Summary), 19 Mar 2026",
+    "url": "https://japan.kantei.go.jp/105/diplomatic/202603/20usa.html"
+   },
+   {
+    "label": "White House fact sheet: strengthening the U.S.–Japan Alliance (19 Mar 2026)",
+    "url": "https://www.whitehouse.gov/fact-sheets/2026/03/fact-sheet-president-donald-j-trump-strengthens-u-s-japan-alliance-for-the-benefit-of-all-americans/"
+   }
+  ],
+  "asof": "2026-03-20",
+  "note": "Both summits confirmed from the Kantei summaries and the White House fact sheet. Japan's MOFA site (mofa.go.jp) returned HTTP 403 to all automated fetches, so MOFA readouts and the latest 2+2 (Security Consultative Committee) statement were not read."
+ },
+ "usjp_trade": {
+  "title": "US–Japan framework agreement on trade and $550bn investment",
+  "dyad": "US–JP",
+  "status": "active",
+  "desc": "Agreed in Jul 2025 and implemented by executive order in Sep 2025: a 15% ceiling on most US tariffs on Japanese goods in exchange for Japan's commitment of $550bn for investment in US projects selected by the President.",
+  "links": [
+   {
+    "label": "White House fact sheet: President Trump implements a historic U.S.–Japan framework agreement (Sep 2025)",
+    "url": "https://www.whitehouse.gov/fact-sheets/2025/09/fact-sheet-president-donald-j-trump-implements-a-historic-u-s-japan-framework-agreement/"
+   }
+  ],
+  "asof": "2025-09",
+  "note": "US side only. The Japanese government's account (Cabinet Secretariat / MOFA) was not fetched; Japanese officials have publicly described the investment mechanism differently (mostly loans and guarantees), which is not confirmed here."
+ },
+ "usjp_minerals": {
+  "title": "US–Japan critical minerals and rare earths framework (2025)",
+  "dyad": "US–JP",
+  "status": "active",
+  "desc": "Signed at the 28 Oct 2025 Tokyo summit: a framework for securing supply of critical minerals and rare earths through mining and processing, including a joint rapid-response group on supply security.",
+  "links": [
+   {
+    "label": "White House: United States–Japan Framework for Securing the Supply of Critical Minerals and Rare Earths through Mining and Processing",
+    "url": "https://www.whitehouse.gov/briefings-statements/2025/10/united-states-japan-framework-for-securing-the-supply-of-critical-minerals-and-rare-earths-through-mining-and-processing/"
+   }
+  ],
+  "asof": "2025-10-28",
+  "note": "Framework text fetched from the White House; signing also listed in the Kantei summit summary. Implementation progress (a reported Mar 2026 action plan) is not separately confirmed."
+ },
+ "ukeu_summit": {
+  "title": "UK–EU summits and Security and Defence Partnership",
+  "dyad": "UK–EU",
+  "status": "active",
+  "desc": "The first UK–EU summit (London, 19 May 2025) adopted a Joint Statement, a Security and Defence Partnership and a Common Understanding on a renewed agenda (SPS, ETS linking, youth experience). The next summit is set for Brussels on 20 Nov 2026.",
+  "links": [
+   {
+    "label": "GOV.UK: UK/EU Summit – Key documentation (May 2025)",
+    "url": "https://www.gov.uk/government/publications/ukeu-summit-key-documentation"
+   },
+   {
+    "label": "GOV.UK: PM statement to the House of Commons, 12 Oct 2026 (next UK–EU summit in Brussels on 20 Nov)",
+    "url": "https://www.gov.uk/government/speeches/pm-statement-to-the-house-of-commons-12-october-2026"
+   },
+   {
+    "label": "European Commission: joint statement by President von der Leyen and PM Starmer, EPC summit, May 2026",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_955"
+   }
+  ],
+  "asof": "2026-10-12",
+  "note": "2025 documents and the Nov 2026 date confirmed on GOV.UK; Commission statement read via the press corner's public API because the page renders with JavaScript. Talks on UK participation in the EU SAFE defence instrument reportedly broke down in late 2025 (unconfirmed from a primary page)."
+ },
+ "ukeu_tca": {
+  "title": "Withdrawal Agreement Joint Committee & TCA Partnership Council",
+  "dyad": "UK–EU",
+  "status": "active",
+  "desc": "The treaty bodies that run the post-Brexit agreements. Both met on 2 Feb 2026, reviewed citizens' rights and Windsor Framework implementation, and aimed to conclude the SPS, ETS-linking and youth experience negotiations by the next summit.",
+  "links": [
+   {
+    "label": "GOV.UK: Joint statement on the Withdrawal Agreement Joint Committee and TCA Partnership Council meetings, 2 Feb 2026",
+    "url": "https://www.gov.uk/government/news/joint-statement-on-the-withdrawal-agreement-joint-committee-and-trade-and-cooperation-agreement-partnership-council-meetings-2-february-2026"
+   }
+  ],
+  "asof": "2026-02-02"
+ },
+ "ukru_diplomatic": {
+  "title": "UK–Russia diplomatic channel (tit-for-tat expulsions)",
+  "dyad": "UK–RU",
+  "status": "limited",
+  "desc": "Embassies remain open but the channel is shrinking: after Russia expelled British diplomats, the FCDO summoned the Russian ambassador and revoked a Russian diplomat's accreditation on 2 Feb 2026 and again on 29 Apr 2026.",
+  "links": [
+   {
+    "label": "GOV.UK (FCDO): Foreign Office summons Russian Ambassador, 2 Feb 2026",
+    "url": "https://www.gov.uk/government/news/statement-foreign-office-summons-russian-ambassador-2-february-2026"
+   },
+   {
+    "label": "GOV.UK (FCDO): Foreign Office summons Russian Ambassador, 29 Apr 2026",
+    "url": "https://www.gov.uk/government/news/statement-foreign-office-summons-russian-ambassador-29th-april-2026"
+   }
+  ],
+  "asof": "2026-04-29",
+  "note": "UK statements only; the Russian MFA (mid.ru) returns a bot challenge and its side was not read."
+ },
+ "ukru_incsea": {
+  "title": "1986 UK–USSR Incidents at Sea Agreement",
+  "dyad": "UK–RU",
+  "status": "limited",
+  "desc": "The 15 Jul 1986 agreement on preventing incidents at sea beyond the territorial sea sets rules and notification channels for warships and military aircraft. A protocol of amendments with the Russian Federation was presented to Parliament in June 2021.",
+  "links": [
+   {
+    "label": "GOV.UK: UK/Russian Federation Protocol of Amendments to the 1986 Incidents at Sea Agreement [CS Russian Federation No.1/2021]",
+    "url": "https://www.gov.uk/government/publications/ukrussian-federation-protocol-of-amendments-to-agreement-concerning-prevention-of-incidents-at-sea-beyond-the-territorial-sea-15-july-1986-cs-russi"
+   }
+  ],
+  "asof": "2021-06-16",
+  "note": "The agreement and 2021 protocol are confirmed. Whether annual INCSEA talks have met since Feb 2022, and whether the protocol entered into force, is unconfirmed."
+ },
+ "ukru_sanctions": {
+  "title": "UK Russia sanctions regime",
+  "dyad": "UK–RU",
+  "status": "contested",
+  "desc": "The UK keeps adding designations under its Russia regime, including GRU officers and procurement fronts (16 Jun 2026) and further rounds through Oct 2026.",
+  "links": [
+   {
+    "label": "GOV.UK: List of Russia sanctions designations, 16 Jun 2026",
+    "url": "https://www.gov.uk/government/publications/list-of-russia-sanctions-designations-16-june-2026"
+   },
+   {
+    "label": "GOV.UK: The UK Sanctions List",
+    "url": "https://www.gov.uk/government/publications/the-uk-sanctions-list"
+   }
+  ],
+  "asof": "2026-06-16"
+ },
+ "ukin_ceta": {
+  "title": "UK–India Comprehensive Economic and Trade Agreement (CETA)",
+  "dyad": "UK–IN",
+  "status": "active",
+  "desc": "Signed in London on 24 Jul 2025 alongside the India–UK Vision 2035; entered into force on 15 Jul 2026 together with the Double Contribution Convention on social security.",
+  "links": [
+   {
+    "label": "GOV.UK (British High Commission New Delhi): Historic UK-India Free Trade Agreement is now in effect (in force 15 Jul)",
+    "url": "https://www.gov.uk/government/news/historic-uk-india-free-trade-agreement-is-now-in-effect"
+   },
+   {
+    "label": "PIB (India Ministry of Commerce): CETA and Agreement on Social Security Contributions set to enter into force on 15 Jul 2026",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2274280&lang=2&reg=48"
+   }
+  ],
+  "asof": "2026-07-17"
+ },
+ "ukin_tsi": {
+  "title": "UK–India Technology Security Initiative (TSI)",
+  "dyad": "UK–IN",
+  "status": "active",
+  "desc": "Launched in July 2024 and coordinated by the two National Security Advisers, covering telecoms, critical minerals, AI, quantum, semiconductors and biotech. Starmer and Modi reaffirmed it in their 9 Oct 2025 joint statement in Mumbai.",
+  "links": [
+   {
+    "label": "GOV.UK: UK-India Technology Security Initiative factsheet",
+    "url": "https://www.gov.uk/government/publications/uk-india-technology-security-initiative-factsheet/uk-india-technology-security-initiative-factsheet"
+   },
+   {
+    "label": "GOV.UK: India-UK Joint Statement, 9 Oct 2025",
+    "url": "https://www.gov.uk/government/news/india-uk-joint-statement-9-october-2025"
+   }
+  ],
+  "asof": "2025-10-09",
+  "note": "India's MEA site (mea.gov.in) returned HTTP 403 to automated fetches, so the Indian copy of the joint statement was not read."
+ },
+ "ukcn_leaders": {
+  "title": "UK–China leader talks (Starmer visit, Jan 2026)",
+  "dyad": "UK–CN",
+  "status": "active",
+  "desc": "Starmer made the first visit to China by a UK prime minister in eight years (28–31 Jan 2026) and met Xi on 29 Jan; the sides agreed to develop a 'long-term and consistent comprehensive strategic partnership'.",
+  "links": [
+   {
+    "label": "GOV.UK: PM meeting with President Xi Jinping of China, 29 Jan 2026",
+    "url": "https://www.gov.uk/government/news/pm-meeting-with-president-xi-jinping-of-china-29-january-2026"
+   },
+   {
+    "label": "PRC MFA (EN): President Xi Jinping meets with U.K. Prime Minister Keir Starmer (29 Jan 2026)",
+    "url": "https://www.fmprc.gov.cn/eng/xw/zyxw/202601/t20260129_11847645.html"
+   }
+  ],
+  "asof": "2026-01-30"
+ },
+ "ukcn_efd": {
+  "title": "UK–China Economic and Financial Dialogue & Financial Working Group",
+  "dyad": "UK–CN",
+  "status": "active",
+  "desc": "The Economic and Financial Dialogue resumed in Beijing in Jan 2025 (first since 2019). A new UK–China Financial Working Group (HM Treasury and PBOC) held its first meeting in Beijing on 31 Jan 2026 as an outcome of Starmer's visit.",
+  "links": [
+   {
+    "label": "GOV.UK (HM Treasury): 2025 UK-China Economic and Financial Dialogue: policy outcomes",
+    "url": "https://www.gov.uk/government/publications/2025-uk-china-economic-and-financial-dialogue-policy-outcomes"
+   },
+   {
+    "label": "GOV.UK: First UK-China Financial Working Group joint readout (Beijing, 31 Jan 2026)",
+    "url": "https://www.gov.uk/government/publications/joint-readout-of-the-first-uk-china-financial-working-group/first-uk-china-financial-working-group-joint-readout"
+   }
+  ],
+  "asof": "2026-01-31"
+ },
+ "ukjp_raa": {
+  "title": "UK–Japan Reciprocal Access Agreement",
+  "dyad": "UK–JP",
+  "status": "active",
+  "desc": "Signed in London on 11 Jan 2023, it sets the status of each side's forces when visiting the other for exercises and operations. It entered into force on 15 Sep 2023.",
+  "links": [
+   {
+    "label": "UK Treaty Series No. 38 (2023): UK–Japan Agreement concerning the Facilitation of Reciprocal Access and Cooperation (entered into force 15 Sep 2023)",
+    "url": "https://assets.publishing.service.gov.uk/media/654a5dede70413000ffc4986/TS_38.2023_UK_Japan_Agreement_Facilitation_Reciprocal_Access_Self_Defense_Forces_and_Armed_Forces.pdf"
+   }
+  ],
+  "asof": "2023-11"
+ },
+ "ukjp_gcap": {
+  "title": "Global Combat Air Programme (GCAP) International Government Organisation",
+  "dyad": "UK–JP",
+  "status": "active",
+  "desc": "UK–Japan–Italy treaty body to co-develop a sixth-generation fighter. The convention was signed in Tokyo on 14 Dec 2023 and entered into force on 10 Dec 2024.",
+  "links": [
+   {
+    "label": "UK Treaty Series No. 98 (2024): Convention on the Establishment of the GCAP International Government Organisation (entered into force 10 Dec 2024)",
+    "url": "https://assets.publishing.service.gov.uk/media/6762c109e6ff7c8a1fde9ab4/TS_98.2024_Convention_Establishment_GCAP_International_Government_Organisation.pdf"
+   }
+  ],
+  "asof": "2024-12",
+  "note": "Trilateral (with Italy). Programme milestones after 2024 are not tracked here."
+ },
+ "euru_relations": {
+  "title": "EU–Russia summits and PCA dialogues",
+  "dyad": "EU–RU",
+  "status": "dormant",
+  "desc": "The 1994 Partnership and Cooperation Agreement is still the legal framework, but summits and most policy dialogues were frozen in 2014, and after the Feb 2022 invasion the EU suspended virtually all remaining cooperation.",
+  "links": [
+   {
+    "label": "EEAS: The European Union and the Russian Federation",
+    "url": "https://www.eeas.europa.eu/russia/european-union-and-russian-federation_en"
+   }
+  ],
+  "asof": "2022-11-23",
+  "note": "Suspended rather than terminated; marked dormant. The EEAS page was last updated in Nov 2022."
+ },
+ "euru_visa": {
+  "title": "EU–Russia Visa Facilitation Agreement",
+  "dyad": "EU–RU",
+  "status": "dormant",
+  "desc": "In force since 1 Jun 2007; partly suspended in Feb 2022 and fully suspended for Russian citizens from 12 Sep 2022 (Council Decision (EU) 2022/1500). All home-affairs engagement with Russia is suspended.",
+  "links": [
+   {
+    "label": "European Commission (DG HOME): Russia – engagement suspended; Visa Facilitation and Readmission Agreements",
+    "url": "https://home-affairs.ec.europa.eu/policies/international-affairs/engagement-partner-countries/russia_en"
+   }
+  ],
+  "asof": "2026-10 (fetched)",
+  "note": "Suspension confirmed from the Commission page. The decision text on EUR-Lex (eli/dec/2022/1500) returned an HTTP 202 bot challenge to automated fetches and was not read."
+ },
+ "euru_sanctions": {
+  "title": "EU sanctions packages against Russia",
+  "dyad": "EU–RU",
+  "status": "contested",
+  "desc": "The EU adopted its 21st package of sanctions against Russia on 23 Jul 2026, extending listings, shadow-fleet vessel bans and financial measures.",
+  "links": [
+   {
+    "label": "European Commission (DG FISMA): EU adopts 21st package of sanctions against Russia (23 Jul 2026)",
+    "url": "https://finance.ec.europa.eu/news/eu-adopts-21st-package-sanctions-against-russia-2026-07-23_en"
+   },
+   {
+    "label": "European Commission: Sanctions adopted following Russia's military aggression against Ukraine (overview)",
+    "url": "https://finance.ec.europa.eu/eu-and-world/sanctions-restrictive-measures/sanctions-adopted-following-russias-military-aggression-against-ukraine_en"
+   }
+  ],
+  "asof": "2026-07-23",
+  "note": "The Council's own press pages (consilium.europa.eu) returned HTTP 403 to automated fetches."
+ },
+ "euin_fta": {
+  "title": "EU–India Free Trade Agreement",
+  "dyad": "EU–IN",
+  "status": "active",
+  "desc": "Negotiations concluded on 27 Jan 2026 at the New Delhi summit after nearly two decades. The Commission has sent proposals for signature and conclusion to the Council; the deal needs Council adoption, signature, European Parliament consent and Indian ratification before entry into force. Separate investment-protection and GI agreements are still being negotiated.",
+  "links": [
+   {
+    "label": "European Commission (DG Trade): EU-India agreements ('Negotiations for a Free Trade Agreement concluded on 27 January 2026')",
+    "url": "https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/india/eu-india-agreements_en"
+   },
+   {
+    "label": "European Commission: The EU-India trade agreement (next steps)",
+    "url": "https://commission.europa.eu/topics/trade/eu-india-trade-agreement_en"
+   }
+  ],
+  "asof": "2026-10 (fetched)"
+ },
+ "euin_ttc": {
+  "title": "EU–India Trade and Technology Council",
+  "dyad": "EU–IN",
+  "status": "active",
+  "desc": "Launched in 2022; ministerial meetings in May 2023, Feb 2025 (New Delhi) and a third on 15 Jul 2026 in Brussels, which set work on India's association to Horizon Europe and a startup partnership.",
+  "links": [
+   {
+    "label": "European Commission (Digital Strategy): Joint statement on the third meeting of the EU-India Trade and Technology Council (15 Jul 2026)",
+    "url": "https://digital-strategy.ec.europa.eu/en/library/joint-statement-third-meeting-eu-india-trade-and-technology-council"
+   }
+  ],
+  "asof": "2026-07-15"
+ },
+ "eucn_summit": {
+  "title": "EU–China summits",
+  "dyad": "EU–CN",
+  "status": "limited",
+  "desc": "The 25th EU–China summit was held in Beijing on 24 Jul 2025 (50th anniversary of relations), with a joint climate statement but sharp friction over trade imbalances, rare-earth export controls and Russia. No date for a 26th summit has been announced.",
+  "links": [
+   {
+    "label": "EEAS (EU Delegation to China): 25th EU-China summit – EU press release (24 Jul 2025)",
+    "url": "https://www.eeas.europa.eu/delegations/china/25th-eu-china-summit-eu-press-release_en"
+   }
+  ],
+  "asof": "2025-07-24",
+  "note": "Summit confirmed from the EEAS copy of the Council release (consilium.europa.eu returned 403). That no 2026 summit date exists is from a Commission midday briefing (30 Jun 2026) seen only as a video listing; unconfirmed."
+ },
+ "eucn_tic": {
+  "title": "EU–China Trade and Investment Consultations",
+  "dyad": "EU–CN",
+  "status": "active",
+  "desc": "A new ministerial mechanism (Wang Wentao and Maroš Šefčovič): first meeting in Brussels on 29 Jun 2026, second in Beijing on 8–9 Oct 2026 with a joint statement and list of deliverables covering trade balance, export controls, IP and WTO reform. A third meeting is planned for Mar 2027.",
+  "links": [
+   {
+    "label": "European Commission: Joint Statement at the second meeting of the EU-China Trade and Investment Consultations (8–9 Oct 2026)",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2122"
+   },
+   {
+    "label": "PRC MOFCOM: 王文涛部长与欧委会谢夫乔维奇共同召开中欧贸易投资磋商机制第二次例会",
+    "url": "https://www.mofcom.gov.cn/syxwfb/art/2026/art_663946a91806452182d02b3f0f62d4fc.html"
+   }
+  ],
+  "asof": "2026-10-09",
+  "note": "Both sides' accounts fetched (Commission text via the press corner API). The Mar 2027 date is from MOFCOM's explanatory note as summarised in search results."
+ },
+ "eucn_hsd": {
+  "title": "EU–China High-level Strategic Dialogue",
+  "dyad": "EU–CN",
+  "status": "active",
+  "desc": "Foreign-minister-level dialogue. Wang Yi and Kaja Kallas held the 13th round in Brussels on 2 Jul 2025 ahead of the summit; they also spoke by phone in Apr 2026.",
+  "links": [
+   {
+    "label": "PRC MFA: 中欧举行第十三轮高级别战略对话 (2 Jul 2025, Brussels)",
+    "url": "https://www.mfa.gov.cn/wjdt_674879/gjldrhd_674881/202507/t20250703_11664024.shtml"
+   }
+  ],
+  "asof": "2025-07-03",
+  "note": "Chinese readout only; no EEAS readout fetched. A 14th round has not been found."
+ },
+ "eujp_summit": {
+  "title": "EU–Japan summits and Competitiveness Alliance",
+  "dyad": "EU–JP",
+  "status": "active",
+  "desc": "The 30th Japan–EU summit in Tokyo on 23 Jul 2025 issued a joint statement and launched a Competitiveness Alliance on economic security, critical minerals, semiconductors and clean energy. The Economic Partnership Agreement has been in force since 2019.",
+  "links": [
+   {
+    "label": "Kantei (EN): The 30th Japan-EU Summit (Summary), 23 Jul 2025",
+    "url": "https://japan.kantei.go.jp/103/diplomatic/202507/23eu.html"
+   },
+   {
+    "label": "European Commission: The EU and Japan launch Competitiveness Alliance at bilateral summit in Tokyo",
+    "url": "https://ec.europa.eu/commission/presscorner/detail/en/ac_25_1908"
+   }
+  ],
+  "asof": "2025-07-24",
+  "note": "The EPA's 2019 entry into force is background knowledge; no EPA page was fetched."
+ },
+ "eujp_sdp": {
+  "title": "EU–Japan Security and Defence Partnership",
+  "dyad": "EU–JP",
+  "status": "active",
+  "desc": "Concluded in Nov 2024, the EU's first such partnership in the Indo-Pacific. It is steered by the annual summit and foreign ministers' Strategic Dialogue and covers maritime security, cyber, hybrid threats, space and defence industry.",
+  "links": [
+   {
+    "label": "EEAS: Security and Defence Partnership between the European Union and Japan (text)",
+    "url": "https://www.eeas.europa.eu/sites/default/files/documents/2024/EU-Japan%20Security%20and%20Defence%20Partnership.pdf"
+   },
+   {
+    "label": "EEAS: EU–Japan strategic partnership factsheet (Jul 2025)",
+    "url": "https://www.eeas.europa.eu/sites/default/files/2025/documents/250723_EU-Japan-2025-07_FINAL_0.pdf"
+   }
+  ],
+  "asof": "2025-07"
+ },
+ "ruin_summit": {
+  "title": "Russia–India annual summits",
+  "dyad": "RU–IN",
+  "status": "active",
+  "desc": "Putin's state visit to New Delhi produced the 23rd annual summit joint statement on 5 Dec 2025 ('A time-tested progressive partnership'), covering a programme of economic cooperation to 2030, national-currency settlement, energy, nuclear (Kudankulam) and space. Modi was invited to Russia for the 24th summit in 2026.",
+  "links": [
+   {
+    "label": "Kremlin (EN): Joint Statement following the 23rd Russia–India Annual Summit, 5 Dec 2025",
+    "url": "http://en.kremlin.ru/supplement/6426"
+   }
+  ],
+  "asof": "2025-12-05",
+  "note": "Russian copy fetched; the MEA (mea.gov.in) copy returned HTTP 403. Whether the 24th summit has taken place in 2026 is unconfirmed."
+ },
+ "ruin_relos": {
+  "title": "Russia–India reciprocal logistics support agreement (RELOS)",
+  "dyad": "RU–IN",
+  "status": "active",
+  "desc": "Signed in Moscow on 18 Feb 2025, it sets procedures for deploying military units, warship port calls, use of airspace and airfields, and mutual logistics support. Russia ratified it by Federal Law No. 458-FZ of 15 Dec 2025.",
+  "links": [
+   {
+    "label": "Kremlin (EN): Agreement with India on reciprocal exchange of logistics support ratified",
+    "url": "http://en.kremlin.ru/acts/news/78748"
+   },
+   {
+    "label": "Official legal portal (pravo.gov.ru): Federal Law of 15.12.2025 No. 458-FZ on ratification",
+    "url": "http://publication.pravo.gov.ru/document/0001202512150025"
+   }
+  ],
+  "asof": "2025-12-15",
+  "note": "Russian ratification confirmed. India's completion of procedures and entry into force are unconfirmed."
+ },
+ "rujp_peace": {
+  "title": "Japan–Russia peace treaty negotiations",
+  "dyad": "RU–JP",
+  "status": "dormant",
+  "desc": "Russia declared in Mar 2022 that it would suspend peace treaty negotiations with Japan in response to Japanese sanctions over Ukraine; visa-free visits to the disputed islands were also halted. Japan says its position on the Northern Territories is unchanged.",
+  "links": [
+   {
+    "label": "Kantei (EN): Press conference by PM Kishida after the G7 summit (Mar 2022), on 'Russia's declaration that it will suspend negotiations for a peace treaty with us'",
+    "url": "https://japan.kantei.go.jp/101_kishida/statement/202203/_00028.html"
+   }
+  ],
+  "asof": "2022-03",
+  "note": "Confirmed from the Japanese PM's statement. The Russian MFA statement of 21 Mar 2022 (mid.ru) was not read: mid.ru serves a JavaScript bot challenge. No sign of resumption was found."
+ },
+ "rujp_fisheries": {
+  "title": "Japan–Russia fisheries commissions",
+  "dyad": "RU–JP",
+  "status": "active",
+  "desc": "One of the few working channels. The salmon talks (Japan–Russia Joint Fisheries Commission) agreed 2026 terms on 19 Mar 2026. The reciprocal EEZ fishing talks (Japan–Russia Fisheries Commission, 42nd session) failed in Dec 2025 but reached agreement on 19 Jun 2026.",
+  "links": [
+   {
+    "label": "Japan Fisheries Agency: 日ロさけ・ます漁業交渉（日本水域）の結果 (20 Mar 2026)",
+    "url": "https://www.jfa.maff.go.jp/j/press/kokusai/260320.html"
+   },
+   {
+    "label": "Japan Fisheries Agency: 日ロ漁業委員会第42回会議 – no agreement (25 Dec 2025)",
+    "url": "https://www.jfa.maff.go.jp/j/press/kokusai/251225.html"
+   },
+   {
+    "label": "Japan Fisheries Agency: 日ロ漁業委員会第42回会議の結果 – agreement reached (19 Jun 2026)",
+    "url": "https://www.jfa.maff.go.jp/j/press/kokusai/260619.html"
+   }
+  ],
+  "asof": "2026-06-19"
+ },
+ "incn_sr": {
+  "title": "India–China Special Representatives talks on the boundary question",
+  "dyad": "IN–CN",
+  "status": "active",
+  "desc": "The top boundary channel (Wang Yi and Ajit Doval). The 24th round met in New Delhi on 19 Aug 2025 and the 25th in Beijing on 25 Aug 2026; the 26th is to be held in India in 2027.",
+  "links": [
+   {
+    "label": "PRC MFA (EN): China and India hold Special Representatives' talks on the boundary question (24th round, New Delhi, 19 Aug 2025)",
+    "url": "https://www.fmprc.gov.cn/eng/gjhdq_665435/2675_665437/2711_663426/2713_663430/202508/t20250820_11692969.html"
+   },
+   {
+    "label": "PRC MFA (EN): Special Representatives of China and India hold talks in Beijing (25th round, 25 Aug 2026)",
+    "url": "https://www.fmprc.gov.cn/eng/wjbzhd/202608/t20260826_12010652.html"
+   }
+  ],
+  "asof": "2026-08-25",
+  "note": "Chinese readouts only; India's MEA site returned HTTP 403 to automated fetches."
+ },
+ "incn_wmcc": {
+  "title": "India–China WMCC on border affairs",
+  "dyad": "IN–CN",
+  "status": "active",
+  "desc": "The Working Mechanism for Consultation and Coordination on border affairs (foreign, home, defence and immigration officials). The 36th meeting was held in New Delhi on 6 Aug 2026; the 35th in Beijing in May 2026.",
+  "links": [
+   {
+    "label": "PRC MFA (EN): China and India hold the 36th WMCC meeting on border affairs (6 Aug 2026)",
+    "url": "https://www.mfa.gov.cn/eng/xw/wjbxw/202608/t20260807_12000162.html"
+   }
+  ],
+  "asof": "2026-08-07",
+  "note": "The 35th meeting (27 May 2026) is from an Indian embassy document whose URL returned 404; not confirmed."
+ },
+ "incn_leaders": {
+  "title": "India–China leader meetings and normalisation steps",
+  "dyad": "IN–CN",
+  "status": "active",
+  "desc": "Modi and Xi met in Tianjin on 31 Aug 2025 (SCO) and in New Delhi on 12 Sep 2026 (BRICS). Normalisation steps since the Oct 2024 border understanding include resumed direct flights from late Oct 2025.",
+  "links": [
+   {
+    "label": "PM India: PM's bilateral meeting with Chinese President Xi Jinping (Tianjin, 31 Aug 2025)",
+    "url": "https://www.pmindia.gov.in/en/news_updates/pms-bilateral-meeting-with-chinese-president-xi-jinping/"
+   },
+   {
+    "label": "PRC MFA (EN): President Xi Jinping meets with PM Narendra Modi of India (New Delhi, 12 Sep 2026)",
+    "url": "https://www.fmprc.gov.cn/eng/xw/zyxw/202609/t20260913_12021206.html"
+   },
+   {
+    "label": "PRC MFA (EN): Spokesperson Guo Jiakun, 24 Oct 2025, on resumption of China–India direct flights",
+    "url": "https://www.fmprc.gov.cn/eng/xw/fyrbt/202510/t20251024_11740246.html"
+   }
+  ],
+  "asof": "2026-09-12"
+ },
+ "injp_summit": {
+  "title": "India–Japan annual summits",
+  "dyad": "IN–JP",
+  "status": "active",
+  "desc": "The 15th annual summit (Tokyo, 29–30 Aug 2025) adopted a Joint Vision for the next decade and a new Joint Declaration on Security Cooperation. The 16th (New Delhi, 1–3 Jul 2026, Takaichi's first visit) issued a joint statement on 2 Jul 2026.",
+  "links": [
+   {
+    "label": "PM India: 15th India-Japan Annual Summit Joint Statement (Aug 2025)",
+    "url": "https://www.pmindia.gov.in/en/news_updates/15th-india-japan-annual-summit-joint-statement-partnership-for-security-and-prosperity-of-our-next-generation/"
+   },
+   {
+    "label": "PM India: 16th India-Japan Annual Summit Joint Statement (2 Jul 2026)",
+    "url": "https://www.pmindia.gov.in/en/news_updates/16th-india-japan-annual-summit-joint-statement/"
+   }
+  ],
+  "asof": "2026-07-02"
+ },
+ "injp_defence": {
+  "title": "India–Japan defence dialogue (Defence Ministers, 2+2)",
+  "dyad": "IN–JP",
+  "status": "active",
+  "desc": "Defence ministers Koizumi and Rajnath Singh met in New Delhi on 20 Aug 2026 and signed a Memorandum of Arrangement on maritime security cooperation. The third 2+2 met in Aug 2024; a fourth is being prepared.",
+  "links": [
+   {
+    "label": "PIB (India Ministry of Defence): India-Japan Joint Press Statement, Defence Ministers' meeting, 20 Aug 2026",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2301459&reg=48&lang=2"
+   },
+   {
+    "label": "PM India: Joint Declaration on Security Cooperation between India and Japan (Aug 2025)",
+    "url": "https://www.pmindia.gov.in/en/news_updates/joint-declaration-on-security-cooperation-between-india-and-japan/"
+   }
+  ],
+  "asof": "2026-08-20",
+  "note": "Japan MOD's English copy (mod.go.jp/en) returned HTTP 403 to automated fetches; the Indian copy was read."
+ },
+ "cnjp_mamc": {
+  "title": "Japan–China Maritime and Aerial Communication Mechanism & defence hotline",
+  "dyad": "CN–JP",
+  "status": "limited",
+  "desc": "A defence-to-defence crisis mechanism agreed in 2018. Its hotline was installed on 31 Mar 2023 and first used by the two defence ministers on 16 May 2023, when both said it helps avoid unforeseen incidents.",
+  "links": [
+   {
+    "label": "Japan MOD: 日中防衛当局間ホットラインの設置について (31 Mar 2023)",
+    "url": "https://www.mod.go.jp/j/approach/exchange/area/2023/pdf/20230331_chn-j.pdf"
+   },
+   {
+    "label": "Japan MOD: 日中防衛相間における「日中防衛当局間ホットライン」による初回通話の実施 (16 May 2023)",
+    "url": "https://www.mod.go.jp/j/approach/exchange/area/2023/pdf/20230516_chn-j.pdf"
+   }
+  ],
+  "asof": "2023-05-16",
+  "note": "Set-up and first use confirmed from Japan MOD notices. Whether the hotline has been used since the Nov 2025 political rupture is unconfirmed; Japanese press reports say it has rarely worked."
+ },
+ "cnjp_maritime": {
+  "title": "Japan–China High-level Consultation on Maritime Affairs",
+  "dyad": "CN–JP",
+  "status": "dormant",
+  "desc": "Working-level forum on East China Sea issues (foreign, defence, coast guard and fisheries agencies). Japan's 2026 defence white paper lists the 14th to 17th rounds (Nov 2022 to Oct 2024, the last in Tokyo) and no round between Oct 2024 and Mar 2026.",
+  "links": [
+   {
+    "label": "Japan MOD, Defense of Japan 2026, reference data 53: recent Japan–China defence exchanges, Apr 2022 – Mar 2026 (CSV)",
+    "url": "https://www.mod.go.jp/j/press/wp/wp2026/backdata/siryo53.csv"
+   }
+  ],
+  "asof": "2026-03-31",
+  "note": "Marked dormant because no round after Oct 2024 is listed in the MOD data; a later round could have been held without appearing there. MOFA's press releases on the talks (mofa.go.jp) returned HTTP 403 to automated fetches."
+ },
+ "cnjp_leaders": {
+  "title": "China–Japan leader and ministerial contact",
+  "dyad": "CN–JP",
+  "status": "contested",
+  "desc": "Xi and Takaichi met in Gyeongju on 31 Oct 2025 and pledged a 'constructive and stable' relationship. After Takaichi's 7 Nov 2025 Diet remarks on a Taiwan contingency, Beijing demanded a retraction and froze high-level exchanges; in May 2026 China's MFA said the 'root cause' of the serious difficulties lies with Takaichi's remarks.",
+  "links": [
+   {
+    "label": "PRC MFA (EN): President Xi Jinping meets with Japanese Prime Minister Takaichi Sanae (31 Oct 2025)",
+    "url": "https://www.mfa.gov.cn/eng/xw/zyxw/202511/t20251101_11745380.html"
+   },
+   {
+    "label": "PRC MFA (EN): Spokesperson Lin Jian's regular press conference, 7 May 2026",
+    "url": "https://www.mfa.gov.cn/eng/xw/fyrbt/202605/t20260507_11906405.html"
+   }
+  ],
+  "asof": "2026-05-07",
+  "note": "Chinese statements only; Japanese readouts on mofa.go.jp could not be fetched (HTTP 403). The absence of cabinet-level talks since Nov 2025 is from press reports."
+ },
+ "cnjp_seafood": {
+  "title": "China's suspension of Japanese seafood imports",
+  "dyad": "CN–JP",
+  "status": "contested",
+  "desc": "China suspended imports of Japanese aquatic products again in Nov 2025, months after a partial resumption. At the 19 Nov 2025 briefing the MFA cited missing technical materials and said that, given Takaichi's remarks, Japanese seafood 'would not find a market' in China.",
+  "links": [
+   {
+    "label": "PRC MFA (EN): Spokesperson Mao Ning's regular press conference, 19 Nov 2025",
+    "url": "https://www.fmprc.gov.cn/mfa_eng/xw/fyrbt/202511/t20251119_11756196.html"
+   }
+  ],
+  "asof": "2025-11-19",
+  "note": "Confirmed from the MFA transcript. No formal GACC customs notice was fetched, and whether imports have since resumed is unconfirmed."
  },
  "all_unsc": {
   "title": "UN Security Council voting/vetoes",
-  "dyad": "All three",
+  "dyad": "Multilateral",
   "status": "contested",
-  "desc": "All three are veto-holding permanent members. Recent vetoes include repeated US vetoes on Gaza resolutions (2024–2025) and Russian vetoes on Ukraine-related texts and other files.",
+  "desc": "All three are veto-holding permanent members. Recent vetoes include repeated US vetoes on Gaza resolutions (2024–2025) and Russian vetoes on Ukraine-related texts and other files. Four of the seven (US, UK, Russia, China) are veto-holding permanent members. The EU is not a member; India and Japan are not on the Council in 2026.",
   "links": [
    {
     "label": "UN Dag Hammarskjöld Library: Security Council veto list",
     "url": "https://research.un.org/en/docs/sc/quick/veto"
+   },
+   {
+    "label": "UN Security Council: current members (permanent and 2026–2027 elected)",
+    "url": "https://main.un.org/securitycouncil/en/content/current-members"
    }
   ],
   "asof": "background",
-  "note": "The veto-list page exists, but the list loads via JavaScript and could not be read. Recent veto details come from background knowledge and are unconfirmed."
+  "note": "The veto-list page exists, but the list loads via JavaScript and could not be read. Recent veto details come from background knowledge and are unconfirmed. Membership across all seven powers checked on the linked page (Oct 2026).",
+  "members": [
+   "US",
+   "UK",
+   "RU",
+   "CN"
+  ]
  },
  "all_p5": {
   "title": "P5 Process & 3 Jan 2022 joint statement on preventing nuclear war",
-  "dyad": "All three",
+  "dyad": "Multilateral",
   "status": "limited",
-  "desc": "In the 3 Jan 2022 P5 statement, the five leaders affirmed that 'a nuclear war cannot be won and must never be fought'. The P5 Process continued at working level but was strained after Russia's invasion of Ukraine.",
+  "desc": "In the 3 Jan 2022 P5 statement, the five leaders affirmed that 'a nuclear war cannot be won and must never be fought'. The P5 Process continued at working level but was strained after Russia's invasion of Ukraine. The P5 (with France) includes the US, UK, Russia and China; India is a nuclear-armed state outside the NPT and the P5 Process.",
   "links": [
    {
     "label": "White House (archived): Joint Statement of the Leaders of the Five Nuclear-Weapon States (3 Jan 2022)",
@@ -301,27 +1163,44 @@
    }
   ],
   "asof": "background",
-  "note": "The 2022 statement is confirmed. The current state of the P5 Process (2025–2026 meetings, chair) is unconfirmed."
+  "note": "The 2022 statement is confirmed. The current state of the P5 Process (2025–2026 meetings, chair) is unconfirmed. Membership across the seven (US, UK, Russia, China; not the EU, India or Japan) is background knowledge, not checked against a P5 Process page.",
+  "members": [
+   "US",
+   "UK",
+   "RU",
+   "CN"
+  ]
  },
  "all_ctbt": {
   "title": "CTBT / CTBTO",
-  "dyad": "All three",
+  "dyad": "Multilateral",
   "status": "limited",
-  "desc": "The US and China signed the CTBT in 1996 but have not ratified it. Russia ratified in 2000 and revoked its ratification in Nov 2023, while remaining a signatory. In late Oct 2025 Trump directed preparations for nuclear testing 'on an equal basis'.",
+  "desc": "The US and China signed the CTBT in 1996 but have not ratified it. Russia ratified in 2000 and revoked its ratification in Nov 2023, while remaining a signatory. In late Oct 2025 Trump directed preparations for nuclear testing 'on an equal basis'. In the UN depositary record, the UK (ratified 6 Apr 1998) and Japan (8 Jul 1997) have ratified; the US, China and Russia are listed as signatories without ratification; India has not signed.",
   "links": [
    {
     "label": "CTBTO: States Signatories",
     "url": "https://www.ctbto.org/our-mission/states-signatories"
+   },
+   {
+    "label": "UN Treaty Collection: CTBT status (chapter XXVI-4)",
+    "url": "https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-4&chapter=26&clang=_en"
    }
   ],
   "asof": "background",
-  "note": "The CTBTO page confirms all three signed on 24 Sep 1996 and lists no ratification date for any of them, consistent with Russia's 2023 revocation. Russia's revocation and Trump's Oct 2025 testing directive are not confirmed from a primary page."
+  "note": "The CTBTO page confirms all three signed on 24 Sep 1996 and lists no ratification date for any of them, consistent with Russia's 2023 revocation. Russia's revocation and Trump's Oct 2025 testing directive are not confirmed from a primary page. Membership across all seven powers checked on the linked page (Oct 2026).",
+  "members": [
+   "US",
+   "UK",
+   "RU",
+   "CN",
+   "JP"
+  ]
  },
  "all_iaea": {
   "title": "IAEA Board of Governors",
-  "dyad": "All three",
+  "dyad": "Multilateral",
   "status": "active",
-  "desc": "The US, China and Russia sit on the 35-member IAEA Board each year as designated members, where they often split on Iran resolutions.",
+  "desc": "The US, China and Russia sit on the 35-member IAEA Board each year as designated members, where they often split on Iran resolutions. All six states among the seven are IAEA members; the EU is not a member state.",
   "links": [
    {
     "label": "IAEA: Board of Governors",
@@ -329,11 +1208,19 @@
    }
   ],
   "asof": "background",
-  "note": "The fetched page showed the 2023–2024 composition, which includes China, Russia and the US. Current 2025–2026 membership was not shown but is near-certain as all three are designated members."
+  "note": "The fetched page showed the 2023–2024 composition, which includes China, Russia and the US. Current 2025–2026 membership was not shown but is near-certain as all three are designated members. Membership of the UK, India and Japan is background knowledge: iaea.org returned HTTP 403/402 to automated fetches, so it was not confirmed from an IAEA page.",
+  "members": [
+   "US",
+   "UK",
+   "RU",
+   "IN",
+   "CN",
+   "JP"
+  ]
  },
  "all_iter": {
   "title": "ITER members",
-  "dyad": "All three",
+  "dyad": "Multilateral",
   "status": "active",
   "desc": "ITER has seven Members: China, the EU, India, Japan, Korea, Russia and the US. Russia remains a Member. Switzerland participates via Fusion for Energy (from 1 Jan 2026), and the UK has discontinued participation.",
   "links": [
@@ -342,24 +1229,42 @@
     "url": "https://www.iter.org/about/iter-members"
    }
   ],
-  "asof": "2026-10 (fetched)"
+  "asof": "2026-10 (fetched)",
+  "members": [
+   "US",
+   "EU",
+   "RU",
+   "IN",
+   "CN",
+   "JP"
+  ],
+  "note": "Membership across all seven powers checked on the linked page (Oct 2026)."
  },
  "all_ats": {
   "title": "Antarctic Treaty Consultative Parties",
-  "dyad": "All three",
+  "dyad": "Multilateral",
   "status": "active",
-  "desc": "The US and Russia are original 1959 signatories with consultative status since entry into force (23 Jun 1961). China acceded in 1983 and gained consultative status on 7 Oct 1985. There are 29 Consultative Parties in total.",
+  "desc": "The US and Russia are original 1959 signatories with consultative status since entry into force (23 Jun 1961). China acceded in 1983 and gained consultative status on 7 Oct 1985. There are 29 Consultative Parties in total. The UK and Japan are also original 1959 signatories, and India became a Consultative Party in 1983. The EU is not a party.",
   "links": [
    {
     "label": "Antarctic Treaty Secretariat: Parties list",
     "url": "https://www.ats.aq/devAS/Parties?lang=e"
    }
   ],
-  "asof": "2026-10 (fetched)"
+  "asof": "2026-10 (fetched)",
+  "members": [
+   "US",
+   "UK",
+   "RU",
+   "IN",
+   "CN",
+   "JP"
+  ],
+  "note": "Membership across all seven powers checked on the linked page (Oct 2026)."
  },
  "all_npfc": {
   "title": "North Pacific Fisheries Commission",
-  "dyad": "All three",
+  "dyad": "Multilateral",
   "status": "active",
   "desc": "The North Pacific Fisheries Commission is the high-seas fisheries management body for the North Pacific. It has nine members: Canada, China, EU, Japan, Korea, Russia, Chinese Taipei, US and Vanuatu.",
   "links": [
@@ -368,41 +1273,95 @@
     "url": "https://www.npfc.int/"
    }
   ],
-  "asof": "2026-10 (fetched)"
+  "asof": "2026-10 (fetched)",
+  "members": [
+   "US",
+   "EU",
+   "RU",
+   "CN",
+   "JP"
+  ],
+  "note": "Membership across all seven powers checked on the linked page (Oct 2026)."
  },
  "all_wmo": {
   "title": "World Meteorological Organization",
-  "dyad": "All three",
+  "dyad": "Multilateral",
   "status": "active",
-  "desc": "All three are WMO Members and exchange data through the WMO global observing and telecommunication system.",
-  "links": [],
-  "asof": "background",
-  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use."
+  "desc": "All three are WMO Members and exchange data through the WMO global observing and telecommunication system. New Delhi, Tokyo and Exeter (UK) are also Regional Telecommunication Hubs.",
+  "links": [
+   {
+    "label": "WMO: Member countries and their Regional Telecommunication Hubs (Beijing, Moscow and Washington are RTHs on the Main Telecommunication Network)",
+    "url": "https://community.wmo.int/site/knowledge-hub/programmes-and-initiatives/operational-information-service-ois/rths-country"
+   },
+   {
+    "label": "WMO: Congress approves Unified Data Policy reaffirming free and unrestricted data exchange among 193 Members (20 Oct 2021)",
+    "url": "https://wmo.int/media/news/wmo-overhauls-data-exchange-policy"
+   }
+  ],
+  "asof": "2026-10 (fetched)",
+  "note": "Membership and data-exchange roles confirmed from WMO pages. The WMO members directory loads its list via JavaScript and could not be read. Membership across all seven powers checked on the linked page (Oct 2026).",
+  "members": [
+   "US",
+   "UK",
+   "RU",
+   "IN",
+   "CN",
+   "JP"
+  ]
  },
  "all_cospas": {
   "title": "Cospas-Sarsat",
-  "dyad": "All three",
+  "dyad": "Multilateral",
   "status": "active",
-  "desc": "Cospas-Sarsat is the satellite search-and-rescue system. The US and Russia (with Canada and France) are founding parties under the 1988 agreement, and China participates as a ground segment provider.",
-  "links": [],
-  "asof": "background",
-  "note": "UNCONFIRMED this session (search budget exhausted; non-search URLs blocked by unanswered permission prompts) - description/status from background knowledge, verify before use."
+  "desc": "Cospas-Sarsat is the satellite search-and-rescue system. Russia and the US (with Canada and France) are the four Parties to the International Programme Agreement, and China participates through its Maritime Safety Administration. The participants list also includes the UK (Maritime and Coastguard Agency), India (ISRO) and Japan (Japan Coast Guard). The EU is not listed as a participant.",
+  "links": [
+   {
+    "label": "Cospas-Sarsat: Participants (Parties: Canada, France, Russia, USA; China participates via its Maritime Safety Administration)",
+    "url": "https://www.cospas-sarsat.int/en/about-us/participants"
+   }
+  ],
+  "asof": "2026-10 (fetched)",
+  "note": "Confirmed from the Cospas-Sarsat participants page. The page lists 45 participants but does not label each one's category, so China's role as a ground segment provider is not confirmed there. Membership across all seven powers checked on the linked page (Oct 2026).",
+  "members": [
+   "US",
+   "UK",
+   "RU",
+   "IN",
+   "CN",
+   "JP"
+  ]
  },
  "all_nptrevcon": {
   "title": "NPT Review Conference 2026",
-  "dyad": "All three",
+  "dyad": "Multilateral",
   "status": "contested",
-  "desc": "The 11th NPT Review Conference met in New York from 27 Apr to 22 May 2026 and ended without a consensus outcome document, reportedly over US–Iran disagreements. This is the third consecutive RevCon without one, after 2015 and 2022.",
+  "desc": "The 11th NPT Review Conference met in New York from 27 Apr to 22 May 2026 and ended without a consensus outcome document. The US blamed other states' failure to address Iran's noncompliance, and China expressed regret. India is not a party to the NPT.",
   "links": [
+   {
+    "label": "UN: 2026 NPT Review Conference, 27 Apr - 22 May 2026 (conference page; 'Review Conference Ends without Consensus Outcome')",
+    "url": "https://www.un.org/en/conferences/treaty-on-the-non-proliferation-of-nuclear-weapons-npt-2026"
+   },
+   {
+    "label": "US State Dept: Conclusion of the 2026 NPT Review Conference (24 May 2026)",
+    "url": "https://www.state.gov/releases/office-of-the-spokesperson/2026/05/conclusion-of-the-2026-nuclear-non-proliferation-treaty-review-conference/"
+   },
+   {
+    "label": "PRC MFA (EN): spokesperson Mao Ning, 25 May 2026 - China regrets failure to reach a final document",
+    "url": "https://www.fmprc.gov.cn/eng/xw/fyrbt/202605/t20260525_11917325.html"
+   },
    {
     "label": "UN Digital Library: NPT/CONF.2026/PC.III/DEC.1 (dates and venue)",
     "url": "https://digitallibrary.un.org/record/4082389/files/NPT_CONF.2026_PC.III_DEC.1-ZH.pdf"
-   },
-   {
-    "label": "Xinhua: PRC MFA regrets RevCon failure to adopt outcome (25 May 2026)",
-    "url": "https://www.news.cn/20260525/889a1f7101dc4dd1aeafbd55f6814d3d/c.html"
    }
   ],
-  "asof": "2026-05-25"
+  "asof": "2026-05-25",
+  "note": "Dates and the no-consensus outcome confirmed from the UN conference page; US and Chinese reactions from State Dept and PRC MFA, replacing the Xinhua link. That this is the third consecutive RevCon without an outcome (after 2015 and 2022) is from the UN press release (press.un.org dc3912), which returned a bot challenge and was not read. Party status across the seven (UK and Japan parties, India not a party) is background knowledge; the UNODA treaty database returned an HTTP 202 bot challenge.",
+  "members": [
+   "US",
+   "UK",
+   "RU",
+   "CN",
+   "JP"
+  ]
  }
 }
