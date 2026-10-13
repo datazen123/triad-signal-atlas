@@ -569,6 +569,517 @@
       ],
       "conf": "unconfirmed",
       "note": "Original as quoted: 一個中國不等於中華人民共和國，也不等於中華民國，而是兩岸同胞共同締造統一的中國. Only a later opinion column was fetched; no 1997 primary record was found. Wang's own official '86-character' formula (1999) was closer to Beijing's line. Treat as an attributed private remark, not policy."
+    },
+    {
+      "id": "gr-tr-1999-earthquake-diplomacy",
+      "pair": [
+        "GR",
+        "TR"
+      ],
+      "sides": [
+        "Greece",
+        "Turkey"
+      ],
+      "year": "1999-08",
+      "kind": "disaster-aid",
+      "who": "Greek and Turkish rescue teams and publics; foreign ministers George Papandreou and Ismail Cem",
+      "title": "Greece and Turkey help each other through the 1999 earthquakes",
+      "what": "After the 17 August 1999 Izmit earthquake in Turkey and the 7 September 1999 Athens earthquake, rescuers and ordinary citizens of each country helped the other. Papandreou later said the quakes gave both nations a simple message: 'we are all human'.",
+      "why_it_matters": "Public sympathy across a long rivalry gave two foreign ministers political room to keep improving relations.",
+      "src": [
+        {
+          "label": "Disaster Diplomacy: Greece/Turkey case study (Kelman)",
+          "url": "https://www.disasterdiplomacy.org/greeceturkey.html",
+          "lang": "en"
+        },
+        {
+          "label": "Ker-Lindsay (2000), 'Greek-Turkish rapprochement: the impact of disaster diplomacy?', Cambridge Review of International Affairs (LSE Research Online record)",
+          "url": "https://researchonline.lse.ac.uk/id/eprint/24786",
+          "lang": "en"
+        }
+      ],
+      "conf": "ok",
+      "note": "Ker-Lindsay argues the rapprochement was not simply caused by the earthquakes: high-level Papandreou–Cem diplomacy had already begun earlier in 1999, and the quakes reinforced it. Kelman's later work finds disaster cooperation did not resolve core disputes (Aegean, Cyprus). Specific rescue-team details are not in the fetched pages and are not given here."
+    },
+    {
+      "id": "gr-tr-2023-earthquake-dendias-visit",
+      "pair": [
+        "GR",
+        "TR"
+      ],
+      "sides": [
+        "Greece",
+        "Turkey"
+      ],
+      "year": "2023-02",
+      "kind": "disaster-aid",
+      "who": "Nikos Dendias (Greek FM); Mevlut Cavusoglu (Turkish FM); Greek EMAK rescuers",
+      "title": "Greek minister tours Turkey's quake zone: 'we should not wait for another earthquake'",
+      "what": "After the 6 February 2023 earthquakes, Greece sent rescuers and aid, and on 12 February Foreign Minister Dendias visited the disaster zone with his Turkish counterpart, the first European minister to do so. Cavusoglu recalled his 1999 letter and said: 'we should not wait for another earthquake to improve our relations'.",
+      "why_it_matters": "The 1999 pattern repeated a generation later, and both ministers said it out loud.",
+      "src": [
+        {
+          "label": "AP via KSAT, 12 Feb 2023: 'Earthquake diplomacy: Greek foreign minister visits Turkey'",
+          "url": "https://www.ksat.com/news/world/2023/02/12/earthquake-diplomacy-greek-foreign-minister-visits-turkey/",
+          "lang": "en"
+        },
+        {
+          "label": "Greek MFA: Dendias interview with Ta Nea, 18 Feb 2023 (page blocks automated fetching)",
+          "url": "https://www.mfa.gr/en/minister-of-foreign-affairs-nikos-dendias-interview-with-ta-nea-savvatokyriako-newspaper-and-journalist-alexandra-fotaki-18022023/",
+          "lang": "en"
+        }
+      ],
+      "conf": "check",
+      "note": "Dendias replied: 'I want to totally sign on to what Mevlut said: that we should not wait for natural disasters…' (AP). The mfa.gr page returned HTTP 403 to automated fetches."
+    },
+    {
+      "id": "am-tr-2023-margara-border-aid",
+      "pair": [
+        "AM",
+        "TR"
+      ],
+      "sides": [
+        "Armenia",
+        "Turkey"
+      ],
+      "year": "2023-02",
+      "kind": "disaster-aid",
+      "who": "Armenian government and rescuers; FM Ararat Mirzoyan; Turkish FM Mevlut Cavusoglu",
+      "title": "A border shut for 30 years opens for Armenian aid trucks to Turkey",
+      "what": "After the February 2023 earthquakes, Armenia sent a search-and-rescue team and aid to Turkey, and the Margara crossing, closed for some thirty years, opened for Armenian trucks carrying aid to Adiyaman. On 15 February Mirzoyan visited Ankara, offered condolences recalling Armenia's own 1988 Spitak earthquake, and the two sides agreed to jointly repair the Ani bridge ahead of a future full border opening.",
+      "why_it_matters": "Two states without diplomatic relations used a disaster to open, briefly, a frontier closed since the early 1990s.",
+      "src": [
+        {
+          "label": "Armenian MFA: statement by FM Mirzoyan at joint press conference with FM Cavusoglu, Ankara, 15 Feb 2023",
+          "url": "https://www.mfa.am/en/press-conference/2023/02/15/fms_armenia_t%C3%BCrkiye/11865",
+          "lang": "hy"
+        },
+        {
+          "label": "CivilNet, Feb 2023: Armenia–Turkey bridge opens for the first time in decades (page blocks automated fetching)",
+          "url": "https://www.civilnet.am/en/news/691652/",
+          "lang": "en"
+        }
+      ],
+      "conf": "ok",
+      "note": "Mirzoyan: 'I consider it symbolic that on Saturday the Armenian-Turkish border, which has been closed for thirty years, was opened for Armenian trucks loaded with humanitarian aid heading to Adiyaman.' The opening was for humanitarian convoys only; the border did not open to regular traffic."
+    },
+    {
+      "id": "in-pk-2019-kartarpur-corridor",
+      "pair": [
+        "IN",
+        "PK"
+      ],
+      "sides": [
+        "India",
+        "Pakistan"
+      ],
+      "year": "2019-11",
+      "kind": "cultural",
+      "who": "Governments of India and Pakistan; Sikh pilgrims",
+      "title": "Kartarpur corridor: visa-free pilgrimage across a hostile border",
+      "what": "On 24 October 2019 India and Pakistan signed an agreement letting Indian pilgrims of all faiths visit Gurdwara Darbar Sahib Kartarpur in Pakistan visa-free, on foot, from dawn to dusk. The corridor opened on 9 November 2019 for the 550th birth anniversary of Guru Nanak, and Pakistan's foreign ministry said the agreement was renewed for five years in 2024.",
+      "why_it_matters": "Both governments made a religious allowance for ordinary people despite deep hostility between the two states.",
+      "src": [
+        {
+          "label": "PIB (India MHA), 24 Oct 2019: 'India signs the Kartarpur Sahib Corridor Agreement with Pakistan'",
+          "url": "https://www.pib.gov.in/Pressreleaseshare.aspx?PRID=1589022",
+          "lang": "en"
+        },
+        {
+          "label": "PIB (PMO), 9 Nov 2019: PM inaugurates Integrated Check Post at Kartarpur corridor",
+          "url": "https://pib.gov.in/PressReleseDetailm.aspx?PRID=1591113",
+          "lang": "en"
+        },
+        {
+          "label": "The Tribune, 16 Jul 2026: corridor suspended since 7 May 2025",
+          "url": "https://www.tribuneindia.com/news/delhi/dsgmc-writes-to-pm-modi-to-reopen-kartarpur-corridor-ahead-of-punjab-visit/",
+          "lang": "en"
+        }
+      ],
+      "conf": "ok",
+      "note": "Frictions: India objected to Pakistan's US$20 per-pilgrim service fee but signed anyway. Services were suspended on 7 May 2025 at the start of Operation Sindoor after the Pahalgam attack, and Indian officials said in 2026 that the security situation kept the corridor closed. The 2024 renewal is reported by Pakistan's MOFA (mofa.gov.pk 'Renewal of the Kartarpur Corridor Agreement'), which failed a TLS handshake to automated fetches and is not cited."
+    },
+    {
+      "id": "pk-in-2001-gujarat-quake-aid",
+      "pair": [
+        "PK",
+        "IN"
+      ],
+      "sides": [
+        "Pakistan",
+        "India"
+      ],
+      "year": "2001-02",
+      "kind": "disaster-aid",
+      "who": "Pervez Musharraf; Atal Bihari Vajpayee; Pakistani relief flights",
+      "title": "Gujarat earthquake: Pakistani relief planes and the leaders' first call",
+      "what": "After the 26 January 2001 Gujarat earthquake, Pakistan sent planeloads of tents and blankets, which India accepted after initial hesitation. On 2 February Musharraf telephoned Vajpayee with condolences, their first conversation since Musharraf took power. Vajpayee said: 'Sorrow reduces when you share it.'",
+      "why_it_matters": "A disaster produced the first leader-level contact between two nuclear-armed rivals after the 1999 Kargil war.",
+      "src": [
+        {
+          "label": "CBS News (AP), 2 Feb 2001: 'Quake sorrow unites rivals'",
+          "url": "https://www.cbsnews.com/news/quake-sorrow-unites-rivals/",
+          "lang": "en"
+        },
+        {
+          "label": "The Globe and Mail: 'India-Pakistan thaw in quake's aftermath'",
+          "url": "https://www.theglobeandmail.com/news/world/india-pakistan-thaw-in-quakes-aftermath/article1030003/",
+          "lang": "en"
+        },
+        {
+          "label": "Disaster Diplomacy: India/Pakistan case study (Kelman)",
+          "url": "https://www.disasterdiplomacy.org/indiapakistan.html",
+          "lang": "en"
+        }
+      ],
+      "conf": "check",
+      "note": "Kelman's timeline lists a leaders' summit in India on 14–16 July 2001 as the next step. India's acceptance of Pakistani aid came after initial confusion (CBS/AP)."
+    },
+    {
+      "id": "in-pk-2005-kashmir-quake-loc",
+      "pair": [
+        "IN",
+        "PK"
+      ],
+      "sides": [
+        "India",
+        "Pakistan"
+      ],
+      "year": "2005-11",
+      "kind": "disaster-aid",
+      "who": "Governments of India and Pakistan; Kashmiris on both sides of the Line of Control",
+      "title": "Kashmir earthquake: five crossing points open on the Line of Control",
+      "what": "After the 8 October 2005 earthquake killed over 70,000 people, mostly in Pakistan-administered Kashmir, India offered aid and the two sides opened five crossing points on the Line of Control to exchange relief supplies, with people's crossings to follow later.",
+      "why_it_matters": "The militarised de facto border was opened for humanitarian traffic within weeks of a disaster.",
+      "src": [
+        {
+          "label": "VOA via GlobalSecurity.org, 16 Nov 2005: 'Pakistan, India Open Final Crossing Point in Kashmir for Quake Aid'",
+          "url": "https://www.globalsecurity.org/wmd/library/news/pakistan/2005/pakistan-051116-voa02.htm",
+          "lang": "en"
+        },
+        {
+          "label": "Disaster Diplomacy: India/Pakistan case study (Kelman)",
+          "url": "https://www.disasterdiplomacy.org/indiapakistan.html",
+          "lang": "en"
+        }
+      ],
+      "conf": "check",
+      "note": "Kelman's timeline records that on 17 October 2005 India and Pakistan failed to agree on terms for aid provision. VOA reported that permission for people to cross would come later."
+    },
+    {
+      "id": "in-pk-1960-indus-waters-treaty",
+      "pair": [
+        "IN",
+        "PK"
+      ],
+      "sides": [
+        "India",
+        "Pakistan"
+      ],
+      "year": "1960-09",
+      "kind": "institutional",
+      "who": "Governments of India and Pakistan; World Bank (signatory)",
+      "title": "Indus Waters Treaty: six decades of shared rivers, now in abeyance",
+      "what": "Signed in 1960 after nine years of World Bank-assisted talks, the treaty divided the Indus system's rivers between India and Pakistan and set up a commission and dispute procedures. The World Bank describes it as one of the most successful international treaties, having survived frequent tensions, including conflict.",
+      "why_it_matters": "It shows that a water-sharing regime between enemies can outlast wars, and also how fragile that is.",
+      "src": [
+        {
+          "label": "World Bank fact sheet: The Indus Waters Treaty 1960 and the Role of the World Bank",
+          "url": "https://www.worldbank.org/en/region/sar/brief/fact-sheet-the-indus-waters-treaty-1960-and-the-world-bank",
+          "lang": "en"
+        },
+        {
+          "label": "PIB (Government of India) compilation, May 2025: CCS decision to keep the treaty in abeyance",
+          "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/may/doc2025512553601.pdf",
+          "lang": "en"
+        },
+        {
+          "label": "UN Security Council S/2025/440: Pakistan's letter on the Court of Arbitration supplemental award",
+          "url": "https://documents.un.org/doc/undoc/gen/n25/175/44/pdf/n2517544.pdf",
+          "lang": "en"
+        }
+      ],
+      "conf": "ok",
+      "note": "After the April 2025 Pahalgam attack, India's Cabinet Committee on Security decided to keep the treaty 'in abeyance with immediate effect, until Pakistan credibly and irrevocably abjures its support for cross-border terrorism'. Pakistan says the treaty has no provision for unilateral suspension and cites a June 2025 Court of Arbitration supplemental award as confirming it 'remains valid and operational'. The treaty's long survival is the bridge; its 2025 suspension is the live caveat."
+    },
+    {
+      "id": "us-su-1975-apollo-soyuz",
+      "pair": [
+        "US",
+        "SU"
+      ],
+      "sides": [
+        "United States",
+        "Soviet Union"
+      ],
+      "year": "1975-07",
+      "kind": "institutional",
+      "who": "NASA and the Soviet space programme; Thomas Stafford, Alexei Leonov and crews",
+      "title": "Apollo–Soyuz: the handshake in orbit",
+      "what": "On 17 July 1975 an American Apollo and a Soviet Soyuz docked in orbit. The crews opened the hatches, shook hands, shared meals and ran joint experiments over two days.",
+      "why_it_matters": "Cold War rivals in the space race built compatible hardware and trusted each other's crews.",
+      "src": [
+        {
+          "label": "NASA History: '45 Years Ago: Historic Handshake in Space'",
+          "url": "https://www.nasa.gov/history/45-years-ago-historic-handshake-in-space/",
+          "lang": "en"
+        }
+      ],
+      "conf": "ok",
+      "note": "NASA attributes the 'spirit of cooperation' to the policy of détente,; NASA says the techniques and relationships later fed into Shuttle–Mir and the ISS."
+    },
+    {
+      "id": "su-us-smallpox-eradication",
+      "pair": [
+        "SU",
+        "US"
+      ],
+      "sides": [
+        "Soviet Union",
+        "United States"
+      ],
+      "year": "1958",
+      "kind": "humanitarian",
+      "who": "Viktor Zhdanov (Soviet deputy health minister); WHO; US and Soviet health agencies",
+      "title": "Smallpox eradication: a Soviet proposal that became a joint Cold War effort",
+      "what": "At the 1958 World Health Assembly the Soviet delegation, led by Viktor Zhdanov, proposed worldwide smallpox eradication and offered 25 million vaccine doses. In 1966 the intensified programme was approved as a joint proposal of the Soviet Union and the United States, and smallpox was later eradicated.",
+      "why_it_matters": "The two superpowers jointly ended a disease that had killed hundreds of millions.",
+      "src": [
+        {
+          "label": "Re-assessing the Foundations: Worldwide Smallpox Eradication, 1957–67 (Medical History, PMC)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6945219/",
+          "lang": "en"
+        },
+        {
+          "label": "Emerging Infectious Diseases (CDC), 1998: 'Confronting emerging infections: lessons from the smallpox eradication campaign'",
+          "url": "https://wwwnc.cdc.gov/eid/article/4/3/98-0018_article",
+          "lang": "en"
+        }
+      ],
+      "conf": "ok",
+      "note": "The CDC article asks: 'If we could form this alliance during the cold war, how many alliances can we form now?' Historians note the 1958 vote also reflected a wish to welcome the USSR back into WHO."
+    },
+    {
+      "id": "us-ru-iss-partnership",
+      "pair": [
+        "US",
+        "RU"
+      ],
+      "sides": [
+        "United States",
+        "Russia"
+      ],
+      "year": "2000-11",
+      "kind": "institutional",
+      "who": "NASA; Roscosmos; ISS partner agencies",
+      "title": "International Space Station: continuously crewed since 2000",
+      "what": "The ISS, built with US and Russian modules among others, has been continuously occupied since November 2000. Five of its 42 assembly flights were on Russian Proton and Soyuz rockets, and US and Russian crews have lived together on board throughout.",
+      "why_it_matters": "Daily life-or-death interdependence between the two sides has continued through sanctions and war.",
+      "src": [
+        {
+          "label": "NASA: Space Station Facts and Figures",
+          "url": "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/",
+          "lang": "en"
+        },
+        {
+          "label": "NASA History: '45 Years Ago: Historic Handshake in Space' (Apollo–Soyuz lineage to Shuttle–Mir and ISS)",
+          "url": "https://www.nasa.gov/history/45-years-ago-historic-handshake-in-space/",
+          "lang": "en"
+        }
+      ],
+      "conf": "ok",
+      "note": "Post-2022 strains on the partnership are not covered by the fetched sources and are not described here."
+    },
+    {
+      "id": "us-ru-nunn-lugar-ctr",
+      "pair": [
+        "US",
+        "RU"
+      ],
+      "sides": [
+        "United States",
+        "Russia"
+      ],
+      "year": "1991-12",
+      "kind": "institutional",
+      "who": "Senators Sam Nunn and Richard Lugar; US DoD (DTRA); Russian and other post-Soviet governments",
+      "title": "Nunn–Lugar: a former enemy pays to dismantle the other's weapons",
+      "what": "The 1991 Nunn–Lugar Cooperative Threat Reduction programme funded the dismantling and securing of Soviet-era nuclear, chemical and missile systems in Russia and other successor states; DTRA reports more than 7,500 warheads deactivated.",
+      "why_it_matters": "Former adversaries jointly reduced the arsenals aimed at each other, on each other's territory.",
+      "src": [
+        {
+          "label": "Arms Control Today, July 2013: 'Nunn-Lugar Program Scaled Back'",
+          "url": "https://www.armscontrol.org/act/2013-07/news/nunn-lugar-program-scaled-back",
+          "lang": "en"
+        },
+        {
+          "label": "DTRA: Cooperative Threat Reduction Program (page blocks automated fetching)",
+          "url": "https://www.dtra.mil/Missions/Partnering/Cooperative-Threat-Reduction-Program/",
+          "lang": "en"
+        }
+      ],
+      "conf": "check",
+      "note": "Russia declined to renew the CTR umbrella agreement, which expired on 17 June 2013; a narrower protocol under the 2003 MNEPR framework replaced it, and Russia took over the remaining missile and chemical-weapons destruction itself. The warhead figure comes from a search-result summary of the DTRA page, which returned HTTP 403."
+    },
+    {
+      "id": "us-ir-2003-bam-earthquake",
+      "pair": [
+        "US",
+        "IR"
+      ],
+      "sides": [
+        "United States",
+        "Iran"
+      ],
+      "year": "2003-12",
+      "kind": "disaster-aid",
+      "who": "US Deputy Secretary of State Richard Armitage; USAID DART; US Air Force; Iranian government (President Mohammad Khatami)",
+      "title": "Bam earthquake: the first US aircraft and officials in Iran since 1979–81",
+      "what": "After the 26 December 2003 Bam earthquake, Washington offered help directly to Iran's government. US C-130s flew in medical supplies (the first US aircraft to land in Iran since the hostage crisis) and an 80-strong US team set up a field hospital.",
+      "why_it_matters": "Two governments without relations let a rescue mission land, and Iran publicly welcomed it.",
+      "src": [
+        {
+          "label": "American Forces Press Service via GlobalSecurity.org, 29 Dec 2003",
+          "url": "https://www.globalsecurity.org/military/library/news/2003/12/mil-031229-afps01.htm",
+          "lang": "en"
+        },
+        {
+          "label": "Insurance Journal, 31 Dec 2003: aid workers arrive in Bam",
+          "url": "https://www.insurancejournal.com/news/international/2003/12/31/35341.htm",
+          "lang": "en"
+        }
+      ],
+      "conf": "ok",
+      "note": "Khatami welcomed US participation but stressed it did not change relations between the two countries (reported via BBC)."
+    },
+    {
+      "id": "jp-cn-2008-sichuan-rescue-team",
+      "pair": [
+        "JP",
+        "CN"
+      ],
+      "sides": [
+        "Japan",
+        "China"
+      ],
+      "year": "2008-05",
+      "kind": "rescue",
+      "who": "Japan Disaster Relief Team (61 rescuers, 23 medical staff); PRC MFA; Hu Jintao",
+      "title": "Sichuan earthquake: Japan's rescue team is the first foreign team China accepts",
+      "what": "After the 12 May 2008 Wenchuan earthquake, China accepted a Japanese search-and-rescue team, the first foreign professional rescue team it had accepted after a major disaster since 1949. Chinese media spread images of the team standing in silence before the bodies of a mother and child they recovered, and Hu Jintao later met team members in Sapporo to thank them.",
+      "why_it_matters": "Amid historical bitterness, a Chinese leader publicly praised Japanese rescuers and Chinese audiences were moved by them.",
+      "src": [
+        {
+          "label": "PRC MFA spokesman Qin Gang press conference, 20 May 2008 (Consulate-General in New York copy)",
+          "url": "https://newyork.china-consulate.gov.cn/chn/fyrth/200805/t20080520_4262242.htm",
+          "lang": "zh"
+        },
+        {
+          "label": "PRC MFA: 胡锦涛会见日本国际救援队和医疗队代表, 8 Jul 2008",
+          "url": "https://www.fmprc.gov.cn/web/ziliao_674904/zt_674979/ywzt_675099/2008zt_675545/hjtdhhy_675549/200807/t20080708_7957901.shtml",
+          "lang": "zh"
+        },
+        {
+          "label": "Japan MOFA: Dispatch of Japan Disaster Relief Teams (page blocks automated fetching)",
+          "url": "https://www.mofa.go.jp/announce/announce/2008/5/1180016_1010.html",
+          "lang": "en"
+        }
+      ],
+      "conf": "ok",
+      "note": "Qin Gang: 'Japan is the first country to send a rescue team to China's disaster area… They stood in silent tribute before the bodies of victims they found.' (日本是第一个向中国灾区派遣救援队的国家…他们对找到的遇难者遗体肃立默哀.) Team sizes come from Japan's 2009 ODA White Paper (search-result summary; mofa.go.jp returned 403)."
+    },
+    {
+      "id": "cn-jp-2011-tohoku-rescue",
+      "pair": [
+        "CN",
+        "JP"
+      ],
+      "sides": [
+        "China",
+        "Japan"
+      ],
+      "year": "2011-03",
+      "kind": "rescue",
+      "who": "China International Search and Rescue team (15 members); Premier Wen Jiabao",
+      "title": "Tohoku earthquake: China's rescuers in Ofunato and Wen Jiabao at the shelters",
+      "what": "After the 11 March 2011 earthquake and tsunami, China sent a 15-member rescue team to Japan that worked in Ofunato, Iwate, plus relief supplies. In May 2011 Premier Wen Jiabao flew to Sendai and visited evacuees in Natori and Fukushima, saying 'in the face of great natural disasters, all humanity is one community'.",
+      "why_it_matters": "Three years after Japan's team in Sichuan, China reciprocated during a period of territorial friction.",
+      "src": [
+        {
+          "label": "PRC Consulate-General in Niigata, 8 Mar 2021: Consul-General Sun Dagang article on the 10th anniversary",
+          "url": "https://niigata.china-consulate.gov.cn/xwdt/202103/t20210308_10030400.htm",
+          "lang": "zh"
+        },
+        {
+          "label": "Japan MOFA: Great East Japan Earthquake (Details), lists acceptance of China's rescue team on 13 March 2011 (page blocks automated fetching)",
+          "url": "https://www.mofa.go.jp/j_info/visit/incidents/index2.html",
+          "lang": "en"
+        }
+      ],
+      "conf": "ok",
+      "note": "Original (Wen, as quoted by the consulate): 大自然灾害面前，全人类是一个共同体，需要同舟共济、共同应对. The consulate article also describes Japan's 2008 team as the first foreign professional rescue team China accepted after a major disaster since 1949."
+    },
+    {
+      "id": "kr-kp-2018-unified-hockey-team",
+      "pair": [
+        "KR",
+        "KP"
+      ],
+      "sides": [
+        "South Korea",
+        "North Korea"
+      ],
+      "year": "2018-02",
+      "kind": "cultural",
+      "who": "Korean Olympic Committees of both Koreas; IOC President Thomas Bach; coach Sarah Murray; 35 players",
+      "title": "One Korean women's hockey team at PyeongChang",
+      "what": "On 20 January 2018 the IOC agreed that 12 North Korean players would join South Korea's 23-player women's ice hockey squad, the first unified Korean team at an Olympic Games, playing under the unification flag with 'Arirang' as its anthem. The two delegations also marched together at the opening ceremony.",
+      "why_it_matters": "Players from two states still technically at war trained, lost and celebrated together in public.",
+      "src": [
+        {
+          "label": "Korea Herald, 20 Jan 2018: 'Joint Korean hockey team to play at least 3 N. Koreans at PyeongChang Olympics'",
+          "url": "https://m.koreaherald.com/article/1566985",
+          "lang": "en"
+        },
+        {
+          "label": "NPR, 10 Feb 2018: 'Korean Women's Hockey Team Presents A Unified Front As It Takes To The Ice'",
+          "url": "https://www.npr.org/sections/thetorch/2018/02/10/584749102/korean-womens-hockey-team-presents-a-unified-front-as-it-takes-to-the-ice",
+          "lang": "en"
+        }
+      ],
+      "conf": "check",
+      "note": "The decision faced a backlash in South Korea because some South Korean players lost places. The IOC's own announcement (olympics.com) timed out to automated fetches and is not cited."
+    },
+    {
+      "id": "kr-kp-separated-family-reunions",
+      "pair": [
+        "KR",
+        "KP"
+      ],
+      "sides": [
+        "South Korea",
+        "North Korea"
+      ],
+      "year": "1985-09",
+      "kind": "humanitarian",
+      "who": "Korean Red Cross and DPRK Red Cross Society; Ministry of Unification; separated families",
+      "title": "Separated families meet across the DMZ",
+      "what": "Starting with hometown visits in 1985, the two Koreas held 21 family reunion events plus 7 video reunions and letter exchanges, through which about 8,262 families confirmed whether relatives were alive. The last face-to-face round was at Mount Kumgang in August 2018.",
+      "why_it_matters": "Two hostile states repeatedly set politics aside long enough for elderly relatives to meet.",
+      "src": [
+        {
+          "label": "ICRC: Historical timeline — ICRC, Geneva Conventions and the Republic of Korea",
+          "url": "https://www.icrc.org/en/article/historical-timeline-icrc-geneva-conventions-korea",
+          "lang": "en"
+        },
+        {
+          "label": "ROK Ministry of Unification: Findings of the 2021 Survey of Separated Families",
+          "url": "https://unikorea.go.kr/web/eng_unikorea/bbs/bbs_0000000000000034/54268",
+          "lang": "en"
+        }
+      ],
+      "conf": "ok",
+      "note": "The 2021 survey covered 47,004 living applicants; 82% had yet to confirm whether their relatives in the North were alive. Reunions depended on the political climate and stopped after 2018; most applicants are over 80. The August 2018 date is from press reports in search results, not the fetched pages."
     }
   ]
 }
