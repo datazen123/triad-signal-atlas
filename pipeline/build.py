@@ -16,24 +16,90 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from common import CURATED, DATA, LIVE, ROOT, now_iso, read_json  # noqa: E402
+from common import ATLAS_NAME, CURATED, DATA, LIVE, ROOT, now_iso, read_json  # noqa: E402
 
 TEMPLATE = ROOT / "template" / "atlas.html"
 OUT = ROOT / "site" / "index.html"
 OUT_ARTIFACT = ROOT / "site" / "artifact.html"
 BODY_MARK = '<div class="wrap">'
-TITLE = "Triad Signal Atlas"
-DESCRIPTION = ("Primary evidence on how the US, China, Russia and the other powers relate: channels, joint projects, "
-               "bridge people, live data, and a Peace Lab of playable approaches to building peace.")
+TITLE = ATLAS_NAME
+NAME_MARK = "__ATLAS_NAME__"  # every occurrence in the template becomes ATLAS_NAME
+DESCRIPTION = ("Primary evidence on how the world's leaders and powers relate, starting with the US, China and Russia: "
+               "channels, joint projects, bridge people, live data, and a Peace Lab of playable approaches to building peace.")
 PLACEHOLDER = "/*__ATLAS_DATA__*/"
 LIVE_KEYS = ["openalex", "nobel", "fedreg", "comtrade", "portwatch", "satcat", "migrants"]
 MAX_BYTES = 15 * 1024 * 1024
+
+# "Bridges across divides": optional curated stories. If the file is missing, the page gets an empty set
+# and hides the feature. ATLAS_BRIDGES overrides the path (for previewing a fixture locally).
+BRIDGES = CURATED / "bridges.json"
+BRIDGE_KINDS = {"disaster-aid", "rescue", "statement", "cultural", "humanitarian", "economic", "personal", "institutional"}
+BRIDGE_CONF = {"ok", "check", "unconfirmed"}
 
 
 def repo_urls():
     repo = os.environ.get("GITHUB_REPOSITORY", "datazen123/triad-signal-atlas")
     owner, name = repo.split("/", 1)
     return f"https://{owner}.github.io/{name}/", f"https://github.com/{repo}"
+
+
+def _text(v) -> str:
+    return v.strip() if isinstance(v, str) else ""
+
+
+def load_bridges(path=None, warn=print) -> dict:
+    """Reads bridges.json and keeps only well-formed stories, so one bad entry can't break the page.
+
+    A story needs an id, a pair of two codes, a title, a "what", and at least one http(s) source.
+    An unknown kind becomes "personal"; an unknown or missing confidence becomes "unconfirmed", which
+    the page flags. Anything dropped is reported on stdout, never silently patched into a claim."""
+    path = Path(path or os.environ.get("ATLAS_BRIDGES") or BRIDGES)
+    empty = {"about": "", "verified": "", "stories": []}
+    if not path.exists():
+        return empty
+    doc = read_json(path)
+    if not isinstance(doc, dict):
+        warn(f"bridges: {path.name} is not a readable JSON object; feature hidden")
+        return empty
+    stories, seen = [], set()
+    for i, st in enumerate(doc.get("stories") or []):
+        if not isinstance(st, dict):
+            warn(f"bridges: story #{i} is not an object; skipped")
+            continue
+        sid, pair = _text(st.get("id")), st.get("pair")
+        src = [{"label": _text(x.get("label")) or _text(x.get("url")), "url": _text(x.get("url")), "lang": _text(x.get("lang"))}
+               for x in (st.get("src") or []) if isinstance(x, dict) and _text(x.get("url")).startswith(("http://", "https://"))]
+        why = []
+        if not sid or sid in seen:
+            why.append("missing or duplicate id")
+        if not (isinstance(pair, list) and len(pair) == 2 and all(_text(p) for p in pair)):
+            why.append("pair must be two codes")
+        if not _text(st.get("title")) or not _text(st.get("what")):
+            why.append("needs title and what")
+        if not src:
+            why.append("needs at least one http(s) source")
+        if why:
+            warn(f"bridges: story {sid or '#' + str(i)} skipped ({'; '.join(why)})")
+            continue
+        seen.add(sid)
+        sides = st.get("sides")
+        if not (isinstance(sides, list) and len(sides) == 2):
+            sides = pair
+        stories.append({
+            "id": sid,
+            "pair": [_text(p) for p in pair],
+            "sides": [_text(x) or _text(p) for x, p in zip(sides, pair)],
+            "year": _text(str(st.get("year") or "")),
+            "kind": st.get("kind") if st.get("kind") in BRIDGE_KINDS else "personal",
+            "who": _text(st.get("who")),
+            "title": _text(st.get("title")),
+            "what": _text(st.get("what")),
+            "why_it_matters": _text(st.get("why_it_matters")),
+            "src": src,
+            "conf": st.get("conf") if st.get("conf") in BRIDGE_CONF else "unconfirmed",
+            "note": _text(st.get("note")),
+        })
+    return {"about": _text(doc.get("about")), "verified": _text(doc.get("verified")), "stories": stories}
 
 
 def compose() -> dict:
@@ -49,6 +115,7 @@ def compose() -> dict:
         e.pop("trace", None)  # stack traces belong in the issue, not on the public page
     live_url, repo_url = repo_urls()
     return {
+        "name": TITLE,
         "built_at": now_iso(),
         "live_url": live_url,
         "repo_url": repo_url,
@@ -59,6 +126,7 @@ def compose() -> dict:
         "live": live,
         "health": health,
         "peace": read_json(CURATED / "peace.json", {}) or {},
+        "bridges": load_bridges(),
         "links": {"healed": links.get("healed", {}), "counts": links.get("counts", {})},
     }
 
@@ -67,8 +135,11 @@ def render(data: dict) -> str:
     tpl = TEMPLATE.read_text(encoding="utf-8")
     if tpl.count(PLACEHOLDER) != 1:
         raise SystemExit("template must contain the data placeholder exactly once")
+    if NAME_MARK not in tpl:
+        raise SystemExit(f"template must use the {NAME_MARK} placeholder for the display name")
     blob = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
-    return tpl.replace(PLACEHOLDER, blob)
+    # The name goes in before the data, so a data string that happens to contain the mark stays untouched.
+    return tpl.replace(NAME_MARK, htmllib.escape(TITLE)).replace(PLACEHOLDER, blob)
 
 
 def wrap(page: str, live_url: str) -> str:
@@ -90,7 +161,7 @@ def wrap(page: str, live_url: str) -> str:
         f'<meta property="og:title" content="{e(TITLE)}">',
         f'<meta property="og:description" content="{e(DESCRIPTION)}">',
         f'<meta property="og:url" content="{e(live_url)}">',
-        '<meta property="og:site_name" content="Triad Signal Atlas">',
+        f'<meta property="og:site_name" content="{e(TITLE)}">',
         '<meta name="twitter:card" content="summary">',
         f'<meta name="twitter:title" content="{e(TITLE)}">',
         f'<meta name="twitter:description" content="{e(DESCRIPTION)}">',

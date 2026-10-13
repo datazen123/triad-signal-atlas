@@ -1,6 +1,6 @@
-# Triad Signal Atlas
+# Common Ground Atlas
 
-An evidence board for how the great powers actually relate. It covers the United States, China and Russia, with the EU, India, Japan and the UK in the second view. The board brings together:
+An evidence board for how the world's leaders and powers actually relate, and a lab for building peace between them. It started with the United States, China and Russia, now adds the EU, India, Japan and the UK, and is growing toward every power and, later, every people (see `BACKLOG.md`). The board brings together:
 
 - **91 primary sources** in a rotatable 3D constellation, ranked on an evidence ladder from physical sensors down to state media.
 - **32 diplomatic and security channels**, each with its status and primary-source links shown on hover.
@@ -9,6 +9,8 @@ An evidence board for how the great powers actually relate. It covers the United
 - **Live data** that refreshes itself: research co-authorship, mirror trade statistics, Entity List actions, satellites in orbit, chokepoint shipping, Nobel laureates who crossed borders, and migrant stock between powers.
 
 The page is one self-contained HTML file: `site/index.html`.
+
+The display name is defined once, as `ATLAS_NAME` in `pipeline/common.py`; the build writes it into the page wherever the template says `__ATLAS_NAME__`. The repository and the Pages URL keep their original `triad-signal-atlas` names, so existing links keep working.
 
 ## How it updates without anyone spending tokens
 

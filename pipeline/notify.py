@@ -23,7 +23,7 @@ from email.message import EmailMessage
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from common import DATA, read_json  # noqa: E402
+from common import ATLAS_NAME, DATA, read_json  # noqa: E402
 
 LABEL = "pipeline-health"
 API = "https://api.github.com"
@@ -59,7 +59,7 @@ def send_email(subject: str, body: str) -> bool:
 
 
 def render(alerts, job_status, run_url, owner):
-    lines = [f"@{owner} the Triad Signal Atlas pipeline needs a look.", ""]
+    lines = [f"@{owner} the {ATLAS_NAME} pipeline needs a look.", ""]
     if job_status not in ("success", None):
         lines += [f"**Workflow run ended with `{job_status}`.** The site was not redeployed; "
                   f"the previous version stays online. Log: {run_url}", ""]
@@ -118,7 +118,7 @@ def main(argv=None) -> int:
                 print("issue already describes this problem; staying quiet")
         if changed:
             try:
-                if send_email("Triad Signal Atlas: pipeline needs attention", body.replace(marker, "")):
+                if send_email(f"{ATLAS_NAME}: pipeline needs attention", body.replace(marker, "")):
                     print("email sent")
             except Exception as e:  # noqa: BLE001
                 print(f"email failed: {e}")
@@ -127,7 +127,7 @@ def main(argv=None) -> int:
         gh("PATCH", f"/issues/{issue['number']}", {"state": "closed", "state_reason": "completed"})
         print("closed recovered issue")
         try:
-            send_email("Triad Signal Atlas: recovered", "All collectors are healthy again.\n" + run_url)
+            send_email(f"{ATLAS_NAME}: recovered", "All collectors are healthy again.\n" + run_url)
         except Exception as e:  # noqa: BLE001
             print(f"email failed: {e}")
     else:

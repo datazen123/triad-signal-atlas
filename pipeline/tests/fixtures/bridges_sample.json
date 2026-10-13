@@ -1,0 +1,56 @@
+{
+  "about": "TEST FIXTURE ONLY. Fictional stories used by pipeline/tests to exercise the Bridges across divides hook. Not real events; the URLs are reserved example.org addresses.",
+  "verified": "2026-10-13",
+  "stories": [
+    {
+      "id": "fx-ok",
+      "pair": ["XA", "XB"],
+      "sides": ["Fixture side A", "Fixture side B"],
+      "year": "2001",
+      "kind": "rescue",
+      "who": "Fixture rescue team",
+      "title": "Fixture: a rescue across the line",
+      "what": "Fictional test text describing a rescue.",
+      "why_it_matters": "Fictional test text on why it matters.",
+      "src": [{"label": "Example source A", "url": "https://example.org/fixture-a", "lang": "en"}],
+      "conf": "ok",
+      "note": ""
+    },
+    {
+      "id": "fx-check",
+      "pair": ["XA", "XB"],
+      "sides": ["Fixture side A", "Fixture side B"],
+      "year": "2010",
+      "kind": "cultural",
+      "who": "Fixture orchestra",
+      "title": "Fixture: a concert both sides attended",
+      "what": "Fictional test text describing a concert.",
+      "why_it_matters": "Fictional test text.",
+      "src": [{"label": "Example source B", "url": "https://example.org/fixture-b", "lang": "zh"}],
+      "conf": "check",
+      "note": "Fixture note: date to confirm."
+    },
+    {
+      "id": "fx-unconfirmed",
+      "pair": ["XC", "XD"],
+      "sides": ["Fixture side C", "Fixture side D"],
+      "year": "2020",
+      "kind": "not-a-kind",
+      "who": "Fixture volunteers",
+      "title": "Fixture: aid after a storm",
+      "what": "Fictional test text describing aid.",
+      "why_it_matters": "Fictional test text.",
+      "src": [{"label": "Example source C", "url": "https://example.org/fixture-c", "lang": "ru"}],
+      "conf": "maybe",
+      "note": ""
+    },
+    {
+      "id": "fx-no-source",
+      "pair": ["XC", "XD"],
+      "title": "Fixture: story without a source (must be dropped)",
+      "what": "Fictional.",
+      "src": [{"label": "not a url", "url": "ftp://example.org/x"}],
+      "conf": "ok"
+    }
+  ]
+}
