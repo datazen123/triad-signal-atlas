@@ -24,7 +24,7 @@ LIVE = DATA / "live"
 # The product's display name. Change it here and nowhere else: build.py puts it into the page
 # (title, heading, meta tags) and notify.py into alert issues and emails. Internal identifiers
 # (repo name, Pages URL, user agent, localStorage keys) deliberately keep their old names.
-ATLAS_NAME = "World Signal Atlas"
+ATLAS_NAME = "Common Ground Atlas"
 
 USER_AGENT = "TriadSignalAtlas/1.0 (+https://github.com/datazen123/triad-signal-atlas)"
 

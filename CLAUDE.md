@@ -1,7 +1,7 @@
-# World Signal Atlas: context for Claude Code
+# Common Ground Atlas: context for Claude Code
 
 ## What this is
-World Signal Atlas (formerly Triad Signal Atlas) is an evidence board on how the world's leaders and powers relate, plus a Peace Lab. It started with the US–China–Russia triad; the second view adds the EU, India, Japan and the UK. `BACKLOG.md` plans a version for all peoples, not just states.
+Common Ground Atlas (formerly Triad Signal Atlas) is an evidence board on how the world's leaders and powers relate, plus a Peace Lab. It started with the US–China–Russia triad; the second view adds the EU, India, Japan and the UK. `BACKLOG.md` plans a version for all peoples, not just states.
 
 The display name lives in one place: `ATLAS_NAME` in `pipeline/common.py`. `build.py` replaces every `__ATLAS_NAME__` in the template with it, and `notify.py` uses it in alerts. The repo, the Pages URL, the user agent and the localStorage keys keep their old `triad`/`peacelab` names on purpose, so links and saved journals keep working. Everything is one self-contained HTML page (`site/index.html`) built from `template/atlas.html` plus JSON data. A zero-token pipeline (GitHub Actions + standard-library Python) keeps it updated. The owner is Data (Alex Kim), GitHub `datazen123`.
 
@@ -21,6 +21,10 @@ The auto-updating version will live at https://datazen123.github.io/triad-signal
   - `projects.json`: start, end, members (US/CN/RU/EU/IN/JP/UK), achieved, url, confidence.
   - `people.json`: from, to, type (resident or envoy), cat, years, did, url, caveat, confidence.
   - `peace.json`: the Peace Lab. Approach nodes (domain, scale, phase, horizon, tags, what/why/mvp/q, play.engine, src, url, conf `ok` or `check`), the 16-card deck, the creation loop, practices by cadence, words for peace and shared problems. Nodes marked `check` show a "check source" flag until verified.
+  - `bridges.json` (optional): "Bridges across divides" stories. `build.py` (`load_bridges`) keeps only well-formed stories (id, pair of two, title, what, at least one http(s) source; unknown conf becomes `unconfirmed`), injects an empty set when the file is missing, and the page then hides the view. `ATLAS_BRIDGES=<path>` previews another file, e.g. `pipeline/tests/fixtures/bridges_sample.json` (fictional, tests only).
+- Peace Lab v2 on the page:
+  - The dome: prompts drift on the inner wall of a sky-sphere around the shape (questions in Contemplate, approach names elsewhere, bridge titles in a ~1-in-8 slot). Tap one to start Contemplate, open the play card, or open the bridge card. Capped at 5/4/3/2 by canvas width.
+  - `schedPick` (between `/*SCHED:BEGIN*/` and `/*SCHED:END*/` in the template) is the fairness scheduler: never-shown and never-opened boosts, a 20-minute cool-down, domain balance. Tests run it under node. Per-viewer history: localStorage `peacelab.seen.v1` (`a:`/`q:`/`b:` ids, shown/opened counts).
 - `data/live/`: collector outputs (last-known-good). Suspect results go to `quarantine/`.
 - `data/health.json`: per-collector status, failure streaks, alerts.
 - `pipeline/`:

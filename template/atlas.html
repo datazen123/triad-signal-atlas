@@ -264,7 +264,7 @@ mark.ld{background:rgba(255,110,90,.3)} mark.un{background:rgba(242,193,78,.32)}
 .sky .breath,.sky .contq,.sky .sky-ui{z-index:2}
 .ph{position:absolute;left:0;top:0;margin:0;padding:6px 8px;border:0;border-radius:6px;background:none;font:inherit;font-family:var(--f-dome);color:var(--pc);text-align:center;line-height:1.28;cursor:pointer;pointer-events:auto;will-change:transform;-webkit-tap-highlight-color:transparent;text-shadow:0 0 14px rgba(10,15,30,.95),0 0 3px rgba(10,15,30,.9)}
 .ph .in{display:block;opacity:0;animation:var(--anim,ph-fade) var(--life,12s) ease-in-out forwards}
-.ph.q{font-style:italic;font-weight:400;font-size:clamp(13.5px,1.6vw,17.5px);width:max-content;max-width:min(300px,44%);text-wrap:balance}
+.ph.q{font-style:italic;font-weight:400;font-size:clamp(13.5px,1.6vw,17.5px);width:max-content;max-width:min(250px,44%);text-wrap:balance}
 .ph.a{font-weight:500;font-size:clamp(13px,1.5vw,16px);white-space:nowrap;font-variation-settings:"opsz" 30}
 .ph.b{font-weight:400;font-size:clamp(12.5px,1.4vw,15px);width:max-content;max-width:min(260px,42%);text-wrap:balance}
 .ph.b .in::before{content:"bridge across a divide";display:block;font-family:var(--f-mono);font-style:normal;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;opacity:.75;margin-bottom:2px}
@@ -952,20 +952,20 @@ function domeSpawn(o,now,mode){
   else inn.textContent=it.text;
   el.appendChild(inn); el.setAttribute('aria-label',(it.kind==='q'?'Sit with: ':it.kind==='a'?'Open approach: ':'Bridge story: ')+it.text);
   DOME.el.appendChild(el); const w=el.offsetWidth,h=el.offsetHeight,zones=domeZones(o),W=o.W,H=o.H;
-  for(let t=0;t<60;t++){ const v=randDir(),p=domeProj(o,v); if(p.z>-.25) continue;
+  for(let t=0;t<60;t++){ const v=randDir(),p=domeProj(o,v); if(p.z>-.15) continue;
     const r={x:p.x-w/2,y:p.y-h/2,w,h}; if(r.x<8||r.y<8||r.x+w>W-8||r.y+h>H-8) continue;
     // Keep clear of the shape: first try only spots outside the whole cloud, then allow its sparse rim, never its core.
-    const cr=o.fit/o.dist*1.25*(t<40?1:.62), nx=clamp(W/2,r.x,r.x+w)-W/2, ny=clamp(H/2+o.y0,r.y,r.y+h)-H/2-o.y0; if(nx*nx+ny*ny<cr*cr) continue;
+    const cr=o.fit/o.dist*(t<40?1.1:.6), nx=clamp(W/2,r.x,r.x+w)-W/2, ny=clamp(H/2+o.y0,r.y,r.y+h)-H/2-o.y0; if(nx*nx+ny*ny<cr*cr) continue;
     if(zones.some(z=>rectHit(r,z,10))) continue;
     if(DOME.ph.some(q=>rectHit(r,q.r,18)||(v.x*q.v.x+v.y*q.v.y+v.z*q.v.z)>.94)) continue; // at least ~20° apart on the dome
     el.style.transform=`translate3d(${r.x.toFixed(1)}px,${r.y.toFixed(1)}px,0)`;
     const ph={id:it.id,it,el,v,w,h,r,col:pc,born:now,life,mode,held:false}; DOME.ph.push(ph); markShown(it.id);
-    el.addEventListener('pointerenter',()=>{ph.held=true;el.classList.add('held');}); el.addEventListener('pointerleave',()=>{ph.held=false;el.classList.remove('held');});
+    el.addEventListener('pointerenter',e=>{if(e.pointerType!=='mouse')return;ph.held=true;el.classList.add('held');}); el.addEventListener('pointerleave',()=>{ph.held=false;el.classList.remove('held');});
     return; }
   el.remove(); }
 function domeFrame(o,now){ if(!DOME.el) return; const dt=DOME.last?Math.min(100,now-DOME.last):16; DOME.last=now; if(!reduce) DOME.rot+=dt*.000012;
   const mode=domeMode(), W=o.W, H=o.H, check=(++DOME.tick%12)===0, zones=check?domeZones(o):null;
-  DOME.ph.forEach(ph=>{ if(ph.leaving) return; if(ph.held) ph.born+=dt;
+  DOME.ph.forEach(ph=>{ if(ph.leaving) return; if(ph.held&&(ph.hold=(ph.hold||0)+dt)<15000) ph.born+=dt;
     if(ph.mode!==mode) return domeLeave(ph,true);
     if(now-ph.born>ph.life){ ph.el.remove(); ph.leaving=true; return; }
     const p=domeProj(o,ph.v); ph.r={x:p.x-ph.w/2,y:p.y-ph.h/2,w:ph.w,h:ph.h};

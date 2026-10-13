@@ -36,7 +36,7 @@ def inline_scripts(html):
 
 class DisplayNameTests(unittest.TestCase):
     def test_one_constant_feeds_build_and_alerts(self):
-        self.assertEqual(common.ATLAS_NAME, "World Signal Atlas")
+        self.assertEqual(common.ATLAS_NAME, "Common Ground Atlas")
         self.assertEqual(build.TITLE, common.ATLAS_NAME)
         self.assertIn(common.ATLAS_NAME, notify.render([], "failure", "https://example.org/run", "someone"))
 

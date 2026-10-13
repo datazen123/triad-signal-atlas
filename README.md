@@ -1,4 +1,4 @@
-# World Signal Atlas
+# Common Ground Atlas
 
 An evidence board for how the world's leaders and powers actually relate, and a lab for building peace between them. It started with the United States, China and Russia, now adds the EU, India, Japan and the UK, and is growing toward every power and, later, every people (see `BACKLOG.md`). The board brings together:
 

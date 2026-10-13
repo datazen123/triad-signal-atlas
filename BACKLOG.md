@@ -1,4 +1,4 @@
-# Backlog
+# Backlog: Common Ground Atlas
 
 Future versions, roughly in order. Nothing here is built yet. Data sources listed below are **unverified candidates**: check each one's own site, licence and method before any of it enters `data/curated/`, and follow the usual rule (every entry has a primary source URL; nothing is invented).
 
