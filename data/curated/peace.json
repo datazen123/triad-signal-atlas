@@ -320,9 +320,9 @@
     }
    },
    "src": "Sustained Dialogue Institute",
-   "url": "https://sustaineddialogue.org/",
+   "url": "https://sustaineddialogue.org/chapter-in-ways-out-of-war-peacemakers-int-he-middle-east-and-balkans/",
    "ev": "D",
-   "conf": "check"
+   "conf": "ok"
   },
   {
    "id": "track2",
@@ -488,7 +488,7 @@
    "src": "Analects 13.23 (Chinese Text Project)",
    "url": "https://ctext.org/analects/zi-lu",
    "ev": "C",
-   "conf": "check"
+   "conf": "ok"
   },
   {
    "id": "ubuntu",
@@ -566,10 +566,10 @@
      "prompt": "Apply 'broadly benefit humanity' to one national policy. What changes?"
     }
    },
-   "src": "Korea Framework Act on Education (law.go.kr)",
-   "url": "https://www.law.go.kr/법령/교육기본법",
+   "src": "Framework Act on Education, Art. 2 (교육이념), law.go.kr",
+   "url": "https://www.law.go.kr/법령/교육기본법/제2조",
    "ev": "C",
-   "conf": "check"
+   "conf": "ok"
   },
   {
    "id": "mir",

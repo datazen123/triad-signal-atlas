@@ -40,11 +40,11 @@ The auto-updating version is live at https://datazen123.github.io/triad-signal-a
 ## Current state (as of 2026-10-14)
 - Live on Pages: https://datazen123.github.io/triad-signal-atlas/ (deployed by the workflow; all 8 collectors ok).
 - Merged: Peace Lab (#2), bridges (#3), Peace Lab v2 dome + rename (#5), seven-power channels/sources (#6, includes #1 and #4).
-- Curated data: 116 sources, 76 channels across all 21 pairs of the seven powers plus Multilateral, 49 bridge stories, 75 Peace Lab nodes (72 ok, 3 check: harmony, hongik, sustained-dialogue).
+- Curated data: 116 sources, 76 channels across all 21 pairs of the seven powers plus Multilateral, 49 bridge stories, 75 Peace Lab nodes, all verified (ok).
 - The artifact declares `downloads` and `sample` ("Deepen with Claude" appears when the viewer grants it).
 
 ## Next steps
-1. Verify the last 3 `check` nodes by hand in a normal browser (ctext.org and law.go.kr block automation).
+1. (done 2026-10-14) All Peace Lab nodes verified.
 2. Integration with Record Field, Agora, News Engine and Left Behind Ledger: see the owner's launch answers before starting.
 3. Optional: SMTP and `CONTACT_EMAIL` secrets; move Actions off Node 20; a light theme.
 
