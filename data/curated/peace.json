@@ -295,7 +295,7 @@
    "src": "Sister Cities International",
    "url": "https://sistercities.org/",
    "ev": "D",
-   "conf": "check"
+   "conf": "ok"
   },
   {
    "id": "sustained-dialogue",
@@ -434,7 +434,7 @@
    "src": "West-Eastern Divan Orchestra",
    "url": "https://west-eastern-divan.org/",
    "ev": "D",
-   "conf": "check"
+   "conf": "ok"
   },
   {
    "id": "sport",
@@ -461,7 +461,7 @@
    "src": "International Olympic Committee: Olympic Truce",
    "url": "https://www.olympics.com/ioc/olympic-truce",
    "ev": "D",
-   "conf": "check"
+   "conf": "ok"
   },
   {
    "id": "harmony",
@@ -1178,7 +1178,7 @@
    "src": "UN DDR Resource Centre",
    "url": "https://www.unddr.org/",
    "ev": "C",
-   "conf": "check"
+   "conf": "ok"
   },
   {
    "id": "demining",
@@ -1481,7 +1481,7 @@
    "src": "UN GGE report A/70/174 (2015)",
    "url": "https://docs.un.org/en/A/70/174",
    "ev": "C",
-   "conf": "check"
+   "conf": "ok"
   },
   {
    "id": "open-gov",
@@ -1508,7 +1508,7 @@
    "src": "Open Government Partnership",
    "url": "https://www.opengovpartnership.org/",
    "ev": "D",
-   "conf": "check"
+   "conf": "ok"
   },
   {
    "id": "sesame",
@@ -1533,7 +1533,7 @@
    "src": "SESAME",
    "url": "https://www.sesame.org.jo/",
    "ev": "D",
-   "conf": "check"
+   "conf": "ok"
   },
   {
    "id": "big-science",
@@ -1641,7 +1641,7 @@
    "src": "UNFCCC: The Paris Agreement",
    "url": "https://unfccc.int/process-and-meetings/the-paris-agreement",
    "ev": "C",
-   "conf": "check"
+   "conf": "ok"
   },
   {
    "id": "antarctic",
@@ -1749,7 +1749,7 @@
    "src": "Disaster Diplomacy (Kelman)",
    "url": "https://www.disasterdiplomacy.org/",
    "ev": "E",
-   "conf": "check"
+   "conf": "ok"
   },
   {
    "id": "health-bridge",
