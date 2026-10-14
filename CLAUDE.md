@@ -6,7 +6,7 @@ Common Ground Atlas (formerly Triad Signal Atlas) is an evidence board on how th
 The display name lives in one place: `ATLAS_NAME` in `pipeline/common.py`. `build.py` replaces every `__ATLAS_NAME__` in the template with it, and `notify.py` uses it in alerts. The repo, the Pages URL, the user agent and the localStorage keys keep their old `triad`/`peacelab` names on purpose, so links and saved journals keep working. Everything is one self-contained HTML page (`site/index.html`) built from `template/atlas.html` plus JSON data. A zero-token pipeline (GitHub Actions + standard-library Python) keeps it updated. The owner is Data (Alex Kim), GitHub `datazen123`.
 
 The page is also published as a claude.ai artifact, which is a static snapshot: https://claude.ai/artifact/3gN2WL2M1QJLGAS7r1Wqr9
-The auto-updating version will live at https://datazen123.github.io/triad-signal-atlas/ once the repo is pushed and Pages is on.
+The auto-updating version is live at https://datazen123.github.io/triad-signal-atlas/
 
 ## Owner's standing preferences
 - Use primary, official sources: governments, intergovernmental bodies, universities, academies, peer-reviewed journals, the project's own site. Avoid SEO blogs, AI content farms and "power blogger" sites.
@@ -15,7 +15,7 @@ The auto-updating version will live at https://datazen123.github.io/triad-signal
 - The pipeline must stay zero-token: no AI calls at runtime, standard library only.
 
 ## Layout
-- `data/curated/`: hand-checked evidence, 91 sources, 32 channels, 55 projects and 80 people.
+- `data/curated/`: hand-checked evidence, 116 sources, 76 channels, 55 projects and 80 people.
   - `sources.json`: evidence class A–F, `cov` = countries covered, `topics`.
   - `channels.json`: a dict keyed by id, holding dyad, status, desc, links, asof and note.
   - `projects.json`: start, end, members (US/CN/RU/EU/IN/JP/UK), achieved, url, confidence.
@@ -37,20 +37,16 @@ The auto-updating version will live at https://datazen123.github.io/triad-signal
   - `API_NOTES.md`: what was verified about each upstream API.
 - `.github/workflows/update.yml`: daily cron (06:17 UTC). It runs the tests, then doctor, build, commit, Pages deploy and notify.
 
-## Current state (as of 2026-10-13)
-- The code is complete and committed locally, and all 15 offline tests pass.
-- It has NOT been pushed yet: the GitHub repo `datazen123/triad-signal-atlas` has to be created (empty, public).
-- The collectors have never run against the live APIs. The build environment had no internet, so they were tested only on fixtures shaped from the API docs. Verified live: Federal Register, Comtrade (for China as reporter), Wayback, PortWatch ArcGIS, World Bank. Docs only: OpenAlex, Nobel v2.1, CelesTrak. OFAC failed entirely and was not built.
-- The live panels on the page show "pending" until the first workflow run.
+## Current state (as of 2026-10-14)
+- Live on Pages: https://datazen123.github.io/triad-signal-atlas/ (deployed by the workflow; all 8 collectors ok).
+- Merged: Peace Lab (#2), bridges (#3), Peace Lab v2 dome + rename (#5), seven-power channels/sources (#6, includes #1 and #4).
+- Curated data: 116 sources, 76 channels across all 21 pairs of the seven powers plus Multilateral, 49 bridge stories, 75 Peace Lab nodes (72 ok, 3 check: harmony, hongik, sustained-dialogue).
+- The artifact declares `downloads` and `sample` ("Deepen with Claude" appears when the viewer grants it).
 
-## Next steps, in order
-1. Create the GitHub repo, push `main`, set Settings → Pages → Source to "GitHub Actions", and set Actions workflow permissions to read/write.
-2. Run `python pipeline/doctor.py --force` locally (with internet) or trigger the workflow with force. Fix any collector whose real response shape differs from the fixtures, and update the fixtures to match.
-3. In particular, check `undesa_migrants.py` header detection on the real 2024 xlsx, and the field paths in `nobel_bridges.py`.
-4. Fill the 14 unconfirmed channels in `channels.json` with official primary links: US–CN Defense Telephone Link, Lima 2024 nuclear-control statement, S&T Agreement renewal, US–RU NRRC/launch notification, INCSEA, ISS seat swap, Istanbul embassy talks, CN–RU joint air patrols, naval and coast guard patrols, the 2009 launch-notification agreement (extension: Dec 2020 or 2021?), Tianwan 7/8 and Xudapu 3/4, local-currency settlement share, WMO, Cospas-Sarsat. Also replace the Sputnik-only source for MMCA 2026 and the Xinhua-only sources for New START, Ukraine talks and the NPT RevCon 2026 with official pages where possible.
-5. Upgrade the 8 medium-confidence people and 13 medium-confidence projects to primary sources. Five people currently rely on Wikipedia mirrors or news sites: Pei, Kissinger, Leonov, Rostropovich, Yau.
-6. Optional: add the SMTP secrets for direct email alerts, and a `CONTACT_EMAIL` secret for OpenAlex's polite pool.
-7. After a successful run, republish `site/index.html` to the claude.ai artifact above so the snapshot shows live data.
+## Next steps
+1. Verify the last 3 `check` nodes by hand in a normal browser (ctext.org and law.go.kr block automation).
+2. Integration with Record Field, Agora, News Engine and Left Behind Ledger: see the owner's launch answers before starting.
+3. Optional: SMTP and `CONTACT_EMAIL` secrets; move Actions off Node 20; a light theme.
 
 ## Conventions
 - After editing the template or data, run `python pipeline/build.py`, then syntax-check the embedded script before committing:
