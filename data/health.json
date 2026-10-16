@@ -1,5 +1,5 @@
 {
- "last_run": "2026-10-15T11:25:50+00:00",
+ "last_run": "2026-10-16T11:20:12+00:00",
  "collectors": {
   "openalex": {
    "title": "Research co-authorship (OpenAlex)",
@@ -31,13 +31,13 @@
    "title": "US Entity List actions (Federal Register)",
    "every_days": 3,
    "source_url": "https://www.federalregister.gov/developers/documentation/api/v1",
-   "last_attempt": "2026-10-12T17:12:54+00:00",
-   "seconds": 0.3,
+   "last_attempt": "2026-10-16T11:20:11+00:00",
+   "seconds": 0.4,
    "status": "ok",
    "error": null,
    "trace": null,
    "consecutive_failures": 0,
-   "last_success": "2026-10-12T17:12:55+00:00",
+   "last_success": "2026-10-16T11:20:12+00:00",
    "stale": false
   },
   "comtrade": {
