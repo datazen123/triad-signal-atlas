@@ -2,15 +2,100 @@
  "name": "links",
  "title": "Evidence link health",
  "source_url": "https://archive.org/help/wayback_api.php",
- "collected_at": "2026-10-12T17:21:39+00:00",
+ "collected_at": "2026-10-20T11:39:15+00:00",
  "payload": {
   "status": {
+   "http://council.gov.ru/events/news/130890/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "http://cpc.people.com.cn/GB/64107/65708/65722/4444435.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "http://en.kremlin.ru/acts/news/78748": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "http://en.kremlin.ru/supplement/6426": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "http://eng.mod.gov.cn": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
    },
+   "http://eng.mod.gov.cn/2025xb/N/JE/16470142.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "http://eng.mod.gov.cn/2025xb/N/T/16423311.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "http://eng.mod.gov.cn/2025xb/N/T/16426188.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "http://eng.mod.gov.cn/2025xb/N/T/16464949.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "http://eng.mod.gov.cn/2025xb/N/T/16473492.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "http://eng.mod.gov.cn/xb/News_213114/NewsRelease/16328897.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "http://eng.mod.gov.cn/xb/News_213114/TopStories/16408897.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "http://government.ru/announcements/42770/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "http://government.ru/news/52428/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "http://news.bbc.co.uk/2/hi/asia-pacific/1969202.stm": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "http://news.bbc.co.uk/2/hi/asia-pacific/2117211.stm": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "http://news.bbc.co.uk/2/hi/asia-pacific/453309.stm": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "http://publication.pravo.gov.ru": {
+    "state": "unverifiable",
+    "code": 405,
+    "dead_streak": 0
+   },
+   "http://publication.pravo.gov.ru/document/0001202512150025": {
     "state": "unverifiable",
     "code": 405,
     "dead_streak": 0
@@ -25,7 +110,62 @@
     "code": null,
     "dead_streak": 0
    },
+   "http://www.arats.com.cn/xieyi/201305/t20130514_4203529.htm": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "http://www.mod.gov.cn/gfbw/zt/gfbwzt/2018_213791/mhyxlsp/4838595.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "http://www.mofcom.gov.cn": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://2001-2009.state.gov/e/eeb/rls/fs/30937.htm": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://2009-2017.state.gov/t/avc/trty/102360.htm": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://2009-2017.state.gov/t/avc/trty/187150.htm": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://2009-2017.state.gov/t/isn/4785.htm": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://2009-2017.state.gov/t/isn/4791.htm": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://2017-2021.state.gov/cuba-sanctions/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://2021-2025.state.gov/amendment-and-extension-of-the-u-s-prc-science-and-technology-agreement-sta/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://2021-2025.state.gov/history-of-the-national-and-nuclear-risk-reduction-center/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://2021-2025.state.gov/u-s-countermeasures-in-response-to-russias-violations-of-the-new-start-treaty": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -55,7 +195,42 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://arxiv.org/abs/2210.15723": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://asianews.network/mainland-china-offers-aid-to-taiwan-after-powerful-earthquake/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://assets.publishing.service.gov.uk/media/654a5dede70413000ffc4986/TS_38.2023_UK_Japan_Agreement_Facilitation_Reciprocal_Access_Self_Defense_Forces_and_Armed_Forces.pdf": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://assets.publishing.service.gov.uk/media/6762c109e6ff7c8a1fde9ab4/TS_98.2024_Convention_Establishment_GCAP_International_Government_Organisation.pdf": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://assets.publishing.service.gov.uk/media/6ab3f7c8a9c3d267bcccedd6/TS_41.2026_UK_USA_Amendment_Agreement_Cooperation_Atomic_Energy_Mutual_Defense_Purposes.pdf": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://barenboim-said.org/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://bidenwhitehouse.archives.gov/briefing-room/statements-releases/2022/01/03/p5-statement-on-preventing-nuclear-war-and-avoiding-arms-races/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://bidenwhitehouse.archives.gov/briefing-room/statements-releases/2024/11/16/readout-of-president-joe-bidens-meeting-with-president-xi-jinping-of-the-peoples-republic-of-china-3/": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -70,7 +245,7 @@
     "code": null,
     "dead_streak": 0
    },
-   "https://blog.google/around-the-globe/google-asia/google-ai-china-center/": {
+   "https://blog.google/company-news/inside-google/around-the-globe/google-asia/google-ai-china-center/": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -100,12 +275,12 @@
     "code": null,
     "dead_streak": 0
    },
-   "https://china.usc.edu/node/2611": {
-    "state": "dead",
-    "code": 404,
-    "dead_streak": 3
-   },
    "https://ciss.tsinghua.edu.cn": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://citizensassembly.ie/": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -120,6 +295,21 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://commission.europa.eu/topics/trade/eu-india-trade-agreement_en": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://community.wmo.int/site/knowledge-hub/programmes-and-initiatives/operational-information-service-ois/rths-country": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://compdemocracy.org/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://comtradeplus.un.org": {
     "state": "ok",
     "code": null,
@@ -130,7 +320,27 @@
     "code": 403,
     "dead_streak": 0
    },
+   "https://ctext.org/analects/zi-lu": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://cup.columbia.edu/book/why-civil-resistance-works/9780231156837": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://curia.europa.eu/site/upload/docs/application/pdf/2025-09/cp250106en.pdf": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://data.bis.org": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://data.ecb.europa.eu": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -141,6 +351,11 @@
     "dead_streak": 0
    },
    "https://dataspace.copernicus.eu": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://digital-strategy.ec.europa.eu/en/library/joint-statement-third-meeting-eu-india-trade-and-technology-council": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -160,12 +375,202 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://docs.un.org/en/A/70/174": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://documents.un.org/doc/undoc/gen/n25/175/44/pdf/n2517544.pdf": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://doi.org/10.1017/S0140525X10000968": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://doi.org/10.1037/0022-3514.90.5.751": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://doi.org/10.1037/0033-2909.85.4.772": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://doi.org/10.1037/cns0000086": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://doi.org/10.1037/pspa0000115": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://doi.org/10.1038/s41586-021-03344-2": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://doi.org/10.1038/s41586-024-07335-x": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://doi.org/10.1073/pnas.1804840115": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://doi.org/10.1086/267990": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://doi.org/10.1111/ajps.12036": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://doi.org/10.1126/sciadv.abo6254": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://doi.org/10.1126/science.7466396": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://doi.org/10.1126/science.aad9713": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://doi.org/10.1162/003355305775097542": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://doi.org/10.1162/isec.2008.33.1.7": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://doi.org/10.1162/isec_a_00351": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://doi.org/10.1177/002234336900600301": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://doi.org/10.1177/0146167217697695": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://doi.org/10.1177/016146811912101102": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://doi.org/10.1177/0956797612469537": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://doi.org/10.2307/3218711": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://dpaa-mil.sites.crmforce.mil/dpaaProfile?id=a0Jt000000ffRF3EAM": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://ds.iris.edu": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
    },
    "https://earthexplorer.usgs.gov": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://ec.europa.eu/commission/presscorner/detail/en/ac_25_1908": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2122": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_955": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://ec.europa.eu/commission/presscorner/home/en": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://ec.europa.eu/eurostat/web/international-trade-in-goods": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://en.wiktionary.org/wiki/%D0%BC%D0%B8%D1%80": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://en.wiktionary.org/wiki/%D7%A9%D7%9C%D7%95%D7%9D": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://en.wiktionary.org/wiki/%D8%B3%D9%84%D8%A7%D9%85": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://en.wiktionary.org/wiki/%E0%A4%B6%E0%A4%BE%E0%A4%82%E0%A4%A4%E0%A4%BF": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://en.wiktionary.org/wiki/%E5%92%8C%E5%B9%B3": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://en.wiktionary.org/wiki/%E5%B9%B3%E5%92%8C": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://en.wiktionary.org/wiki/%ED%8F%89%ED%99%94": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://en.wiktionary.org/wiki/Frieden": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://en.wiktionary.org/wiki/pax": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -180,10 +585,20 @@
     "code": null,
     "dead_streak": 0
    },
-   "https://english.cas.cn/newsroom/cas_media/202408/t20240806_681340.shtml": {
-    "state": "dead",
-    "code": 404,
-    "dead_streak": 3
+   "https://english.president.gov.tw/NEWS/4628": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://english.president.gov.tw/NEWS/4779": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://enrs.eu/news/letter-of-reconciliation-of-the-polish-bishops-to-the-german-bishops": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
    },
    "https://epoch.ai": {
     "state": "ok",
@@ -196,6 +611,11 @@
     "dead_streak": 0
    },
    "https://eto.tech": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://eur-lex.europa.eu": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -215,6 +635,16 @@
     "code": 403,
     "dead_streak": 0
    },
+   "https://finance.ec.europa.eu/eu-and-world/sanctions-restrictive-measures/sanctions-adopted-following-russias-military-aggression-against-ukraine_en": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://finance.ec.europa.eu/news/eu-adopts-21st-package-sanctions-against-russia-2026-07-23_en": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://finding-aids.library.umkc.edu/agents/people/601": {
     "state": "ok",
     "code": null,
@@ -230,9 +660,29 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://fulbrightprogram.org/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://futurium.ec.europa.eu/en/node/5315": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
    "https://gardnermuseum.emuseum.com/people/1281/okakura-kakuzo": {
     "state": "unverifiable",
     "code": 403,
+    "dead_streak": 0
+   },
+   "https://github.com/twitter/communitynotes": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://global.jaxa.jp": {
+    "state": "ok",
+    "code": null,
     "dead_streak": 0
    },
    "https://globalaffairs.org": {
@@ -245,17 +695,27 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://globalizationandhealth.biomedcentral.com/articles/10.1186/s12992-014-0071-y": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://globe.adsbexchange.com": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
    },
-   "https://gulfnews.com/world/when-russian-and-us-scientists-worked-together-on-vaccines-1.1597530992539": {
+   "https://hai.stanford.edu/ai-index": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
    },
-   "https://hai.stanford.edu/ai-index": {
+   "https://hansard.parliament.uk": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://hbr.org/2007/09/performing-a-project-premortem": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -280,12 +740,32 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://home-affairs.ec.europa.eu/policies/international-affairs/engagement-partner-countries/russia_en": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://home.cern/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://home.cern/science/physics/higgs-boson": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
    },
    "https://home.treasury.gov/data/treasury-international-capital-tic-system": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://hpmmuseum.jp/?lang=eng": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://iawn.net/": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -300,9 +780,54 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://india.un.org/en/311310-un-secretary-general-statement-expiration-treaty-measures-further-reduction-and-limitation": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://interpret.csis.org/translations/general-secretary-xi-jinping-meets-with-joint-delegation-of-taiwan-peaceful-reunification-groups/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://japan.kantei.go.jp": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://japan.kantei.go.jp/101_kishida/statement/202203/_00028.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://japan.kantei.go.jp/103/diplomatic/202507/23eu.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://japan.kantei.go.jp/104/diplomatic/202510/28usa.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://japan.kantei.go.jp/105/diplomatic/202603/20usa.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://japan.kantei.go.jp/97_abe/statement/201612/1220678_11021.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://journal.juilliard.edu/journal/van-cliburn-1934-2013": {
     "state": "unverifiable",
     "code": 403,
+    "dead_streak": 0
+   },
+   "https://kokkai.ndl.go.jp": {
+    "state": "ok",
+    "code": null,
     "dead_streak": 0
    },
    "https://kremlin.ru": {
@@ -315,12 +840,32 @@
     "code": null,
     "dead_streak": 0
    },
-   "https://library.um.edu.mo/resources/electronic_resources/macau_music/musician/m01": {
+   "https://lib.taiwan.cn/2015wenxian/202101/t20210119_12319021.htm": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://lib.taiwan.cn/shetai/201109/t20110921_2075833.htm": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
    },
    "https://ligo.org/ligo-virgo-kagra-to-resume-and-extend-the-o4-run/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://longnow.org/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://m.koreaherald.com/article/1566985": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://main.un.org/securitycouncil/en/content/current-members": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -345,12 +890,42 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://news.pts.org.tw/article/401132": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://news.sina.com.cn/c/2002-01-24/455649.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://news.tvbs.com.tw/english/2451354": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://news.un.org/en/story/2025/09/1165901": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
    },
    "https://newscenter.lbl.gov/2020/12/11/scientists-say-farewell-to-daya-bay-site-proceed-with-final-data-analysis/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://newtalk.tw/news/view/2011-10-03/18332": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://newyork.china-consulate.gov.cn/chn/fyrth/200805/t20080520_4262242.htm": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://niigata.china-consulate.gov.cn/xwdt/202103/t20210308_10030400.htm": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -385,7 +960,27 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://obamawhitehouse.archives.gov/the-press-office/2014/12/17/statement-president-cuba-policy-changes": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://obamawhitehouse.archives.gov/the-press-office/2015/07/01/presidential-letter-re-establishing-diplomatic-relations-and-permanent": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://obamawhitehouse.archives.gov/the-press-office/2016/05/27/remarks-President-obama-and-prime-minister-abe-japan-hiroshima-peace": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://oceans-and-fisheries.ec.europa.eu/news/arctic-agreement-prevent-unregulated-fishing-enters-force-2021-06-25_en": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://oeil.secure.europarl.europa.eu": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -430,17 +1025,52 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://peacemaker.un.org/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://pib.gov.in": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://pib.gov.in/PressReleseDetailm.aspx?PRID=1591113": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
    "https://planet4589.org": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
    },
-   "https://pmc.ncbi.nlm.nih.gov/articles/PMC10129129": {
+   "https://plato.stanford.edu/entries/original-position/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://pmc.ncbi.nlm.nih.gov/articles/PMC6945219/": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
    },
    "https://pmc.ncbi.nlm.nih.gov/articles/PMC8888238": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://pmc.ncbi.nlm.nih.gov/articles/PMC8888238/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://policy.trade.ec.europa.eu/eu-trade-relationships-country-and-region/countries-and-regions/india/eu-india-agreements_en": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://policy.trade.ec.europa.eu/news/joint-statement-united-states-european-union-framework-agreement-reciprocal-fair-and-balanced-trade-2025-08-21_en": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -465,9 +1095,19 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://psychclassics.yorku.ca/Sherif/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://publichealth.jhu.edu/about/history/heroes-of-public-health/donald-a-henderson": {
     "state": "unverifiable",
     "code": 403,
+    "dead_streak": 0
+   },
+   "https://pugwash.org/": {
+    "state": "ok",
+    "code": null,
     "dead_streak": 0
    },
    "https://relstud-hist.spbu.ru/en/articles/alekseev-vasily": {
@@ -476,6 +1116,16 @@
     "dead_streak": 0
    },
    "https://research.un.org/en/docs/sc/quick/veto": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://researchonline.lse.ac.uk/id/eprint/24786": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2025": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -490,6 +1140,21 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://ru.usembassy.gov/april-10th-meeting-in-istanbul/": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://ru.usembassy.gov/february-27-meeting-in-istanbul/": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://sansad.in/ls": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://sci.esa.int/web/rosetta/-/31242-rosetta-disk-goes-back-to-the-future": {
     "state": "ok",
     "code": null,
@@ -500,7 +1165,27 @@
     "code": null,
     "dead_streak": 0
    },
-   "https://sputniknews.cn/20260602/1071625764.html": {
+   "https://science.nasa.gov/mission/dart/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://sistercities.org/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://soliya.net/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2025/may/doc2025512553601.pdf": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://sustaineddialogue.org/chapter-in-ways-out-of-war-peacemakers-int-he-middle-east-and-balkans/": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -510,13 +1195,48 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://tcdata.tzuchi-org.tw/files/public/public.test/2024/04/20231202-235718277-2980.pdf": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://tdllib.sjtu.edu.cn/lzd/czqh.htm": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://thebulletin.org": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
    },
+   "https://tradestat.commerce.gov.in": {
+    "state": "unverifiable",
+    "code": 405,
+    "dead_streak": 0
+   },
    "https://treaties.un.org": {
     "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=XXVI-4&chapter=26&clang=_en": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://ukraine.ohchr.org/en/Report-on-the-Human-Rights-Situation-in-Ukraine-1-June-30-November-2025": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://unfccc.int/process-and-meetings/the-paris-agreement": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://unikorea.go.kr/web/eng_unikorea/bbs/bbs_0000000000000034/54268": {
+    "state": "unreachable",
     "code": null,
     "dead_streak": 0
    },
@@ -530,12 +1250,27 @@
     "code": null,
     "dead_streak": 0
    },
-   "https://usinfo.org/wf-archive/2004/040330/epf206.htm": {
+   "https://ustr.gov": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
    },
-   "https://ustr.gov": {
+   "https://viewsforecasting.org/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://virological.org/t/novel-2019-coronavirus-genome/319": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://vn.usembassy.gov/fact-sheets-dioxin-remediation-at-bien-hoa-airbase-area/": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://west-eastern-divan.org/": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -550,17 +1285,22 @@
     "code": null,
     "dead_streak": 0
    },
-   "https://wmo.int/node/11383": {
+   "https://wmo.int/media/news/argo-ocean-floats-achieve-2-million-profiles-20-years-support-new-research-ocean-heat": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
    },
-   "https://wmo.int/node/14000": {
+   "https://wmo.int/media/news/wmo-overhauls-data-exchange-policy": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
    },
    "https://worldview.earthdata.nasa.gov": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.accesstoinsight.org/tipitaka/kn/snp/snp.1.08.amar.html": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -573,6 +1313,16 @@
    "https://www.amsa.gov.au/safety-navigation/search-and-rescue/search-malaysia-airlines-flight-mh370": {
     "state": "ok",
     "code": null,
+    "dead_streak": 0
+   },
+   "https://www.apminebanconvention.org/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.armscontrol.org/act/2013-07/news/nunn-lugar-program-scaled-back": {
+    "state": "unverifiable",
+    "code": 403,
     "dead_streak": 0
    },
    "https://www.armscontrol.org/factsheets/intermediate-range-nuclear-forces-inf-treaty-glance": {
@@ -590,12 +1340,22 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://www.ats.aq/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://www.ats.aq/devAS/Parties?lang=e": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
    },
    "https://www.ats.aq/e/antarctictreaty.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.bankofengland.co.uk/boeapps/database": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -620,9 +1380,24 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://www.caea.gov.cn/n6760338/n6760342/c10768957/content.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://www.cbr.ru/eng/statistics": {
     "state": "ok",
     "code": null,
+    "dead_streak": 0
+   },
+   "https://www.cbsnews.com/news/quake-sorrow-unites-rivals/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.ccg.gov.cn/gjhz/202410/t20241017_2520.html": {
+    "state": "error",
+    "code": 418,
     "dead_streak": 0
    },
    "https://www.census.gov/foreign-trade/balance/c5700.html": {
@@ -631,6 +1406,11 @@
     "dead_streak": 0
    },
    "https://www.chinanews.com.cn/gn/2023/02-08/9950028.shtml": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.chinanews.com.cn/tw/tw-dlyw/news/2009/08-19/1824825.shtml": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -645,6 +1425,21 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://www.civilnet.am/en/news/691652/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.cmp-cyprus.org/press-release/the-government-of-ireland-donates-e30000-to-cmp/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.cna.com.tw/news/acn/202609020085.aspx": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://www.cnsa.gov.cn/english/n6465652/n6465653/c6812150/content.html": {
     "state": "ok",
     "code": null,
@@ -655,7 +1450,7 @@
     "code": null,
     "dead_streak": 0
    },
-   "https://www.collectspace.com/news/news-101119a-cosmonaut-alexei-leonov-obituary.html": {
+   "https://www.cnvc.org/": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -665,7 +1460,17 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://www.copernicus.eu/en": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://www.cospas-sarsat.int": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.cospas-sarsat.int/en/about-us/participants": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -673,6 +1478,11 @@
    "https://www.courtlistener.org": {
     "state": "unreachable",
     "code": null,
+    "dead_streak": 0
+   },
+   "https://www.crisisgroup.org/alr/africa/ethiopia-eritrea/pulling-ethiopia-and-eritrea-back-from-war": {
+    "state": "unverifiable",
+    "code": 403,
     "dead_streak": 0
    },
    "https://www.ctbto.org": {
@@ -690,9 +1500,39 @@
     "code": 403,
     "dead_streak": 0
    },
+   "https://www.customs.go.jp/toukei/info/index_e.htm": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://www.defense.gov": {
     "state": "unverifiable",
     "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.defense.gov/News/News-Stories/Article/Article/1586122/us-receives-fallen-service-members-remains-from-north-korea/": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.disasterdiplomacy.org/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.disasterdiplomacy.org/chinataiwan.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.disasterdiplomacy.org/greeceturkey.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.disasterdiplomacy.org/indiapakistan.html": {
+    "state": "ok",
+    "code": null,
     "dead_streak": 0
    },
    "https://www.dtra.mil/Missions/Partnering/Cooperative-Threat-Reduction-Program/": {
@@ -700,7 +1540,47 @@
     "code": 403,
     "dead_streak": 0
    },
+   "https://www.econlib.org/archives/2011/06/the_ideological.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.eda.admin.ch/en/switzerland-is-committed-to-peace-in-ukraine": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.eeas.europa.eu/delegations/china/25th-eu-china-summit-eu-press-release_en": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.eeas.europa.eu/eeas/press-material_en": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.eeas.europa.eu/russia/european-union-and-russian-federation_en": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.eeas.europa.eu/sites/default/files/2025/documents/250723_EU-Japan-2025-07_FINAL_0.pdf": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.eeas.europa.eu/sites/default/files/documents/2024/EU-Japan%20Security%20and%20Defence%20Partnership.pdf": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://www.eia.gov/uranium/marketing/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.environmentalpeacebuilding.org/": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -715,12 +1595,57 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://www.ettoday.net/news/20180512/1168072.htm": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://www.federalregister.gov": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
    },
    "https://www.fmprc.gov.cn": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.fmprc.gov.cn/eng/gjhdq_665435/2675_665437/2711_663426/2713_663430/202508/t20250820_11692969.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.fmprc.gov.cn/eng/wjbzhd/202608/t20260826_12010652.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.fmprc.gov.cn/eng/xw/fyrbt/202510/t20251024_11740246.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.fmprc.gov.cn/eng/xw/fyrbt/202605/t20260525_11917325.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.fmprc.gov.cn/eng/xw/zyxw/202601/t20260129_11847645.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.fmprc.gov.cn/eng/xw/zyxw/202609/t20260913_12021206.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.fmprc.gov.cn/mfa_eng/xw/fyrbt/202511/t20251119_11756196.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.fmprc.gov.cn/mfa_eng/xw/zyxw/202411/t20241117_11527672.html": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -735,9 +1660,14 @@
     "code": null,
     "dead_streak": 0
    },
-   "https://www.foreign.senate.gov/press/dem/release/lugar-applauds-the-secure-storage-of-spent-plutonium-fuel-in-kazakhstan": {
+   "https://www.fmprc.gov.cn/web/ziliao_674904/zt_674979/ywzt_675099/2008zt_675545/hjtdhhy_675549/200807/t20080708_7957901.shtml": {
     "state": "ok",
     "code": null,
+    "dead_streak": 0
+   },
+   "https://www.foreign.senate.gov/press/dem/release/lugar-applauds-the-secure-storage-of-spent-plutonium-fuel-in-kazakhstan": {
+    "state": "unverifiable",
+    "code": 403,
     "dead_streak": 0
    },
    "https://www.gavi.org/news/media-room/covid-19-vaccinations-shift-regular-immunisation-covax-draws-close": {
@@ -750,12 +1680,157 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://www.genome.gov/about-genomics/educational-resources/fact-sheets/human-genome-project": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.globalsecurity.org/military/library/news/2003/12/mil-031229-afps01.htm": {
+    "state": "error",
+    "code": 402,
+    "dead_streak": 0
+   },
+   "https://www.globalsecurity.org/wmd/library/news/pakistan/2005/pakistan-051116-voa02.htm": {
+    "state": "error",
+    "code": 402,
+    "dead_streak": 0
+   },
+   "https://www.globalsecurity.org/wmd/library/news/taiwan/1999/990921-prc.htm": {
+    "state": "error",
+    "code": 402,
+    "dead_streak": 0
+   },
+   "https://www.globalsecurity.org/wmd/library/news/taiwan/1999/991001.htm": {
+    "state": "error",
+    "code": 402,
+    "dead_streak": 0
+   },
+   "https://www.globalsecurity.org/wmd/library/news/taiwan/2009/taiwan-090512-cna01.htm": {
+    "state": "error",
+    "code": 402,
+    "dead_streak": 0
+   },
+   "https://www.globalsecurity.org/wmd/library/news/taiwan/2015/taiwan-151230-cna02.htm": {
+    "state": "error",
+    "code": 402,
+    "dead_streak": 0
+   },
+   "https://www.gov.cn/lianbo/bumen/202412/content_6992558.htm": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.gov.cn/xinwen/2021-05/19/content_5608935.htm": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.gov.uk/government/collections/bilateral-and-multilateral-treaties-published-in-the-treaty-series-2018": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.gov.uk/government/news/historic-uk-india-free-trade-agreement-is-now-in-effect": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.gov.uk/government/news/india-uk-joint-statement-9-october-2025": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.gov.uk/government/news/joint-statement-on-the-withdrawal-agreement-joint-committee-and-trade-and-cooperation-agreement-partnership-council-meetings-2-february-2026": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.gov.uk/government/news/pm-meeting-with-president-xi-jinping-of-china-29-january-2026": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.gov.uk/government/news/statement-foreign-office-summons-russian-ambassador-2-february-2026": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.gov.uk/government/news/statement-foreign-office-summons-russian-ambassador-29th-april-2026": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.gov.uk/government/organisations/foreign-commonwealth-development-office": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.gov.uk/government/publications/2025-uk-china-economic-and-financial-dialogue-policy-outcomes": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://www.gov.uk/government/publications/ai-safety-summit-2023-the-bletchley-declaration/the-bletchley-declaration-by-countries-attending-the-ai-safety-summit-1-2-november-2023": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
    },
+   "https://www.gov.uk/government/publications/joint-readout-of-the-first-uk-china-financial-working-group/first-uk-china-financial-working-group-joint-readout": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.gov.uk/government/publications/list-of-russia-sanctions-designations-16-june-2026": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.gov.uk/government/publications/the-uk-sanctions-list": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.gov.uk/government/publications/uk-india-technology-security-initiative-factsheet/uk-india-technology-security-initiative-factsheet": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.gov.uk/government/publications/ukeu-summit-key-documentation": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.gov.uk/government/publications/ukrussian-federation-protocol-of-amendments-to-agreement-concerning-prevention-of-incidents-at-sea-beyond-the-territorial-sea-15-july-1986-cs-russi": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.gov.uk/government/speeches/pm-statement-to-the-house-of-commons-12-october-2026": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.gov.za/documents/constitution/constitution-republic-south-africa-act-200-1993": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.govinfo.gov/app/details/DCPD-202500855": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.govinfo.gov/app/details/GOVPUB-S-PURL-gpo34414": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://www.govinfo.gov/app/details/PLAW-118publ62": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.govinfo.gov/content/pkg/DCPD-202500861/html/DCPD-202500861.htm": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -770,6 +1845,26 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://www.gutenberg.org/ebooks/50922": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.gwytb.gov.cn/xwdt/xwfb/xwfbh/201101/t20110106_1679287.htm": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.gwytb.gov.cn/zt/zylszl/lhjl/la2008q/wangu/1st/201101/t20110108_1684732.htm": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.gwytb.gov.cn/zt/zylszl/tufashijian/201802/t20180208_11922853.htm": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://www.iaea.org": {
     "state": "unverifiable",
     "code": 403,
@@ -778,6 +1873,41 @@
    "https://www.iaea.org/about/governance/board-of-governors": {
     "state": "unverifiable",
     "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.icj-cij.org/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.icrc.org/en/article/historical-timeline-icrc-geneva-conventions-korea": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.icrc.org/en/document/falkland-islands-islas-malvinas-humanitarian-plan-identify-argentine-soldiers-buried-darwin": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.icrc.org/en/document/falklandmalvinas-islands-icrc-presents-argentina-and-united-kingdom-results-humanitarian": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.insurancejournal.com/news/international/2003/12/31/35341.htm": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.ipinst.org/wp-content/uploads/2015/06/IPI-E-pub-Reimagining-Peacemaking.pdf": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.isro.gov.in": {
+    "state": "ok",
+    "code": null,
     "dead_streak": 0
    },
    "https://www.iter.org": {
@@ -796,6 +1926,26 @@
     "dead_streak": 0
    },
    "https://www.jcs.mil.kr": {
+    "state": "unreachable",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.jfa.maff.go.jp/j/press/index.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.jfa.maff.go.jp/j/press/kokusai/251225.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.jfa.maff.go.jp/j/press/kokusai/260320.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.jfa.maff.go.jp/j/press/kokusai/260619.html": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -810,8 +1960,23 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://www.justice.gov.za/trc/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://www.k-state.edu/landon/speakers/mike-mansfield/": {
     "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.ksat.com/news/world/2023/02/12/earthquake-diplomacy-greek-foreign-minister-visits-turkey/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.law.go.kr/법령/교육기본법/제2조": {
+    "state": "error",
     "code": null,
     "dead_streak": 0
    },
@@ -821,6 +1986,36 @@
     "dead_streak": 0
    },
    "https://www.lindahall.org/about/news/scientist-of-the-day/matteo-ricci/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.mea.gov.in": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk09/202608/t20260813_1163971.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.mfa.am/en/press-conference/2023/02/15/fms_armenia_t%C3%BCrkiye/11865": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.mfa.gov.cn/eng/xw/fyrbt/202605/t20260507_11906405.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.mfa.gov.cn/eng/xw/wjbxw/202608/t20260807_12000162.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.mfa.gov.cn/eng/xw/zyxw/202511/t20251101_11745380.html": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -855,9 +2050,39 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://www.mfa.gov.cn/wjdt_674879/gjldrhd_674881/202507/t20250703_11664024.shtml": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.mfa.gr/en/minister-of-foreign-affairs-nikos-dendias-interview-with-ta-nea-savvatokyriako-newspaper-and-journalist-alexandra-fotaki-18022023/": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.mkgandhi.org/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://www.mnd.gov.tw": {
     "state": "unverifiable",
     "code": 405,
+    "dead_streak": 0
+   },
+   "https://www.mod.go.jp/j/approach/exchange/area/2023/pdf/20230331_chn-j.pdf": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.mod.go.jp/j/approach/exchange/area/2023/pdf/20230516_chn-j.pdf": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.mod.go.jp/j/press/wp/wp2026/backdata/siryo53.csv": {
+    "state": "ok",
+    "code": null,
     "dead_streak": 0
    },
    "https://www.mod.go.jp/js/press/index.html": {
@@ -865,7 +2090,52 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://www.mofa.go.jp": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.mofa.go.jp/announce/announce/2008/5/1180016_1010.html": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.mofa.go.jp/j_info/visit/incidents/index2.html": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.mofa.gov.ae/en/MediaHub/News/2026/1/23/UAE-Russia-Ukraine-United-States": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.mofa.gov.ae/en/MediaHub/News/2026/2/4/UAE-Tripartite-talks": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.mofcom.gov.cn/syxwfb/art/2026/art_663946a91806452182d02b3f0f62d4fc.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://www.nact.jp/english/artcommons/user/detail/26382": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.nam.ac.uk/explore/christmas-ww1": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.nasa.gov/general/nasas-campaign-to-return-to-the-moon-with-global-partners/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.nasa.gov/history/45-years-ago-historic-handshake-in-space/": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -890,12 +2160,27 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://www.nasa.gov/international-space-station/space-station-international-cooperation": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
    },
    "https://www.nasa.gov/news-release/nasa-administrator-pays-tribute-to-space-pioneer-thomas-stafford": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.nasa.gov/news-release/nasa-shares-spacex-crew-14-assignments-for-space-station-mission/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.nasa.gov/wp-content/uploads/2023/10/nac-oct2022-iss-final2.pdf": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -910,27 +2195,12 @@
     "code": null,
     "dead_streak": 0
    },
-   "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5876186/": {
-    "state": "ok",
-    "code": null,
-    "dead_streak": 0
-   },
    "https://www.news.cn": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
    },
-   "https://www.news.cn/20260525/889a1f7101dc4dd1aeafbd55f6814d3d/c.html": {
-    "state": "ok",
-    "code": null,
-    "dead_streak": 0
-   },
    "https://www.news.cn/world/20260205/74c3432ca6e445deab59a0da8cbf8616/c.html": {
-    "state": "ok",
-    "code": null,
-    "dead_streak": 0
-   },
-   "https://www.news.cn/world/20260227/9755b93a3cd0473f980465d241127deb/c.html": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -965,6 +2235,11 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/facts/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://www.nobelprize.org/prizes/medicine/1968/khorana/facts/": {
     "state": "ok",
     "code": null,
@@ -976,6 +2251,11 @@
     "dead_streak": 0
    },
    "https://www.nobelprize.org/prizes/peace/1995/rotblat/biographical/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.nobelprize.org/prizes/peace/1995/summary/": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -1015,6 +2295,11 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://www.npr.org/sections/thetorch/2018/02/10/584749102/korean-womens-hockey-team-presents-a-unified-front-as-it-takes-to-the-ice": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://www.nri.cam.ac.uk/?p=170": {
     "state": "ok",
     "code": null,
@@ -1025,7 +2310,27 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://www.ofaj.org/institution/lhistoire-de-loffice-franco-allemand-pour-la-jeunesse": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.olympics.com/ioc/olympic-truce": {
+    "state": "unreachable",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.ons.gov.uk/economy/nationalaccounts/balanceofpayments": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://www.opcw.org/media-centre/news/2014/07/transloading-syrian-chemicals-cape-ray-completed-without-incident-port": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.opengovpartnership.org/": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -1035,12 +2340,82 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://www.osce.org/fsc/86597": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.peaceagreements.org/agreements/2097/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.peaceparks.org/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://www.pewresearch.org": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
    },
+   "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2184622&reg=3&lang=2": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2274280&lang=2&reg=48": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2301459&reg=48&lang=2": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.pib.gov.in/Pressreleaseshare.aspx?PRID=1589022": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.pmindia.gov.in/en/news_updates/15th-india-japan-annual-summit-joint-statement-partnership-for-security-and-prosperity-of-our-next-generation/": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.pmindia.gov.in/en/news_updates/16th-india-japan-annual-summit-joint-statement/": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.pmindia.gov.in/en/news_updates/joint-declaration-on-security-cooperation-between-india-and-japan/": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.pmindia.gov.in/en/news_updates/pms-bilateral-meeting-with-chinese-president-xi-jinping/": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
    "https://www.praemiumimperiale.org/en/laureate/ma/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.presidency.ucsb.edu/documents/commencement-address-american-university-washington": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.rbi.org.in/Scripts/Statistics.aspx": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.rfa.org/mandarin/duomeiti/tebiejiemu/xch-03212023162857.html": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -1065,8 +2440,33 @@
     "code": null,
     "dead_streak": 0
    },
-   "https://www.scientificamerican.com/article/farside-politics-the-west-eyes-moon-cooperation-with-china": {
+   "https://www.seedvault.no/": {
     "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.sef.org.tw/article-1-106-667": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.sef.org.tw/article-1-129-11224": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.sef.org.tw/article-1-129-5867": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.sef.org.tw/article-1-15-1366": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.sesame.org.jo/": {
+    "state": "unreachable",
     "code": null,
     "dead_streak": 0
    },
@@ -1095,7 +2495,17 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://www.stat-search.boj.or.jp/index_en.html": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://www.state.gov": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
+   "https://www.state.gov/releases/office-of-the-spokesperson/2026/05/conclusion-of-the-2026-nuclear-non-proliferation-treaty-review-conference/": {
     "state": "unverifiable",
     "code": 403,
     "dead_streak": 0
@@ -1115,12 +2525,32 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://www.taipeitimes.com/News/front/archives/2017/05/23/2003671113": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.theglobeandmail.com/news/world/india-pakistan-thaw-in-quakes-aftermath/article1030003/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.theparentscircle.org/en/about_eng-2/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://www.tid.gov.hk/en/tradecircular/files/2025/ci2025318a.pdf": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
    },
    "https://www.tid.gov.hk/en/tradecircular/files/2025/ci8892025a.pdf": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.tribuneindia.com/news/delhi/dsgmc-writes-to-pm-modi-to-reopen-kartarpur-corridor-ahead-of-punjab-visit/": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -1140,12 +2570,47 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://www.un.org/en/black-sea-grain-initiative/achievements": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.un.org/en/black-sea-grain-initiative/update-15-july-2023": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://www.un.org/en/conferences/npt2026": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
    },
+   "https://www.un.org/en/conferences/treaty-on-the-non-proliferation-of-nuclear-weapons-npt-2026": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.un.org/peacebuilding/commission": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.unddr.org/": {
+    "state": "error",
+    "code": 503,
+    "dead_streak": 0
+   },
    "https://www.unep.org/zh-hans/xinwenyuziyuan/xinwengao/chouyangcenghuifuyiburuzhengguiyouzhuyubimianquanqiu05degcdeshengwen": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.unesco.org/en/legal-affairs/recommendation-education-peace-and-human-rights-international-understanding-cooperation-fundamental": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.unodc.org/documents/justice-and-prison-reform/20-01146_Handbook_on_Restorative_Justice_Programmes.pdf": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -1160,6 +2625,11 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://www.unwomen.org/en/what-we-do/peace-and-security/facts-and-figures": {
+    "state": "unverifiable",
+    "code": 403,
+    "dead_streak": 0
+   },
    "https://www.uscc.gov": {
     "state": "ok",
     "code": null,
@@ -1170,12 +2640,42 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://www.visionofhumanity.org/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://www.visvabharati.ac.in/file/Dept_Chinaese.pdf": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
    },
+   "https://www.whitehouse.gov/briefings-statements/2025/10/united-states-japan-framework-for-securing-the-supply-of-critical-minerals-and-rare-earths-through-mining-and-processing/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.whitehouse.gov/briefings-statements/2026/02/united-states-india-joint-statement/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.whitehouse.gov/fact-sheets/2025/09/fact-sheet-president-donald-j-trump-implements-a-historic-u-s-japan-framework-agreement/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://www.whitehouse.gov/fact-sheets/2025/11/fact-sheet-president-donald-j-trump-strikes-deal-on-economic-and-trade-relations-with-china/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.whitehouse.gov/fact-sheets/2026/03/fact-sheet-president-donald-j-trump-strengthens-u-s-japan-alliance-for-the-benefit-of-all-americans/": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.whitehouse.gov/presidential-actions/2025/09/memorandum-of-understanding-between-the-government-of-the-united-states-of-america-and-the-government-of-the-united-kingdom-of-great-britain-and-northern-ireland-regarding-the-technology-prosperity-deal/": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -1190,7 +2690,7 @@
     "code": null,
     "dead_streak": 0
    },
-   "https://www.who.int/news/item/08-04-2020-who-timeline---covid-19": {
+   "https://www.who.int/news/item/27-04-2020-who-timeline---covid-19": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -1210,12 +2710,32 @@
     "code": null,
     "dead_streak": 0
    },
+   "https://www.worldbank.org/en/region/sar/brief/fact-sheet-the-indus-waters-treaty-1960-and-the-world-bank": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
    "https://www.worldbank.org/en/topic/debt/brief/covid-19-debt-service-suspension-initiative": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
    },
+   "https://www.worldjournal.com/wj/story/121220/8884050": {
+    "state": "dead",
+    "code": 404,
+    "dead_streak": 1
+   },
    "https://www.wto.org": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://www.xinhuanet.com/english/bilingual/2016-06/29/c_135475576.htm": {
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
+   },
+   "https://wwwnc.cdc.gov/eid/article/4/3/98-0018_article": {
     "state": "ok",
     "code": null,
     "dead_streak": 0
@@ -1226,12 +2746,12 @@
    "https://china.usc.edu/node/2611": "https://web.archive.org/web/20240729091821/https://china.usc.edu/node/2611"
   },
   "counts": {
-   "ok": 214,
-   "unverifiable": 20,
-   "error": 1,
-   "dead": 2,
-   "unreachable": 6
+   "ok": 462,
+   "unverifiable": 64,
+   "error": 10,
+   "unreachable": 10,
+   "dead": 1
   },
-  "checked": 243
+  "checked": 547
  }
 }
