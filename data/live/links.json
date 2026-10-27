@@ -2,7 +2,7 @@
  "name": "links",
  "title": "Evidence link health",
  "source_url": "https://archive.org/help/wayback_api.php",
- "collected_at": "2026-10-20T11:39:15+00:00",
+ "collected_at": "2026-10-27T12:13:31+00:00",
  "payload": {
   "status": {
    "http://council.gov.ru/events/news/130890/": {
@@ -356,8 +356,8 @@
     "dead_streak": 0
    },
    "https://digital-strategy.ec.europa.eu/en/library/joint-statement-third-meeting-eu-india-trade-and-technology-council": {
-    "state": "ok",
-    "code": null,
+    "state": "unverifiable",
+    "code": 403,
     "dead_streak": 0
    },
    "https://digitallibrary.un.org": {
@@ -911,8 +911,8 @@
     "dead_streak": 0
    },
    "https://newscenter.lbl.gov/2020/12/11/scientists-say-farewell-to-daya-bay-site-proceed-with-final-data-analysis/": {
-    "state": "ok",
-    "code": null,
+    "state": "unverifiable",
+    "code": 403,
     "dead_streak": 0
    },
    "https://newtalk.tw/news/view/2011-10-03/18332": {
@@ -1236,8 +1236,8 @@
     "dead_streak": 0
    },
    "https://unikorea.go.kr/web/eng_unikorea/bbs/bbs_0000000000000034/54268": {
-    "state": "unreachable",
-    "code": null,
+    "state": "unverifiable",
+    "code": 403,
     "dead_streak": 0
    },
    "https://usbelleii.bnl.gov/": {
@@ -1551,28 +1551,28 @@
     "dead_streak": 0
    },
    "https://www.eeas.europa.eu/delegations/china/25th-eu-china-summit-eu-press-release_en": {
-    "state": "ok",
-    "code": null,
+    "state": "unverifiable",
+    "code": 403,
     "dead_streak": 0
    },
    "https://www.eeas.europa.eu/eeas/press-material_en": {
-    "state": "ok",
-    "code": null,
+    "state": "unverifiable",
+    "code": 403,
     "dead_streak": 0
    },
    "https://www.eeas.europa.eu/russia/european-union-and-russian-federation_en": {
-    "state": "ok",
-    "code": null,
+    "state": "unverifiable",
+    "code": 403,
     "dead_streak": 0
    },
    "https://www.eeas.europa.eu/sites/default/files/2025/documents/250723_EU-Japan-2025-07_FINAL_0.pdf": {
-    "state": "ok",
-    "code": null,
+    "state": "unverifiable",
+    "code": 403,
     "dead_streak": 0
    },
    "https://www.eeas.europa.eu/sites/default/files/documents/2024/EU-Japan%20Security%20and%20Defence%20Partnership.pdf": {
-    "state": "ok",
-    "code": null,
+    "state": "unverifiable",
+    "code": 403,
     "dead_streak": 0
    },
    "https://www.eia.gov/uranium/marketing/": {
@@ -1666,8 +1666,8 @@
     "dead_streak": 0
    },
    "https://www.foreign.senate.gov/press/dem/release/lugar-applauds-the-secure-storage-of-spent-plutonium-fuel-in-kazakhstan": {
-    "state": "unverifiable",
-    "code": 403,
+    "state": "ok",
+    "code": null,
     "dead_streak": 0
    },
    "https://www.gavi.org/news/media-room/covid-19-vaccinations-shift-regular-immunisation-covax-draws-close": {
@@ -1881,18 +1881,18 @@
     "dead_streak": 0
    },
    "https://www.icrc.org/en/article/historical-timeline-icrc-geneva-conventions-korea": {
-    "state": "unverifiable",
-    "code": 403,
+    "state": "ok",
+    "code": null,
     "dead_streak": 0
    },
    "https://www.icrc.org/en/document/falkland-islands-islas-malvinas-humanitarian-plan-identify-argentine-soldiers-buried-darwin": {
-    "state": "unverifiable",
-    "code": 403,
+    "state": "ok",
+    "code": null,
     "dead_streak": 0
    },
    "https://www.icrc.org/en/document/falklandmalvinas-islands-icrc-presents-argentina-and-united-kingdom-results-humanitarian": {
-    "state": "unverifiable",
-    "code": 403,
+    "state": "ok",
+    "code": null,
     "dead_streak": 0
    },
    "https://www.insurancejournal.com/news/international/2003/12/31/35341.htm": {
@@ -2466,7 +2466,7 @@
     "dead_streak": 0
    },
    "https://www.sesame.org.jo/": {
-    "state": "unreachable",
+    "state": "ok",
     "code": null,
     "dead_streak": 0
    },
@@ -2526,8 +2526,8 @@
     "dead_streak": 0
    },
    "https://www.taipeitimes.com/News/front/archives/2017/05/23/2003671113": {
-    "state": "ok",
-    "code": null,
+    "state": "unverifiable",
+    "code": 403,
     "dead_streak": 0
    },
    "https://www.theglobeandmail.com/news/world/india-pakistan-thaw-in-quakes-aftermath/article1030003/": {
@@ -2723,7 +2723,7 @@
    "https://www.worldjournal.com/wj/story/121220/8884050": {
     "state": "dead",
     "code": 404,
-    "dead_streak": 1
+    "dead_streak": 2
    },
    "https://www.wto.org": {
     "state": "ok",
@@ -2746,10 +2746,10 @@
    "https://china.usc.edu/node/2611": "https://web.archive.org/web/20240729091821/https://china.usc.edu/node/2611"
   },
   "counts": {
-   "ok": 462,
-   "unverifiable": 64,
+   "ok": 459,
+   "unverifiable": 69,
    "error": 10,
-   "unreachable": 10,
+   "unreachable": 8,
    "dead": 1
   },
   "checked": 547
