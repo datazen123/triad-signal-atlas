@@ -1,5 +1,5 @@
 {
- "last_run": "2026-10-27T12:13:31+00:00",
+ "last_run": "2026-10-28T12:50:31+00:00",
  "collectors": {
   "openalex": {
    "title": "Research co-authorship (OpenAlex)",
@@ -31,13 +31,13 @@
    "title": "US Entity List actions (Federal Register)",
    "every_days": 3,
    "source_url": "https://www.federalregister.gov/developers/documentation/api/v1",
-   "last_attempt": "2026-10-25T11:23:09+00:00",
+   "last_attempt": "2026-10-28T12:50:11+00:00",
    "seconds": 0.5,
    "status": "ok",
    "error": null,
    "trace": null,
    "consecutive_failures": 0,
-   "last_success": "2026-10-25T11:23:10+00:00",
+   "last_success": "2026-10-28T12:50:12+00:00",
    "stale": false
   },
   "comtrade": {
@@ -57,13 +57,13 @@
    "title": "Chokepoint ship transits (IMF PortWatch)",
    "every_days": 7,
    "source_url": "https://portwatch.imf.org",
-   "last_attempt": "2026-10-27T12:07:47+00:00",
-   "seconds": 40.6,
-   "status": "fail",
-   "error": "RuntimeError: all variants failed -> date-string: ArcGIS error: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']} | date-timestamp: ArcGIS error: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']} | latest-any: ArcGIS error: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}",
-   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/triad-signal-atlas/triad-signal-atlas/pipeline/doctor.py\", line 53, in run_one\n    payload = mod.collect(prev)\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/triad-signal-atlas/triad-signal-atlas/pipeline/collectors/portwatch.py\", line 40, in collect\n    _, feats = try_variants([\n               ^^^^^^^^^^^^^^\n  File \"/home/runner/work/triad-signal-atlas/triad-signal-atlas/pipeline/common.py\", line 145, in try_variants\n    raise RuntimeError(\"all variants failed -> \" + \" | \".join(errors))\nRuntimeError: all variants failed -> date-string: ArcGIS error: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']} | date-timestamp: ArcGIS error: {'code': 400, 'message': 'Cannot perform query. Invalid query parameters.', 'details': ['Unable to perform query. Please check your parameters.']} | latest-any: ArcGIS error: {'code': 400, 'message': 'Invalid URL', 'details': ['Invalid URL']}\n",
-   "consecutive_failures": 1,
-   "last_success": "2026-10-20T11:33:46+00:00",
+   "last_attempt": "2026-10-28T12:50:12+00:00",
+   "seconds": 19.2,
+   "status": "ok",
+   "error": null,
+   "trace": null,
+   "consecutive_failures": 0,
+   "last_success": "2026-10-28T12:50:31+00:00",
    "stale": false
   },
   "satcat": {

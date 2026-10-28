@@ -2,17 +2,13 @@
  "name": "portwatch",
  "title": "Chokepoint ship transits (IMF PortWatch)",
  "source_url": "https://portwatch.imf.org",
- "collected_at": "2026-10-20T11:33:46+00:00",
+ "collected_at": "2026-10-28T12:50:31+00:00",
  "payload": {
   "chokepoints": {
    "Taiwan Strait": {
-    "2026-04-20": {
-     "total": 941,
-     "tanker": 193
-    },
     "2026-04-27": {
-     "total": 1737,
-     "tanker": 325
+     "total": 804,
+     "tanker": 145
     },
     "2026-05-04": {
      "total": 1680,
@@ -109,16 +105,16 @@
     "2026-10-12": {
      "total": 1591,
      "tanker": 323
+    },
+    "2026-10-19": {
+     "total": 1330,
+     "tanker": 307
     }
    },
    "Malacca Strait": {
-    "2026-04-20": {
-     "total": 900,
-     "tanker": 294
-    },
     "2026-04-27": {
-     "total": 1529,
-     "tanker": 507
+     "total": 646,
+     "tanker": 214
     },
     "2026-05-04": {
      "total": 1592,
@@ -215,16 +211,16 @@
     "2026-10-12": {
      "total": 1506,
      "tanker": 500
+    },
+    "2026-10-19": {
+     "total": 1596,
+     "tanker": 531
     }
    },
    "Korea Strait": {
-    "2026-04-20": {
-     "total": 864,
-     "tanker": 230
-    },
     "2026-04-27": {
-     "total": 1450,
-     "tanker": 349
+     "total": 617,
+     "tanker": 143
     },
     "2026-05-04": {
      "total": 1395,
@@ -321,16 +317,16 @@
     "2026-10-12": {
      "total": 1371,
      "tanker": 353
+    },
+    "2026-10-19": {
+     "total": 1389,
+     "tanker": 369
     }
    },
    "Dover Strait": {
-    "2026-04-20": {
-     "total": 760,
-     "tanker": 241
-    },
     "2026-04-27": {
-     "total": 1171,
-     "tanker": 384
+     "total": 548,
+     "tanker": 175
     },
     "2026-05-04": {
      "total": 1187,
@@ -427,16 +423,16 @@
     "2026-10-12": {
      "total": 1225,
      "tanker": 417
+    },
+    "2026-10-19": {
+     "total": 901,
+     "tanker": 310
     }
    },
    "Bohai Strait": {
-    "2026-04-20": {
-     "total": 709,
-     "tanker": 131
-    },
     "2026-04-27": {
-     "total": 1066,
-     "tanker": 178
+     "total": 446,
+     "tanker": 82
     },
     "2026-05-04": {
      "total": 1144,
@@ -533,16 +529,16 @@
     "2026-10-12": {
      "total": 1033,
      "tanker": 229
+    },
+    "2026-10-19": {
+     "total": 1148,
+     "tanker": 245
     }
    },
    "Gibraltar Strait": {
-    "2026-04-20": {
-     "total": 526,
-     "tanker": 170
-    },
     "2026-04-27": {
-     "total": 932,
-     "tanker": 321
+     "total": 391,
+     "tanker": 140
     },
     "2026-05-04": {
      "total": 944,
@@ -639,16 +635,16 @@
     "2026-10-12": {
      "total": 871,
      "tanker": 277
+    },
+    "2026-10-19": {
+     "total": 815,
+     "tanker": 257
     }
    },
    "Cape of Good Hope": {
-    "2026-04-20": {
-     "total": 465,
-     "tanker": 93
-    },
     "2026-04-27": {
-     "total": 636,
-     "tanker": 145
+     "total": 316,
+     "tanker": 65
     },
     "2026-05-04": {
      "total": 620,
@@ -745,16 +741,16 @@
     "2026-10-12": {
      "total": 600,
      "tanker": 135
+    },
+    "2026-10-19": {
+     "total": 610,
+     "tanker": 153
     }
    },
    "Luzon Strait": {
-    "2026-04-20": {
-     "total": 224,
-     "tanker": 78
-    },
     "2026-04-27": {
-     "total": 553,
-     "tanker": 156
+     "total": 256,
+     "tanker": 78
     },
     "2026-05-04": {
      "total": 544,
@@ -851,16 +847,16 @@
     "2026-10-12": {
      "total": 724,
      "tanker": 209
+    },
+    "2026-10-19": {
+     "total": 436,
+     "tanker": 139
     }
    },
    "Bosporus Strait": {
-    "2026-04-20": {
-     "total": 383,
-     "tanker": 84
-    },
     "2026-04-27": {
-     "total": 570,
-     "tanker": 131
+     "total": 205,
+     "tanker": 47
     },
     "2026-05-04": {
      "total": 661,
@@ -957,115 +953,119 @@
     "2026-10-12": {
      "total": 326,
      "tanker": 101
+    },
+    "2026-10-19": {
+     "total": 376,
+     "tanker": 111
     }
    },
-   "Yucatan Channel": {
-    "2026-04-20": {
-     "total": 224,
-     "tanker": 123
-    },
+   "Mindoro Strait": {
     "2026-04-27": {
-     "total": 398,
-     "tanker": 223
+     "total": 147,
+     "tanker": 16
     },
     "2026-05-04": {
-     "total": 291,
-     "tanker": 165
+     "total": 270,
+     "tanker": 21
     },
     "2026-05-11": {
-     "total": 377,
-     "tanker": 232
+     "total": 399,
+     "tanker": 28
     },
     "2026-05-18": {
-     "total": 385,
-     "tanker": 226
+     "total": 374,
+     "tanker": 19
     },
     "2026-05-25": {
-     "total": 400,
-     "tanker": 224
+     "total": 446,
+     "tanker": 37
     },
     "2026-06-01": {
-     "total": 396,
-     "tanker": 235
+     "total": 434,
+     "tanker": 29
     },
     "2026-06-08": {
-     "total": 362,
-     "tanker": 213
+     "total": 408,
+     "tanker": 29
     },
     "2026-06-15": {
-     "total": 361,
-     "tanker": 210
+     "total": 388,
+     "tanker": 34
     },
     "2026-06-22": {
-     "total": 382,
-     "tanker": 233
+     "total": 431,
+     "tanker": 37
     },
     "2026-06-29": {
-     "total": 408,
-     "tanker": 228
+     "total": 375,
+     "tanker": 36
     },
     "2026-07-06": {
-     "total": 377,
-     "tanker": 214
+     "total": 451,
+     "tanker": 46
     },
     "2026-07-13": {
-     "total": 389,
-     "tanker": 221
+     "total": 318,
+     "tanker": 40
     },
     "2026-07-20": {
-     "total": 385,
-     "tanker": 207
+     "total": 366,
+     "tanker": 27
     },
     "2026-07-27": {
-     "total": 366,
-     "tanker": 212
+     "total": 342,
+     "tanker": 37
     },
     "2026-08-03": {
-     "total": 366,
-     "tanker": 217
+     "total": 361,
+     "tanker": 33
     },
     "2026-08-10": {
-     "total": 359,
-     "tanker": 193
+     "total": 332,
+     "tanker": 35
     },
     "2026-08-17": {
-     "total": 386,
-     "tanker": 212
+     "total": 323,
+     "tanker": 31
     },
     "2026-08-24": {
-     "total": 359,
-     "tanker": 213
+     "total": 361,
+     "tanker": 38
     },
     "2026-08-31": {
-     "total": 375,
-     "tanker": 214
+     "total": 364,
+     "tanker": 23
     },
     "2026-09-07": {
-     "total": 365,
-     "tanker": 216
+     "total": 378,
+     "tanker": 28
     },
     "2026-09-14": {
-     "total": 352,
-     "tanker": 197
+     "total": 364,
+     "tanker": 33
     },
     "2026-09-21": {
-     "total": 346,
-     "tanker": 194
+     "total": 367,
+     "tanker": 31
     },
     "2026-09-28": {
-     "total": 336,
-     "tanker": 184
+     "total": 375,
+     "tanker": 43
     },
     "2026-10-05": {
-     "total": 367,
-     "tanker": 205
+     "total": 359,
+     "tanker": 32
     },
     "2026-10-12": {
-     "total": 356,
-     "tanker": 205
+     "total": 396,
+     "tanker": 38
+    },
+    "2026-10-19": {
+     "total": 383,
+     "tanker": 41
     }
    }
   },
-  "latest_week": "2026-10-12"
+  "latest_week": "2026-10-19"
  }
 }
