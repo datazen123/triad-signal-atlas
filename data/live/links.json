@@ -2,7 +2,7 @@
  "name": "links",
  "title": "Evidence link health",
  "source_url": "https://archive.org/help/wayback_api.php",
- "collected_at": "2026-11-03T14:14:59+00:00",
+ "collected_at": "2026-11-10T14:56:11+00:00",
  "payload": {
   "status": {
    "http://council.gov.ru/events/news/130890/": {
@@ -296,8 +296,8 @@
     "dead_streak": 0
    },
    "https://commission.europa.eu/topics/trade/eu-india-trade-agreement_en": {
-    "state": "ok",
-    "code": null,
+    "state": "unverifiable",
+    "code": 429,
     "dead_streak": 0
    },
    "https://community.wmo.int/site/knowledge-hub/programmes-and-initiatives/operational-information-service-ois/rths-country": {
@@ -311,9 +311,9 @@
     "dead_streak": 0
    },
    "https://comtradeplus.un.org": {
-    "state": "ok",
-    "code": null,
-    "dead_streak": 0
+    "state": "dead",
+    "code": 404,
+    "dead_streak": 1
    },
    "https://crsreports.congress.gov": {
     "state": "unverifiable",
@@ -1071,8 +1071,8 @@
     "dead_streak": 0
    },
    "https://policy.trade.ec.europa.eu/news/joint-statement-united-states-european-union-framework-agreement-reciprocal-fair-and-balanced-trade-2025-08-21_en": {
-    "state": "ok",
-    "code": null,
+    "state": "unverifiable",
+    "code": 429,
     "dead_streak": 0
    },
    "https://polioeradication.org/about-polio/history-of-polio": {
@@ -1421,9 +1421,9 @@
     "dead_streak": 0
    },
    "https://www.city.sendai.jp/koryu/foreignlanguage/cn/sendai/rojin.html": {
-    "state": "ok",
-    "code": null,
-    "dead_streak": 0
+    "state": "dead",
+    "code": 404,
+    "dead_streak": 1
    },
    "https://www.civilnet.am/en/news/691652/": {
     "state": "ok",
@@ -1551,28 +1551,28 @@
     "dead_streak": 0
    },
    "https://www.eeas.europa.eu/delegations/china/25th-eu-china-summit-eu-press-release_en": {
-    "state": "ok",
-    "code": null,
+    "state": "unverifiable",
+    "code": 403,
     "dead_streak": 0
    },
    "https://www.eeas.europa.eu/eeas/press-material_en": {
-    "state": "ok",
-    "code": null,
+    "state": "unverifiable",
+    "code": 403,
     "dead_streak": 0
    },
    "https://www.eeas.europa.eu/russia/european-union-and-russian-federation_en": {
-    "state": "ok",
-    "code": null,
+    "state": "unverifiable",
+    "code": 403,
     "dead_streak": 0
    },
    "https://www.eeas.europa.eu/sites/default/files/2025/documents/250723_EU-Japan-2025-07_FINAL_0.pdf": {
-    "state": "ok",
-    "code": null,
+    "state": "unverifiable",
+    "code": 403,
     "dead_streak": 0
    },
    "https://www.eeas.europa.eu/sites/default/files/documents/2024/EU-Japan%20Security%20and%20Defence%20Partnership.pdf": {
-    "state": "ok",
-    "code": null,
+    "state": "unverifiable",
+    "code": 403,
     "dead_streak": 0
    },
    "https://www.eia.gov/uranium/marketing/": {
@@ -1811,7 +1811,7 @@
     "dead_streak": 0
    },
    "https://www.gov.za/documents/constitution/constitution-republic-south-africa-act-200-1993": {
-    "state": "unreachable",
+    "state": "ok",
     "code": null,
     "dead_streak": 0
    },
@@ -1926,7 +1926,7 @@
     "dead_streak": 0
    },
    "https://www.jcs.mil.kr": {
-    "state": "unreachable",
+    "state": "ok",
     "code": null,
     "dead_streak": 0
    },
@@ -2301,9 +2301,9 @@
     "dead_streak": 0
    },
    "https://www.nri.cam.ac.uk/?p=170": {
-    "state": "ok",
-    "code": null,
-    "dead_streak": 0
+    "state": "dead",
+    "code": 404,
+    "dead_streak": 1
    },
    "https://www.nycballet.com/discover/our-history/george-balanchine": {
     "state": "ok",
@@ -2723,7 +2723,7 @@
    "https://www.worldjournal.com/wj/story/121220/8884050": {
     "state": "dead",
     "code": 404,
-    "dead_streak": 3
+    "dead_streak": 4
    },
    "https://www.wto.org": {
     "state": "ok",
@@ -2746,11 +2746,11 @@
    "https://china.usc.edu/node/2611": "https://web.archive.org/web/20240729091821/https://china.usc.edu/node/2611"
   },
   "counts": {
-   "ok": 463,
-   "unverifiable": 64,
+   "ok": 455,
+   "unverifiable": 71,
    "error": 10,
-   "unreachable": 9,
-   "dead": 1
+   "dead": 4,
+   "unreachable": 7
   },
   "checked": 547
  }
