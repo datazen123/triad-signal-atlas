@@ -1,5 +1,5 @@
 {
- "last_run": "2026-11-11T14:17:44+00:00",
+ "last_run": "2026-11-12T15:12:29+00:00",
  "collectors": {
   "openalex": {
    "title": "Research co-authorship (OpenAlex)",
@@ -18,39 +18,39 @@
    "title": "Cross-border Nobel laureates (Nobel Foundation API)",
    "every_days": 30,
    "source_url": "https://www.nobelprize.org/about/developer-zone-2/",
-   "last_attempt": "2026-10-12T17:12:44+00:00",
-   "seconds": 10.1,
+   "last_attempt": "2026-11-12T15:09:47+00:00",
+   "seconds": 1.7,
    "status": "ok",
    "error": null,
    "trace": null,
    "consecutive_failures": 0,
-   "last_success": "2026-10-12T17:12:54+00:00",
+   "last_success": "2026-11-12T15:09:49+00:00",
    "stale": false
   },
   "fedreg": {
    "title": "US Entity List actions (Federal Register)",
    "every_days": 3,
    "source_url": "https://www.federalregister.gov/developers/documentation/api/v1",
-   "last_attempt": "2026-11-09T16:13:12+00:00",
-   "seconds": 1.0,
+   "last_attempt": "2026-11-12T15:09:49+00:00",
+   "seconds": 0.5,
    "status": "ok",
    "error": null,
    "trace": null,
    "consecutive_failures": 0,
-   "last_success": "2026-11-09T16:13:13+00:00",
+   "last_success": "2026-11-12T15:09:50+00:00",
    "stale": false
   },
   "comtrade": {
    "title": "Mirror trade statistics (UN Comtrade)",
    "every_days": 30,
    "source_url": "https://comtradeplus.un.org",
-   "last_attempt": "2026-10-12T17:12:55+00:00",
-   "seconds": 202.6,
+   "last_attempt": "2026-11-12T15:09:50+00:00",
+   "seconds": 156.5,
    "status": "ok",
    "error": null,
    "trace": null,
    "consecutive_failures": 0,
-   "last_success": "2026-10-12T17:16:17+00:00",
+   "last_success": "2026-11-12T15:12:26+00:00",
    "stale": false
   },
   "portwatch": {
@@ -83,14 +83,14 @@
    "title": "Migrant stock between powers (UN DESA)",
    "every_days": 30,
    "source_url": "https://www.un.org/development/desa/pd/content/international-migrant-stock",
-   "last_attempt": "2026-10-12T17:16:20+00:00",
-   "seconds": 5.3,
+   "last_attempt": "2026-11-12T15:12:26+00:00",
+   "seconds": 2.7,
    "status": "ok",
    "error": null,
    "trace": null,
    "consecutive_failures": 0,
    "stale": false,
-   "last_success": "2026-10-12T17:16:26+00:00"
+   "last_success": "2026-11-12T15:12:29+00:00"
   },
   "links": {
    "title": "Evidence link health",
