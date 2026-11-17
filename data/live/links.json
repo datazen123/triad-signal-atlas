@@ -2,7 +2,7 @@
  "name": "links",
  "title": "Evidence link health",
  "source_url": "https://archive.org/help/wayback_api.php",
- "collected_at": "2026-11-10T14:56:11+00:00",
+ "collected_at": "2026-11-17T16:05:21+00:00",
  "payload": {
   "status": {
    "http://council.gov.ru/events/news/130890/": {
@@ -276,8 +276,8 @@
     "dead_streak": 0
    },
    "https://ciss.tsinghua.edu.cn": {
-    "state": "ok",
-    "code": null,
+    "state": "error",
+    "code": 502,
     "dead_streak": 0
    },
    "https://citizensassembly.ie/": {
@@ -313,7 +313,7 @@
    "https://comtradeplus.un.org": {
     "state": "dead",
     "code": 404,
-    "dead_streak": 1
+    "dead_streak": 2
    },
    "https://crsreports.congress.gov": {
     "state": "unverifiable",
@@ -356,8 +356,8 @@
     "dead_streak": 0
    },
    "https://digital-strategy.ec.europa.eu/en/library/joint-statement-third-meeting-eu-india-trade-and-technology-council": {
-    "state": "ok",
-    "code": null,
+    "state": "error",
+    "code": 503,
     "dead_streak": 0
    },
    "https://digitallibrary.un.org": {
@@ -741,8 +741,8 @@
     "dead_streak": 0
    },
    "https://home-affairs.ec.europa.eu/policies/international-affairs/engagement-partner-countries/russia_en": {
-    "state": "ok",
-    "code": null,
+    "state": "unverifiable",
+    "code": 429,
     "dead_streak": 0
    },
    "https://home.cern/": {
@@ -1071,8 +1071,8 @@
     "dead_streak": 0
    },
    "https://policy.trade.ec.europa.eu/news/joint-statement-united-states-european-union-framework-agreement-reciprocal-fair-and-balanced-trade-2025-08-21_en": {
-    "state": "unverifiable",
-    "code": 429,
+    "state": "ok",
+    "code": null,
     "dead_streak": 0
    },
    "https://polioeradication.org/about-polio/history-of-polio": {
@@ -1196,8 +1196,8 @@
     "dead_streak": 0
    },
    "https://tcdata.tzuchi-org.tw/files/public/public.test/2024/04/20231202-235718277-2980.pdf": {
-    "state": "error",
-    "code": 522,
+    "state": "unverifiable",
+    "code": 403,
     "dead_streak": 0
    },
    "https://tdllib.sjtu.edu.cn/lzd/czqh.htm": {
@@ -1423,7 +1423,7 @@
    "https://www.city.sendai.jp/koryu/foreignlanguage/cn/sendai/rojin.html": {
     "state": "dead",
     "code": 404,
-    "dead_streak": 1
+    "dead_streak": 2
    },
    "https://www.civilnet.am/en/news/691652/": {
     "state": "ok",
@@ -1551,28 +1551,28 @@
     "dead_streak": 0
    },
    "https://www.eeas.europa.eu/delegations/china/25th-eu-china-summit-eu-press-release_en": {
-    "state": "unverifiable",
-    "code": 403,
+    "state": "ok",
+    "code": null,
     "dead_streak": 0
    },
    "https://www.eeas.europa.eu/eeas/press-material_en": {
-    "state": "unverifiable",
-    "code": 403,
+    "state": "ok",
+    "code": null,
     "dead_streak": 0
    },
    "https://www.eeas.europa.eu/russia/european-union-and-russian-federation_en": {
-    "state": "unverifiable",
-    "code": 403,
+    "state": "ok",
+    "code": null,
     "dead_streak": 0
    },
    "https://www.eeas.europa.eu/sites/default/files/2025/documents/250723_EU-Japan-2025-07_FINAL_0.pdf": {
-    "state": "unverifiable",
-    "code": 403,
+    "state": "ok",
+    "code": null,
     "dead_streak": 0
    },
    "https://www.eeas.europa.eu/sites/default/files/documents/2024/EU-Japan%20Security%20and%20Defence%20Partnership.pdf": {
-    "state": "unverifiable",
-    "code": 403,
+    "state": "ok",
+    "code": null,
     "dead_streak": 0
    },
    "https://www.eia.gov/uranium/marketing/": {
@@ -1846,8 +1846,8 @@
     "dead_streak": 0
    },
    "https://www.gutenberg.org/ebooks/50922": {
-    "state": "ok",
-    "code": null,
+    "state": "error",
+    "code": 503,
     "dead_streak": 0
    },
    "https://www.gwytb.gov.cn/xwdt/xwfb/xwfbh/201101/t20110106_1679287.htm": {
@@ -2301,9 +2301,9 @@
     "dead_streak": 0
    },
    "https://www.nri.cam.ac.uk/?p=170": {
-    "state": "dead",
-    "code": 404,
-    "dead_streak": 1
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
    },
    "https://www.nycballet.com/discover/our-history/george-balanchine": {
     "state": "ok",
@@ -2606,7 +2606,7 @@
     "dead_streak": 0
    },
    "https://www.unesco.org/en/legal-affairs/recommendation-education-peace-and-human-rights-international-understanding-cooperation-fundamental": {
-    "state": "ok",
+    "state": "unreachable",
     "code": null,
     "dead_streak": 0
    },
@@ -2646,8 +2646,8 @@
     "dead_streak": 0
    },
    "https://www.visvabharati.ac.in/file/Dept_Chinaese.pdf": {
-    "state": "ok",
-    "code": null,
+    "state": "error",
+    "code": 522,
     "dead_streak": 0
    },
    "https://www.whitehouse.gov/briefings-statements/2025/10/united-states-japan-framework-for-securing-the-supply-of-critical-minerals-and-rare-earths-through-mining-and-processing/": {
@@ -2723,7 +2723,7 @@
    "https://www.worldjournal.com/wj/story/121220/8884050": {
     "state": "dead",
     "code": 404,
-    "dead_streak": 4
+    "dead_streak": 5
    },
    "https://www.wto.org": {
     "state": "ok",
@@ -2743,14 +2743,15 @@
   },
   "healed": {
    "https://english.cas.cn/newsroom/cas_media/202408/t20240806_681340.shtml": "https://web.archive.org/web/20241106235940/https://english.cas.cn/newsroom/cas_media/202408/t20240806_681340.shtml",
-   "https://china.usc.edu/node/2611": "https://web.archive.org/web/20240729091821/https://china.usc.edu/node/2611"
+   "https://china.usc.edu/node/2611": "https://web.archive.org/web/20240729091821/https://china.usc.edu/node/2611",
+   "https://www.city.sendai.jp/koryu/foreignlanguage/cn/sendai/rojin.html": "https://web.archive.org/web/20250823125427/https://www.city.sendai.jp/koryu/foreignlanguage/cn/sendai/rojin.html"
   },
   "counts": {
-   "ok": 455,
-   "unverifiable": 71,
-   "error": 10,
-   "dead": 4,
-   "unreachable": 7
+   "ok": 456,
+   "unverifiable": 67,
+   "error": 13,
+   "dead": 3,
+   "unreachable": 8
   },
   "checked": 547
  }
