@@ -2,6 +2,17 @@
 
 Future versions, roughly in order. Nothing here is built yet. Data sources listed below are **unverified candidates**: check each one's own site, licence and method before any of it enters `data/curated/`, and follow the usual rule (every entry has a primary source URL; nothing is invented).
 
+## Primary-source acquisition (started 2026-11-19)
+
+The shared registry now lives in `datazen123/gather-primary-sources` (branch `claude/primary-sources-acquisition-deryx9`): 38 ranked sources, 12 insider books, a co-browse recorder and Claude Code prompts. All entries stay **unverified** until its `fetch/verify.py` reaches them, and nothing enters `data/curated/` without the usual source URL.
+
+Planned for this atlas, highest impact first (prompt: `prompts/03-atlas-ingest.md` there):
+1. `unga_votes` collector: UN General Assembly recorded votes, giving pairwise agreement per year and the set of resolutions all seven powers backed. This is the most direct "common ground" signal.
+2. Shared treaty participation (UN Treaty Collection).
+3. Legislature behaviour: Voteview (US), UK Commons/Lords votes, European Parliament open data, Japan's Diet (Kokkai) speeches; India and Russia by co-browse or key.
+4. Readout triangulation: the same meeting as told by each side's foreign ministry.
+5. Insider lens for closed decision-making (CN, RU): claims from former insiders, logged with page numbers, and corroborated only when a second lens with different biases agrees.
+
 ## v3: All peoples, not just states
 
 ### Why
