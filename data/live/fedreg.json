@@ -2,7 +2,7 @@
  "name": "fedreg",
  "title": "US Entity List actions (Federal Register)",
  "source_url": "https://www.federalregister.gov/developers/documentation/api/v1",
- "collected_at": "2026-11-18T15:36:24+00:00",
+ "collected_at": "2026-11-21T14:36:33+00:00",
  "payload": {
   "series": {
    "CN": {
@@ -38,7 +38,7 @@
     "2023": 24,
     "2024": 23,
     "2025": 14,
-    "2026": 2
+    "2026": 3
    },
    "RU": {
     "1994": 0,
