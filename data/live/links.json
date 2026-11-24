@@ -2,7 +2,7 @@
  "name": "links",
  "title": "Evidence link health",
  "source_url": "https://archive.org/help/wayback_api.php",
- "collected_at": "2026-11-17T16:05:21+00:00",
+ "collected_at": "2026-11-24T17:45:36+00:00",
  "payload": {
   "status": {
    "http://council.gov.ru/events/news/130890/": {
@@ -276,8 +276,8 @@
     "dead_streak": 0
    },
    "https://ciss.tsinghua.edu.cn": {
-    "state": "error",
-    "code": 502,
+    "state": "ok",
+    "code": null,
     "dead_streak": 0
    },
    "https://citizensassembly.ie/": {
@@ -311,9 +311,9 @@
     "dead_streak": 0
    },
    "https://comtradeplus.un.org": {
-    "state": "dead",
-    "code": 404,
-    "dead_streak": 2
+    "state": "ok",
+    "code": null,
+    "dead_streak": 0
    },
    "https://crsreports.congress.gov": {
     "state": "unverifiable",
@@ -356,8 +356,8 @@
     "dead_streak": 0
    },
    "https://digital-strategy.ec.europa.eu/en/library/joint-statement-third-meeting-eu-india-trade-and-technology-council": {
-    "state": "error",
-    "code": 503,
+    "state": "ok",
+    "code": null,
     "dead_streak": 0
    },
    "https://digitallibrary.un.org": {
@@ -741,8 +741,8 @@
     "dead_streak": 0
    },
    "https://home-affairs.ec.europa.eu/policies/international-affairs/engagement-partner-countries/russia_en": {
-    "state": "unverifiable",
-    "code": 429,
+    "state": "ok",
+    "code": null,
     "dead_streak": 0
    },
    "https://home.cern/": {
@@ -821,8 +821,8 @@
     "dead_streak": 0
    },
    "https://journal.juilliard.edu/journal/van-cliburn-1934-2013": {
-    "state": "unverifiable",
-    "code": 403,
+    "state": "error",
+    "code": 522,
     "dead_streak": 0
    },
    "https://kokkai.ndl.go.jp": {
@@ -1381,7 +1381,7 @@
     "dead_streak": 0
    },
    "https://www.caea.gov.cn/n6760338/n6760342/c10768957/content.html": {
-    "state": "ok",
+    "state": "unreachable",
     "code": null,
     "dead_streak": 0
    },
@@ -1423,7 +1423,7 @@
    "https://www.city.sendai.jp/koryu/foreignlanguage/cn/sendai/rojin.html": {
     "state": "dead",
     "code": 404,
-    "dead_streak": 2
+    "dead_streak": 3
    },
    "https://www.civilnet.am/en/news/691652/": {
     "state": "ok",
@@ -1441,12 +1441,12 @@
     "dead_streak": 0
    },
    "https://www.cnsa.gov.cn/english/n6465652/n6465653/c6812150/content.html": {
-    "state": "ok",
+    "state": "unreachable",
     "code": null,
     "dead_streak": 0
    },
    "https://www.cnsa.gov.cn/english/n6465668/n6465670/c6811967/content.html": {
-    "state": "ok",
+    "state": "unreachable",
     "code": null,
     "dead_streak": 0
    },
@@ -1581,7 +1581,7 @@
     "dead_streak": 0
    },
    "https://www.environmentalpeacebuilding.org/": {
-    "state": "ok",
+    "state": "unreachable",
     "code": null,
     "dead_streak": 0
    },
@@ -1926,7 +1926,7 @@
     "dead_streak": 0
    },
    "https://www.jcs.mil.kr": {
-    "state": "ok",
+    "state": "unreachable",
     "code": null,
     "dead_streak": 0
    },
@@ -1991,8 +1991,8 @@
     "dead_streak": 0
    },
    "https://www.mea.gov.in": {
-    "state": "unverifiable",
-    "code": 403,
+    "state": "ok",
+    "code": null,
     "dead_streak": 0
    },
    "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk09/202608/t20260813_1163971.html": {
@@ -2606,7 +2606,7 @@
     "dead_streak": 0
    },
    "https://www.unesco.org/en/legal-affairs/recommendation-education-peace-and-human-rights-international-understanding-cooperation-fundamental": {
-    "state": "unreachable",
+    "state": "ok",
     "code": null,
     "dead_streak": 0
    },
@@ -2646,8 +2646,8 @@
     "dead_streak": 0
    },
    "https://www.visvabharati.ac.in/file/Dept_Chinaese.pdf": {
-    "state": "error",
-    "code": 522,
+    "state": "ok",
+    "code": null,
     "dead_streak": 0
    },
    "https://www.whitehouse.gov/briefings-statements/2025/10/united-states-japan-framework-for-securing-the-supply-of-critical-minerals-and-rare-earths-through-mining-and-processing/": {
@@ -2723,7 +2723,7 @@
    "https://www.worldjournal.com/wj/story/121220/8884050": {
     "state": "dead",
     "code": 404,
-    "dead_streak": 5
+    "dead_streak": 6
    },
    "https://www.wto.org": {
     "state": "ok",
@@ -2747,11 +2747,11 @@
    "https://www.city.sendai.jp/koryu/foreignlanguage/cn/sendai/rojin.html": "https://web.archive.org/web/20250823125427/https://www.city.sendai.jp/koryu/foreignlanguage/cn/sendai/rojin.html"
   },
   "counts": {
-   "ok": 456,
-   "unverifiable": 67,
-   "error": 13,
-   "dead": 3,
-   "unreachable": 8
+   "ok": 458,
+   "unverifiable": 64,
+   "error": 11,
+   "unreachable": 12,
+   "dead": 2
   },
   "checked": 547
  }
