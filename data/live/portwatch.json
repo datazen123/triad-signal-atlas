@@ -2,17 +2,13 @@
  "name": "portwatch",
  "title": "Chokepoint ship transits (IMF PortWatch)",
  "source_url": "https://portwatch.imf.org",
- "collected_at": "2026-11-20T15:24:29+00:00",
+ "collected_at": "2026-11-27T16:37:05+00:00",
  "payload": {
   "chokepoints": {
    "Taiwan Strait": {
-    "2026-05-18": {
-     "total": 235,
-     "tanker": 51
-    },
     "2026-05-25": {
-     "total": 1765,
-     "tanker": 354
+     "total": 307,
+     "tanker": 62
     },
     "2026-06-01": {
      "total": 1892,
@@ -109,16 +105,16 @@
     "2026-11-09": {
      "total": 1546,
      "tanker": 329
+    },
+    "2026-11-16": {
+     "total": 1564,
+     "tanker": 312
     }
    },
    "Malacca Strait": {
-    "2026-05-18": {
-     "total": 231,
-     "tanker": 73
-    },
     "2026-05-25": {
-     "total": 1497,
-     "tanker": 465
+     "total": 207,
+     "tanker": 68
     },
     "2026-06-01": {
      "total": 1445,
@@ -215,16 +211,16 @@
     "2026-11-09": {
      "total": 1609,
      "tanker": 547
+    },
+    "2026-11-16": {
+     "total": 1533,
+     "tanker": 531
     }
    },
    "Korea Strait": {
-    "2026-05-18": {
-     "total": 218,
-     "tanker": 56
-    },
     "2026-05-25": {
-     "total": 1612,
-     "tanker": 411
+     "total": 263,
+     "tanker": 57
     },
     "2026-06-01": {
      "total": 1586,
@@ -321,16 +317,16 @@
     "2026-11-09": {
      "total": 1415,
      "tanker": 383
+    },
+    "2026-11-16": {
+     "total": 1313,
+     "tanker": 338
     }
    },
    "Dover Strait": {
-    "2026-05-18": {
-     "total": 175,
-     "tanker": 67
-    },
     "2026-05-25": {
-     "total": 1128,
-     "tanker": 375
+     "total": 165,
+     "tanker": 47
     },
     "2026-06-01": {
      "total": 1126,
@@ -427,16 +423,16 @@
     "2026-11-09": {
      "total": 1113,
      "tanker": 378
+    },
+    "2026-11-16": {
+     "total": 1030,
+     "tanker": 366
     }
    },
    "Bohai Strait": {
-    "2026-05-18": {
-     "total": 169,
-     "tanker": 25
-    },
     "2026-05-25": {
-     "total": 1167,
-     "tanker": 207
+     "total": 163,
+     "tanker": 26
     },
     "2026-06-01": {
      "total": 1179,
@@ -533,16 +529,16 @@
     "2026-11-09": {
      "total": 1053,
      "tanker": 228
+    },
+    "2026-11-16": {
+     "total": 1100,
+     "tanker": 222
     }
    },
    "Gibraltar Strait": {
-    "2026-05-18": {
-     "total": 135,
-     "tanker": 46
-    },
     "2026-05-25": {
-     "total": 981,
-     "tanker": 324
+     "total": 151,
+     "tanker": 49
     },
     "2026-06-01": {
      "total": 878,
@@ -639,16 +635,16 @@
     "2026-11-09": {
      "total": 866,
      "tanker": 262
+    },
+    "2026-11-16": {
+     "total": 880,
+     "tanker": 258
     }
    },
    "Luzon Strait": {
-    "2026-05-18": {
-     "total": 105,
-     "tanker": 25
-    },
     "2026-05-25": {
-     "total": 581,
-     "tanker": 173
+     "total": 60,
+     "tanker": 28
     },
     "2026-06-01": {
      "total": 567,
@@ -745,16 +741,16 @@
     "2026-11-09": {
      "total": 743,
      "tanker": 243
+    },
+    "2026-11-16": {
+     "total": 651,
+     "tanker": 212
     }
    },
    "Cape of Good Hope": {
-    "2026-05-18": {
-     "total": 109,
-     "tanker": 26
-    },
     "2026-05-25": {
-     "total": 664,
-     "tanker": 131
+     "total": 100,
+     "tanker": 17
     },
     "2026-06-01": {
      "total": 641,
@@ -851,16 +847,16 @@
     "2026-11-09": {
      "total": 525,
      "tanker": 121
+    },
+    "2026-11-16": {
+     "total": 480,
+     "tanker": 127
     }
    },
    "Bosporus Strait": {
-    "2026-05-18": {
-     "total": 86,
-     "tanker": 19
-    },
     "2026-05-25": {
-     "total": 593,
-     "tanker": 148
+     "total": 66,
+     "tanker": 18
     },
     "2026-06-01": {
      "total": 555,
@@ -957,16 +953,16 @@
     "2026-11-09": {
      "total": 340,
      "tanker": 105
+    },
+    "2026-11-16": {
+     "total": 343,
+     "tanker": 106
     }
    },
    "Makassar Strait": {
-    "2026-05-18": {
-     "total": 59,
-     "tanker": 9
-    },
     "2026-05-25": {
-     "total": 369,
-     "tanker": 34
+     "total": 44,
+     "tanker": 0
     },
     "2026-06-01": {
      "total": 426,
@@ -1063,9 +1059,13 @@
     "2026-11-09": {
      "total": 335,
      "tanker": 36
+    },
+    "2026-11-16": {
+     "total": 409,
+     "tanker": 43
     }
    }
   },
-  "latest_week": "2026-11-09"
+  "latest_week": "2026-11-16"
  }
 }
